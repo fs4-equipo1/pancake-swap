@@ -15,9 +15,7 @@ function App() {
         <Boton texto={"White"} isWhite={true} />
       </div>
 
-      <div>
-        <BaseSwiper />
-      </div>
+      <BaseSwiper/>
     </div>
   );
 }
