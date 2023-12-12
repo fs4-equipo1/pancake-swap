@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-const BaseSwiper = () => {
+const BaseSwiper = ({ children }) => {
   return (
     <Swiper
       spaceBetween={50}
@@ -8,18 +8,9 @@ const BaseSwiper = () => {
       onSlideChange={() => console.log("slide change")}
       onSwiper={(swiper) => console.log(swiper)}
     >
-      <SwiperSlide>
-        <h2 style={{ color: "white" }}>Slide 1</h2>
-      </SwiperSlide>
-      <SwiperSlide>
-        <h2 style={{ color: "white" }}>Slide 2</h2>
-      </SwiperSlide>
-      <SwiperSlide>
-        <h2 style={{ color: "white" }}>Slide 3</h2>
-      </SwiperSlide>
-      <SwiperSlide>
-        <h2 style={{ color: "white" }}>Slide 4</h2>
-      </SwiperSlide>
+      {children.map((slide, index) => (
+        <SwiperSlide key={index}>{slide}</SwiperSlide>
+      ))}
     </Swiper>
   );
 };
