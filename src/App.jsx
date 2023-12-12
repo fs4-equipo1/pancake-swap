@@ -1,3 +1,4 @@
+import BaseSwiper from "./componentes/BaseSwiper/BaseSwiper";
 import Boton from "./componentes/Boton/Boton";
 import styles from "./styles/pages/home.module.scss";
 function App() {
@@ -12,6 +13,10 @@ function App() {
         <Boton texto={"Transparent"} isTransparent={true} />
         <Boton texto={"Blue"} isBlue={true} />
         <Boton texto={"White"} isWhite={true} />
+      </div>
+
+      <div>
+        <BaseSwiper />
       </div>
     </div>
   );
