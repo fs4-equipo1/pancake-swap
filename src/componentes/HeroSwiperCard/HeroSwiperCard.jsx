@@ -11,6 +11,8 @@ export const HeroSwiperCard = ({
       <h2 style={{ color: "white" }}>{text}</h2>
       {botonPrimary && <Boton texto={botonPrimary} isBlue />}
       {botonSecondary && <Boton texto={botonSecondary} isWhite />}
+
+      {/**@TODO Creat componente Link*/}
       {link && <Boton texto={link} isTransparent />}
     </div>
   );
