@@ -26,7 +26,23 @@
   justify-content: center;
   display: inline-flex;
   font-family: inherit;
-
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  opacity: 1;
+  outline: 0px;
+  transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+  height: 48px;
+  padding: 0px 24px;
+  background-color: transparent;
+  border-width: 3px;
+  border-style: solid;
+  border-image: none;
+  border-color: #1fc7d4;
+  box-shadow: none;
+  color: #1fc7d4;
   color: var(--colors-primary);
   background-color: transparent;
   border: 3px solid var(--colors-primary);
@@ -35,11 +51,38 @@
 .blue {
   background-color: #1fc7d4;
   color: var(--colors-light-invertedContrast);
-
+  border: 0px;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  opacity: 1;
+  outline: 0px;
+  transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+  height: 48px;
+  padding: 0px 24px;
+  background-color: #1fc7d4;
+  color: var(--colors-light-invertedContrast);
+  margin-right: 8px;
   box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
 }
 
 .white {
   background-color: white;
   color: #1fc7d4;
+  font-size: 16px;
+  border: 0px;
+  font-weight: 600;
+  justify-content: center;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  opacity: 1;
+  outline: 0px;
+  transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+  height: 48px;
+  padding: 0px 24px;
+  background-color: white;
+  color: #1fc7d4;
+  margin-right: 8px;
 }
