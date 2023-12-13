@@ -1,4 +1,12 @@
 import Boton from "./componentes/Boton/Boton";
+import { Iconos } from "./componentes/Iconos/Iconos";
+import { FaTwitter } from "react-icons/fa";
+import { FaTelegram } from "react-icons/fa";
+import { FaReddit } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { FaDiscord } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
 
 function App() {
   return (
@@ -6,7 +14,14 @@ function App() {
       <Boton texto={"Transparent"} isTransparent={true} />
       <Boton texto={"Blue"} isBlue={true} />
       <Boton texto={"White"} isWhite={true} />
-    </div>
+      <Iconos icono={<FaTwitter  />} href="https://twitter.com/pancakeswap" />
+      <Iconos icono={<FaTelegram />} href="https://t.me/pancakeswap" />
+      <Iconos icono={<FaReddit />} href="https://www.reddit.com/r/pancakeswap" />
+      <Iconos icono={<FaInstagram />} href="https://www.instagram.com/pancakeswap_official" />
+      <Iconos icono={<FaGithub />} href="https://github.com/pancakeswap/" />
+      <Iconos icono={<FaDiscord />} href="https://discord.gg/pancakeswap/" />
+      <Iconos icono={<FaYoutube />} href="https://www.youtube.com/@pancakeswap_official"/>
+      </div>
   );
 }
 
