@@ -21,6 +21,12 @@ function App() {
       <Iconos icono={<FaGithub />} href="https://github.com/pancakeswap/" />
       <Iconos icono={<FaDiscord />} href="https://discord.gg/pancakeswap/" />
       <Iconos icono={<FaYoutube />} href="https://www.youtube.com/@pancakeswap_official"/>
+      <Iconos icono={<FaTwitter />} href="https://twitter.com/pancakeswap" estiloAdicional={true} />
+      <Iconos icono={<FaTelegram />} href="https://t.me/pancakeswap" estiloAdicional={true} />
+      <Iconos icono={<FaDiscord />} href="https://discord.gg/pancakeswap/" estiloAdicional={true} />
+      <Iconos icono={<FaInstagram />} href="https://www.instagram.com/pancakeswap_official" estiloAdicional={true} />
+      <Iconos icono={<FaReddit />} href="https://www.reddit.com/r/pancakeswap" estiloAdicional={true} />
+      <Iconos icono={<FaYoutube />} href="https://www.youtube.com/@pancakeswap_official" estiloAdicional={true} />
       </div>
   );
 }
