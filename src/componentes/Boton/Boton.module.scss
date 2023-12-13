@@ -16,8 +16,6 @@
 }
 
 .transparent {
-  letter-spacing: 0.03em;
-  line-height: 1;
   opacity: 1;
   outline: 0px;
   transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
@@ -39,9 +37,6 @@
   background-color: #1fc7d4;
   color: var(--colors-light-invertedContrast);
   border: 0px;
-  font-size: 16px;
-  letter-spacing: 0.03em;
-  line-height: 1;
   opacity: 1;
   outline: 0px;
   transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
@@ -56,10 +51,7 @@
 .white {
   background-color: white;
   color: #1fc7d4;
-  font-size: 16px;
   border: 0px;
-  letter-spacing: 0.03em;
-  line-height: 1;
   opacity: 1;
   outline: 0px;
   transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
