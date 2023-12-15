@@ -1,5 +1,5 @@
 import Boton from "./componentes/Boton/Boton";
-import { Iconos } from "./componentes/Iconos/Iconos";
+import { Icono } from "./componentes/Icono/Icono";
 import { FaTwitter } from "react-icons/fa";
 import { FaTelegram } from "react-icons/fa";
 import { FaReddit } from "react-icons/fa";
@@ -14,19 +14,19 @@ function App() {
       <Boton texto={"Transparent"} isTransparent={true} />
       <Boton texto={"Blue"} isBlue={true} />
       <Boton texto={"White"} isWhite={true} />
-      <Iconos icono={<FaTwitter  />} href="https://twitter.com/pancakeswap" />
-      <Iconos icono={<FaTelegram />} href="https://t.me/pancakeswap" />
-      <Iconos icono={<FaReddit />} href="https://www.reddit.com/r/pancakeswap" />
-      <Iconos icono={<FaInstagram />} href="https://www.instagram.com/pancakeswap_official" />
-      <Iconos icono={<FaGithub />} href="https://github.com/pancakeswap/" />
-      <Iconos icono={<FaDiscord />} href="https://discord.gg/pancakeswap/" />
-      <Iconos icono={<FaYoutube />} href="https://www.youtube.com/@pancakeswap_official"/>
-      <Iconos icono={<FaTwitter />} href="https://twitter.com/pancakeswap" estiloAdicional={true} />
-      <Iconos icono={<FaTelegram />} href="https://t.me/pancakeswap" estiloAdicional={true} />
-      <Iconos icono={<FaDiscord />} href="https://discord.gg/pancakeswap/" estiloAdicional={true} />
-      <Iconos icono={<FaInstagram />} href="https://www.instagram.com/pancakeswap_official" estiloAdicional={true} />
-      <Iconos icono={<FaReddit />} href="https://www.reddit.com/r/pancakeswap" estiloAdicional={true} />
-      <Iconos icono={<FaYoutube />} href="https://www.youtube.com/@pancakeswap_official" estiloAdicional={true} />
+      <Icono icono={<FaTwitter  />} href="https://twitter.com/pancakeswap" />
+      <Icono icono={<FaTelegram />} href="https://t.me/pancakeswap" />
+      <Icono icono={<FaReddit />} href="https://www.reddit.com/r/pancakeswap" />
+      <Icono icono={<FaInstagram />} href="https://www.instagram.com/pancakeswap_official" />
+      <Icono icono={<FaGithub />} href="https://github.com/pancakeswap/" />
+      <Icono icono={<FaDiscord />} href="https://discord.gg/pancakeswap/" />
+      <Icono icono={<FaYoutube />} href="https://www.youtube.com/@pancakeswap_official"/>
+      <Icono icono={<FaTwitter />} href="https://twitter.com/pancakeswap" estiloAdicional={true} />
+      <Icono icono={<FaTelegram />} href="https://t.me/pancakeswap" estiloAdicional={true} />
+      <Icono icono={<FaDiscord />} href="https://discord.gg/pancakeswap/" estiloAdicional={true} />
+      <Icono icono={<FaInstagram />} href="https://www.instagram.com/pancakeswap_official" estiloAdicional={true} />
+      <Icono icono={<FaReddit />} href="https://www.reddit.com/r/pancakeswap" estiloAdicional={true} />
+      <Icono icono={<FaYoutube />} href="https://www.youtube.com/@pancakeswap_official" estiloAdicional={true} />
       </div>
   );
 }

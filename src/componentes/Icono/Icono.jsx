@@ -1,6 +1,6 @@
-import styles from "./Iconos.module.scss";
+import styles from "./Icono.module.scss";
 
-export const Iconos = ({ icono, href, estiloAdicional }) => {
+export const Icono = ({ icono, href, estiloAdicional }) => {
   const clasesIcono = estiloAdicional ? `${styles.icono} ${styles["icono-adicional"]}` : styles.icono;
 
   return (
