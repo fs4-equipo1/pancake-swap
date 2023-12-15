@@ -1,3 +1,7 @@
+.icono {
+  width: 300px;
+}
+
 .icono svg {
   color: #b8add2;
   width: 20px;
@@ -6,6 +10,7 @@
 }
 
 .icono-adicional {
+  display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 32px;
