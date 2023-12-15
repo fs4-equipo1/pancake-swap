@@ -2,13 +2,7 @@ import Boton from "./componentes/Boton/Boton";
 import Tipografia from "./componentes/Tipografia/Tipografia";
 import styles from "./styles/pages/home.module.scss";
 import { Icono } from "./componentes/Icono/Icono";
-import { FaTwitter } from "react-icons/fa";
-import { FaTelegram } from "react-icons/fa";
-import { FaReddit } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
-import { FaDiscord } from "react-icons/fa";
-import { FaYoutube } from "react-icons/fa";
+import { FaTwitter, FaTelegram, FaReddit, FaInstagram, FaGithub, FaDiscord, FaYoutube } from "react-icons/fa";
 function App() {
     return (
       <div>
