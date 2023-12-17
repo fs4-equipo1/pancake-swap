@@ -12,6 +12,7 @@ import {
   FaDiscord,
   FaYoutube,
 } from "react-icons/fa";
+import DropdownNavbar from "./componentes/Dropdown/DropdownNavbar";
 
 function App() {
   return (
