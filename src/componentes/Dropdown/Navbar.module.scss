@@ -11,7 +11,7 @@
 .dropdownPrimary {
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    gap: 35px;
     margin: 15px;
 }
 
@@ -21,7 +21,7 @@
     left: -100px;
     display: flex;
     flex-direction: row;
-    justify-content: flex-sta;
+    justify-content: flex-start;  // Fix the typo here
     align-items: center;
 }
 
@@ -29,3 +29,18 @@
     width: 160px;
     height: 25px;
 }
+
+.bluecircle {
+    justify-content: center;
+    gap: 5px;
+    margin: 10px;
+    height: 28px;
+    width: 45px;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .bluecircleimage {
+    height: 100%; 
+    width: 28px;  
+  }
