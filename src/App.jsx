@@ -18,6 +18,7 @@ import DropdownGame from "./componentes/Dropdown/DropdownGame";
 import DropdownNft from "./componentes/Dropdown/DropdownNft";
 import DropdownTrade from "./componentes/Dropdown/DropdownTrade";
 import Navbar from "./componentes/Dropdown/Navbar";
+import DropdownEnd from "./componentes/Dropdown/DropdownEnd";
 
 function App() {
   return (
@@ -79,10 +80,14 @@ function App() {
       </div>
       <div>
         <DropdownGame />
+        </div>
         <div>
           <DropdownNft />
         </div>
+      <div>
+        <DropdownEnd />
       </div>
+      
       <div className={styles.container}>
         <div>
           <Boton texto={"Transparent"} isTransparent={true} />
