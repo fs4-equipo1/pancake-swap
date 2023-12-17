@@ -8,6 +8,7 @@
 .icono-adicional {
   justify-content: center;
   align-items: center;
+  display: flex;
   border-radius: 32px;
   background-color: var(--colors-backgroundAlt);
   width: 48px;
@@ -19,7 +20,7 @@
 .icono-adicional svg {
   height: 18px;
   color: #1fc7d4;
- 
+  justify-self: center;
 }
 
 .icono-adicional:hover svg {
