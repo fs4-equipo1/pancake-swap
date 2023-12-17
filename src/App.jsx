@@ -13,6 +13,11 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import DropdownCoin from "./componentes/Dropdown/DropdownCoin";
+import DropdownEarn from "./componentes/Dropdown/DropdownEarn";
+import DropdownGame from "./componentes/Dropdown/DropdownGame";
+import DropdownNft from "./componentes/Dropdown/DropdownNft";
+import DropdownTrade from "./componentes/Dropdown/DropdownTrade";
+
 
 function App() {
   return (
@@ -66,7 +71,18 @@ function App() {
           estiloAdicional={true}
         />
       </div>
-
+      <div>
+        <DropdownTrade />
+      </div>
+<div>
+  <DropdownEarn />
+</div>
+<div>
+  <DropdownGame />
+  <div>
+    <DropdownNft />
+  </div>
+</div>
       <div className={styles.container}>
         <div>
           <Boton texto={"Transparent"} isTransparent={true} />
