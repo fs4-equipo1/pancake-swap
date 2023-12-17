@@ -12,7 +12,7 @@ import {
   FaDiscord,
   FaYoutube,
 } from "react-icons/fa";
-import DropdownNavbar from "./componentes/Dropdown/DropdownNavbar";
+import DropdownCoin from "./componentes/Dropdown/DropdownCoin";
 
 function App() {
   return (
@@ -73,7 +73,9 @@ function App() {
           <Boton texto={"Blue"} isBlue={true} />
           <Boton texto={"White"} isWhite={true} />
         </div>
-
+        <div>
+        <DropdownCoin />
+      </div>
         <div>
           <Tipografia
             color={"--colors-warning"}
@@ -112,7 +114,7 @@ function App() {
               />
               <Tipografia color={"--colors-white"} texto={"DEX"} isTitleLarge />
             </div>
-      <div>
+            <div>
         <DropdownButton />
       </div>
           </div>
