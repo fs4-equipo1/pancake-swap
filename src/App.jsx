@@ -17,12 +17,12 @@ import DropdownEarn from "./componentes/Dropdown/DropdownEarn";
 import DropdownGame from "./componentes/Dropdown/DropdownGame";
 import DropdownNft from "./componentes/Dropdown/DropdownNft";
 import DropdownTrade from "./componentes/Dropdown/DropdownTrade";
-
+import Navbar from "./componentes/Dropdown/Navbar";
 
 function App() {
   return (
     <div>
-      
+      <Navbar />
       <div>
         <Icono icono={<FaTwitter />} href="https://twitter.com/pancakeswap" />
         <Icono icono={<FaTelegram />} href="https://t.me/pancakeswap" />
@@ -74,15 +74,15 @@ function App() {
       <div>
         <DropdownTrade />
       </div>
-<div>
-  <DropdownEarn />
-</div>
-<div>
-  <DropdownGame />
-  <div>
-    <DropdownNft />
-  </div>
-</div>
+      <div>
+        <DropdownEarn />
+      </div>
+      <div>
+        <DropdownGame />
+        <div>
+          <DropdownNft />
+        </div>
+      </div>
       <div className={styles.container}>
         <div>
           <Boton texto={"Transparent"} isTransparent={true} />
@@ -90,8 +90,8 @@ function App() {
           <Boton texto={"White"} isWhite={true} />
         </div>
         <div>
-        <DropdownCoin />
-      </div>
+          <DropdownCoin />
+        </div>
         <div>
           <Tipografia
             color={"--colors-warning"}
@@ -131,8 +131,8 @@ function App() {
               <Tipografia color={"--colors-white"} texto={"DEX"} isTitleLarge />
             </div>
             <div>
-        <DropdownButton />
-      </div>
+              <DropdownButton />
+            </div>
           </div>
         </div>
       </div>
