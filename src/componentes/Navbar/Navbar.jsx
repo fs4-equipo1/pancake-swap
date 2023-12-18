@@ -27,6 +27,18 @@ function Navbar() {
             ]}
             punto={"success"}
           />
+           <NavbarDropdown
+            title={"Earn"}
+            items={[
+              "Farms",
+              "Cake staking",
+              "Pools",
+              "Position Manager",
+              "Liquid Staking",
+              "Simple Staking",
+            ]}
+            punto={"gold"}
+          />
         </div>
         <div className={styles.dropdownSecondary}>
           <div className={styles.bluecircle}>
