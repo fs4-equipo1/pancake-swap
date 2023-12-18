@@ -8,21 +8,32 @@ import styles from "./Navbar.module.scss";
 import { FaArrowRightFromBracket } from "react-icons/fa6";
 
 function Navbar() {
-
   /**
    * EJEMPLO PARA RAMIRO
    */
 
   const items = [
     {
-      texto: "Farms",
-      icono: null,
+      texto: "Perpetual",
+      icono: <FaArrowRightFromBracket />,
     },
     {
-      texto: "Cake staking",
-      icono: <FaArrowRightFromBracket/>,
-    }
-  ]
+      texto: "Bridge",
+      icono: <FaArrowRightFromBracket />,
+    },
+    {
+      texto: "Gaming Marketplace",
+      icono: <FaArrowRightFromBracket />,
+    },
+    {
+      texto: "Blog",
+      icono: <FaArrowRightFromBracket />,
+    },
+    {
+      texto: "Docs",
+      icono: <FaArrowRightFromBracket />,
+    },
+  ];
   return (
     <div>
       <nav className={styles.navbar}>
@@ -31,6 +42,18 @@ function Navbar() {
             className={styles.navbarImg}
             src="https://cdn.discordapp.com/attachments/1146380288776220734/1186038041333207050/vecake-title.de07d9b9.png?ex=6591cb00&is=657f5600&hm=28843fe8c1fb35f0112536f74a1ae45023861dff72317cf761797d8e043cb597&"
           ></img>
+          <NavbarDropdown
+            title={"Trade"}
+            items={[
+              "Swap",
+              "Liquidity",
+              "Perpetual",
+              "Bridge",
+              "Limit (V2)",
+              "Buy Crypto",
+              "Trading Reward",
+            ]}
+          />
           <NavbarDropdown
             title={"Earn"}
             items={[
@@ -43,10 +66,39 @@ function Navbar() {
             ]}
             punto={"success"}
           />
-          {/** 
+          <NavbarDropdown
+            title={"Game"}
+            items={[
+              "Gaming Marketplace",
+              "Prediction BETA",
+              "Lottery",
+              "Pottery BETA",
+            ]}
+          />
+          <NavbarDropdown
+            title={"NFT"}
+            items={["Overview", "Collections", "Activity"]}
+          />
+          <NavbarDropdown
+            title={"..."}
+            items={[
+              "info",
+              "IFO",
+              "Affiliate Program",
+              "Voting",
+              <hr />,
+              "Leanderboard",
+              <hr />,
+              "Blog",
+              "Docs",
+            ]}
+            punto={"success"}
+          />
+
+          {/**
            * CONTINUACION DEL EJEMPLO
-          */}
-           {/* <NavbarDropdown
+           */}
+          {/* <NavbarDropdown
             title={"Earn"}
             items={items}
             punto={"gold"}
