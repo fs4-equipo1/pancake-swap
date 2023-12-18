@@ -1,7 +1,7 @@
 import Boton from "./componentes/Boton/Boton";
 import Tipografia from "./componentes/Tipografia/Tipografia";
 import styles from "./styles/pages/home.module.scss";
-import DropdownButton from "./componentes/Dropdown/DropdownButton";
+import LanguageDropdown from "./componentes/LanguageDropdown/LanguageDropdown";
 import { Icono } from "./componentes/Icono/Icono";
 import {
   FaTwitter,
@@ -111,7 +111,7 @@ function App() {
               <Tipografia color={"--colors-white"} texto={"DEX"} isTitleLarge />
             </div>
             <div>
-              <DropdownButton />
+              <LanguageDropdown />
             </div>
           </div>
         </div>

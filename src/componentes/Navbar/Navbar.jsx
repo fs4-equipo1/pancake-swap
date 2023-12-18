@@ -1,7 +1,7 @@
 import Boton from "../Boton/Boton";
-import DropdownButton from "../Dropdown/DropdownButton";
+import LanguageDropdown from "../LanguageDropdown/LanguageDropdown";
 import NetworkDropdown from "../NetworkDropdown/NetworkDropdown";
-import NavbarDropdown from "../Dropdown/NavbarDropdown";
+import NavbarDropdown from "../NavbarDropdown/NavbarDropdown";
 import { Icono } from "../Icono/Icono";
 import { IoMdSettings } from "react-icons/io";
 import styles from "./Navbar.module.scss";
@@ -37,7 +37,7 @@ function Navbar() {
             />
             <p>$2.273</p>
           </div>
-          <DropdownButton />
+          <LanguageDropdown />
           <Icono
             icono={<IoMdSettings />}
             href="https://www.instagram.com/pancakeswap_official"

@@ -1,7 +1,7 @@
-import { useState } from 'react';
-import styles from './DropdownNavbar.module.scss';
+import { useState } from "react";
+import styles from "./NavbarDropdown.module.scss";
 
-const DropdownGame = () => {
+const NavbarDropdown = ({ title, items, punto }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleMouseEnter = () => {
@@ -18,19 +18,17 @@ const DropdownGame = () => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <button className={styles.dropdownBtn}>
-        Game
-      </button>
+      <button className={styles.dropdownBtn}>{title}</button>
+      {punto && (
+        <div className={styles.punto} style={{ backgroundColor: `var(--colors-${punto})` }} />
+      )}
       {isOpen && (
         <div className={styles.dropdownContent}>
-          <a href="#">Gaming Marketplace</a>
-          <a href="#">Prediction (BETA)</a>
-          <a href="#">Lottery</a>
-          <a href="#">Pottery (BETA)</a>
+          {items && items.map((item) => <a href="">{item}</a>)}
         </div>
       )}
     </div>
   );
 };
 
-export default DropdownGame;
+export default NavbarDropdown;
