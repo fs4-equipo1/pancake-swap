@@ -1,11 +1,25 @@
+import imagenes from "../assets/imagenes";
+
 export const heroSwiperCardData = [
   {
-    texto: "Trade now",
-    botonPrimary: "Buy now",
-    botonSecondary: "Trade now",
+    background: imagenes.background1,
+    topLogo: imagenes.logoPancake,
+    titleText: "Your CAKE, Your Voice",
+    secondText: "Introducing Gauges Voting and veCAKE",
+    botonPrimary: "Get Started",
+    botonSecondary: "Learn More",
+    link: null,
+    botonLink: null,
+    bunnyPng: imagenes.desktopBunny,
   },
   {
-    texto: "Trade now",
-    link: "Go to trade Page",
+    background: imagenes.background2,
+    topLogo: imagenes.logoPancakeWhite,
+    titleText: "PancakeSwap Gaming Marketplace",
+    secondText: "Explore Your GameFi Spirit", 
+    botonPrimary: null,
+    botonSecondary: null,
+    link: null,
+    bunnyPng: imagenes.gameBunny,
   },
 ];
