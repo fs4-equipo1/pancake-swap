@@ -12,13 +12,7 @@ import {
   FaDiscord,
   FaYoutube,
 } from "react-icons/fa";
-import DropdownCoin from "./componentes/Dropdown/DropdownCoin";
-import DropdownEarn from "./componentes/Dropdown/DropdownEarn";
-import DropdownGame from "./componentes/Dropdown/DropdownGame";
-import DropdownNft from "./componentes/Dropdown/DropdownNft";
-import DropdownTrade from "./componentes/Dropdown/DropdownTrade";
-import Navbar from "./componentes/Dropdown/Navbar";
-import DropdownEnd from "./componentes/Dropdown/DropdownEnd";
+import Navbar from "./componentes/Navbar/Navbar";
 
 function App() {
   return (
@@ -72,30 +66,11 @@ function App() {
           estiloAdicional={true}
         />
       </div>
-      <div>
-        <DropdownTrade />
-      </div>
-      <div>
-        <DropdownEarn />
-      </div>
-      <div>
-        <DropdownGame />
-        </div>
-        <div>
-          <DropdownNft />
-        </div>
-      <div>
-        <DropdownEnd />
-      </div>
-      
       <div className={styles.container}>
         <div>
           <Boton texto={"Transparent"} isTransparent={true} />
           <Boton texto={"Blue"} isBlue={true} />
           <Boton texto={"White"} isWhite={true} />
-        </div>
-        <div>
-          <DropdownCoin />
         </div>
         <div>
           <Tipografia

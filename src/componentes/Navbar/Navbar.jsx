@@ -1,7 +1,7 @@
 import Boton from "../Boton/Boton";
-import DropdownButton from "./DropdownButton";
-import DropdownCoin from "./DropdownCoin";
-import NavbarDropdown from "./NavbarDropdown";
+import DropdownButton from "../Dropdown/DropdownButton";
+import NetworkDropdown from "../NetworkDropdown/NetworkDropdown";
+import NavbarDropdown from "../Dropdown/NavbarDropdown";
 import { Icono } from "../Icono/Icono";
 import { IoMdSettings } from "react-icons/io";
 import styles from "./Navbar.module.scss";
@@ -25,6 +25,7 @@ function Navbar() {
               "Liquid Staking",
               "Simple Staking",
             ]}
+            punto={"success"}
           />
         </div>
         <div className={styles.dropdownSecondary}>
@@ -41,7 +42,7 @@ function Navbar() {
             icono={<IoMdSettings />}
             href="https://www.instagram.com/pancakeswap_official"
           />
-          <DropdownCoin />
+          <NetworkDropdown />
           <Boton texto={"Connect Wallet"} isBlue={true} />
         </div>
       </nav>

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./DropdownNavbar.module.scss";
 
-const DropdownEarn = ({ title, items }) => {
+const NavbarDropdown = ({ title, items, punto }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleMouseEnter = () => {
@@ -19,6 +19,9 @@ const DropdownEarn = ({ title, items }) => {
       onMouseLeave={handleMouseLeave}
     >
       <button className={styles.dropdownBtn}>{title}</button>
+      {punto && (
+        <div className={styles.punto} style={{ backgroundColor: `var(--colors-${punto})` }} />
+      )}
       {isOpen && (
         <div className={styles.dropdownContent}>
           {items && items.map((item) => <a href="">{item}</a>)}
@@ -28,4 +31,4 @@ const DropdownEarn = ({ title, items }) => {
   );
 };
 
-export default DropdownEarn;
+export default NavbarDropdown;
