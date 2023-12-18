@@ -5,8 +5,24 @@ import NavbarDropdown from "../NavbarDropdown/NavbarDropdown";
 import { Icono } from "../Icono/Icono";
 import { IoMdSettings } from "react-icons/io";
 import styles from "./Navbar.module.scss";
+import { FaArrowRightFromBracket } from "react-icons/fa6";
 
 function Navbar() {
+
+  /**
+   * EJEMPLO PARA RAMIRO
+   */
+
+  const items = [
+    {
+      texto: "Farms",
+      icono: null,
+    },
+    {
+      texto: "Cake staking",
+      icono: <FaArrowRightFromBracket/>,
+    }
+  ]
   return (
     <div>
       <nav className={styles.navbar}>
@@ -27,18 +43,14 @@ function Navbar() {
             ]}
             punto={"success"}
           />
-           <NavbarDropdown
+          {/** 
+           * CONTINUACION DEL EJEMPLO
+          */}
+           {/* <NavbarDropdown
             title={"Earn"}
-            items={[
-              "Farms",
-              "Cake staking",
-              "Pools",
-              "Position Manager",
-              "Liquid Staking",
-              "Simple Staking",
-            ]}
+            items={items}
             punto={"gold"}
-          />
+          /> */}
         </div>
         <div className={styles.dropdownSecondary}>
           <div className={styles.bluecircle}>
