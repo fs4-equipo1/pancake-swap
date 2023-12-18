@@ -1,7 +1,7 @@
-import { useState } from 'react';
-import styles from './dropdownNavbar.module.scss';
+import { useState } from "react";
+import styles from "./DropdownNavbar.module.scss";
 
-const DropdownEarn = () => {
+const DropdownEarn = ({ title, items }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleMouseEnter = () => {
@@ -18,17 +18,10 @@ const DropdownEarn = () => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <button className={styles.dropdownBtn}>
-        Earn
-      </button>
+      <button className={styles.dropdownBtn}>{title}</button>
       {isOpen && (
         <div className={styles.dropdownContent}>
-          <a href="#">Farms</a>
-          <a href="#">CAKE Staking</a>
-          <a href="#">Pools</a>
-          <a href="#">Position Manager</a>
-          <a href="#">Liquid Staking</a>
-          <a href="#">Simple Staking</a>
+          {items && items.map((item) => <a href="">{item}</a>)}
         </div>
       )}
     </div>

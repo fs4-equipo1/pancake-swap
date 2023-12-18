@@ -1,11 +1,7 @@
 import Boton from "../Boton/Boton";
-import DropdownEnd from "./DropdownEnd";
 import DropdownButton from "./DropdownButton";
 import DropdownCoin from "./DropdownCoin";
-import DropdownEarn from "./DropdownEarn";
-import DropdownGame from "./DropdownGame";
-import DropdownNft from "./DropdownNft";
-import DropdownTrade from "./DropdownTrade";
+import NavbarDropdown from "./NavbarDropdown";
 import { Icono } from "../Icono/Icono";
 import { IoMdSettings } from "react-icons/io";
 import styles from "./Navbar.module.scss";
@@ -19,11 +15,17 @@ function Navbar() {
             className={styles.navbarImg}
             src="https://cdn.discordapp.com/attachments/1146380288776220734/1186038041333207050/vecake-title.de07d9b9.png?ex=6591cb00&is=657f5600&hm=28843fe8c1fb35f0112536f74a1ae45023861dff72317cf761797d8e043cb597&"
           ></img>
-          <DropdownTrade />
-          <DropdownEarn />
-          <DropdownGame />
-          <DropdownNft />
-          <DropdownEnd />
+          <NavbarDropdown
+            title={"Earn"}
+            items={[
+              "Farms",
+              "Cake staking",
+              "Pools",
+              "Position Manager",
+              "Liquid Staking",
+              "Simple Staking",
+            ]}
+          />
         </div>
         <div className={styles.dropdownSecondary}>
           <div className={styles.bluecircle}>

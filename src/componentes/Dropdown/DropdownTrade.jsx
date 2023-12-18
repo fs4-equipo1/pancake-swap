@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import styles from './dropdownNavbar.module.scss';
+import styles from './DropdownNavbar.module.scss';
 
 const DropdownTrade = () => {
   const [isOpen, setIsOpen] = useState(false);
