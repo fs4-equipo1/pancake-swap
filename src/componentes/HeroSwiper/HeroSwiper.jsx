@@ -21,7 +21,6 @@ export default () => {
       {heroSwiperCardData.map((card, index) => (
         <SwiperSlide key={index}>
           <HeroSwiperCard
-            cardOrder={card.cardOrder}
             background={card.background}
             topLogo={card.topLogo}
             titleText={card.titleText}
