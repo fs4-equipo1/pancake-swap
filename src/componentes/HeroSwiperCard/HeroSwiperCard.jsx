@@ -15,7 +15,7 @@ export const HeroSwiperCard = ({
       style={{ backgroundImage: `url(${background})` }}
     >
       <div className={styles.logo}>
-        <img src={topLogo} alt="logo-pancake" />
+        <img src={topLogo} alt="Logo Pancake" />
       </div>
       <div className={styles.title}>{titleText}</div>
       <div className={styles.text}>{secondText}</div>
@@ -24,7 +24,7 @@ export const HeroSwiperCard = ({
         {botonSecondary && <Boton texto={botonSecondary} isWhite />}
       </div>
       <div className={styles.bunny}>
-        <img src={bunnyPng} alt="bunny" />
+        <img src={bunnyPng} alt="Bunny" />
       </div>
     </div>
   );
