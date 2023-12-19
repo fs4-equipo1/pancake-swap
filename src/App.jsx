@@ -117,7 +117,7 @@ function App() {
             <div>
             <Footer 
             title={"ECOSYSTEM"} 
-            item={[
+            items={[
               "Trade",
               "Earn",
               "Game",
@@ -126,7 +126,8 @@ function App() {
               "Litepaper",
               "CAKE Emission Projection",
               "Merchandise",
-            ]}/>
+            ]}
+          />
             </div>
           </div>
         </div>
