@@ -15,7 +15,7 @@ export function Card({imageSrc, titleText, contentText, commandText}){
 }
 import styles from "./EcosystemCard.scss"
 
-export function EcosystemCardsContainer({path, titulo, cardcomponents}) {
+export function EcosystemCardsContainer({path, titulo, cardData}) {
     
     return (
     <div className={styles.discoverEcosystem}>
@@ -24,8 +24,9 @@ export function EcosystemCardsContainer({path, titulo, cardcomponents}) {
                 <div className={styles.ecosystemTrade}>
                     <div className={styles.ecosystemTitle}>{titulo}</div>
                     <div className={styles.card-container}>
-                        {/*{cardcomponents.map((component) => {
-                            <div> {component} </div>})}*/}
+                        {cardData.forEach(data => {
+                            <Card imageSrc={data.imgsrc} titleText={data.title} contentText={data.content} commandText={data.button} />
+                        })}
                     </div>
                 </div>
         </div>
