@@ -1,3 +1,8 @@
+import styles from "./EcosystemCard.module.scss";
+import classNames from "classnames/bind";
+
+const cx = classNames.bind(styles);
+
 export function Card({imageSrc, titleText, contentText, commandText}){
     return (
         <div>
