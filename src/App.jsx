@@ -114,23 +114,65 @@ function App() {
             <div>
               <LanguageDropdown />
             </div>
-            <div>
-            <Footer 
-            title={"ECOSYSTEM"} 
-            items={[
-              "Trade",
-              "Earn",
-              "Game",
-              "NFT",
-              "Tokenomics",
-              "Litepaper",
-              "CAKE Emission Projection",
-              "Merchandise",
-            ]}
-          />
-            </div>
           </div>
         </div>
+      </div>
+      <div style={{background: "#27262c", display: "flex", justifyContent:"center" }}>
+        <div style={{display: "flex", flexDirection:"column",}}>
+      <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", marginBottom: "32px", padding: "0px", }}>
+        <Footer
+          title={"ECOSYSTEM"}
+          items={[
+            "Trade",
+            "Earn",
+            "Game",
+            "NFT",
+            "Tokenomics",
+            "Litepaper",
+            "CAKE Emission Projection",
+            "Merchandise",
+          ]}
+        />
+        <Footer
+          title={"BUSINESS"}
+          items={["Farms And Syrup Pools", "IFO", "NFT Marketplace"]}
+        />
+        <Footer
+          title={"DEVELOPERS"}
+          items={["Contributing", "Github", "Bug Bounty"]}
+        />
+        <Footer
+          title={"SUPPORT"}
+          items={["Contact", "Troubleshooting", "Documentation"]}
+        />
+        <Footer
+          title={"ABOUT"}
+          items={["Terms Of Service", "Blog", "Brand Assets", "Careers"]}
+        />
+         <img
+        src={"https://cdn.discordapp.com/attachments/1146380288776220734/1186038041333207050/vecake-title.de07d9b9.png?ex=6591cb00&is=657f5600&hm=28843fe8c1fb35f0112536f74a1ae45023861dff72317cf761797d8e043cb597&"}
+        alt="Description of the image"
+        style={{ width: "160px", height: "25px"}}></img>
+      </div>
+      <div style={{display: "flex",flexDirection: "row", gap: "30px", marginBottom:"32px"}}>
+      <Icono icono={<FaTwitter />} href="https://twitter.com/pancakeswap" />
+        <Icono icono={<FaTelegram />} href="https://t.me/pancakeswap" />
+        <Icono
+          icono={<FaReddit />}
+          href="https://www.reddit.com/r/pancakeswap"
+        />
+        <Icono
+          icono={<FaInstagram />}
+          href="https://www.instagram.com/pancakeswap_official"
+        />
+        <Icono icono={<FaGithub />} href="https://github.com/pancakeswap/" />
+        <Icono icono={<FaDiscord />} href="https://discord.gg/pancakeswap/" />
+        <Icono
+          icono={<FaYoutube />}
+          href="https://www.youtube.com/@pancakeswap_official"
+        />
+      </div>
+      </div>
       </div>
     </div>
   );

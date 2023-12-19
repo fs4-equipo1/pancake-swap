@@ -1,16 +1,27 @@
-.footerTitle{
+/* Footer.module.scss */
+.footerTitle {
     color: var(--colors-secondary);
     font-weight: 600;
-}
-
-.footerItem {
-    text-decoration: underline;
-    color: var(--colors-white);
+    margin-bottom: 8px;
+  }
   
-
-}
-
-.footerList{
+  .footerItem {
+    text-decoration: none;
+    color: var(--colors-white);
+    margin-bottom: 8px;
+    &:hover {
+        text-decoration: underline;
+    }
+  }
+  
+  .footerList {
     display: flex;
     flex-direction: column;
-}
+
+  }
+  
+  .footer {
+    display: flex;
+    flex-direction: row;
+  }
+  

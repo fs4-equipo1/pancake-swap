@@ -1,8 +1,9 @@
+import React from 'react';
 import styles from "./Footer.module.scss";
 
 const Footer = ({ title, items }) => {
   return (
-    <footer>
+    <div className={styles.footerDiv}>
       <div className={styles.footerText}>
         <ul className={styles.footerList}>
           <li className={styles.footerTitle}>{title}</li>
@@ -13,7 +14,7 @@ const Footer = ({ title, items }) => {
           ))}
         </ul>
       </div>
-    </footer>
+    </div>
   );
 };
 
