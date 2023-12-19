@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import styles from "./LanguageDropdown.module.scss";
 import { TbWorld } from "react-icons/tb";
 
-const LanguageDropdown = () => {
+const LanguageDropdown = ({reverse}) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownTimerRef = useRef(null);
 
@@ -35,8 +35,9 @@ const LanguageDropdown = () => {
     };
   }, []);
 
-  return (
-    <div className={styles["dropdown-container"]}>
+return (
+    <div className={`${styles["dropdown-container"]} ${reverse ? styles["reverse"] : ""}`}>
+      
       <button
         className={styles["dropdown-button"]}
         onMouseEnter={showDropdown}
@@ -44,21 +45,16 @@ const LanguageDropdown = () => {
         style={{ fontSize: "24px" }}
       >
         <TbWorld />
+        {reverse && <p style={{ marginLeft:"2px",fontSize: "16px"}}>EN</p>}
       </button>
       {isDropdownOpen && (
         <div
-          className={styles["dropdown-content"]}
+          className={`${styles["dropdown-content"]} ${
+            reverse ? styles["reverse-content"] : ""
+          }`}
           onMouseEnter={handleContentMouseEnter}
           onMouseLeave={handleContentMouseLeave}
         >
-          <p className={styles.item}>English</p>
-          <p className={styles.item}>Deutsch</p>
-          <p className={styles.item}>Spanish</p>
-          <p className={styles.item}>Français</p>
-          <p className={styles.item}>English</p>
-          <p className={styles.item}>Deutsch</p>
-          <p className={styles.item}>Spanish</p>
-          <p className={styles.item}>Français</p>
           <p className={styles.item}>English</p>
           <p className={styles.item}>Deutsch</p>
           <p className={styles.item}>Spanish</p>
