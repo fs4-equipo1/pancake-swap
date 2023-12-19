@@ -1,4 +1,4 @@
-import { EcosystemCard } from "./EcosystemCard/EcosystemCard";
+import { EcosystemCard } from "./EcosystemCard/CardComponent";
 import BaseSwiper from "./componentes/BaseSwiper/BaseSwiper";
 import Boton from "./componentes/Boton/Boton";
 import { HeroSwiperCard } from "./componentes/HeroSwiperCard/HeroSwiperCard";
@@ -30,7 +30,6 @@ function App() {
           />
         ))}
       </BaseSwiper>
-      <EcosystemCard/>
     </div>
   );
 }

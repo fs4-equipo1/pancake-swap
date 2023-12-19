@@ -1,4 +1,3 @@
-import { func } from "prop-types";
 import styles from "./EcosystemCard.module.scss";
 import classNames from "classnames/bind";
 
