@@ -1,0 +1,119 @@
+.card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  gap: var(--space-20px);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 250px;
+  width: 150px;
+  gap: var(--space-8px);
+
+  overflow: hidden;
+}
+
+.cardlink {
+  text-decoration: none;
+  color: var(--colors-textSubtle) ;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-text {
+  flex-wrap: wrap;
+  height: auto;
+
+  gap: var(--space-8px);
+}
+
+.card-text p {
+  margin: 0;
+  font-size: 16px;
+  color: var(--colors-text99);
+}
+
+.card-text a {
+  display: block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #1fc7d4;
+  font-weight: bold;
+}
+
+.swap-on-hover {
+  width: 108px;
+  height: 108px;
+}
+
+.swap-on-hover img {
+  top: 0;
+  left: 0;
+  position: absolute;
+  overflow: hidden;
+
+  object-fit: cover;
+}
+
+.swap-on-hover .swap-on-hover__front-image {
+  z-index: 9999;
+  transition: opacity 0.5s linear;
+  cursor: pointer;
+}
+
+.card:hover {
+  .swap-on-hover > .swap-on-hover__front-image {
+    opacity: 0;
+  }
+  .cardlink {
+    transition: 0.2s linear;
+    color: var(--colors-primaryBright);
+  }
+}
+
+.ecosystemTitle {
+  color: var(--colors-textSubtle);
+  font-size: 40px;
+  margin: 20px;
+}
+
+.ecosystemContainer {
+  width: 60vw;
+  justify-content: left;
+  display: flex;
+  position: relative;
+  border-radius: 25px;
+  background-color: aliceblue;
+  
+}
+
+.ecosystemImg {
+  width: 340px;
+  position: relative;
+  height: 340px;
+  left: -52px;
+  margin-top: 25px;
+}
+
+.ecosystemImgLeft {
+  width: 296px;
+  height: 360px;
+}
+
+.discoverEcosystem {
+  display: flex;
+  position: relative;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
