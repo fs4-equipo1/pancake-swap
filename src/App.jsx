@@ -1,6 +1,7 @@
 import Boton from "./componentes/Boton/Boton";
 import Tipografia from "./componentes/Tipografia/Tipografia";
 import styles from "./styles/pages/home.module.scss";
+
 function App() {
   return (
     <div className={styles.container}>
@@ -11,7 +12,7 @@ function App() {
       </div>
       <div>
         <Tipografia
-          color={"--colors-warning"}
+          color={"--colors-text"}
           texto={"Title Large"}
           isTitleLarge
         />
@@ -22,16 +23,16 @@ function App() {
           isSubtitleLarge
         />
         <Tipografia
-          color={"--colors-textDisabled"}
+          color={"--colors-textSubtle"}
           texto={"Subtitle"}
           isSubtitle
         />
         <Tipografia
-          color={"--colors-failure"}
+          color={"--colors-text"}
           texto={"Body Large"}
           isBodyLarge
         />
-        <Tipografia color={"--colors-primary"} texto={"Body"} isBody />
+        <Tipografia color={"--colors-text99"} texto={"Body"} isBody />
 
         <div className={styles.textContainer}>
           <Tipografia
