@@ -1,4 +1,1 @@
-export function EcosystemData({ident}){
-    
-    return 
-}
+export const trade = {}

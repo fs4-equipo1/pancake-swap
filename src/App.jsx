@@ -1,3 +1,4 @@
+import { EcosystemCard } from "./EcosystemCard/EcosystemCard";
 import BaseSwiper from "./componentes/BaseSwiper/BaseSwiper";
 import Boton from "./componentes/Boton/Boton";
 import { HeroSwiperCard } from "./componentes/HeroSwiperCard/HeroSwiperCard";
@@ -29,11 +30,7 @@ function App() {
           />
         ))}
       </BaseSwiper>
-      {/* <BaseSwiper>
-        {data.map((card, index) => (
-          <NewsSwiperCard text={card} key={index} />
-        ))}
-      </BaseSwiper> */}
+      <EcosystemCard/>
     </div>
   );
 }
