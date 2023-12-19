@@ -1,4 +1,5 @@
 import Boton from "./componentes/Boton/Boton";
+import background from "./assets/background.png"
 import Tipografia from "./componentes/Tipografia/Tipografia";
 import styles from "./styles/pages/home.module.scss";
 import LanguageDropdown from "./componentes/LanguageDropdown/LanguageDropdown";
@@ -14,6 +15,7 @@ import {
 } from "react-icons/fa";
 import Navbar from "./componentes/Navbar/Navbar";
 import Footer from "./componentes/Footer/Footer";
+import DexNow from "./componentes/DexNow/DexNow";
 
 function App() {
   return (
@@ -117,7 +119,29 @@ function App() {
           </div>
         </div>
       </div>
-      <div style={{background: "#27262c", display: "flex", justifyContent:"center" }}>
+      <div>
+      <section style={{
+        backgroundImage: `url(${background})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        minHeight: '550px',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        color: '#ffffff'
+      }}>
+        {/* <h1>Join Everyone's Favorite DEX Now!</h1> */}
+        <div>
+      <DexNow titleLarge={"Join Everyone's Favorite DEX Now!"}/> 
+      </div>
+        <div>
+              <Boton texto={"Connect Wallet"} isBlue={true} />
+            </div>
+      </section>
+      
+      </div>
+      <div style={{background: "#27262c", display: "flex", justifyContent:"center", padding: "56px 40px 32px"}}>
         <div style={{display: "flex", flexDirection:"column",width: "80%"}}>
       <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", marginBottom: "32px", padding: "0px", }}>
         <Footer
