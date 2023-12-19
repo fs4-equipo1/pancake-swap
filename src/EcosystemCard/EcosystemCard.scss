@@ -1,0 +1,117 @@
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.card {
+  margin: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 250px;
+  width: 150px;
+}
+
+.cardlink {
+  text-decoration: none;
+  color: #7a6eaa;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+
+}
+
+.card-text {
+  padding: 10px;
+  flex-wrap: wrap;
+  height: auto;
+}
+
+.card-text p {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.card-text a {
+  display: block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #1fc7d4;
+  font-weight: bold;
+}
+
+.swap-on-hover {
+  position: relative;
+  width: 108px;
+  height: 108px;
+  margin: 0;
+}
+
+.swap-on-hover img {
+  top: 0;
+  left: 0;
+  position: absolute;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.swap-on-hover .swap-on-hover__front-image {
+  z-index: 9999;
+  transition: opacity 0.5s linear;
+  cursor: pointer;
+}
+
+.card:hover {
+  .swap-on-hover > .swap-on-hover__front-image {
+    opacity: 0;
+  }
+  .cardlink {
+    transition: 0.2s linear;
+    color: #1fc7d4;
+  }
+}
+
+.ecosystemTitle {
+  color: #9a6aff;
+  font-size: 40px;
+  margin: 20px;
+}
+
+.ecosystemContainer {
+  width: 60vw;
+  justify-content: left;
+  display: flex;
+  position: relative;
+  border-radius: 25px;
+  background-color: aliceblue;
+  
+}
+
+.ecosystemImg {
+  width: 340px;
+  position: relative;
+  height: 340px;
+  left: -52px;
+  margin-top: 25px;
+}
+
+.ecosystemImgLeft {
+  width: 296px;
+  height: 360px;
+}
+
+.discoverEcosystem {
+  display: flex;
+  position: relative;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
