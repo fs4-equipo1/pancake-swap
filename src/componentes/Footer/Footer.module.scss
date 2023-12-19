@@ -1,0 +1,16 @@
+.footerTitle{
+    color: var(--colors-secondary);
+    font-weight: 600;
+}
+
+.footerItem {
+    text-decoration: underline;
+    color: var(--colors-white);
+  
+
+}
+
+.footerText{
+    display: flex;
+    flex-direction: column;
+}

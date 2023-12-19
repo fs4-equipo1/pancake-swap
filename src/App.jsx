@@ -13,6 +13,7 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import Navbar from "./componentes/Navbar/Navbar";
+import Footer from "./componentes/Footer/Footer";
 
 function App() {
   return (
@@ -112,6 +113,20 @@ function App() {
             </div>
             <div>
               <LanguageDropdown />
+            </div>
+            <div>
+            <Footer 
+            title={"ECOSYSTEM"} 
+            item={[
+              "Trade",
+              "Earn",
+              "Game",
+              "NFT",
+              "Tokenomics",
+              "Litepaper",
+              "CAKE Emission Projection",
+              "Merchandise",
+            ]}/>
             </div>
           </div>
         </div>
