@@ -1,43 +1,46 @@
 .card-container {
   display: flex;
-  justify-content: center;
   flex-direction: row;
+  justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  margin: 20px;
+
+  gap: var(--space-20px);
 }
 
 .card {
-  margin: 10px;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
   height: 250px;
   width: 150px;
+  gap: var(--space-8px);
+
+  overflow: hidden;
 }
 
 .cardlink {
   text-decoration: none;
-  color: #7a6eaa;
+  color: var(--colors-textSubtle) ;
 }
 
 .card img {
   width: 100%;
   height: auto;
-
 }
 
 .card-text {
-  padding: 10px;
   flex-wrap: wrap;
   height: auto;
+
+  gap: var(--space-8px);
 }
 
 .card-text p {
   margin: 0;
   font-size: 16px;
-  color: #333;
+  color: var(--colors-text99);
 }
 
 .card-text a {
@@ -49,10 +52,8 @@
 }
 
 .swap-on-hover {
-  position: relative;
   width: 108px;
   height: 108px;
-  margin: 0;
 }
 
 .swap-on-hover img {
@@ -60,6 +61,7 @@
   left: 0;
   position: absolute;
   overflow: hidden;
+
   object-fit: cover;
 }
 
@@ -75,12 +77,12 @@
   }
   .cardlink {
     transition: 0.2s linear;
-    color: #1fc7d4;
+    color: var(--colors-primaryBright);
   }
 }
 
 .ecosystemTitle {
-  color: #9a6aff;
+  color: var(--colors-textSubtle);
   font-size: 40px;
   margin: 20px;
 }
