@@ -15,11 +15,19 @@
 }
 
 .swiper-pagination-bullet {
-  width: 24px;
+  width: 28px;
   height: 8px;
   border-radius: 0px;
 }
 
 .swiper-pagination-bullet-active {
   background: white;
+}
+
+.swiper-pagination-bullet:first-child {
+  border-radius: 4px 0px 0px 4px;
+}
+
+.swiper-pagination-bullet:last-child {
+  border-radius: 0px 4px 4px 0px;
 }
