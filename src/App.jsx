@@ -5,7 +5,7 @@ import { HeroSwiperCard } from "./componentes/HeroSwiperCard/HeroSwiperCard";
 // import NewsSwiperCard from "./componentes/NewsSwiperCard/NewsSwiperCard";
 import { heroSwiperCardData } from "./mocks/HeroSwiperCard.mock";
 import styles from "./styles/pages/home.module.scss";
-import {EcosystemCardsData} from "./EcosystemCard/EcosystemCardsData.ts";
+import { EcosystemCardsData } from "./EcosystemCard/EcosystemCardsData.ts";
 function App() {
   return (
     <div className={styles.container}>
@@ -36,9 +36,27 @@ function App() {
           <NewsSwiperCard text={card} key={index} />
         ))}
       </BaseSwiper> */}
-      <EcosystemCardsContainer path={"./Assets/Images/trade-bunny.png"} titulo={"Trade"} cardData={EcosystemCardsData} objectId={1}/>
-      <EcosystemCardsContainer path={"./Assets/Images/asset36.png"} titulo={"Earn"} cardData={EcosystemCardsData} objectId={2}/>
-      <EcosystemCardsContainer path={"./Assets/Images/asset8.png"} titulo={"Game & NFT"} cardData={EcosystemCardsData} objectId={3}/>
+      <div>
+        <EcosystemCardsContainer
+          path={"./Assets/Images/trade-bunny.png"}
+          titulo={"Trade"}
+          cardData={EcosystemCardsData}
+          objectId={1}
+        />
+        <EcosystemCardsContainer
+          path={"./Assets/Images/asset36.png"}
+          titulo={"Earn"}
+          cardData={EcosystemCardsData}
+          objectId={2}
+          isReverse
+        />
+        <EcosystemCardsContainer
+          path={"./Assets/Images/asset8.png"}
+          titulo={"Game & NFT"}
+          cardData={EcosystemCardsData}
+          objectId={3}
+        />
+      </div>
     </div>
   );
 }
