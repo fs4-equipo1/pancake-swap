@@ -219,12 +219,13 @@ function App() {
                 className={styles.bluecircleImage}
                 width="28"
                 height="28"
-                style={{marginRight: "5px"}}
+                style={{marginRight: "10px"}}
               />
-              <p>2.245$</p>
-
+              
+              <p style={{ marginRight: "20px", color: "#B8ADD2" }}>2.245$ </p>
+          
             <div>
-              <Boton texto={"Buy CAKE"} isBlue={true} />
+              <Boton texto={"Buy CAKE"} isBlue={true}/>
             </div>
             </div>
           </div>

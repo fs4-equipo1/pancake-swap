@@ -25,6 +25,10 @@ const NavbarDropdown = ({ title, items, punto }) => {
       {isOpen && (
         <div className={styles.dropdownContent}>
           {items && items.map((item) => <a href="">{item}</a>)}
+          {/* {items.map((item, index) => (
+            <li key={index} className={styles.dropdownBtn}>
+              <a href="">{item}</a>
+            </li> */}
         </div>
       )}
     </div>
