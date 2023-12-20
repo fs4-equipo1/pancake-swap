@@ -1,0 +1,111 @@
+
+  .scroll {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 1100px;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #e3daf2 20%, #e3daf2 80%, transparent)
+  }
+  
+  .scroll div {
+    white-space: nowrap;
+    animation: scroll var(--time) linear infinite;
+    animation-delay: calc(var(--time)*-1);
+  
+  }
+  
+  .scroll div:nth-child(2) {
+    animation: scroll2 var(--time) linear infinite;
+    animation-delay: calc(var(--time)/-2);
+  }
+  
+  @keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+  
+    100% {
+        transform: translateX(-100%);
+    }
+  }
+  
+  @keyframes scroll2 {
+    0% {
+        transform: translateX(0);
+    }
+  
+    100% {
+        transform: translateX(-200%);
+    }
+  }
+  :root {
+    --time: 30s;
+  }
+  
+  .scroll div span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    letter-spacing: 0.2em;
+    background: #1094b6;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border-radius: 25px;
+    transition: 0.5s;
+    margin: 10px;
+  }
+  
+  .scroll div .scrollBNB {
+  background-color: #d7a60a;
+  }
+  .scroll div .scrollBase {
+    background-color: #6991e5;
+  }
+  
+  .scroll div .scrollLinea {
+    background-color: #74c2d2;
+  }
+  
+  .scroll div .scrollZksync {
+    background-color: #686ea7;
+  }
+  
+  .scroll div .scrollArbitrum {
+    background-color: #6e89ae;
+  }
+  
+  .scroll div .scrollAptos {
+    background-color: #17ba92;
+  }
+  
+  .scroll div .scrollEthereum {
+    background-color: #627ad8;
+  }
+  
+  .scroll div .scrollPolygon {
+    background-color: #ad73de;
+  }
+  
+  .imgBox div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .imgBox img {
+    max-width: 100px;
+    scale: 0.8;
+  }
+
+  .scroll img {
+    height: 20px;
+    width: 20px;
+    margin: 8px;
+  }
+
+  .scrollZksync img {
+    width: 24px;
+  }
