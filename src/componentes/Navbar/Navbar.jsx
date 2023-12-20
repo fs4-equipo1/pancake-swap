@@ -8,11 +8,15 @@ import styles from "./Navbar.module.scss";
 import { FaArrowRightFromBracket } from "react-icons/fa6";
 
 function Navbar() {
-  /**
-   * EJEMPLO PARA RAMIRO
-   */
-
-  const items = [
+  const itemsTrade = [
+    {
+      texto: "Swap",
+      icono: <null />,
+    },
+    {
+      texto: "Liquidity",
+      icono: <null />,
+    },
     {
       texto: "Perpetual",
       icono: <FaArrowRightFromBracket />,
@@ -22,8 +26,97 @@ function Navbar() {
       icono: <FaArrowRightFromBracket />,
     },
     {
+      texto: "Limit (V2)",
+      icono: <null />,
+    },
+    {
+      texto: "Buy Crypto",
+      icono: <null />,
+    },
+    {
+      texto: "Trading Reward",
+      icono: <null />,
+    },
+  ];
+  const itemsEarn = [
+    {
+      texto: "Farms",
+      icono: <null />,
+    },
+    {
+      texto: "CAKE Staking",
+      icono: <null />,
+    },
+    {
+      texto: "Pools",
+      icono: <null />,
+    },
+    {
+      texto: "Position Manager",
+      icono: <null />,
+    },
+    {
+      texto: "Liquid Staking",
+      icono: <null />,
+    },
+    {
+      texto: "Simple Staking",
+      icono: <null />,
+    },
+  ];
+  const itemsGame = [
+    {
       texto: "Gaming Marketplace",
       icono: <FaArrowRightFromBracket />,
+    },
+    {
+      texto: "Prediction (BETA)",
+      icono: <null />,
+    },
+    {
+      texto: "Lottery",
+      icono: <null />,
+    },
+    {
+      texto: "Pottery (BETA)",
+      icono: <null />,
+    },
+  ];
+  const itemsNft = [
+    {
+      texto: "Overview",
+      icono: <null />,
+    },
+    {
+      texto: "Colecctions",
+      icono: <null />,
+    },
+    {
+      texto: "Activity",
+      icono: <null />,
+    },
+  ];
+
+  const itemsPunto = [
+    {
+      texto: "Info",
+      icono: <null />,
+    },
+    {
+      texto: "IFO",
+      icono: <null />,
+    },
+    {
+      texto: "Affiliate Program",
+      icono: <null />,
+    },
+    {
+      texto: "Voting",
+      icono: <null />,
+    },
+    {
+      texto: "LeaderBoard",
+      icono: <null />,
     },
     {
       texto: "Blog",
@@ -42,67 +135,11 @@ function Navbar() {
             className={styles.navbarImg}
             src="https://cdn.discordapp.com/attachments/1146380288776220734/1186038041333207050/vecake-title.de07d9b9.png?ex=6591cb00&is=657f5600&hm=28843fe8c1fb35f0112536f74a1ae45023861dff72317cf761797d8e043cb597&"
           ></img>
-          <NavbarDropdown
-            title={"Trade"}
-            items={[
-              "Swap",
-              "Liquidity",
-              "Perpetual",
-              "Bridge",
-              "Limit (V2)",
-              "Buy Crypto",
-              "Trading Reward",
-            ]}
-          />
-          <NavbarDropdown
-            title={"Earn"}
-            items={[
-              "Farms",
-              "Cake staking",
-              "Pools",
-              "Position Manager",
-              "Liquid Staking",
-              "Simple Staking",
-            ]}
-            punto={"success"}
-          />
-          <NavbarDropdown
-            title={"Game"}
-            items={[
-              "Gaming Marketplace",
-              "Prediction BETA",
-              "Lottery",
-              "Pottery BETA",
-            ]}
-          />
-          <NavbarDropdown
-            title={"NFT"}
-            items={["Overview", "Collections", "Activity"]}
-          />
-          <NavbarDropdown
-            title={"..."}
-            items={[
-              "info",
-              "IFO",
-              "Affiliate Program",
-              "Voting",
-              <hr />,
-              "Leanderboard",
-              <hr />,
-              "Blog",
-              "Docs",
-            ]}
-            punto={"success"}
-          />
-
-          {/**
-           * CONTINUACION DEL EJEMPLO
-           */}
-          {/* <NavbarDropdown
-            title={"Earn"}
-            items={items}
-            punto={"gold"}
-          /> */}
+          <NavbarDropdown title={"Trade"} items={itemsTrade} />
+          <NavbarDropdown title={"Earn"} items={itemsEarn} punto={"success"} />
+          <NavbarDropdown title={"Game"} items={itemsGame} />
+          <NavbarDropdown title={"NFT"} items={itemsNft} />
+          <NavbarDropdown title={"..."} items={itemsPunto} />
         </div>
         <div className={styles.dropdownSecondary}>
           <div className={styles.bluecircle}>
