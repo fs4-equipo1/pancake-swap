@@ -36,7 +36,7 @@ function App() {
           <NewsSwiperCard text={card} key={index} />
         ))}
       </BaseSwiper> */}
-      <EcosystemCardsContainer path={"#"} titulo={"prueva"} cardData={EcosystemCardsData} objectId={1}/>
+      <EcosystemCardsContainer path={"./Assets/Images/trade-bunny.png"} titulo={"Trade"} cardData={EcosystemCardsData} objectId={1}/>
     </div>
   );
 }
