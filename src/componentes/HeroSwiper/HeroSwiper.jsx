@@ -17,7 +17,7 @@ export default () => {
       fadeEffect={{ crossFade: true }}
       pagination={{ clickable: true }}
       autoplay={{
-        delay: 4500,
+        delay: 3000,
         disableOnInteraction: false,
       }}
     >
