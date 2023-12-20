@@ -6,11 +6,10 @@ import { HeroSwiperCard } from "./componentes/HeroSwiperCard/HeroSwiperCard";
 import { heroSwiperCardData } from "./mocks/HeroSwiperCard.mock";
 import styles from "./styles/pages/home.module.scss";
 import {EcosystemCardsData} from "./EcosystemCard/EcosystemCardsData.ts";
-import { Card } from "./EcosystemCard/EcosystemCard";
 function App() {
   return (
     <div className={styles.container}>
-      <div>
+      {/* <div>
         <Boton texto={"Transparent"} isTransparent={true} />
         <Boton texto={"Blue"} isBlue={true} />
         <Boton texto={"White"} isWhite={true} />
@@ -37,8 +36,9 @@ function App() {
           <NewsSwiperCard text={card} key={index} />
         ))}
       </BaseSwiper> */}
-      <EcosystemCardsContainer path={"#"} titulo={"prueva"} cardData={EcosystemCardsData} objectId={1}/>
-      {/*<Card imageSrc="#" titleText="Trade" contentText="prueva card" commandText="Trade Now"/>*/}
+      <EcosystemCardsContainer path={"./Assets/Images/trade-bunny.png"} titulo={"Trade"} cardData={EcosystemCardsData} objectId={1}/>
+      <EcosystemCardsContainer path={"./Assets/Images/asset36.png"} titulo={"Earn"} cardData={EcosystemCardsData} objectId={2}/>
+      <EcosystemCardsContainer path={"./Assets/Images/asset8.png"} titulo={"Game & NFT"} cardData={EcosystemCardsData} objectId={3}/>
     </div>
   );
 }
