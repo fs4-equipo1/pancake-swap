@@ -1,0 +1,25 @@
+/* Footer.module.scss */
+.footerTitle {
+    color: var(--colors-secondary);
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  
+  .footerItem {
+    text-decoration: none;
+    color: var(--colors-white);
+    margin-bottom: 8px;
+    &:hover {
+        text-decoration: underline;
+    }
+  }
+  
+  .footerList {
+
+
+  }
+  
+  .footerDiv {
+
+  }
+  

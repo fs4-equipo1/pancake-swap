@@ -1,0 +1,46 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 56px;
+    background-color: #fff;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dropdownPrimary {
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+    margin: 15px;
+}
+
+.dropdownSecondary {   
+    gap: 20px;
+    position: relative;
+    left: -100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;  // Fix the typo here
+    align-items: center;
+}
+
+.navbarImg {
+    width: 160px;
+    height: 25px;
+}
+
+.bluecircle {
+    justify-content: center;
+    gap: 5px;
+    margin: 10px;
+    height: 28px;
+    width: 45px;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .bluecircleimage {
+    height: 100%; 
+    width: 28px;  
+  }
