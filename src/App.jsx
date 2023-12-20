@@ -61,7 +61,9 @@ function App() {
           objectId={3}
         />
       </section>
+      <div style={{display:"flex", justifyContent:"center"}}>
       <InfiniteSlider />
+      </div>
       <div>
       <section style={{
         backgroundImage: `url(${background})`,
