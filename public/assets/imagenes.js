@@ -6,6 +6,8 @@ import desktopBunny from "./vecake-desktop-bunny.png";
 import gameBunny from "./game-desktop-bunny.png";
 import gametext from "./game-text.png";
 import perpetualBunny from "./perpetual.webp";
+import gameCube from "./game-cube.png";
+import cakeToken from "./vecake-ruby.png";
 
 export default {
   background1: background1,
@@ -13,7 +15,9 @@ export default {
   logoPancake: logoPancake,
   logoPancakeWhite: logoPancakeWhite,
   desktopBunny: desktopBunny,
+  cakeToken: cakeToken,
   gameBunny: gameBunny,
   gametext: gametext,
   perpetualBunny: perpetualBunny,
+  gameCube: gameCube
 };

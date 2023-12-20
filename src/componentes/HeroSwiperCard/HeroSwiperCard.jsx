@@ -8,6 +8,7 @@ export const HeroSwiperCard = ({
   botonPrimary,
   botonSecondary,
   bunnyPng,
+  decorationPng
 }) => {
   return (
     <div
@@ -22,6 +23,7 @@ export const HeroSwiperCard = ({
         {botonSecondary}
       </div>
       <div className={styles.bunny}>{bunnyPng}</div>
+      <div className={styles.decoration}>{decorationPng}</div>
     </div>
   );
 };

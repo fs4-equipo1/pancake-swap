@@ -32,6 +32,7 @@ export default () => {
             botonPrimary={card.botonPrimary}
             botonSecondary={card.botonSecondary}
             bunnyPng={card.bunnyPng}
+            decorationPng={card.decorationPng}
           />
         </SwiperSlide>
       ))}

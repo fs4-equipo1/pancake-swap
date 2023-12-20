@@ -75,6 +75,19 @@ export const heroSwiperCardData = [
         alt="Bunny"
       ></img>
     ),
+    decorationPng: (
+      <img
+        style={{
+          position: "absolute",
+          right: "35%",
+          top: -29,
+          height: "77px",
+          width: "73px",
+        }}
+        src={imagenes.cakeToken}
+        alt="Bunny"
+      ></img>
+    ),
   },
   {
     backgroundImg: imagenes.background2,
@@ -171,6 +184,19 @@ export const heroSwiperCardData = [
         alt="Bunny"
       ></img>
     ),
+    decorationPng: (
+      <img
+        style={{
+          position: "absolute",
+          right: "29%",
+          top: -22,
+          height: "59px",
+          width: "59px",
+        }}
+        src={imagenes.gameCube}
+        alt="Bunny"
+      ></img>
+    ),
   },
   {
     backgroundImg: null,
@@ -215,5 +241,6 @@ export const heroSwiperCardData = [
         alt="Bunny"
       ></img>
     ),
+    decorationPng: null,
   },
 ];
