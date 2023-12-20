@@ -13,6 +13,7 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import Navbar from "./componentes/Navbar/Navbar";
+import { JoinComunidad } from "./componentes/JoinComunidad/JoinComunidad";
 
 function App() {
   return (
@@ -116,6 +117,7 @@ function App() {
           </div>
         </div>
       </div>
+      <JoinComunidad />
     </div>
   );
 }
