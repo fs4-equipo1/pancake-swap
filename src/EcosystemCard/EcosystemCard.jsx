@@ -10,11 +10,12 @@ export function Card({
   contentText,
   commandText,
 }) {
+
   return (
     <div className={styles.card}>
       <img className={styles.cardImgPurple} src={imageSrc} alt="" />
       <img className={styles.cardImgColor} src={imageSrcColor} alt="" />
-      <div className={styles.cardTextTitle} >{titleText}</div>
+      <div className={styles.cardTextTitle}>{titleText}</div>
       <div className={styles.cardText}>{contentText}</div>
       <div className={styles.cardlink}>{commandText}</div>
     </div>

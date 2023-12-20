@@ -39,7 +39,7 @@ function App() {
             key={index}
           />
         ))}
-      </BaseSwiper>
+        </BaseSwiper>
       {/* <BaseSwiper>
         {data.map((card, index) => (
           <NewsSwiperCard text={card} key={index} />
