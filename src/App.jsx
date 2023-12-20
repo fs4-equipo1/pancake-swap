@@ -6,7 +6,6 @@ import { EcosystemCardsContainer } from "./EcosystemCard/EcosystemCard";
 import Boton from "./componentes/Boton/Boton";
 import background from "./assets/background.png"
 import Tipografia from "./componentes/Tipografia/Tipografia";
-import styles from "./styles/pages/home.module.scss";
 import LanguageDropdown from "./componentes/LanguageDropdown/LanguageDropdown";
 import { Icono } from "./componentes/Icono/Icono";
 import {
@@ -28,7 +27,7 @@ function App() {
   return (
     <div>
       <Navbar />
-      
+      <HeroSwiper />
       <div className={styles.container}>
        
         
