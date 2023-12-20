@@ -13,9 +13,6 @@ function App() {
         <Boton texto={"Blue"} isBlue={true} />
         <Boton texto={"White"} isWhite={true} />
       </div>
-      <div>
-        <favoriteDex></favoriteDex>
-      </div>
     </div>
   );
 }
