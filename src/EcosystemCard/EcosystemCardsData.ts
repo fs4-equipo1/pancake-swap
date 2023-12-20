@@ -43,13 +43,13 @@ export const EcosystemCardsData = [
     button: "Stake Now"
     },
     {id: 2,
-    imgsrc: "./Assets/Images/earn-liquid-staking-purple.png",
+    imgsrc: "./Assets/Images/earn-liquidstaking-purple.png",
     title: "Liquid Staking",
     content: "Earn rewards while retaining asset flexibility",
     button: "Add Now"
     },
     {id: 2,
-    imgsrc: "./Assets/Images/earn-simple-staking-purple.png",
+    imgsrc: "./Assets/Images/earn-simplestaking-purple.png",
     title: "Simple Staking",
     content: "Earn rewards hassle-free with single-sided staking",
     button: "Stake Now"
@@ -61,7 +61,7 @@ export const EcosystemCardsData = [
     button: "Try Now"
     },
     {id: 3,
-    imgsrc: "./Assets/Images/gamenft-pancake-protectors-purple.png",
+    imgsrc: "./Assets/Images/gamenft-pancakeprotector-purple.png",
     title: "Pancake Protectors",
     content: "Immersive PvP & PvE tower-defense GameFi",
     button: "Play Now"
