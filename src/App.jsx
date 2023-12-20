@@ -9,11 +9,6 @@ import { EcosystemCardsData } from "./EcosystemCard/EcosystemCardsData.ts";
 function App() {
   return (
     <div className={styles.container}>
-      {/* <div>
-        <Boton texto={"Transparent"} isTransparent={true} />
-        <Boton texto={"Blue"} isBlue={true} />
-        <Boton texto={"White"} isWhite={true} />
-      </div>
       <div>
         <Boton texto={"Transparent"} isTransparent={true} />
         <Boton texto={"Blue"} isBlue={true} />
