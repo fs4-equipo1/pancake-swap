@@ -1,3 +1,6 @@
+
+import HeroSwiper from "./componentes/HeroSwiper/HeroSwiper";
+import styles from "./styles/pages/home.module.scss";
 import { EcosystemCardsData } from "./EcosystemCard/EcosystemCardsData";
 import { EcosystemCardsContainer } from "./EcosystemCard/EcosystemCard";
 import Boton from "./componentes/Boton/Boton";
@@ -177,3 +180,4 @@ function App() {
 }
 
 export default App;
+
