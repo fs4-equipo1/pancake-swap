@@ -1,4 +1,3 @@
-import Boton from "../Boton/Boton";
 import styles from "./HeroSwiperCard.module.scss";
 export const HeroSwiperCard = ({
   background,
@@ -14,18 +13,14 @@ export const HeroSwiperCard = ({
       className={styles.container}
       style={{ backgroundImage: `url(${background})` }}
     >
-      <div className={styles.logo}>
-        <img src={topLogo} alt="Logo Pancake" />
-      </div>
+      <div className={styles.logo}>{topLogo}</div>
       <div className={styles.title}>{titleText}</div>
       <div className={styles.text}>{secondText}</div>
       <div className={styles.buttonCont}>
-        {botonPrimary && <Boton texto={botonPrimary} isBlue />}
-        {botonSecondary && <Boton texto={botonSecondary} isWhite />}
+        {botonPrimary}
+        {botonSecondary}
       </div>
-      <div className={styles.bunny}>
-        <img src={bunnyPng} alt="Bunny" />
-      </div>
+      <div className={styles.bunny}>{bunnyPng}</div>
     </div>
   );
 };

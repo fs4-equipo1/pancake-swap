@@ -5,35 +5,32 @@
   background-repeat: no-repeat;
 }
 
+.logo .title .text .buttonCont {
+  margin-left: 12px;
+}
+
 img {
   height: 100%;
   width: 100%;
 }
 
 .buttonCont {
-  margin: 8px;
+  margin: 11px 0px 0px 14px;
   display: flex;
   flex-direction: row;
+  gap: 10px;
   font-weight: 600;
   align-items: center;
 }
 
 .logo {
-  width: 170px;
-  height: 30px;
-  margin: 8px;
+  width: 120px;
+  height: 20px;
+  margin: 16px 0px 0px 16px;
 }
 
 .title,
 .text {
-  font-size: 24px;
-  margin-left: 5px;
-}
-
-.bunny {
-  position: absolute;
-  right: 15%;
-  bottom: 0;
-  height: 257px;
-  width: 235px;
+  font-size: 26px;
+  margin-left: 12px;
 }

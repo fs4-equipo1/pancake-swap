@@ -1,6 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
+import { Autoplay, Pagination, EffectFade } from "swiper/modules";
 import "swiper/css";
+import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 import { heroSwiperCardData } from "../../mocks/HeroSwiperCard.mock";
 import HeroSwiperCard from "../HeroSwiperCard/HeroSwiperCard";
@@ -9,9 +10,11 @@ import "./HeroSwiper.scss";
 export default () => {
   return (
     <Swiper
-      modules={[Pagination, Autoplay]}
+      modules={[Pagination, Autoplay, EffectFade]}
       spaceBetween={50}
       slidesPerView={1}
+      effect={"fade"}
+      fadeEffect={{ crossFade: true }}
       pagination={{ clickable: true }}
       autoplay={{
         delay: 5000,
@@ -27,7 +30,6 @@ export default () => {
             secondText={card.secondText}
             botonPrimary={card.botonPrimary}
             botonSecondary={card.botonSecondary}
-            link={card.link}
             bunnyPng={card.bunnyPng}
           />
         </SwiperSlide>
