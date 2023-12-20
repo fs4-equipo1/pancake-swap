@@ -44,6 +44,7 @@ export function EcosystemCardsContainer({
               <Card
                 key={index}
                 imageSrc={data.imgsrc}
+                imageSrcColor={data.imgsrcColor}
                 titleText={data.title}
                 contentText={data.content}
                 commandText={data.button}

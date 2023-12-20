@@ -2,6 +2,7 @@ export const EcosystemCardsData = [
   {
     id: 1,
     imgsrc: "./Assets/Images/trade-swap-purple.png",
+    imgsrcColor: "./Assets/Images/trade-swap.png",
     title: "Trade",
     content: "Trade crypto instantly across multiple chains",
     button: "Trade Now",
@@ -9,6 +10,7 @@ export const EcosystemCardsData = [
   {
     id: 1,
     imgsrc: "./Assets/Images/trade-liquidity-purple.png",
+    imgsrcColor: "./Assets/Images/trade-liquidity.png",
     title: "Liquidity",
     content: "Fund liquidity pools, earn trading fees",
     button: "Add Now",
@@ -16,6 +18,7 @@ export const EcosystemCardsData = [
   {
     id: 1,
     imgsrc: "./Assets/Images/trade-bridge-purple.png",
+    imgsrcColor: "./Assets/Images/trade-bridge.png",
     title: "Bridge",
     content: "Seamlessly transfer assets across chains",
     button: "Bridge Now",
@@ -23,6 +26,7 @@ export const EcosystemCardsData = [
   {
     id: 1,
     imgsrc: "./Assets/Images/trade-perpetual-purple.png",
+    imgsrcColor: "./Assets/Images/trade-perpetual.png",
     title: "Perpetual",
     content: "Trade endlessly without expiration dates",
     button: "Trade Now",
@@ -30,6 +34,7 @@ export const EcosystemCardsData = [
   {
     id: 1,
     imgsrc: "./Assets/Images/trade-buy-crypto-purple.png",
+    imgsrcColor: "./Assets/Images/trade-buy-crypto.png",
     title: "Buy Crypto",
     content: "Buy crypto with your preferred currency and payment method",
     button: "Buy Now",
@@ -37,6 +42,7 @@ export const EcosystemCardsData = [
   {
     id: 2,
     imgsrc: "./Assets/Images/earn-farm-purple.png",
+    imgsrcColor: "./Assets/Images/earn-farm.png",
     title: "Farm",
     content: "Stake LP tokens, harvest CAKE",
     button: "Stake Now",
@@ -44,6 +50,7 @@ export const EcosystemCardsData = [
   {
     id: 2,
     imgsrc: "./Assets/Images/earn-pools-purple.png",
+    imgsrcColor: "./Assets/Images/earn-pools.png",
     title: "Pools",
     content: "Stake CAKE, earn various rewards",
     button: "Stake Now",
@@ -51,6 +58,7 @@ export const EcosystemCardsData = [
   {
     id: 2,
     imgsrc: "./Assets/Images/earn-liquidstaking-purple.png",
+    imgsrcColor: "./Assets/Images/earn-liquistaking.png",
     title: "Liquid Staking",
     content: "Earn rewards while retaining asset flexibility",
     button: "Add Now",
@@ -58,6 +66,7 @@ export const EcosystemCardsData = [
   {
     id: 2,
     imgsrc: "./Assets/Images/earn-simplestaking-purple.png",
+    imgsrcColor: "./Assets/Images/earn-simplestaking.png",
     title: "Simple Staking",
     content: "Earn rewards hassle-free with single-sided staking",
     button: "Stake Now",
@@ -65,6 +74,7 @@ export const EcosystemCardsData = [
   {
     id: 3,
     imgsrc: "./Assets/Images/gamenft-prediction-purple.png",
+    imgsrcColor: "./Assets/Images/gamenft-prediction.png",
     title: "Prediction",
     content: "Forecast token prices within minutes",
     button: "Try Now",
@@ -72,6 +82,7 @@ export const EcosystemCardsData = [
   {
     id: 3,
     imgsrc: "./Assets/Images/gamenft-pancakeprotector-purple.png",
+    imgsrcColor: "./Assets/Images/gamenft-pancakeprotector.png",
     title: "Pancake Protectors",
     content: "Immersive PvP & PvE tower-defense GameFi",
     button: "Play Now",
@@ -79,6 +90,7 @@ export const EcosystemCardsData = [
   {
     id: 3,
     imgsrc: "./Assets/Images/gamenft-lottery-purple.png",
+    imgsrcColor: "./Assets/Images/gamenft-lottery.png",
     title: "Lottery",
     content: "Enter for a chance to win CAKE prize pools",
     button: "Try Now",
@@ -86,6 +98,7 @@ export const EcosystemCardsData = [
   {
     id: 3,
     imgsrc: "./Assets/Images/gamenft-pottery-purple.png",
+    imgsrcColor: "./Assets/Images/gamenft-pottery.png",
     title: "Pottery",
     content: "Stake CAKE, acquire pottery tickets, win prizes",
     button: "Try Now",
@@ -93,6 +106,7 @@ export const EcosystemCardsData = [
   {
     id: 3,
     imgsrc: "./Assets/Images/gamenft-nftmarketplace-purple.png",
+    imgsrcColor: "./Assets/Images/gamenft-nftmarketplace.png",
     title: "NFT Marketplace",
     content: "Trade unique NFTs on BNB Chain",
     button: "Trade Now",
