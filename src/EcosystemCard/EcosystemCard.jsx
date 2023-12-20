@@ -25,9 +25,6 @@ export function EcosystemCardsContainer({path, titulo, cardData, objectId}) {
                 <div className={styles.ecosystemTrade}>
                     <div className={styles.ecosystemTitle}>{titulo}</div>
                     <div className={styles.cardcontainer}>
-                        {/*filteredData.forEach(data => {
-                            <Card imageSrc={data.imgsrc} titleText={data.title} contentText={data.content} commandText={data.button} />
-                        })*/}
                         {filteredData.map(data => {
                             return <Card imageSrc={data.imgsrc} titleText={data.title} contentText={data.content} commandText={data.button} />
                         })}
