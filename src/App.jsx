@@ -1,3 +1,4 @@
+import { EcosystemCardsData } from "./EcosystemCard/EcosystemCardsData";
 import { EcosystemCardsContainer } from "./EcosystemCard/EcosystemCard";
 import Boton from "./componentes/Boton/Boton";
 import background from "./assets/background.png"
@@ -29,22 +30,6 @@ function App() {
        
         
       </div>
-      <BaseSwiper>
-        {heroSwiperCardData.map((card, index) => (
-          <HeroSwiperCard
-            text={card.texto}
-            botonPrimary={card.botonPrimary}
-            botonSecondary={card.botonSecondary}
-            link={card.link}
-            key={index}
-          />
-        ))}
-      </BaseSwiper>
-      {/* <BaseSwiper>
-        {data.map((card, index) => (
-          <NewsSwiperCard text={card} key={index} />
-        ))}
-      </BaseSwiper> */}
       <section
         className="Ecosistema"
         style={{
