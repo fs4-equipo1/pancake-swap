@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styles from "./EcosystemCard.module.scss";
 import classNames from "classnames/bind";
 
@@ -10,10 +11,23 @@ export function Card({
   contentText,
   commandText,
 }) {
+
+  const [opacity, setOpacity] = useState(1);
+
+  function handleMouseEnter() {
+    setOpacity(0);
+  }
+
+  function handleMouseLeave() {
+    setOpacity(1);
+  }
+
   return (
-    <div className={styles.card}>
-      <img className={styles.cardImgPurple} src={imageSrc} alt="" />
-      <img className={styles.cardImgColor} src={imageSrcColor} alt="" />
+      <div className={styles.card}>
+      <img className={styles.cardImgPurple} src={imageSrc} alt="" style={{opacity: opacity}}
+        onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} />
+      <img className={styles.cardImgColor} src={imageSrcColor} alt="" style={{ opacity: 1 - opacity}} 
+        onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}/>
       <div className={styles.cardTextTitle} >{titleText}</div>
       <div className={styles.cardText}>{contentText}</div>
       <div className={styles.cardlink}>{commandText}</div>
