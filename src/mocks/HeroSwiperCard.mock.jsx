@@ -197,7 +197,7 @@ export const heroSwiperCardData = [
           fontSize: "38px",
         }}
       >
-        UP TO 1001x LEVERAGE
+        UP TO 1001× LEVERAGE
       </div>
     ),
     botonPrimary: <Boton texto="Trade Now" isBlue />,
