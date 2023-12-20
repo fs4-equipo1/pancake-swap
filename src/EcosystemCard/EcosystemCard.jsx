@@ -32,9 +32,10 @@ export function EcosystemCardsContainer({
       <div className={styles.ecosystemTrade}>
         <div className={styles.ecosystemTitle}>{titulo}</div>
         <div className={styles.cardcontainer}>
-          {filteredData.map((data) => {
+          {filteredData.map((data, index) => {
             return (
               <Card
+                key={index}
                 imageSrc={data.imgsrc}
                 titleText={data.title}
                 contentText={data.content}
