@@ -2,11 +2,13 @@
     height: 205px;
     max-width: 1200px;
     border-radius: 36px;
+    overflow: visible;
   }
   
   .swiper-slide {
     display: flex;
     height: 100%;
+    overflow: visible;
   }
 
 .swiper-pagination-horizontal.swiper-pagination-bullets

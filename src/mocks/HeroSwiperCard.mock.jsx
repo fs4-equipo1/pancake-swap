@@ -66,7 +66,7 @@ export const heroSwiperCardData = [
       <img
         style={{
           position: "absolute",
-          right: "15%",
+          right: "13%",
           bottom: 0,
           height: "257px",
           width: "235px",
@@ -162,7 +162,7 @@ export const heroSwiperCardData = [
       <img
         style={{
           position: "absolute",
-          right: "10%",
+          right: "8%",
           bottom: 0,
           height: "100%",
           width: "235px",
@@ -180,7 +180,7 @@ export const heroSwiperCardData = [
       <h6
         style={{
           fontWeight: 900,
-          fontSize: "20px",
+          fontSize: "var(--fontSizes-20px)",
           margin: "-10px 0px 6px 6px",
           color: "var(--colors-gold)",
         }}
@@ -191,7 +191,7 @@ export const heroSwiperCardData = [
     secondText: (
       <div
         style={{
-          color: "white",
+          color: "var(--colors-white)",
           marginLeft: "var(--space-6px)",
           marginRight: "var(--space-4px)",
           fontSize: "38px",
@@ -206,9 +206,9 @@ export const heroSwiperCardData = [
       <img
         style={{
           position: "absolute",
-          right: "8px",
+          right: "var(--space-8px)",
           bottom: 0,
-          height: "260px",
+          height: "247px",
           width: "392px",
         }}
         src={imagenes.perpetualBunny}

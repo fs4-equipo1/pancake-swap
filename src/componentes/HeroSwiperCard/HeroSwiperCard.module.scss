@@ -3,6 +3,7 @@
   width: 100%;
   background-size: contain;
   background-repeat: no-repeat;
+  border-radius: 36px;
 }
 
 .logo .title .text .buttonCont {
@@ -33,4 +34,9 @@ img {
 .text {
   font-size: 26px;
   margin-left: 12px;
+}
+
+.bunny {
+  overflow: visible;
+
 }
