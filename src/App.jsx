@@ -31,7 +31,15 @@ function App() {
           <NewsSwiperCard text={card} key={index} />
         ))}
       </BaseSwiper> */}
-      <div>
+      <section
+        className="Ecosistema"
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems:'center',
+          width:'100%'
+        }}
+      >
         <EcosystemCardsContainer
           path={"./Assets/Images/trade-bunny.png"}
           titulo={"Trade"}
@@ -51,7 +59,7 @@ function App() {
           cardData={EcosystemCardsData}
           objectId={3}
         />
-      </div>
+      </section>
     </div>
   );
 }

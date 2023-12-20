@@ -3,13 +3,20 @@ import classNames from "classnames/bind";
 
 const cx = classNames.bind(styles);
 
-export function Card({ imageSrc, titleText, contentText, commandText }) {
+export function Card({
+  imageSrc,
+  imageSrcColor,
+  titleText,
+  contentText,
+  commandText,
+}) {
   return (
-    <div>
-      <img src={imageSrc} alt="" />
-      <h3>{titleText}</h3>
-      <p>{contentText}</p>
-      <h4>{commandText}</h4>
+    <div className={styles.card}>
+      <img className={styles.cardImgPurple} src={imageSrc} alt="" />
+      <img className={styles.cardImgColor} src={imageSrcColor} alt="" />
+      <div className={styles.cardTextTitle} >{titleText}</div>
+      <div className={styles.cardText}>{contentText}</div>
+      <div className={styles.cardlink}>{commandText}</div>
     </div>
   );
 }
@@ -29,7 +36,7 @@ export function EcosystemCardsContainer({
       style={{ flexDirection: isReverse ? "row-reverse" : "row" }}
     >
       <img className={styles.ecosystemImg} src={path} />
-      <div className={styles.ecosystemTrade}>
+      <div className={styles.ecosystemSegment}>
         <div className={styles.ecosystemTitle}>{titulo}</div>
         <div className={styles.cardcontainer}>
           {filteredData.map((data, index) => {
