@@ -1,0 +1,142 @@
+.cardcontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+
+  gap: var(--space-20px);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+
+  height: 250px;
+  width: 140px;
+  gap: var(--space-8px);
+
+  // overflow: hidden;
+}
+
+
+.cardImgPurple {
+  width: 70%;
+  height: auto;
+  // position: relative;
+  top: 0%;
+}
+
+.cardImgColor {
+  width: 70%;
+  height: auto;
+  // position: absolute;
+  top: 0%;
+  opacity: 0%;
+  
+  display: none;
+  //ATENCION: IMAGENES A COLOR DESACTIVADAS. PONER OPACITY CON HOVER, O ALGO ASI
+}
+
+.cardTextTitle {
+  margin: 0;
+  font-size: 20px;
+  color: aliceblue;
+}
+
+.cardText {
+  flex-wrap: wrap;
+  height: auto;
+  font-size: 14px;
+  gap: var(--space-8px);
+}
+
+.card-text a {
+  display: block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #1fc7d4;
+  font-weight: bold;
+}
+
+.cardlink {
+  text-decoration: none;
+  color: var(--colors-textSubtle);
+}
+
+.swap-on-hover {
+  width: 108px;
+  height: 108px;
+}
+
+.swap-on-hover img {
+  top: 0;
+  left: 0;
+  position: absolute;
+  overflow: hidden;
+  
+  object-fit: cover;
+}
+
+.swap-on-hover .swap-on-hover__front-image {
+  z-index: 9999;
+  transition: opacity 0.5s linear;
+  cursor: pointer;
+}
+
+.card:hover {
+  .swap-on-hover > .swap-on-hover__front-image {
+    opacity: 0;
+  }
+  .cardlink {
+    transition: 0.2s linear;
+    color: var(--colors-primaryBright);
+  }
+}
+
+.ecosystemTitle {
+  color: var(--colors-textSubtle);
+  font-size: 40px;
+  margin: 20px;
+}
+
+.ecosystemContainer {
+  width: 60vw;
+  justify-content: left;
+  display: flex;
+  position: relative;
+  border-radius: 25px;
+  background-color: aliceblue;
+}
+
+.ecosystemImg {
+  width: 340px;
+  position: relative;
+  height: auto;
+  // left: -52px;
+  margin-top: 25px;
+}
+
+.ecosystemSegment {
+  display: flex;
+  flex-direction: column;
+  max-width: 80vw;
+}
+
+.ecosystemImgLeft {
+  width: 296px;
+  height: 360px;
+}
+
+.discoverEcosystem {
+  display: flex;
+  position: relative;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgb(0, 45, 70);
+  border-radius: 30px;
+  margin: 30px;
+  max-width: 80vw;
+}

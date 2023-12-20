@@ -1,3 +1,4 @@
+import { EcosystemCardsContainer } from "./EcosystemCard/EcosystemCard";
 import Boton from "./componentes/Boton/Boton";
 import background from "./assets/background.png"
 import Tipografia from "./componentes/Tipografia/Tipografia";
@@ -18,6 +19,7 @@ import Footer from "./componentes/Footer/Footer";
 import DexNow from "./componentes/DexNow/DexNow";
 import InfiniteSlider from "./componentes/InfiniteSlider/InfiniteSlider";
 
+
 function App() {
   return (
     <div>
@@ -27,6 +29,51 @@ function App() {
        
         
       </div>
+      <BaseSwiper>
+        {heroSwiperCardData.map((card, index) => (
+          <HeroSwiperCard
+            text={card.texto}
+            botonPrimary={card.botonPrimary}
+            botonSecondary={card.botonSecondary}
+            link={card.link}
+            key={index}
+          />
+        ))}
+      </BaseSwiper>
+      {/* <BaseSwiper>
+        {data.map((card, index) => (
+          <NewsSwiperCard text={card} key={index} />
+        ))}
+      </BaseSwiper> */}
+      <section
+        className="Ecosistema"
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems:'center',
+          width:'100%'
+        }}
+      >
+        <EcosystemCardsContainer
+          path={"./Assets/Images/trade-bunny.png"}
+          titulo={"Trade"}
+          cardData={EcosystemCardsData}
+          objectId={1}
+        />
+        <EcosystemCardsContainer
+          path={"./Assets/Images/asset36.png"}
+          titulo={"Earn"}
+          cardData={EcosystemCardsData}
+          objectId={2}
+          isReverse
+        />
+        <EcosystemCardsContainer
+          path={"./Assets/Images/asset8.png"}
+          titulo={"Game & NFT"}
+          cardData={EcosystemCardsData}
+          objectId={3}
+        />
+      </section>
       <InfiniteSlider />
       <div>
       <section style={{
