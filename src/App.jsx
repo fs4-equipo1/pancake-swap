@@ -36,7 +36,7 @@ function App() {
 
         <div className={styles.textContainer}>
           <Tipografia
-            color={"--colors-white"}
+            color={"--colors-text"}
             texto={"Everyone's"}
             isTitleLarge
           />
@@ -46,7 +46,7 @@ function App() {
               texto={"Favorite"}
               isTitleLarge
             />
-            <Tipografia color={"--colors-white"} texto={"DEX"} isTitleLarge />
+            <Tipografia color={"--colors-text"} texto={"DEX"} isTitleLarge />
           </div>
         </div>
       </div>
