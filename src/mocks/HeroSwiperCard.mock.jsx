@@ -1,5 +1,7 @@
 import imagenes from "../../public/assets/imagenes";
 import Boton from "../componentes/Boton/Boton";
+import { ArrowLink } from "../../Assets/Icons/ArrowLink";
+import { ArrowRight } from "../../Assets/Icons/ArrowRight";
 
 export const heroSwiperCardData = [
   {
@@ -45,7 +47,7 @@ export const heroSwiperCardData = [
         </div>
         <div
           style={{
-            color: "var(--colors-text)",
+            color: "#280d5f",
             marginRight: "var(--space-4px)",
           }}
         >
@@ -60,7 +62,7 @@ export const heroSwiperCardData = [
         </div>
       </div>
     ),
-    botonPrimary: <Boton texto="Get Started" isBlue />,
+    botonPrimary: <Boton texto="Get Started" icon={<ArrowRight />} isBlue />,
     botonSecondary: <Boton texto="Learn More" isWhite />,
     bunnyPng: (
       <img
@@ -82,7 +84,7 @@ export const heroSwiperCardData = [
           right: "35%",
           top: -29,
           height: "77px",
-          width: "73px",
+          width: "72px",
         }}
         src={imagenes.cakeToken}
         alt="Bunny"
@@ -137,7 +139,11 @@ export const heroSwiperCardData = [
             margin: "0x 4px",
           }}
         >
-          <img src={imagenes.gametext} alt="GameFi Spirit" />
+          <img
+            src={imagenes.gametext}
+            style={{ width: "100%", height: "100%" }}
+            alt="GameFi Spirit"
+          />
         </div>
         <div
           style={{
@@ -164,9 +170,12 @@ export const heroSwiperCardData = [
             margin: "var(--space-6px)",
             color: "#34fba6",
             fontSize: "var(--fontSizes-16px)",
+            display: "flex",
+            gap: "10px",
           }}
         >
           Try Now
+          <ArrowLink />
         </a>
       </div>
     ),
@@ -226,7 +235,7 @@ export const heroSwiperCardData = [
         UP TO 1001× LEVERAGE
       </div>
     ),
-    botonPrimary: <Boton texto="Trade Now" isBlue />,
+    botonPrimary: <Boton texto="Trade Now" icon={<ArrowRight />} isBlue />,
     botonSecondary: null,
     bunnyPng: (
       <img
