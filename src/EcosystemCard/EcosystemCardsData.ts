@@ -1,5 +1,5 @@
 
-const EcosystemCardsData = [
+export const EcosystemCardsData = [
     {id: 1,
     imgsrc: "#",
     title: "Trade",

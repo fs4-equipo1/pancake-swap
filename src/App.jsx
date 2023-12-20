@@ -5,6 +5,7 @@ import { HeroSwiperCard } from "./componentes/HeroSwiperCard/HeroSwiperCard";
 // import NewsSwiperCard from "./componentes/NewsSwiperCard/NewsSwiperCard";
 import { heroSwiperCardData } from "./mocks/HeroSwiperCard.mock";
 import styles from "./styles/pages/home.module.scss";
+import {EcosystemCardsData} from "./EcosystemCard/EcosystemCardsData.ts";
 function App() {
   return (
     <div className={styles.container}>
@@ -35,7 +36,7 @@ function App() {
           <NewsSwiperCard text={card} key={index} />
         ))}
       </BaseSwiper> */}
-      <EcosystemCardsContainer/>
+      <EcosystemCardsContainer path={"#"} titulo={"prueva"} cardData={EcosystemCardsData} objectId={1}/>
     </div>
   );
 }
