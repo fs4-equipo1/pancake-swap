@@ -1,0 +1,31 @@
+.favoriteDex {
+  width: 80vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.separador {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.subtext {
+  display: flex;
+  flex-wrap: wrap;
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.img {
+  width: 648px;
+  height: 648px;
+  object-fit: contain;
+}
