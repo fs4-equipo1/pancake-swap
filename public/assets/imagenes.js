@@ -5,6 +5,7 @@ import logoPancakeWhite from "./ethXpancakeswap.png";
 import desktopBunny from "./vecake-desktop-bunny.png";
 import gameBunny from "./game-desktop-bunny.png";
 import gametext from "./game-text.png";
+import perpetualBunny from "./perpetual.webp";
 
 export default {
   background1: background1,
@@ -14,4 +15,5 @@ export default {
   desktopBunny: desktopBunny,
   gameBunny: gameBunny,
   gametext: gametext,
+  perpetualBunny: perpetualBunny,
 };

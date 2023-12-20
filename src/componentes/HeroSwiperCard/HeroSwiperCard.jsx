@@ -1,6 +1,7 @@
 import styles from "./HeroSwiperCard.module.scss";
 export const HeroSwiperCard = ({
-  background,
+  backgroundImg,
+  colorBackground,
   topLogo,
   titleText,
   secondText,
@@ -11,7 +12,7 @@ export const HeroSwiperCard = ({
   return (
     <div
       className={styles.container}
-      style={{ backgroundImage: `url(${background})` }}
+      style={{ background: `${colorBackground} url(${backgroundImg})` }}
     >
       <div className={styles.logo}>{topLogo}</div>
       <div className={styles.title}>{titleText}</div>

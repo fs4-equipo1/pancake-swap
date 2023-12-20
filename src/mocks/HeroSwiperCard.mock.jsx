@@ -3,7 +3,8 @@ import Boton from "../componentes/Boton/Boton";
 
 export const heroSwiperCardData = [
   {
-    background: imagenes.background1,
+    backgroundImg: imagenes.background1,
+    colorBackground: "transparent",
     topLogo: (
       <img
         style={{
@@ -76,7 +77,8 @@ export const heroSwiperCardData = [
     ),
   },
   {
-    background: imagenes.background2,
+    backgroundImg: imagenes.background2,
+    colorBackground: "rgb(32, 40, 61)",
     topLogo: (
       <img
         style={{
@@ -166,6 +168,50 @@ export const heroSwiperCardData = [
           width: "235px",
         }}
         src={imagenes.gameBunny}
+        alt="Bunny"
+      ></img>
+    ),
+  },
+  {
+    backgroundImg: null,
+    colorBackground: "rgb(73, 34, 134)",
+    topLogo: null,
+    titleText: (
+      <h6
+        style={{
+          fontWeight: 900,
+          fontSize: "20px",
+          margin: "-10px 0px 6px 6px",
+          color: "var(--colors-gold)",
+        }}
+      >
+        Perpetual Futures
+      </h6>
+    ),
+    secondText: (
+      <div
+        style={{
+          color: "white",
+          marginLeft: "var(--space-6px)",
+          marginRight: "var(--space-4px)",
+          fontSize: "38px",
+        }}
+      >
+        UP TO 1001x LEVERAGE
+      </div>
+    ),
+    botonPrimary: <Boton texto="Trade Now" isBlue />,
+    botonSecondary: null,
+    bunnyPng: (
+      <img
+        style={{
+          position: "absolute",
+          right: "8px",
+          bottom: 0,
+          height: "260px",
+          width: "392px",
+        }}
+        src={imagenes.perpetualBunny}
         alt="Bunny"
       ></img>
     ),
