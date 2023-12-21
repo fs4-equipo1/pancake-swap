@@ -7,7 +7,8 @@
     -webkit-mask-image: linear-gradient(180deg, transparent, var(--colors-background) 20%, var(--colors-background) 80%, transparent);
     flex-direction: column;
     height: 230px;
-    
+    align-items: start;
+    justify-content: center;
   }
 
   .scroll div {
@@ -157,5 +158,37 @@
     position: relative;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
 
+.titleCake{
+    font-size: 40px;
+    display: flex;
+    
+}
+
+.experienceP{
+    color: var(--colors-text99);
+    font-size: 20px;
+    padding: 0 16px;
+    line-height: 110%;
+    
+}
+
+.containerText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+
+.buyCake{
+    display: flex;
+    flex-direction: row;
+}
+
+.cake{
+    color: var(--colors-secondary);
+    margin-left: 10px;
+}

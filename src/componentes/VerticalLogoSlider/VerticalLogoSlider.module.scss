@@ -7,7 +7,7 @@
     -webkit-mask-image: linear-gradient(180deg, transparent, var(--colors-background) 20%, var(--colors-background) 80%, transparent);
     flex-direction: column;
     height: 230px;
-    
+    align-items: end;
   }
 
   .scroll div {
