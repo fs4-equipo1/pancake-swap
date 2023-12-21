@@ -2,7 +2,7 @@ import styles from "./InfiniteSlider.module.scss";
 
 export function InfiniteSlider() {
   return (
-    <section>
+    <section className={styles.shapingSection}>
       <div className={styles.subtitle32}>
         <div className={styles.titletop}>
           <p>Shaping the Future of Decentralized Trading:</p>
