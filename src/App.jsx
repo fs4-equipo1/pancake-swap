@@ -24,6 +24,8 @@ import Footer from "./componentes/Footer/Footer";
 import DexNow from "./componentes/DexNow/DexNow";
 import InfiniteSlider from "./componentes/InfiniteSlider/InfiniteSlider";
 
+import { JoinComunidad } from "./componentes/JoinComunidad/JoinComunidad";
+import { CardComunidad } from "./componentes/JoinComunidad/CardComunidad";
 
 function App() {
   return (
@@ -66,6 +68,11 @@ function App() {
       <div style={{display:"flex", justifyContent:"center"}}>
       <InfiniteSlider />
       </div>
+      
+        <div className={styles.container}>
+          <JoinComunidad />
+        </div>
+
       <div>
       <section style={{
         backgroundImage: `url(${background})`,
