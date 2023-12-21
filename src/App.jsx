@@ -14,6 +14,7 @@ import {
 } from "react-icons/fa";
 import Navbar from "./componentes/Navbar/Navbar";
 import { JoinComunidad } from "./componentes/JoinComunidad/JoinComunidad";
+import { CardComunidad } from "./componentes/JoinComunidad/CardComunidad";
 
 function App() {
   return (
