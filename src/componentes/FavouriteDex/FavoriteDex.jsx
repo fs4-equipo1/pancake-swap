@@ -11,7 +11,7 @@ export function FavoriteDex() {
       <div className={styles.container}>
         <div className={styles.textContainer}>
           <Tipografia
-            color={"--colors-text"}
+            color={"--colors-light-text"}
             texto={"Everyone's"}
             isTitleLarge
           ></Tipografia>
@@ -21,7 +21,7 @@ export function FavoriteDex() {
               texto={"Favorite"}
               isTitleLarge
             />
-            <Tipografia color={"--colors-text"} texto={"DEX"} isTitleLarge />
+            <Tipografia color={"--colors-light-text"} texto={"DEX"} isTitleLarge />
           </div>
           <div className={styles.subtext}>
             <Tipografia
