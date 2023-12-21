@@ -25,6 +25,7 @@ import DexNow from "./componentes/DexNow/DexNow";
 import InfiniteSlider from "./componentes/InfiniteSlider/InfiniteSlider";
 import { JoinComunidad } from "./componentes/JoinComunidad/JoinComunidad";
 import { CardComunidad } from "./componentes/JoinComunidad/CardComunidad";
+import ThemeToggle from "./componentes/ThemeToggle/ThemeToggle";
 
 
 function App() {
@@ -73,9 +74,7 @@ function App() {
           <JoinComunidad />
         </div>
 
-      <div>
-        <InfiniteSlider />
-      </div>
+
       <div>
       <section style={{
         backgroundImage: `url(${background})`,
