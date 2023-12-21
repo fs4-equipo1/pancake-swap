@@ -1,7 +1,13 @@
+
+import HeroSwiper from "./componentes/HeroSwiper/HeroSwiper";
+import imagenes from "../public/assets/imagenes";
+import FavoriteDex from "./componentes/FavouriteDex/FavoriteDex";
+import styles from "./styles/pages/home.module.scss";
+import { EcosystemCardsData } from "./EcosystemCard/EcosystemCardsData";
+import { EcosystemCardsContainer } from "./EcosystemCard/EcosystemCard";
 import Boton from "./componentes/Boton/Boton";
 import background from "./assets/background.png"
 import Tipografia from "./componentes/Tipografia/Tipografia";
-import styles from "./styles/pages/home.module.scss";
 import LanguageDropdown from "./componentes/LanguageDropdown/LanguageDropdown";
 import { Icono } from "./componentes/Icono/Icono";
 import {
@@ -17,109 +23,56 @@ import Navbar from "./componentes/Navbar/Navbar";
 import Footer from "./componentes/Footer/Footer";
 import DexNow from "./componentes/DexNow/DexNow";
 import InfiniteSlider from "./componentes/InfiniteSlider/InfiniteSlider";
+import { JoinComunidad } from "./componentes/JoinComunidad/JoinComunidad";
+import { CardComunidad } from "./componentes/JoinComunidad/CardComunidad";
+
 
 function App() {
   return (
     <div>
       <Navbar />
-      <div>
-        <Icono icono={<FaTwitter />} href="https://twitter.com/pancakeswap" />
-        <Icono icono={<FaTelegram />} href="https://t.me/pancakeswap" />
-        <Icono
-          icono={<FaReddit />}
-          href="https://www.reddit.com/r/pancakeswap"
-        />
-        <Icono
-          icono={<FaInstagram />}
-          href="https://www.instagram.com/pancakeswap_official"
-        />
-        <Icono icono={<FaGithub />} href="https://github.com/pancakeswap/" />
-        <Icono icono={<FaDiscord />} href="https://discord.gg/pancakeswap/" />
-        <Icono
-          icono={<FaYoutube />}
-          href="https://www.youtube.com/@pancakeswap_official"
-        />
-        <Icono
-          icono={<FaTwitter />}
-          href="https://twitter.com/pancakeswap"
-          estiloAdicional={true}
-        />
-        <Icono
-          icono={<FaTelegram />}
-          href="https://t.me/pancakeswap"
-          estiloAdicional={true}
-        />
-        <Icono
-          icono={<FaDiscord />}
-          href="https://discord.gg/pancakeswap/"
-          estiloAdicional={true}
-        />
-        <Icono
-          icono={<FaInstagram />}
-          href="https://www.instagram.com/pancakeswap_official"
-          estiloAdicional={true}
-        />
-        <Icono
-          icono={<FaReddit />}
-          href="https://www.reddit.com/r/pancakeswap"
-          estiloAdicional={true}
-        />
-        <Icono
-          icono={<FaYoutube />}
-          href="https://www.youtube.com/@pancakeswap_official"
-          estiloAdicional={true}
-        />
-      </div>
+      <HeroSwiper />
       <div className={styles.container}>
-        <div>
-          <Boton texto={"Transparent"} isTransparent={true} />
-          <Boton texto={"Blue"} isBlue={true} />
-          <Boton texto={"White"} isWhite={true} />
-        </div>
-        <div>
-          <Tipografia
-            color={"--colors-warning"}
-            texto={"Title Large"}
-            isTitleLarge
-          />
-          <Tipografia color={"--colors-background"} texto={"Title"} isTitle />
-          <Tipografia
-            color={"--colors-textSubtle"}
-            texto={"Subtitle large"}
-            isSubtitleLarge
-          />
-          <Tipografia
-            color={"--colors-textDisabled"}
-            texto={"Subtitle"}
-            isSubtitle
-          />
-          <Tipografia
-            color={"--colors-failure"}
-            texto={"Body Large"}
-            isBodyLarge
-          />
-          <Tipografia color={"--colors-primary"} texto={"Body"} isBody />
-
-          <div className={styles.textContainer}>
-            <Tipografia
-              color={"--colors-white"}
-              texto={"Everyone's"}
-              isTitleLarge
-            />
-            <div className={styles.subtext}>
-              <Tipografia
-                color={"--colors-secondary"}
-                texto={"Favorite"}
-                isTitleLarge
-              />
-              <Tipografia color={"--colors-white"} texto={"DEX"} isTitleLarge />
-            </div>
-            <div>
-              <LanguageDropdown />
-            </div>
-          </div>
-        </div>
+       <FavoriteDex />
+        
       </div>
+      <section
+        className="Ecosistema"
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems:'center',
+          width:'100%'
+        }}
+      >
+        <EcosystemCardsContainer
+          path={"./Assets/Images/trade-bunny.png"}
+          titulo={"Trade"}
+          cardData={EcosystemCardsData}
+          objectId={1}
+        />
+        <EcosystemCardsContainer
+          path={"./Assets/Images/asset36.png"}
+          titulo={"Earn"}
+          cardData={EcosystemCardsData}
+          objectId={2}
+          isReverse
+        />
+        <EcosystemCardsContainer
+          path={"./Assets/Images/asset8.png"}
+          titulo={"Game & NFT"}
+          cardData={EcosystemCardsData}
+          objectId={3}
+        />
+      </section>
+      <div style={{display:"flex", justifyContent:"center"}}>
+      <InfiniteSlider />
+      </div>
+      
+        <div className={styles.container}>
+          <JoinComunidad />
+        </div>
+
       <div>
         <InfiniteSlider />
       </div>
@@ -178,8 +131,8 @@ function App() {
           items={["Terms Of Service", "Blog", "Brand Assets", "Careers"]}
         />
          <img
-        src={"https://cdn.discordapp.com/attachments/1146380288776220734/1186038041333207050/vecake-title.de07d9b9.png?ex=6591cb00&is=657f5600&hm=28843fe8c1fb35f0112536f74a1ae45023861dff72317cf761797d8e043cb597&"}
-        alt="Description of the image"
+        src={imagenes.logoPancakeWhite}
+        alt="Pancake"
         style={{ width: "160px", height: "25px"}}></img>
       </div>
       <div style={{display: "flex",flexDirection: "row", gap: "30px", marginBottom:"32px"}}>
@@ -240,3 +193,4 @@ function App() {
 }
 
 export default App;
+

@@ -6,6 +6,7 @@
     background-color: #fff;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 100px;
 }
 
 .dropdownPrimary {
@@ -13,6 +14,7 @@
     flex-direction: row;
     gap: 35px;
     margin: 15px;
+    z-index: 1000;
 }
 
 .dropdownSecondary {   
@@ -44,3 +46,5 @@
     height: 100%; 
     width: 28px;  
   }
+
+  
