@@ -2,7 +2,9 @@ import styles from "./InfiniteSlider.module.scss";
 
 export function InfiniteSlider() {
   return (
-    <section className={styles.shapingSection}>
+    <section className={styles.shapfuture}>
+    <div className={styles.containerL}>
+    <div className={styles.shapingSection}>
       <div className={styles.subtitle32}>
         <div className={styles.titletop}>
           <p>Shaping the Future of Decentralized Trading:</p>
@@ -82,6 +84,18 @@ export function InfiniteSlider() {
           </span>
         </div>
       </div>
+      <div className={styles.leftball}>
+            <img src="../public/images/asset14.png" alt="BNB-ball-rocket" />
+          </div>
+          <div className={styles.rightball}>
+            <img src="../public/images/asset16.png" alt="ETH-ball-rocket" />
+          </div>
+          <div className={styles.middleball}>
+            <img src="../public/images/asset15.png" alt="Aptos-ball-rocket" />
+        </div>
+
+    </div>
+    </div>
     </section>
   );
 }

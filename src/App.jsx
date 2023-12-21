@@ -120,7 +120,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div style={{display:"flex", justifyContent:"center"}}>
+      <div>
         <InfiniteSlider />
       </div>
       <div>
