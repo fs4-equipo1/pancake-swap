@@ -23,11 +23,9 @@ export function Card({
   }
 
   return (
-      <div className={styles.card}>
-      <img className={styles.cardImgPurple} src={imageSrc} alt="" style={{opacity: opacity}}
-        onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} />
-      <img className={styles.cardImgColor} src={imageSrcColor} alt="" style={{ opacity: 1 - opacity}} 
-        onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}/>
+      <div className={styles.card} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+      <img className={styles.cardImgPurple} src={imageSrc} alt="" style={{opacity: opacity}} />
+      <img className={styles.cardImgColor} src={imageSrcColor} alt="" style={{ opacity: 1 - opacity}} />
       <div className={styles.cardTextTitle} >{titleText}</div>
       <div className={styles.cardText}>{contentText}</div>
       <div className={styles.cardlink}>{commandText}</div>
