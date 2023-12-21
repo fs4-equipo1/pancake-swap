@@ -1,9 +1,10 @@
 import Boton from "./componentes/Boton/Boton";
+import FavoriteDex from "./componentes/FavouriteDex/FavoriteDex";
 import styles from "./styles/pages/home.module.scss";
 function App() {
   return (
     <div className={styles.container}>
-      <div>
+      {/*<div>
         <Boton texto={"Transparent"} isTransparent={true} />
         <Boton texto={"Blue"} isBlue={true} />
         <Boton texto={"White"} isWhite={true} />
@@ -12,7 +13,8 @@ function App() {
         <Boton texto={"Transparent"} isTransparent={true} />
         <Boton texto={"Blue"} isBlue={true} />
         <Boton texto={"White"} isWhite={true} />
-      </div>
+      </div>*/}
+      <FavoriteDex />
     </div>
   );
 }
