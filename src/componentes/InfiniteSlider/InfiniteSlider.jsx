@@ -3,29 +3,29 @@ import styles from "./InfiniteSlider.module.scss";
 export function InfiniteSlider() {
   return (
     <section>
-      <div className="sub-title-32">
-        <div className="title-top">
+      <div className={styles.subtitle32}>
+        <div className={styles.titletop}>
           <p>Shaping the Future of Decentralized Trading:</p>
         </div>
-        <div className="second-title">
+        <div className={styles.secondtitle}>
           <p>PancakeSwap Unstoppable Expansion</p>
         </div>
       </div>
-      <div className="numbers-container">
-        <div className="numbers-card">
-          <div className="total-title">Total Users:</div>
-          <div className="total-numbers">1,267,400</div>
-          <div className="last-days">in the last 30 days</div>
+      <div className={styles.numberscontainer}>
+        <div className={styles.numberscard}>
+          <div className={styles.totaltitle}>Total Users:</div>
+          <div className={styles.totalnumbers}>1,267,400</div>
+          <div className={styles.lastdays}>in the last 30 days</div>
         </div>
-        <div className="numbers-card">
-          <div className="total-title">Total Traders:</div>
-          <div className="total-numbers">18,912,145</div>
-          <div className="last-days">in the last 30 days</div>
+        <div className={styles.numberscard}>
+        <div className={styles.totaltitle}>Total Traders:</div>
+        <div className={styles.totalnumbers}>18,912,145</div>
+        <div className={styles.lastdays}>in the last 30 days</div>
         </div>
-        <div className="numbers-card">
-          <div className="total-title">Total Value Locked:</div>
-          <div className="total-numbers">1,521,686,350$</div>
-          <div className="last-days">in the last 30 days</div>
+        <div className={styles.numberscard}>
+          <div className={styles.totaltitle}>Total Value Locked:</div>
+          <div className={styles.totalnumbers}>1,521,686,350$</div>
+          <div className={styles.lastdays}>in the last 30 days</div>
         </div>
       </div>
       <div className={styles.scroll}>
