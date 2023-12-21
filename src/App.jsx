@@ -32,7 +32,6 @@ function App() {
   return (
     <div>
       <Navbar />
-      <ThemeToggle />
       <HeroSwiper />
       <div className={styles.container}>
        <FavoriteDex />
