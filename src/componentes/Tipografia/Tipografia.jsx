@@ -30,9 +30,9 @@ const Tipografia = ({
     body: isBody,
   });
   return (
-    <p className={classNames} style={{ color: `var(${color})` }}>
+    <div className={classNames} style={{ color: `var(${color})` }}>
       {texto}
-    </p>
+    </div>
   );
 };
 
