@@ -1,13 +1,9 @@
 - Breve descripción de lo que se va a trabajar en esta pull request:
 
-- Link a la tarjeta de Trello:
+- Link a la tarjeta de Trello o al Issue (ej: Cierra el issue #2):
 
 - Imagenés de los componentes creados:
 
-- [ ] El código no tiene errores
-- [ ] El código fue revisado por mi
-- [ ] El código está lo mas simplificado posible
-- [ ] El código esta formateado
 
 **Nota**
 

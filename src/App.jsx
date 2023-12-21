@@ -1,6 +1,7 @@
 
 import HeroSwiper from "./componentes/HeroSwiper/HeroSwiper";
 import imagenes from "../public/assets/imagenes";
+import FavoriteDex from "./componentes/FavouriteDex/FavoriteDex";
 import styles from "./styles/pages/home.module.scss";
 import { EcosystemCardsData } from "./EcosystemCard/EcosystemCardsData";
 import { EcosystemCardsContainer } from "./EcosystemCard/EcosystemCard";

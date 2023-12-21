@@ -313,7 +313,8 @@
 body {
   font-family: var(--font);
   // color: var(--colors-text);
-  background-color: var(--colors-contrast);
+  background-color: var(--colors-background);
+  width: 100vw;
 }
 
 /**
