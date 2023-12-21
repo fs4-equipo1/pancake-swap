@@ -27,6 +27,7 @@ import { JoinComunidad } from "./componentes/JoinComunidad/JoinComunidad";
 // import { CardComunidad } from "./componentes/JoinComunidad/CardComunidad";
 import ThemeToggle from "./componentes/ThemeToggle/ThemeToggle";
 import VerticalSlider from "./componentes/VerticalSlider/VerticalSlider";
+import VerticalLogoSlider from "./componentes/VerticalLogoSlider/VerticalLogoSlider";
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
       <div className={styles.container}>
        <FavoriteDex />
         <VerticalSlider />
+        <VerticalLogoSlider />
       </div>
       <section
         className="Ecosistema"
