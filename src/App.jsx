@@ -1,5 +1,6 @@
 
 import HeroSwiper from "./componentes/HeroSwiper/HeroSwiper";
+import imagenes from "../public/assets/imagenes";
 import styles from "./styles/pages/home.module.scss";
 import { EcosystemCardsData } from "./EcosystemCard/EcosystemCardsData";
 import { EcosystemCardsContainer } from "./EcosystemCard/EcosystemCard";
@@ -119,8 +120,8 @@ function App() {
           items={["Terms Of Service", "Blog", "Brand Assets", "Careers"]}
         />
          <img
-        src={"https://cdn.discordapp.com/attachments/1146380288776220734/1186038041333207050/vecake-title.de07d9b9.png?ex=6591cb00&is=657f5600&hm=28843fe8c1fb35f0112536f74a1ae45023861dff72317cf761797d8e043cb597&"}
-        alt="Description of the image"
+        src={imagenes.logoPancakeWhite}
+        alt="Pancake"
         style={{ width: "160px", height: "25px"}}></img>
       </div>
       <div style={{display: "flex",flexDirection: "row", gap: "30px", marginBottom:"32px"}}>
