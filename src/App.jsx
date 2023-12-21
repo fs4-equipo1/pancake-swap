@@ -31,7 +31,7 @@ function App() {
       <Navbar />
       <HeroSwiper />
       <div className={styles.container}>
-       
+       <FavoriteDex />
         
       </div>
       <section
