@@ -7,7 +7,7 @@ import { EcosystemCardsData } from "./EcosystemCard/EcosystemCardsData";
 import { EcosystemCardsContainer } from "./EcosystemCard/EcosystemCard";
 import Boton from "./componentes/Boton/Boton";
 import background from "./assets/background.png"
-import Tipografia from "./componentes/Tipografia/Tipografia";
+// import Tipografia from "./componentes/Tipografia/Tipografia";
 import LanguageDropdown from "./componentes/LanguageDropdown/LanguageDropdown";
 import { Icono } from "./componentes/Icono/Icono";
 import {
@@ -24,9 +24,9 @@ import Footer from "./componentes/Footer/Footer";
 import DexNow from "./componentes/DexNow/DexNow";
 import InfiniteSlider from "./componentes/InfiniteSlider/InfiniteSlider";
 import { JoinComunidad } from "./componentes/JoinComunidad/JoinComunidad";
-import { CardComunidad } from "./componentes/JoinComunidad/CardComunidad";
+// import { CardComunidad } from "./componentes/JoinComunidad/CardComunidad";
 import ThemeToggle from "./componentes/ThemeToggle/ThemeToggle";
-
+import VerticalSlider from "./componentes/VerticalSlider/";
 
 function App() {
   return (
@@ -113,6 +113,9 @@ function App() {
             "Merchandise",
           ]}
         />
+        <div>
+        <VerticalSlider />
+        </div>
         <Footer
           title={"BUSINESS"}
           items={["Farms And Syrup Pools", "IFO", "NFT Marketplace"]}
