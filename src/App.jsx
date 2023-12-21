@@ -16,6 +16,7 @@ import {
 import Navbar from "./componentes/Navbar/Navbar";
 import Footer from "./componentes/Footer/Footer";
 import DexNow from "./componentes/DexNow/DexNow";
+import InfiniteSlider from "./componentes/InfiniteSlider/InfiniteSlider";
 
 function App() {
   return (
@@ -118,6 +119,9 @@ function App() {
             </div>
           </div>
         </div>
+      </div>
+      <div style={{display:"flex", justifyContent:"center"}}>
+        <InfiniteSlider />
       </div>
       <div>
       <section style={{
