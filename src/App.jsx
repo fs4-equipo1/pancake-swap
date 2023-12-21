@@ -160,7 +160,10 @@ function App() {
               justifyContent: "space-between",
             }}
           >
+            <div style={{display:"flex", alignItems:"center"}}>
+            <ThemeToggle />
             <LanguageDropdown reverse={true} />
+            </div>
             <div
               style={{
                 display: "flex",
