@@ -43,3 +43,16 @@
   background-color: white;
   color: #1fc7d4;
 }
+
+.learn {
+  align-items: center;
+  justify-content: center;
+  display: inline-flex;
+  font-family: inherit;
+
+  color: var(--colors-primary);
+  background-color: transparent;
+  &:hover{
+    text-decoration: underline;
+  }
+}
