@@ -23,9 +23,9 @@ import Navbar from "./componentes/Navbar/Navbar";
 import Footer from "./componentes/Footer/Footer";
 import DexNow from "./componentes/DexNow/DexNow";
 import InfiniteSlider from "./componentes/InfiniteSlider/InfiniteSlider";
-
 import { JoinComunidad } from "./componentes/JoinComunidad/JoinComunidad";
 import { CardComunidad } from "./componentes/JoinComunidad/CardComunidad";
+
 
 function App() {
   return (
@@ -73,6 +73,9 @@ function App() {
           <JoinComunidad />
         </div>
 
+      <div>
+        <InfiniteSlider />
+      </div>
       <div>
       <section style={{
         backgroundImage: `url(${background})`,
