@@ -26,7 +26,8 @@ import InfiniteSlider from "./componentes/InfiniteSlider/InfiniteSlider";
 import { JoinComunidad } from "./componentes/JoinComunidad/JoinComunidad";
 // import { CardComunidad } from "./componentes/JoinComunidad/CardComunidad";
 import ThemeToggle from "./componentes/ThemeToggle/ThemeToggle";
-import VerticalSlider from "./componentes/VerticalSlider/";
+import VerticalSlider from "./componentes/VerticalSlider/VerticalSlider";
+
 
 function App() {
   return (
@@ -35,7 +36,7 @@ function App() {
       <HeroSwiper />
       <div className={styles.container}>
        <FavoriteDex />
-        
+        <VerticalSlider />
       </div>
       <section
         className="Ecosistema"
@@ -114,7 +115,7 @@ function App() {
           ]}
         />
         <div>
-        <VerticalSlider />
+
         </div>
         <Footer
           title={"BUSINESS"}
