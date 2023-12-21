@@ -109,3 +109,89 @@
   .scrollZksync img {
     width: 24px;
   }
+
+  .shapingSection {
+    display: flex;
+    justify-content: center;
+  }
+
+
+  
+  .subtitle32 {
+    width: 100%;
+    text-align: center;
+    font-size: var(--fontSizes-32px);
+  }
+  
+  .subtitle-32 > .titletop {
+    color: var(--colors-text);
+    font-size: 32px;
+    font-weight: 600;
+  }
+  
+  .titletop {
+    color: var(--colors-text);
+    font-size: 32px;
+    font-weight: 600;
+  }
+
+  .subtitle32 > .secondtitle {
+    color: var(--colors-text);
+    font-size: 32px;
+    margin-bottom: var(--space-48px);
+    font-weight: 600;
+  }
+  
+  .numberscontainer {
+    margin-bottom: var(--space-48px);
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    width: 800px;
+    height: 98px;
+    gap: 50px;
+    justify-content: center;
+  }
+  
+  .numberscard {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    align-items: center;
+    text-align: center; /* Center the text within the card */
+  }
+  
+  .totaltitle {
+    color: var(--colors-text);
+    font-size: var(--fontSizes-20px);
+    font-weight: 600;
+  }
+  
+  .totalnumbers {
+    color: var(--colors-secondary);
+    font-weight: 600;
+    height: 44px;
+    font-size: var(--fontSizes-40px);
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+  }
+  .lastdays {
+    color: var(--colors-textSubtle);
+    font-weight: 600;
+    font-size: var(--fontSizes-16px);
+  }
+  
+  @media screen and (max-width: 1200px) {
+    .left-img {
+      top: 0px;
+      left: -45px;
+    }
+  
+    .middle-img {
+      top: 0px;
+      right: 98px;
+    }
+  }
+  
