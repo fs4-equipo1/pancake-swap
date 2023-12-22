@@ -2,8 +2,8 @@ import styles from "./VerticalLogoSlider.module.scss";
 
 function VerticalLogoSlider() {
   return (
-    <div className={styles.containerL}>
-
+    <div className={styles.containerL}> 
+    //
       <div className={styles.scroll}>
         <div>
           <span className={styles.scrollAptos}>

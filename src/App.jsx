@@ -29,7 +29,7 @@ import ThemeToggle from "./componentes/ThemeToggle/ThemeToggle";
 import VerticalSlider from "./componentes/VerticalSlider/VerticalSlider";
 import VerticalLogoSlider from "./componentes/VerticalLogoSlider/VerticalLogoSlider";
 
-
+// App
 function App() {
   return (
     <div>
