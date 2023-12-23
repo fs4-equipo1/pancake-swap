@@ -1,0 +1,13 @@
+.cardComunidad{
+    height: 340px;
+    width: 340px;
+    background-color: #7645d9;
+    border-radius: 32px;
+    border: 2px solid rgb(60, 23, 134);
+    box-shadow: rgb(60, 23, 134) 0px 4px 0px 0px;
+    padding: 24px 0px 24px 60px;
+}
+.cardComunidadContent{
+  display: flex;
+  flex-direction: column;
+}

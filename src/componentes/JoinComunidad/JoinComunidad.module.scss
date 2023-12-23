@@ -1,0 +1,50 @@
+.iconosFoot{
+    display: flex;
+    margin-top: 30px;
+    gap: 12px;
+    justify-content: center;
+}
+.container{
+    background-color:rgba(0, 0, 0, 0.8);
+    color: white;
+    height: 628px;
+    width: 936px;
+    padding: 40px;
+    border-radius: 72px;
+    border: 1px solid #383241;
+    position: relative;
+    backdrop-filter: blur(20px);
+    box-sizing: border-box;
+}
+
+.cards{
+    gap: 24px;
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.join{
+    line-height: 1.1;
+    font-size: 32px;
+}
+.joinComunidad{
+    color: rgb(168, 129, 252);
+    font-size: 32px;
+}
+.tittleComunity{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 12px;
+    gap: 8px;
+}
+.phraseComunity{
+    line-height: 1.5;
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: 600;
+    color: #b8add2;
+}
