@@ -1,3 +1,7 @@
-.iconoWraper{
-    background-color: black;
+.iconoWrapper {
+  cursor: pointer;
+
+  &:hover {
+    translate: ease 0.2;
+  }
 }
