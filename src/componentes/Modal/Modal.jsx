@@ -1,35 +1,62 @@
-
-import React, { useState } from "react";
-import PropTypes from 'prop-types';
-import styles from './Modal.module.scss'
-import IconoWrapper from "../../IconoWraper/IconoWraper";
+import React, { useEffect, useState, useRef } from "react";
+import PropTypes from "prop-types";
+import styles from "./Modal.module.scss";
 import { Icono } from "../Icono/Icono";
 import { IoMdSettings } from "react-icons/io";
+import IconoWrapper from "../IconoWraper/IconoWraper";
 
-
-export const Modal = ({children}) => {
-  const [isOpen, setIsOpen] = useState(false);
+const Modal = ({ isOpen, onClose, children, onClick }) => {
+  const [modalOpen, setModalOpen] = useState(isOpen);
+  const modalRef = useRef();
 
   const openModal = () => {
-    setIsOpen(true);
-    console.log('Modal is open');
-
+    setModalOpen(true);
+    onClick && onClick();
   };
 
   const closeModal = () => {
-    setIsOpen(false);
-    console.log('Modal is closed');
-
+    setModalOpen(false);
+    onClose && onClose();
   };
+
+  const handleClickOutside = (event) => {
+    if (modalRef.current && !modalRef.current.contains(event.target)) {
+      closeModal();
+    }
+  };
+
+  useEffect(() => {
+    setModalOpen(isOpen);
+
+    const handleEscapeKey = (event) => {
+      if (event.key === "Escape") {
+        closeModal();
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+      document.addEventListener("keydown", handleEscapeKey);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleEscapeKey);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleEscapeKey);
+    };
+  }, [isOpen]);
 
   return (
     <div>
-        <IconoWrapper onClick={openModal}>
-        <Icono icono={<IoMdSettings />}/>
-        </IconoWrapper>
-      {isOpen && (
-        <div className={styles.modal}>
-          <div className={styles.modal-content}>
+      <IconoWrapper onClick={openModal}>
+        <Icono icono={<IoMdSettings />} />
+      </IconoWrapper>
+
+      {modalOpen && (
+        <div className={styles.modal} ref={modalRef}>
+          <div className={styles.modalContent}>
             <button className={styles.close} onClick={closeModal} aria-label="Close">
               &times;
             </button>
@@ -42,7 +69,11 @@ export const Modal = ({children}) => {
 };
 
 Modal.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired,
   children: PropTypes.node.isRequired,
+  onClick: PropTypes.func,
 };
 
 export default Modal;
+

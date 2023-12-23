@@ -1,14 +1,25 @@
-import Boton from "../Boton/Boton";
+import React, { useState } from "react";
+import Modal from "../Modal/Modal";
+import { FaArrowRightFromBracket } from "react-icons/fa6";
+import NavbarDropdown from "../NavbarDropdown/NavbarDropdown";
 import LanguageDropdown from "../LanguageDropdown/LanguageDropdown";
 import NetworkDropdown from "../NetworkDropdown/NetworkDropdown";
-import NavbarDropdown from "../NavbarDropdown/NavbarDropdown";
-import { Icono } from "../Icono/Icono";
-import { IoMdSettings } from "react-icons/io";
+import Boton from "../Boton/Boton";
 import styles from "./Navbar.module.scss";
-import { FaArrowRightFromBracket } from "react-icons/fa6";
+import ThemeToggle from "../ThemeToggle/ThemeToggle";
+import Tipografia from "../Tipografia/Tipografia";
 
 function Navbar() {
- 
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
   const itemsTrade = [
     {
       texto: "Swap",
@@ -22,7 +33,7 @@ function Navbar() {
       texto: "Perpetual",
       icono: <FaArrowRightFromBracket />,
     },
-    { 
+    {
       texto: "Bridge",
       icono: <FaArrowRightFromBracket />,
     },
@@ -122,8 +133,8 @@ function Navbar() {
     {
       texto: "Blog",
       icono: <FaArrowRightFromBracket />,
-    }
-    ]
+    },
+  ];
   return (
     <div>
       <nav className={styles.navbar}>
@@ -137,7 +148,6 @@ function Navbar() {
           <NavbarDropdown title={"Game"} items={itemsGame} />
           <NavbarDropdown title={"NFT"} items={itemsNft} />
           <NavbarDropdown title={"..."} items={itemsPunto} />
-
         </div>
         <div className={styles.dropdownSecondary}>
           <div className={styles.bluecircle}>
@@ -149,10 +159,45 @@ function Navbar() {
             <p>$2.273</p>
           </div>
           <LanguageDropdown />
-          <Icono
-            icono={<IoMdSettings />}
-            href="https://www.instagram.com/pancakeswap_official"
-          />
+          <div>
+            <Modal isOpen={modalOpen} onClose={closeModal}>
+              <div>
+                <Tipografia texto={"Settings"} isTitle></Tipografia>
+              </div>
+              <div>
+                <div>
+                <Tipografia Texto={"GLOBAL"} isBodyLarge></Tipografia>
+
+                  <div className="">
+                    <Tipografia Texto={"Dark mode"} isBodyLarge></Tipografia>
+                    <Tipografia
+                      Texto={"Subgraph Health Indicator"}
+                      isBodyLarge
+                    ></Tipografia>
+                    <Tipografia Texto={"Show username"} isBodyLarge></Tipografia>
+                    <Tipografia Texto={"Allow notifications"} isBodyLarge></Tipografia>
+                    <Tipografia Texto={"Token Risk Scanning"} isBodyLarge></Tipografia>
+                  </div>
+                  <div>
+                    <ThemeToggle/>
+
+                  </div>
+                </div>
+                <div>
+                  <Tipografia
+                    Texto={"Default Transaction Speed (GWEI)"}
+                  ></Tipografia>
+                  <div>
+                    <Boton texto={"Default"} isBlue={true}></Boton>
+                    <Boton texto={"Standard (3)"} isWhite={true}></Boton>
+                    <Boton texto={"Fast (4)"} isWhite={true}></Boton>
+                    <Boton texto={"Instant (5)"} isWhite={true}></Boton>
+                  </div>
+                </div>
+              </div>
+            </Modal>
+          </div>
+
           <NetworkDropdown />
           <Boton texto={"Connect Wallet"} isBlue={true} />
         </div>
