@@ -1,8 +1,8 @@
 
 .modal {
   position: fixed;
-  top: 0;
-  left: 0;
+  top:0;
+  left: 0;;
   width: 100%;
   height: 100%;
   background-color:#ae8ce941;
@@ -18,7 +18,7 @@
   .modalContent {
     background-color: #fff;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 50px;
     width: 483px;
     height: 530px;
     position: relative;
@@ -32,4 +32,17 @@
     font-size: 20px;
     color: #000;
   }
+}
+.header{
+  background-color: #494545;
+  height: 74px;
+  object-fit: cover;
+}
+.activate{
+  display: flex;
+  flex-direction: column;
+}
+.buttons{
+  display: flex;
+  flex-direction: row;
 }

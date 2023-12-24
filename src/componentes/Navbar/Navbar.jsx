@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Modal from "../Modal/Modal";
+import ModalStyles from "../Modal/Modal.module.scss"
 import { FaArrowRightFromBracket } from "react-icons/fa6";
 import NavbarDropdown from "../NavbarDropdown/NavbarDropdown";
 import LanguageDropdown from "../LanguageDropdown/LanguageDropdown";
@@ -161,14 +162,14 @@ function Navbar() {
           <LanguageDropdown />
           <div>
             <Modal isOpen={modalOpen} onClose={closeModal}>
-              <div>
+              <div className={ModalStyles.header}>
                 <Tipografia texto={"Settings"} isTitle></Tipografia>
               </div>
               <div>
                 <div>
                 <Tipografia Texto={"GLOBAL"} isBodyLarge></Tipografia>
 
-                  <div className="">
+                  <div className="textContainer">
                     <Tipografia Texto={"Dark mode"} isBodyLarge></Tipografia>
                     <Tipografia
                       Texto={"Subgraph Health Indicator"}
@@ -178,7 +179,7 @@ function Navbar() {
                     <Tipografia Texto={"Allow notifications"} isBodyLarge></Tipografia>
                     <Tipografia Texto={"Token Risk Scanning"} isBodyLarge></Tipografia>
                   </div>
-                  <div>
+                  <div className={ModalStyles.activate}>
                     <ThemeToggle/>
 
                   </div>
@@ -187,7 +188,7 @@ function Navbar() {
                   <Tipografia
                     Texto={"Default Transaction Speed (GWEI)"}
                   ></Tipografia>
-                  <div>
+                  <div className={ModalStyles.buttons}>
                     <Boton texto={"Default"} isBlue={true}></Boton>
                     <Boton texto={"Standard (3)"} isWhite={true}></Boton>
                     <Boton texto={"Fast (4)"} isWhite={true}></Boton>
