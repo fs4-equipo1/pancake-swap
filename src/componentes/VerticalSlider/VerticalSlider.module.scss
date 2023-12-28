@@ -156,9 +156,11 @@
     padding-top: var(--space-48px);
     padding-bottom: var(--space-48px);
     position: relative;
+    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items:flex-end;
+  
+    
   }
 
 .titleCake{
@@ -191,4 +193,18 @@
 .cake{
     color: var(--colors-secondary);
     margin-left: 10px;
+}
+
+ 
+.scroll {
+  margin-right: 200px;
+}
+
+.titleSlider {
+  color: var(--colors-text);
+  line-height: 1.5;
+    margin-bottom: 20px;
+    margin-right: 200px;
+    font-size: 30px;
+    font-weight: 600;
 }

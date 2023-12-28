@@ -2,7 +2,7 @@
     position: relative;
     display: flex;
     align-items: center;
-
+    
     overflow: hidden;
     -webkit-mask-image: linear-gradient(180deg, transparent, var(--colors-background) 20%, var(--colors-background) 80%, transparent);
     flex-direction: column;
@@ -50,6 +50,7 @@
   .scroll div span {
     display: inline-flex;
     align-items: center;
+
     margin: 10px;
     background: var(--colors-backgroundAlt);
     color: var(--colors-text);
@@ -155,7 +156,23 @@
     padding-top: var(--space-48px);
     padding-bottom: var(--space-48px);
     position: relative;
+    display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start
   }
 
+  .scroll {
+    margin-left: 200px;
+    
+  }
+
+
+.titleSlider{
+ 
+    color: var(--colors-text);
+    line-height: 1.5;
+      margin-bottom: 20px;
+      margin-left: 200px;
+      font-size: 30px;
+      font-weight: 600;
+  }
