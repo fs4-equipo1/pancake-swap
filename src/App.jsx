@@ -28,6 +28,8 @@ import { JoinComunidad } from "./componentes/JoinComunidad/JoinComunidad";
 import ThemeToggle from "./componentes/ThemeToggle/ThemeToggle";
 import VerticalSlider from "./componentes/VerticalSlider/VerticalSlider";
 import VerticalLogoSlider from "./componentes/VerticalLogoSlider/VerticalLogoSlider";
+import SliderSeparator from "./componentes/SliderSeparator/SliderSeparator";
+import CakePotencial from "./componentes/CakePotencial/CakePotencial";
 
 // App
 function App() {
@@ -37,8 +39,22 @@ function App() {
       <HeroSwiper />
       <div className={styles.container}>
        <FavoriteDex />
+      </div>
+      <div><CakePotencial />
+      <div style={{display: "flex",
+      flexDirection: "row" 
+      }}>
+       <VerticalLogoSlider />
+     
+        <SliderSeparator />
+        
         <VerticalSlider />
-        <VerticalLogoSlider />
+      <div style={{display: "flex",
+      justifyContent: "center",
+      
+    }}>
+      </div>
+      </div>
       </div>
       <section
         className="Ecosistema"

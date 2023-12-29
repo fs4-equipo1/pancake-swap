@@ -163,42 +163,10 @@
     
   }
 
-.titleCake{
-    font-size: 40px;
-    display: flex;
-    
-}
-
-.experienceP{
-    color: var(--colors-text99);
-    font-size: 20px;
-    padding: 0 16px;
-    line-height: 110%;
-    
-}
-
-.containerText{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 32px;
-}
-
-.buyCake{
-    display: flex;
-    flex-direction: row;
-}
-
-.cake{
-    color: var(--colors-secondary);
-    margin-left: 10px;
-}
-
  
-.scroll {
-  margin-right: 200px;
-}
+// .scroll {
+//   margin-right: 200px;
+// }
 
 .titleSlider {
   color: var(--colors-text);
@@ -207,4 +175,8 @@
     margin-right: 200px;
     font-size: 30px;
     font-weight: 600;
+}
+
+.titleInfinite {
+  margin-top: 50px;
 }
