@@ -3,6 +3,7 @@ import styles from "./VerticalLogoSlider.module.scss";
 function VerticalLogoSlider() {
   return (
     <div className={styles.containerL}> 
+    <div className={styles.titleInfinite}>
     <div className={styles.titleSlider}><h2>Ecosystem</h2></div>
       <div className={styles.scroll}>
       <div>
@@ -58,6 +59,7 @@ function VerticalLogoSlider() {
           </span>
         
         </div>
+      </div>
       </div>
       </div>
   )

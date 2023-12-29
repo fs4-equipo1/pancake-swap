@@ -1,4 +1,3 @@
-
 import HeroSwiper from "./componentes/HeroSwiper/HeroSwiper";
 import imagenes from "../public/assets/imagenes";
 import FavoriteDex from "./componentes/FavouriteDex/FavoriteDex";
@@ -6,7 +5,7 @@ import styles from "./styles/pages/home.module.scss";
 import { EcosystemCardsData } from "./EcosystemCard/EcosystemCardsData";
 import { EcosystemCardsContainer } from "./EcosystemCard/EcosystemCard";
 import Boton from "./componentes/Boton/Boton";
-import background from "./assets/background.png"
+import background from "./assets/background.png";
 // import Tipografia from "./componentes/Tipografia/Tipografia";
 import LanguageDropdown from "./componentes/LanguageDropdown/LanguageDropdown";
 import { Icono } from "./componentes/Icono/Icono";
@@ -38,33 +37,42 @@ function App() {
       <Navbar />
       <HeroSwiper />
       <div className={styles.container}>
-       <FavoriteDex />
+        <FavoriteDex />
       </div>
-      <div><CakePotencial />
-      <div style={{display: "flex",
-      flexDirection: "row" 
-      }}>
-       <VerticalLogoSlider />
-     
-        <SliderSeparator />
-        
-        <VerticalSlider />
-      <div style={{display: "flex",
-      justifyContent: "center",
+      <div>
+        <CakePotencial />
+        <div style={{ display: "flex", flexDirection: "row", justifyContent: "center" }}>
+          <div
+            style={{
+              position: "relative",
+              display: "flex",
+              flexGrow: "1",
+              flexShrink: "0",
+              flexDirection: "column",
+              zIindex: "1",
+              maxWidth: "100%",
+              padding: "16px 24px",
+            }}
+          >
+            
+            <VerticalLogoSlider />
+          </div>
+          <SliderSeparator />
+          <VerticalSlider />
+          <div style={{ display: "flex", justifyContent: "center" }}></div>
+        </div>
+      </div>
       
-    }}>
-      </div>
-      </div>
-      </div>
       <section
         className="Ecosistema"
         style={{
           display: "flex",
           flexDirection: "column",
-          alignItems:'center',
-          width:'100%'
+          alignItems: "center",
+          width: "100%",
         }}
       >
+       
         <EcosystemCardsContainer
           path={"./Assets/Images/trade-bunny.png"}
           titulo={"Trade"}
@@ -85,96 +93,126 @@ function App() {
           objectId={3}
         />
       </section>
-      <div style={{display:"flex", justifyContent:"center"}}>
-      <InfiniteSlider />
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <InfiniteSlider />
       </div>
-      
-        <div className={styles.container}>
-          <JoinComunidad />
-        </div>
 
+      <div className={styles.container}>
+        <JoinComunidad />
+      </div>
 
       <div>
-      <section style={{
-        backgroundImage: `url(${background})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        minHeight: '550px',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        color: '#ffffff'
-      }}>
-        {/* <h1>Join Everyone's Favorite DEX Now!</h1> */}
-        <div>
-      <DexNow titleLarge={"Join Everyone's Favorite DEX Now!"}/> 
+        <section
+          style={{
+            backgroundImage: `url(${background})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            minHeight: "550px",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            color: "#ffffff",
+          }}
+        >
+          {/* <h1>Join Everyone's Favorite DEX Now!</h1> */}
+          <div>
+            <DexNow titleLarge={"Join Everyone's Favorite DEX Now!"} />
+          </div>
+          <div>
+            <Boton texto={"Connect Wallet"} isBlue={true} />
+          </div>
+        </section>
       </div>
-        <div>
-              <Boton texto={"Connect Wallet"} isBlue={true} />
-            </div>
-      </section>
-      
-      </div>
-      <div style={{background: "#27262c", display: "flex", justifyContent:"center", padding: "56px 40px 32px"}}>
-        <div style={{display: "flex", flexDirection:"column",width: "80%"}}>
-      <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", marginBottom: "32px", padding: "0px", }}>
-        <Footer
-          title={"ECOSYSTEM"}
-          items={[
-            "Trade",
-            "Earn",
-            "Game",
-            "NFT",
-            "Tokenomics",
-            "Litepaper",
-            "CAKE Emission Projection",
-            "Merchandise",
-          ]}
-        />
-        <div>
-
-        </div>
-        <Footer
-          title={"BUSINESS"}
-          items={["Farms And Syrup Pools", "IFO", "NFT Marketplace"]}
-        />
-        <Footer
-          title={"DEVELOPERS"}
-          items={["Contributing", "Github", "Bug Bounty"]}
-        />
-        <Footer
-          title={"SUPPORT"}
-          items={["Contact", "Troubleshooting", "Documentation"]}
-        />
-        <Footer
-          title={"ABOUT"}
-          items={["Terms Of Service", "Blog", "Brand Assets", "Careers"]}
-        />
-         <img
-        src={imagenes.logoPancakeWhite}
-        alt="Pancake"
-        style={{ width: "160px", height: "25px"}}></img>
-      </div>
-      <div style={{display: "flex",flexDirection: "row", gap: "30px", marginBottom:"32px"}}>
-      <Icono icono={<FaTwitter />} href="https://twitter.com/pancakeswap" />
-        <Icono icono={<FaTelegram />} href="https://t.me/pancakeswap" />
-        <Icono
-          icono={<FaReddit />}
-          href="https://www.reddit.com/r/pancakeswap"
-        />
-        <Icono
-          icono={<FaInstagram />}
-          href="https://www.instagram.com/pancakeswap_official"
-        />
-        <Icono icono={<FaGithub />} href="https://github.com/pancakeswap/" />
-        <Icono icono={<FaDiscord />} href="https://discord.gg/pancakeswap/" />
-        <Icono
-          icono={<FaYoutube />}
-          href="https://www.youtube.com/@pancakeswap_official"
-        />
-      </div>
-      <hr></hr>
+      <div
+        style={{
+          background: "#27262c",
+          display: "flex",
+          justifyContent: "center",
+          padding: "56px 40px 32px",
+        }}
+      >
+        <div style={{ display: "flex", flexDirection: "column", width: "80%" }}>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-between",
+              marginBottom: "32px",
+              padding: "0px",
+            }}
+          >
+            <Footer
+              title={"ECOSYSTEM"}
+              items={[
+                "Trade",
+                "Earn",
+                "Game",
+                "NFT",
+                "Tokenomics",
+                "Litepaper",
+                "CAKE Emission Projection",
+                "Merchandise",
+              ]}
+            />
+            <div></div>
+            <Footer
+              title={"BUSINESS"}
+              items={["Farms And Syrup Pools", "IFO", "NFT Marketplace"]}
+            />
+            <Footer
+              title={"DEVELOPERS"}
+              items={["Contributing", "Github", "Bug Bounty"]}
+            />
+            <Footer
+              title={"SUPPORT"}
+              items={["Contact", "Troubleshooting", "Documentation"]}
+            />
+            <Footer
+              title={"ABOUT"}
+              items={["Terms Of Service", "Blog", "Brand Assets", "Careers"]}
+            />
+            <img
+              src={imagenes.logoPancakeWhite}
+              alt="Pancake"
+              style={{ width: "160px", height: "25px" }}
+            ></img>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              gap: "30px",
+              marginBottom: "32px",
+            }}
+          >
+            <Icono
+              icono={<FaTwitter />}
+              href="https://twitter.com/pancakeswap"
+            />
+            <Icono icono={<FaTelegram />} href="https://t.me/pancakeswap" />
+            <Icono
+              icono={<FaReddit />}
+              href="https://www.reddit.com/r/pancakeswap"
+            />
+            <Icono
+              icono={<FaInstagram />}
+              href="https://www.instagram.com/pancakeswap_official"
+            />
+            <Icono
+              icono={<FaGithub />}
+              href="https://github.com/pancakeswap/"
+            />
+            <Icono
+              icono={<FaDiscord />}
+              href="https://discord.gg/pancakeswap/"
+            />
+            <Icono
+              icono={<FaYoutube />}
+              href="https://www.youtube.com/@pancakeswap_official"
+            />
+          </div>
+          <hr></hr>
           <div
             style={{
               display: "flex",
@@ -182,9 +220,9 @@ function App() {
               justifyContent: "space-between",
             }}
           >
-            <div style={{display:"flex", alignItems:"center"}}>
-            <ThemeToggle />
-            <LanguageDropdown reverse={true} />
+            <div style={{ display: "flex", alignItems: "center" }}>
+              <ThemeToggle />
+              <LanguageDropdown reverse={true} />
             </div>
             <div
               style={{
@@ -200,21 +238,20 @@ function App() {
                 className={styles.bluecircleImage}
                 width="28"
                 height="28"
-                style={{marginRight: "10px"}}
+                style={{ marginRight: "10px" }}
               />
-              
+
               <p style={{ marginRight: "20px", color: "#B8ADD2" }}>2.245$ </p>
-          
-            <div>
-              <Boton texto={"Buy CAKE"} isBlue={true}/>
-            </div>
+
+              <div>
+                <Boton texto={"Buy CAKE"} isBlue={true} />
+              </div>
             </div>
           </div>
-      </div>
+        </div>
       </div>
     </div>
   );
 }
 
 export default App;
-
