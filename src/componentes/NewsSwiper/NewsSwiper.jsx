@@ -17,7 +17,7 @@ export default () => {
       {newsSwiperCardData.map((card, index) => (
         <SwiperSlide key={index}>
           <NewsSwiperCard
-            newImg={card.newImg}
+            newImage={card.newImage}
             source={card.source}
             date={card.date}
             title={card.title}
