@@ -39,30 +39,9 @@ function App() {
       <div className={styles.container}>
         <FavoriteDex />
       </div>
-      <div>
-        <CakePotencial />
-        <div style={{ display: "flex", flexDirection: "row", justifyContent: "center" }}>
-          <div
-            style={{
-              position: "relative",
-              display: "flex",
-              flexGrow: "1",
-              flexShrink: "0",
-              flexDirection: "column",
-              zIindex: "1",
-              maxWidth: "100%",
-              padding: "16px 24px",
-            }}
-          >
-            
-            <VerticalLogoSlider />
-          </div>
-          <SliderSeparator />
-          <VerticalSlider />
-          <div style={{ display: "flex", justifyContent: "center" }}></div>
-        </div>
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <InfiniteSlider />
       </div>
-      
       <section
         className="Ecosistema"
         style={{
@@ -93,9 +72,32 @@ function App() {
           objectId={3}
         />
       </section>
-      <div style={{ display: "flex", justifyContent: "center" }}>
-        <InfiniteSlider />
+      <div>
+        <CakePotencial />
+        <div style={{ display: "flex", flexDirection: "row", justifyContent: "center" }}>
+          <div
+            style={{
+              position: "relative",
+              display: "flex",
+              flexGrow: "1",
+              flexShrink: "0",
+              flexDirection: "column",
+              zIindex: "1",
+              maxWidth: "100%",
+              padding: "16px 24px",
+            }}
+          >
+            
+            <VerticalLogoSlider />
+          </div>
+          <SliderSeparator />
+          <VerticalSlider />
+          <div style={{ display: "flex", justifyContent: "center" }}></div>
+        </div>
       </div>
+      
+      
+      
 
       <div className={styles.container}>
         <JoinComunidad />
