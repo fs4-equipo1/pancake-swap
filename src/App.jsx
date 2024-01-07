@@ -102,6 +102,10 @@ function App() {
       </div>
 
       <div>
+        < NewsSwiper />
+      </div>
+
+      <div>
         <section
           style={{
             backgroundImage: `url(${background})`,

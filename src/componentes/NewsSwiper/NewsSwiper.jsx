@@ -1,27 +1,28 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+import { Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import { newsSwiperCardData } from "../../mocks/NewsSwiperCard";
+import 'swiper/css/navigation'
+import { NewsSwiperCardData } from "../../mocks/NewsSwiperCard.mock";
 import NewsSwiperCard from "../NewsSwiperCard/NewsSwiperCard";
 import "./NewsSwiper.scss";
 
 export default () => {
   return (
     <Swiper
-      modules={[Pagination]}
+      modules={[Pagination, Navigation]}
       spaceBetween={50}
-      slidesPerView={1}
+      slidesPerView={4}
       pagination={{ clickable: true }}
     >
-      {newsSwiperCardData.map((card, index) => (
+      {NewsSwiperCardData.map((card, index) => (
         <SwiperSlide key={index}>
           <NewsSwiperCard
-            newImage={card.newImage}
-            source={card.source}
+            image={card.image}
+            from={card.from}
             date={card.date}
-            title={card.title}
-            text={card.text}
+            cardTitle={card.cardTitle}
+            cardText={card.cardText}
           />
         </SwiperSlide>
       ))}
