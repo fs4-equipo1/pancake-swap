@@ -9,7 +9,8 @@ import "./HeroSwiper.scss";
 
 export default () => {
   return (
-    <Swiper
+      <Swiper
+      className="hero-swiper-container"
       modules={[Pagination, Autoplay, EffectFade]}
       spaceBetween={50}
       slidesPerView={1}
@@ -36,6 +37,6 @@ export default () => {
           />
         </SwiperSlide>
       ))}
-    </Swiper>
+    </Swiper>    
   );
 };
