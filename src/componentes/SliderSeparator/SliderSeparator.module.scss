@@ -5,8 +5,15 @@
 // //    right: 50%;
 // //    display: flex;
    
+.imgSeparator{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 450px;
+    max-height: 450px;
+    overflow: hidden;
+}
 
 .imgSeparator img{
-    
-    width: 650px;
+    width: 150%;
 }

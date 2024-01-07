@@ -7,8 +7,7 @@
     -webkit-mask-image: linear-gradient(180deg, transparent, var(--colors-background) 20%, var(--colors-background) 80%, transparent);
     flex-direction: column;
     height: 230px;
-    align-items: start;
-    justify-content: center;
+    align-items: end;
   }
 
   .scroll div {
@@ -51,6 +50,7 @@
   .scroll div span {
     display: inline-flex;
     align-items: center;
+
     margin: 10px;
     background: var(--colors-backgroundAlt);
     color: var(--colors-text);
@@ -151,15 +151,16 @@
   
 
   
-.containerL {
-    width: 100%;
+.containerR {
+    width: auto;
     // padding-top: var(--space-48px);
-    padding-bottom: var(--space-48px);
+    // padding-bottom: var(--space-48px);
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items:flex-end;
-    margin-top: 50px; 
+    
+    height: 450px;
+    justify-content: start;
   }
 
  
@@ -171,12 +172,12 @@
   color: var(--colors-text);
   line-height: 1.5;
     margin-bottom: 20px;
-    margin-right: 200px;
+    // margin-right: 200px;
     font-size: 25px;
     font-weight: 600;
 }
 
-.titleInfinite {
-  margin-top: 50px;
+// .titleInfinite {
+//   margin-top: 50px;
  
-}
+// }
