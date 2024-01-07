@@ -87,3 +87,4 @@ export const joinComunidadCardSwiper = [
     }
 ]
 export default joinComunidadCardSwiper;
+//rECOMENDACION DE IVAN
