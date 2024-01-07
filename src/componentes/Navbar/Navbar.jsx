@@ -125,7 +125,6 @@ function Navbar() {
     }
     ]
   return (
-    <div>
       <nav className={styles.navbar}>
         <div className={styles.dropdownPrimary}>
           <img
@@ -157,7 +156,6 @@ function Navbar() {
           <Boton texto={"Connect Wallet"} isBlue={true} />
         </div>
       </nav>
-    </div>
   );
 }
 
