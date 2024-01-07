@@ -1,4 +1,4 @@
-import imagenes from "../../Assets/newsSwiperImages.js";
+import imagenes from "../../Assets/newsSwiperImages";
 
 
 export const NewsSwiperCardData = [
