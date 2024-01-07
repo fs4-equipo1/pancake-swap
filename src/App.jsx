@@ -102,11 +102,7 @@ function App() {
       <div className={styles.container}>
         <JoinComunidad />
       </div>
-
-      <div>
         <NewsSwiper />
-      </div>
-
       <div>
         <section
           style={{

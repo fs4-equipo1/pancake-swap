@@ -8,19 +8,17 @@ import "./NewsSwiper.scss";
 
 export default () => {
   return (
-    <div>
+    <div className="featured-news-container">
+      <div className="title-container">
+        <div className="first-title">Featured</div>
+        <div className="second-title">News</div>
+      </div>
       <Swiper
         className="news-swiper-container"
         modules={[Navigation]}
-        spaceBetween={40}
         slidesPerView={4}
-        navigation={{
-          nextElel: ".swiper-button-prev",
-          prevElel: ".swiper-button-next",
-        }}
+        navigation={true}
       >
-        <div className="swiper-button-prev"></div>
-
         {NewsSwiperCardData.map((card, index) => (
           <SwiperSlide className="news-swiper-slide" key={index}>
             <NewsSwiperCard
@@ -33,7 +31,6 @@ export default () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="swiper-button-next"></div>
     </div>
   );
 };
