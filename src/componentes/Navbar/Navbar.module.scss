@@ -6,7 +6,10 @@
     background-color: #fff;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 100px;
+    // margin-bottom: 100px;
+    position: sticky;
+    top: 0px;
+    z-index: 9000;
 }
 
 .dropdownPrimary {

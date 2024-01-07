@@ -1,18 +1,23 @@
 .swiper {
-    height: 205px;
-    max-width: 1200px;
-    border-radius: 36px;
-    overflow: visible;
-  }
-  
-  .swiper-slide {
-    display: flex;
-    height: 100%;
-    overflow: visible;
-  }
+  height: 205px;
+  max-width: 95vw;
+  border-radius: 36px;
+  overflow: visible;
+  padding: 48px 0px;
+  position: relative;
+}
 
+.swiper-slide {
+  display: flex;
+  height: 100%;
+  overflow: visible;
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets {
+  top: 220px;
+}
 .swiper-pagination-horizontal.swiper-pagination-bullets
-  .swiper-pagination-bullet {
+.swiper-pagination-bullet {
   margin: 0;
 }
 

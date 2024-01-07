@@ -25,8 +25,8 @@ import InfiniteSlider from "./componentes/InfiniteSlider/InfiniteSlider";
 import { JoinComunidad } from "./componentes/JoinComunidad/JoinComunidad";
 // import { CardComunidad } from "./componentes/JoinComunidad/CardComunidad";
 import ThemeToggle from "./componentes/ThemeToggle/ThemeToggle";
-import VerticalSlider from "./componentes/VerticalSlider/VerticalSlider";
-import VerticalLogoSlider from "./componentes/VerticalLogoSlider/VerticalLogoSlider";
+import VerticalRightSlider from "./componentes/VerticalSlider/VerticalRightSlider";
+import VerticalLeftSlider from "./componentes/VerticalLogoSlider/VerticalLeftSlider";
 import SliderSeparator from "./componentes/SliderSeparator/SliderSeparator";
 import CakePotencial from "./componentes/CakePotencial/CakePotencial";
 
@@ -74,7 +74,7 @@ function App() {
       </section>
       <div>
         <CakePotencial />
-        <div style={{ display: "flex", flexDirection: "row", justifyContent: "center" }}>
+        {/* <div style={{ display: "flex", flexDirection: "row", justifyContent: "center" , width: "100%"}}>
           <div
             style={{
               position: "relative",
@@ -88,16 +88,22 @@ function App() {
             }}
           >
             
-            <VerticalLogoSlider />
+            <VerticalLeftSlider />
           </div>
           <SliderSeparator />
-          <VerticalSlider />
-          <div style={{ display: "flex", justifyContent: "center" }}></div>
+          <VerticalRightSlider />
+          <div style={{ display: "flex", justifyContent: "center"}}></div>
+        </div> */}
+      
+        {/* VERSION DE LUIS */}
+        <div style={{display: 'flex', flexDirection: 'row', alignItems:"center", justifyContent: "center", height:"auto", margin: "var(--space-48px)"}}>
+          <VerticalLeftSlider/>
+          <SliderSeparator/>
+          <VerticalRightSlider/>
         </div>
+        {/* FIN VERSION LUIS */}
       </div>
-      
-      
-      
+
 
       <div className={styles.container}>
         <JoinComunidad />

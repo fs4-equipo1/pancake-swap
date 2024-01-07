@@ -1,10 +1,8 @@
-import styles from "./VerticalSlider.module.scss";
+import styles from "./VerticalRightSlider.module.scss";
 
-
-function VerticalSlider() {
+function VerticalRightSlider() {
   return (
-    <div className={styles.containerL}>
-      
+    <div className={styles.containerR}>
       <div className={styles.titleInfinite}>
         <div className={styles.titleSlider}>
           <h2>Partners</h2>
@@ -50,4 +48,4 @@ function VerticalSlider() {
   );
 }
 
-export default VerticalSlider;
+export default VerticalRightSlider;

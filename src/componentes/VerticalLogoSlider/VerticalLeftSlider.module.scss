@@ -152,28 +152,29 @@
 
   
 .containerL {
-    width: 100%;
-    padding-top: var(--space-48px);
-    padding-bottom: var(--space-18px);
+    width: auto;
+    // padding-top: var(--space-48px);
+    // padding-bottom: var(--space-18px);
     position: relative;
     display: flex;
     flex-direction: column;
-    margin-top: 180px;
     
+    height: 450px;
+    justify-content: end;
     }
 
-  .scroll {
-    margin-left: 200px;
-    
-  }
+  // .scroll {
+  //   margin-left: 200px;    
+  // }
 
 
 .titleSlider{
  
     color: var(--colors-text);
     line-height: 1.5;
+    text-align: end;
       margin-bottom: 20px;
-      margin-left: 200px;
+      // margin-left: 200px;
       font-size: 25px;
       font-weight: 600;
   }
