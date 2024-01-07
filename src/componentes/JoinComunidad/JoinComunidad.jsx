@@ -11,6 +11,7 @@ import {
     FaDiscord,
     FaYoutube,
   } from "react-icons/fa";
+import JoinComunidadSwiper from "./JoinComunidadSwiper";
 
 export function JoinComunidad(){
     return (
@@ -32,13 +33,8 @@ export function JoinComunidad(){
                         ambassadorsNum="35 +"/> 
                     </div>
                     <div>
-                        <CardComunidad 
-                            comunidades="Community members" 
-                            numeros="1.8M +" 
-                            multi="Multilingual Communities" 
-                            multiNumbers="15 +"
-                            ambassadors="Community Ambassadors"
-                            ambassadorsNum="35 +"/> 
+                        <JoinComunidadSwiper />
+                            
                     </div>
                 </div>
                 <div className={styles.iconosFoot}>
