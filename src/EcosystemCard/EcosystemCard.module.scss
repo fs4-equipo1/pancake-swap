@@ -1,8 +1,7 @@
 .cardcontainer {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: space-between;  
   padding: 20px;
 
   gap: var(--space-20px);
@@ -15,8 +14,8 @@
   position: relative;
 
   height: 250px;
-  width: 140px;
-  gap: var(--space-8px);
+  min-width: 100px;
+  // gap: var(--space-8px);
 
   // overflow: hidden;
 }
@@ -140,5 +139,6 @@
   background-color: rgb(0, 45, 70);
   border-radius: 30px;
   margin: 30px;
-  width: 80vw;
+  max-width: 80vw;
+  width: auto;
 }
