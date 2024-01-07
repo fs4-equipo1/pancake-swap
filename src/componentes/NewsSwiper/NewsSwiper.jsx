@@ -17,6 +17,7 @@ export default () => {
         className="news-swiper-container"
         modules={[Navigation]}
         slidesPerView={4}
+        spaceBetween={46}
         navigation={true}
       >
         {NewsSwiperCardData.map((card, index) => (
