@@ -29,6 +29,8 @@ import VerticalSlider from "./componentes/VerticalSlider/VerticalSlider";
 import VerticalLogoSlider from "./componentes/VerticalLogoSlider/VerticalLogoSlider";
 import SliderSeparator from "./componentes/SliderSeparator/SliderSeparator";
 import CakePotencial from "./componentes/CakePotencial/CakePotencial";
+import NewsSwiper from "./componentes/NewsSwiper/NewsSwiper";
+
 
 // App
 function App() {
@@ -102,7 +104,7 @@ function App() {
       </div>
 
       <div>
-        < NewsSwiper />
+        <NewsSwiper />
       </div>
 
       <div>

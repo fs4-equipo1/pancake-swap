@@ -1,6 +1,7 @@
 .swiper {
-    height: 400px;
-    width: 100%;
+    width: 20vw;
+    height: 30vw;
+  
   }
   
   .swiper-slide {
@@ -8,8 +9,25 @@
     height: 100%;
   }
 
-.swiper-button-next { color: red; }
+.swiper-button-next { 
+    --swiper-navigation-size: 10px;
+    background-color:   white;
+    width: 25px;
+    height: 25px;
+    border-radius: 30px;
+    --swiper-theme-color: rgb(46, 169, 226);
+    font-weight: bold;
+    margin-left: 20px;
+    outline: 2px solid rgb(46, 169, 226); }
 
 .swiper-button-prev { 
-    color: red
+    --swiper-navigation-size: 10px;
+    background-color:   white;
+    width: 25px;
+    height: 25px;
+    border-radius: 30px;
+    --swiper-theme-color: rgb(46, 169, 226);
+    font-weight: bold;
+    margin-left: 20px;
+    outline: 2px solid rgb(46, 169, 226);
 }
