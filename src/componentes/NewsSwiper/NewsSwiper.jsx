@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -9,12 +9,12 @@ import "./NewsSwiper.scss";
 
 export default () => {
   return (
-    <div>
       <Swiper
-        modules={[Pagination, Navigation]}
+        className="news-swiper-container"
+        modules={[Navigation]}
+        navigation={true}
         spaceBetween={50}
         slidesPerView={4}
-        pagination={{ clickable: true }}
       >
         {NewsSwiperCardData.map((card, index) => (
           <SwiperSlide key={index}>
@@ -28,6 +28,5 @@ export default () => {
           </SwiperSlide>
         ))}
       </Swiper>
-    </div>
   );
 };
