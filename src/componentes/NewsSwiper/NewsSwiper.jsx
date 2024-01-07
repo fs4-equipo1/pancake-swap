@@ -2,9 +2,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import { newsSwiperCardData } from "../../mocks/HeroSwiperCard.mock";
+import { newsSwiperCardData } from "../../mocks/NewsSwiperCard";
 import NewsSwiperCard from "../NewsSwiperCard/NewsSwiperCard";
-import "./HeroSwiper.scss";
+import "./NewsSwiper.scss";
 
 export default () => {
   return (
