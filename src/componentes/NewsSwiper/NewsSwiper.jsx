@@ -3,7 +3,7 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { NewsSwiperCardData } from "../../mocks/NewsSwiperCard.mock";
+import { NewsSwiperCardData } from "../../mocks/NewsSwiperCard.jsx";
 import NewsSwiperCard from "../NewsSwiperCard/NewsSwiperCard";
 import "./NewsSwiper.scss";
 

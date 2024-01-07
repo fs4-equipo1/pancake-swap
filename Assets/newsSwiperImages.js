@@ -1,12 +1,12 @@
-import image1 from "./FeaturedNews1.webp"
-import image2 from "./FeaturedNews2.webp"
-import image3 from "./FeaturedNews3.jpeg"
-import image4 from "./FeaturedNews4.jpeg"
-import image5 from "./FeaturedNews5.jpg"
-import image6 from "./FeaturedNews6.jpg"
-import image7 from "./FeaturedNews7.jpg"
-import image8 from "./FeaturedNews8.jpg"
-import image9 from "./FeaturedNews9.jpg"
+import image1 from "../Assets/FeaturedNews/FeaturedNews1.webp"
+import image2 from "../Assets/FeaturedNews/FeaturedNews2.webp"
+import image3 from "../Assets/FeaturedNews/FeaturedNews3.jpeg"
+import image4 from "../Assets/FeaturedNews/FeaturedNews4.jpeg"
+import image5 from "../Assets/FeaturedNews/FeaturedNews5.jpg"
+import image6 from "../Assets/FeaturedNews/FeaturedNews6.jpg"
+import image7 from "../Assets/FeaturedNews/FeaturedNews7.jpg"
+import image8 from "../Assets/FeaturedNews/FeaturedNews8.jpg"
+import image9 from "../Assets/FeaturedNews/FeaturedNews9.jpg"
 
 export default {
     image1: image1,
