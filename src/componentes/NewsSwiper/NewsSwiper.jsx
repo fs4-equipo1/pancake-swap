@@ -13,7 +13,6 @@ export default () => {
         <div className="first-title">Featured</div>
         <div className="second-title">News</div>
       </div>
-      <div className="swiper-container">
         <Swiper
           className="news-swiper"
           modules={[Navigation]}
@@ -32,7 +31,6 @@ export default () => {
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>
     </div>
   );
 };
