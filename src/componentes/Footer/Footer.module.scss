@@ -1,21 +1,35 @@
 /* Footer.module.scss */
 .footerTitle {
-    color: var(--colors-secondary);
-    font-weight: 600;
-    margin-bottom: 8px;
+  color: var(--colors-secondary);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.footerItem {
+  text-decoration: none;
+  color: var(--colors-white);
+  margin-bottom: 8px;
+  &:hover {
+    text-decoration: underline;
   }
-  
-  .footerItem {
-    text-decoration: none;
-    color: var(--colors-white);
-    margin-bottom: 8px;
-    &:hover {
-        text-decoration: underline;
-    }
-  }
-  
-  .bluecircleimage {
-    height: 100%; 
-    width: 28px;  
-  }
-  
+}
+.footerContainer {
+  background: #27262c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 56px 40px 32px;
+  max-width: 100%;
+}
+.footerTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  gap: 50px;
+}
+.footerEnd {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
