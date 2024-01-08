@@ -43,7 +43,9 @@ export function FavoriteDex() {
           <Boton texto={"Trade now"} isTransparent></Boton>
         </div>
       </div>
-      <img className={styles.img} src="./Assets/Images/space-bunny.webp"></img>
+      <div className={styles.imgContainer}>
+        <img className={styles.img} src="./Assets/Images/space-bunny.webp"/>
+      </div>
     </div>
   );
 }

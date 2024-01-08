@@ -1,7 +1,12 @@
 .leSection{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin: 10px 0px;
+    overflow: hidden;
+    position: relative;
 
-    width: 100%;
+    object-fit: content;
+
     background-color: lightblue;
 }

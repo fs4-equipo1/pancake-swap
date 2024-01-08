@@ -2,6 +2,8 @@ import { useState } from "react";
 import styles from "./EcosystemCard.module.scss";
 import classNames from "classnames/bind";
 
+import { EcosystemCardsData } from "./EcosystemCardsData";
+
 const cx = classNames.bind(styles);
 
 export function Card({
@@ -67,4 +69,30 @@ export function EcosystemCardsContainer({
       </div>
     </div>
   );
+}
+
+export function EcosystemCardContainersContainer(){
+  return(
+    <div>
+      <EcosystemCardsContainer
+          path={"../../Assets/Images/trade-bunny.png"}
+          titulo={"Trade"}
+          cardData={EcosystemCardsData}
+          objectId={1}
+        />
+        <EcosystemCardsContainer
+          path={"../../Assets/Images/asset36.png"}
+          titulo={"Earn"}
+          cardData={EcosystemCardsData}
+          objectId={2}
+          isReverse
+        />
+        <EcosystemCardsContainer
+          path={"../../Assets/Images/asset8.png"}
+          titulo={"Game & NFT"}
+          cardData={EcosystemCardsData}
+          objectId={3}
+        />
+    </div>
+  )
 }

@@ -1,4 +1,3 @@
-import { Children } from "react";
 import styles from "./Section.module.scss";
 
 export function BaseSection({flexDirection, children}) {
