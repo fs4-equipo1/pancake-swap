@@ -12,6 +12,7 @@ import VerticalLeftSlider from "./componentes/VerticalLogoSlider/VerticalLeftSli
 import SliderSeparator from "./componentes/SliderSeparator/SliderSeparator";
 import CakePotencial from "./componentes/CakePotencial/CakePotencial";
 import { BaseSection } from "./MainBaseComponents/BaseSection";
+import NewsSwiper from "./componentes/NewsSwiper/NewsSwiper";
 
 function App2() {
   return (
@@ -37,23 +38,26 @@ function App2() {
       </BaseSection>
 
       <BaseSection>
-        <CakePotencial/>
+        <CakePotencial />
       </BaseSection>
 
-      <BaseSection flexDirection={'row'}>
-        <VerticalLeftSlider/>
-        <SliderSeparator/>
-        <VerticalRightSlider/>
+      <BaseSection flexDirection={"row"}>
+        <VerticalLeftSlider />
+        <SliderSeparator />
+        <VerticalRightSlider />
       </BaseSection>
 
       <BaseSection>
-        <JoinComunidad/>
+        <JoinComunidad />
       </BaseSection>
 
-      <BaseSection backgroundColor={'#27262c'}>
+      <BaseSection>
+        <NewsSwiper />
+      </BaseSection>
+
+      <BaseSection backgroundColor={"#27262c"}>
         <Footer />
       </BaseSection>
-
     </div>
   );
 }
