@@ -8,7 +8,6 @@ import styles from "./Navbar.module.scss";
 import { FaArrowRightFromBracket } from "react-icons/fa6";
 
 function Navbar() {
- 
   const itemsTrade = [
     {
       texto: "Swap",
@@ -120,10 +119,21 @@ function Navbar() {
       icono: <null />,
     },
     {
-      texto: "Blog",
-      icono: <FaArrowRightFromBracket />,
-    }
-    ]
+      texto: "Prediction (BETA)",
+      icono: <null />,
+    },
+    {
+      texto: "Lottery",
+      icono: <null />,
+    },
+    {
+      texto: "Pottery (BETA)",
+      icono: <null />,
+    },
+  ];
+ 
+
+  
   return (
     <div>
       <nav className={styles.navbar}>
@@ -137,7 +147,6 @@ function Navbar() {
           <NavbarDropdown title={"Game"} items={itemsGame} />
           <NavbarDropdown title={"NFT"} items={itemsNft} />
           <NavbarDropdown title={"..."} items={itemsPunto} />
-
         </div>
         <div className={styles.dropdownSecondary}>
           <div className={styles.bluecircle}>
