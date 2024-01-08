@@ -1,3 +1,51 @@
-.container{
-  background-color: yellow;
+.container {
+  border-radius: 24px;
+  width: 283px;
+  height: 387px;
+  background: var(--colors-backgroundAlt);
+  box-shadow: 0px 2px 0px 0px var(--colors-cardBorder);
+  overflow: hidden;
+}
+
+.textContainer {
+  height: 187px;
+  padding: 20px;
+}
+
+.sinceDate {
+  display: flex;
+  justify-content: space-between;
+}
+
+.textSince,
+.dateRi {
+  color: var(--colors-textSubtle);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 120%;
+}
+
+.title {
+  color: var(--colors-text);
+  font-weight: 600;
+  margin-top: 16px;
+  line-height: 120%;
+  font-size: 16px;
+  min-height: 66px;
+}
+
+.textC {
+  font-size: 9px;
+  line-height: 120%;
+  margin-top: 10px;
+  max-height: 56px;
+}
+
+.imagen {
+  height: 200px;
+}
+
+.imagen > img {
+  width: 100%;
+  height: 100%;
 }
