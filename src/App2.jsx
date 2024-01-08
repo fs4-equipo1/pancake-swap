@@ -29,7 +29,7 @@ import VerticalRightSlider from "./componentes/VerticalSlider/VerticalRightSlide
 import VerticalLeftSlider from "./componentes/VerticalLogoSlider/VerticalLeftSlider";
 import SliderSeparator from "./componentes/SliderSeparator/SliderSeparator";
 import CakePotencial from "./componentes/CakePotencial/CakePotencial";
-import { BaseSection } from "./MainBaseComponents/section";
+import { BaseSection } from "./MainBaseComponents/BaseSection";
 
 function App2() {
   return (
@@ -68,6 +68,9 @@ function App2() {
         <JoinComunidad/>
       </BaseSection>
 
+      <BaseSection>
+        <Footer />
+      </BaseSection>
 
     </div>
   );

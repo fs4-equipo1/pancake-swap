@@ -1,4 +1,4 @@
-import styles from "./Section.module.scss";
+import styles from "./BaseSection.module.scss";
 
 export function BaseSection({flexDirection, children}) {
   let givenFlexDirection = flexDirection;
@@ -10,12 +10,4 @@ export function BaseSection({flexDirection, children}) {
         {children}
     </section>
   );
-}
-
-export function BaseSection2({Children}) {
-    return (
-        <section className={style.leSection}>
-            {Children}
-        </section>
-    )
 }

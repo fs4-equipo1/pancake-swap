@@ -29,7 +29,7 @@ import VerticalRightSlider from "./componentes/VerticalSlider/VerticalRightSlide
 import VerticalLeftSlider from "./componentes/VerticalLogoSlider/VerticalLeftSlider";
 import SliderSeparator from "./componentes/SliderSeparator/SliderSeparator";
 import CakePotencial from "./componentes/CakePotencial/CakePotencial";
-import { BaseSection } from "./MainBaseComponents/section";
+import { BaseSection } from "./MainBaseComponents/BaseSection";
 
 // App
 function App() {
