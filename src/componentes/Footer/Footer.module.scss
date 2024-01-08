@@ -14,12 +14,14 @@
   }
 }
 .footerContainer {
-  background: #27262c;
   display: flex;
   flex-direction: column;
   justify-content: center;
+
   padding: 56px 40px 32px;
-  width: 100%;
+  width: auto;
+  
+  background: #27262c;
 }
 .footerTop {
   display: flex;

@@ -50,7 +50,7 @@ function App2() {
         <JoinComunidad/>
       </BaseSection>
 
-      <BaseSection>
+      <BaseSection backgroundColor={'#27262c'}>
         <Footer />
       </BaseSection>
 
