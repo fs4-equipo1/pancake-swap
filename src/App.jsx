@@ -84,34 +84,13 @@ function App() {
       </section>
       <div>
         <CakePotencial />
-        {/* <div style={{ display: "flex", flexDirection: "row", justifyContent: "center" , width: "100%"}}>
-          <div
-            style={{
-              position: "relative",
-              display: "flex",
-              flexGrow: "1",
-              flexShrink: "0",
-              flexDirection: "column",
-              zIindex: "1",
-              maxWidth: "100%",
-              padding: "16px 24px",
-            }}
-          >
-            
-            <VerticalLeftSlider />
-          </div>
-          <SliderSeparator />
-          <VerticalRightSlider />
-          <div style={{ display: "flex", justifyContent: "center"}}></div>
-        </div> */}
       
-        {/* VERSION DE LUIS */}
         <div style={{display: 'flex', flexDirection: 'row', alignItems:"center", justifyContent: "center", height:"auto", margin: "var(--space-48px)"}}>
           <VerticalLeftSlider/>
           <SliderSeparator/>
           <VerticalRightSlider/>
         </div>
-        {/* FIN VERSION LUIS */}
+
       </div>
 
 

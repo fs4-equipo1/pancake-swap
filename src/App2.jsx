@@ -53,6 +53,22 @@ function App2() {
       <BaseSection>
         <EcosystemCardContainersContainer />
       </BaseSection>
+
+      <BaseSection>
+        <CakePotencial/>
+      </BaseSection>
+
+      <BaseSection flexDirection={'row'}>
+        <VerticalLeftSlider/>
+        <SliderSeparator/>
+        <VerticalRightSlider/>
+      </BaseSection>
+
+      <BaseSection>
+        <JoinComunidad/>
+      </BaseSection>
+
+
     </div>
   );
 }
