@@ -1,7 +1,7 @@
 .navbar {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: auto;
     height: 56px;
     background-color: #fff;
     align-items: center;
@@ -16,17 +16,17 @@
     display: flex;
     flex-direction: row;
     gap: 35px;
-    margin: 15px;
+    // margin: 15px;
     z-index: 1000;
 }
 
 .dropdownSecondary {   
     gap: 20px;
-    position: relative;
-    left: -100px;
+    // position: relative;
+    // left: -100px;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;  // Fix the typo here
+    justify-content: center;  // Fix the typo here
     align-items: center;
 }
 
