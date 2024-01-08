@@ -13,25 +13,26 @@ export default () => {
         <div className="first-title">Featured</div>
         <div className="second-title">News</div>
       </div>
-      <Swiper
-        className="news-swiper-container"
-        modules={[Navigation]}
-        slidesPerView={4}
-        spaceBetween={46}
-        navigation={true}
-      >
-        {NewsSwiperCardData.map((card, index) => (
-          <SwiperSlide className="news-swiper-slide" key={index}>
-            <NewsSwiperCard
-              image={card.image}
-              from={card.from}
-              date={card.date}
-              cardTitle={card.cardTitle}
-              cardText={card.cardText}
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <div className="swiper-container">
+        <Swiper
+          className="news-swiper"
+          modules={[Navigation]}
+          slidesPerView={4}
+          navigation={true}
+        >
+          {NewsSwiperCardData.map((card, index) => (
+            <SwiperSlide className="news-swiper-slide" key={index}>
+              <NewsSwiperCard
+                image={card.image}
+                from={card.from}
+                date={card.date}
+                cardTitle={card.cardTitle}
+                cardText={card.cardText}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </div>
   );
 };
