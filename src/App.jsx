@@ -29,11 +29,21 @@ import VerticalRightSlider from "./componentes/VerticalSlider/VerticalRightSlide
 import VerticalLeftSlider from "./componentes/VerticalLogoSlider/VerticalLeftSlider";
 import SliderSeparator from "./componentes/SliderSeparator/SliderSeparator";
 import CakePotencial from "./componentes/CakePotencial/CakePotencial";
+import { BaseSection } from "./MainBaseComponents/section";
 
 // App
 function App() {
   return (
     <div>
+      {/* PRUEBA DE BASE-SECTION */}
+      
+      <BaseSection flexDirection={'column'}>
+        <div><h1>el componente base-section funciona adecuadamente</h1></div>
+        <div>Ademas coloca las cosas bien</div>
+      </BaseSection>
+
+      {/* PRUEBA DE BASE-SECTION */}
+
       <Navbar />
       <HeroSwiper />
       <div className={styles.container}>
