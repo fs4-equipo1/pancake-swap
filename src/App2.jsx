@@ -19,27 +19,27 @@ function App2() {
     <div>
       {/* <BaseSection> */}
         <Navbar />
-      {/* </BaseSection> */}
+      {/* </BaseSection> */}      {/* si dejamos elemento basesection, no funciona style sticky con respecto a la pagina */}
 
-      {/* <BaseSection> */}
+      <BaseSection>
         <HeroSwiper />
-      {/* </BaseSection> */}
+      </BaseSection>
 
-      {/* <BaseSection> */}
+      <BaseSection>
         <FavoriteDex />
-      {/* </BaseSection> */}
+      </BaseSection>
 
-      {/* <BaseSection> */}
+      <BaseSection>
         <InfiniteSlider />
-      {/* </BaseSection> */}
+      </BaseSection>
 
-      {/* <BaseSection> */}
+      <BaseSection>
         <EcosystemCardContainersContainer />
-      {/* </BaseSection> */}
+      </BaseSection>
 
-      {/* <BaseSection> */}
+      <BaseSection>
         <CakePotencial />
-      {/* </BaseSection> */}
+      </BaseSection>
 
       <BaseSection flexDirection={"row"}>
         <VerticalLeftSlider />
@@ -47,17 +47,17 @@ function App2() {
         <VerticalRightSlider />
       </BaseSection>
 
-      {/* <BaseSection> */}
+      <BaseSection>
         <JoinComunidad />
-      {/* </BaseSection> */}
+      </BaseSection>
 
-      {/* <BaseSection> */}
+      <BaseSection>
         <NewsSwiper />
-      {/* </BaseSection> */}
+      </BaseSection>
 
-      {/* <BaseSection backgroundColor={"#27262c"}> */}
+      <BaseSection backgroundColor={"#27262c"}>
         <Footer />
-      {/* </BaseSection> */}
+      </BaseSection>
     </div>
   );
 }
