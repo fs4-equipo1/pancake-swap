@@ -17,8 +17,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 
-  padding: 56px 40px 32px;
+  padding: 40px 0px;
   width: inherit;
   
   background: #27262c;
@@ -29,11 +30,21 @@
   justify-content: space-between;
   margin-bottom: 32px;
   gap: 50px;
+  width: 90%;
 }
+
+.footerBottom{
+  width: 90%;
+}
+
 .footerEnd {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-top: 30px;
+
+  
+  border-top: 1px solid #7a6eea4f;
 }
 
 .footerEndLangAndTheme{
