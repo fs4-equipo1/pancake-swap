@@ -15,6 +15,7 @@ import { BaseSection } from "./MainBaseComponents/BaseSection";
 import NewsSwiper from "./componentes/NewsSwiper/NewsSwiper";
 import { VerticalSliderSection } from "./componentes/VerticalSliderSection/VerticalSliderSection";
 import styles from "./MainBaseComponents/BaseSection.module.scss"
+import DexNowSection from "./componentes/DexNow/DexNow";
 
 function App2() {
   return (
@@ -36,6 +37,8 @@ function App2() {
         <JoinComunidad />
 
         <NewsSwiper />
+
+        <DexNowSection />
 
         <FooterSection />
     </div>
