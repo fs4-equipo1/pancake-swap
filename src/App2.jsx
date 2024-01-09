@@ -19,45 +19,25 @@ import styles from "./MainBaseComponents/BaseSection.module.scss"
 function App2() {
   return (
     <div className={styles.leSection}>
-      {/* <BaseSection> */}
         <Navbar />
-      {/* </BaseSection> */}      {/* si dejamos elemento basesection, no funciona style sticky con respecto a la pagina */}
 
-      {/* <BaseSection> */}
         <HeroSwiper />
-      {/* </BaseSection> */}
 
-      {/* <BaseSection> */}
         <FavoriteDex />
-      {/* </BaseSection> */}
 
-      {/* <BaseSection> */}
         <InfiniteSlider />
-      {/* </BaseSection> */}
 
-      {/* <BaseSection> */}
         <EcosystemCardContainersContainer />
-      {/* </BaseSection> */}
 
-      {/* <BaseSection> */}
         <CakePotencial />
-      {/* </BaseSection> */}
 
-      {/* <BaseSection flexDirection={"row"}> */}
         <VerticalSliderSection/>
-      {/* </BaseSection> */}
 
-      {/* <BaseSection> */}
         <JoinComunidad />
-      {/* </BaseSection> */}
 
-      {/* <BaseSection> */}
         <NewsSwiper />
-      {/* </BaseSection> */}
 
-      {/* <BaseSection backgroundColor={"#27262c"}> */}
         <FooterSection />
-      {/* </BaseSection> */}
     </div>
   );
 }
