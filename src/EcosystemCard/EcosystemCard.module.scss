@@ -1,7 +1,7 @@
 .cardcontainer {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;  
+  justify-content: space-between;
   padding: 20px;
 
   gap: var(--space-20px);
@@ -22,14 +22,14 @@
 
 
 .cardImgPurple {
-  width: 90px;
+  width: 90px; /* 90px */
   height: auto;
   // position: relative;
   top: 0%;
 }
 
 .cardImgColor {
-  width: 90px;
+  width: 90px; /* 70% */
   height: auto;
   position: absolute;
   top: 0%;
