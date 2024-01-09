@@ -3,6 +3,7 @@ import LanguageDropdown from "../LanguageDropdown/LanguageDropdown";
 import styles from "./Footer.module.scss";
 import FooterIcons from "./FooterIcons";
 import { FooterBuyCake } from "./FooterBuyCake";
+import ThemeToggle from "../ThemeToggle/ThemeToggle";
 
 export function Footer() {
   return (
@@ -49,7 +50,10 @@ export function Footer() {
         <FooterIcons />
         <hr></hr>
         <div className={styles.footerEnd}>
-          <LanguageDropdown reverse={true} />
+          <div className={styles.footerEndLangAndTheme}>
+            <ThemeToggle/>
+            <LanguageDropdown reverse={true} />
+          </div>
           <FooterBuyCake />
         </div>
       </div>
