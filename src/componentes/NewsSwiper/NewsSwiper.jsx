@@ -5,6 +5,8 @@ import "swiper/css/navigation";
 import { NewsSwiperCardData } from "../../mocks/NewsSwiperCard";
 import NewsSwiperCard from "../NewsSwiperCard/NewsSwiperCard";
 import "./NewsSwiper.scss";
+import SwiperPrev from "../../../Assets/Icons/SwiperPrev";
+import SwiperNext from "../../../Assets/Icons/SwiperNext";
 
 export default () => {
   return (
@@ -13,11 +15,18 @@ export default () => {
         <div className="first-title">Featured</div>
         <div className="second-title">News</div>
       </div>
+      <div className="swiper-container">
+        <div className="prev">
+          <SwiperPrev color={'var(--colors-primary)'} />
+        </div>
         <Swiper
           className="news-swiper"
           modules={[Navigation]}
           slidesPerView={4}
-          navigation={true}
+          navigation={{
+            prevEl: ".prev",
+            nextEl: ".next",
+          }}
         >
           {NewsSwiperCardData.map((card, index) => (
             <SwiperSlide className="news-swiper-slide" key={index}>
@@ -31,6 +40,10 @@ export default () => {
             </SwiperSlide>
           ))}
         </Swiper>
+        <div className="next">
+          <SwiperNext color={'var(--colors-primary)'} />
+        </div>
+      </div>
     </div>
   );
 };

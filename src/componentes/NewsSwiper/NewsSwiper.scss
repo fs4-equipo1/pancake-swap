@@ -1,64 +1,72 @@
 .featured-news-container {
-    height: 570px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 46px;
-    padding: 48px 0px;
-  }
+  height: 580px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 46px;
+  padding: 48px 16px;
+  box-sizing: border-box;
+  margin: 0px;
+  max-width: 1400px;
+}
 
-  .news-swiper {
-    height: 390px;
-    overflow: hidden;
-  }
-  
-  .news-swiper-slide {
-    margin-right: 46px;
-    max-width: 283px;
-  }
-  
-  .swiper-button-prev {
-    --swiper-navigation-size: 10px;
-    background-color: white;
-    width: 25px;
-    height: 25px;
-    border-radius: 30px;
-    --swiper-theme-color: rgb(46, 169, 226);
-    font-weight: bold;
-    outline: 2px solid rgb(46, 169, 226);
-  }
-  
-  .swiper-button-next {
-    --swiper-navigation-size: 10px;
-    background-color: white;
-    width: 25px;
-    height: 25px;
-    border-radius: 30px;
-    --swiper-theme-color: rgb(46, 169, 226);
-    font-weight: bold;
-    outline: 2px solid rgb(46, 169, 226);
-  }
-  
-  .title-container {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-  }
-  
-  .first-title {
-    color: var(--colors-light-text);
-    line-height: 1.5;
-    font-size: 40px;
-    font-weight: 600;
-    text-align: center;
-  }
-  
-  .second-title {
-    color: var(--colors-secondary);
-    line-height: 1.5;
-    font-size: 40px;
-    font-weight: 600;
-    text-align: center;
-  }
+.swiper-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.news-swiper {
+  height: 390px;
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+}
+
+.news-swiper-slide {
+  margin-right: 46px;
+  min-width: 280px;
+  max-width: 280px;
+  height: 387px;
+  background: var(--colors-backgroundAlt);
+  box-shadow: 0px 2px 0px 0px var(--colors-cardBorder);
+  cursor: pointer;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.prev {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.next {
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+}
+
+.title-container {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.first-title {
+  color: var(--colors-text);
+  line-height: 1.5;
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.second-title {
+  color: var(--colors-secondary);
+  line-height: 1.5;
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+}
