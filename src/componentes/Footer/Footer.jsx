@@ -61,4 +61,13 @@ export function Footer() {
   );
 }
 
-export default Footer;
+export function FooterSection(){
+  return (
+    <div className={styles.footerSection}>
+      <Footer/>
+    </div>
+  )
+}
+
+export default FooterSection
+

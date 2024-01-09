@@ -3,7 +3,7 @@ import FavoriteDex from "./componentes/FavouriteDex/FavoriteDex";
 import { EcosystemCardContainersContainer } from "./EcosystemCard/EcosystemCard";
 // import Tipografia from "./componentes/Tipografia/Tipografia";
 import Navbar from "./componentes/Navbar/Navbar";
-import Footer from "./componentes/Footer/Footer";
+import Footer, { FooterSection } from "./componentes/Footer/Footer";
 import InfiniteSlider from "./componentes/InfiniteSlider/InfiniteSlider";
 import { JoinComunidad } from "./componentes/JoinComunidad/JoinComunidad";
 // import { CardComunidad } from "./componentes/JoinComunidad/CardComunidad";
@@ -56,7 +56,7 @@ function App2() {
       {/* </BaseSection> */}
 
       {/* <BaseSection backgroundColor={"#27262c"}> */}
-        <Footer />
+        <FooterSection />
       {/* </BaseSection> */}
     </div>
   );
