@@ -48,7 +48,7 @@ export function Footer() {
       </div>
       <div className={styles.footerBottom}>
         <FooterIcons />
-        <hr></hr>
+        {/* <hr style={{opacity:'30%'}}></hr> */}
         <div className={styles.footerEnd}>
           <div className={styles.footerEndLangAndTheme}>
             <ThemeToggle/>
