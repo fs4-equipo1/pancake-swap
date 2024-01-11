@@ -49,7 +49,7 @@ export function EcosystemCardsContainer({
       className={styles.discoverEcosystem}
       style={{ flexDirection: isReverse ? "row-reverse" : "row" }}
     >
-      <img className={styles.ecosystemImg} src={path} />
+      <img className={isReverse ? styles.ecosystemImgReversed : styles.ecosystemImg} src={path}/>
       <div className={styles.ecosystemSegment}>
         <div className={styles.ecosystemTitle}>{titulo}</div>
         <div className={styles.cardcontainer}>

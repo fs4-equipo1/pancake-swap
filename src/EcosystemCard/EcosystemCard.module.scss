@@ -36,7 +36,6 @@
   opacity: 0.7; // 0%
   
   display: block;
-  //ATENCION: IMAGENES A COLOR DESACTIVADAS. PONER OPACITY CON HOVER, O ALGO ASI
 }
 
 .cardTextTitle {
@@ -112,11 +111,23 @@
   background-color: aliceblue;
 }
 
+.ecosystemImgContainer{
+  width: 20%;
+}
+
 .ecosystemImg {
-  width: 340px;
+  width: 300px;
   position: relative;
   height: auto;
-  // left: -52px;
+  left: -52px;
+  margin-top: 25px;
+}
+
+.ecosystemImgReversed{
+  width: 300px;
+  position: relative;
+  height: auto;
+  right: -52px;
   margin-top: 25px;
 }
 
@@ -133,8 +144,8 @@
 
 .discoverEcosystem {
   display: flex;
-  position: relative;
-  justify-content: space-evenly;
+  // position: relative;
+  justify-content: space-between;
   align-items: center;
   background-color: rgb(0, 45, 70);
   border-radius: 30px;

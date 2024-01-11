@@ -12,6 +12,7 @@ import NewsSwiper from "./componentes/NewsSwiper/NewsSwiper";
 import { VerticalSliderSection } from "./componentes/VerticalSliderSection/VerticalSliderSection";
 import styles from "./MainBaseComponents/BaseSection.module.scss";
 import { useState } from "react";
+import DexNowSection from "./componentes/DexNow/DexNow";
 
 function App2() {
   // funciones para Theme Toggle
@@ -52,6 +53,8 @@ function App2() {
       <JoinComunidad />
 
       <NewsSwiper />
+
+      <DexNowSection/>
 
       <Footer theme={theme} toggleTheme={toggleTheme}/>
     </div>
