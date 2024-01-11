@@ -16,6 +16,7 @@ import NewsSwiper from "./componentes/NewsSwiper/NewsSwiper";
 import { VerticalSliderSection } from "./componentes/VerticalSliderSection/VerticalSliderSection";
 import styles from "./MainBaseComponents/BaseSection.module.scss"
 import DexNowSection from "./componentes/DexNow/DexNow";
+import { CakeFigures } from "./componentes/CakeFigures/CakeFigures";
 
 function App2() {
   return (
@@ -33,6 +34,9 @@ function App2() {
         <CakePotencial />
 
         <VerticalSliderSection/>
+
+        {/* Solo para ver si funciona CakeFigures: */}
+        <CakeFigures />
 
         <JoinComunidad />
 
