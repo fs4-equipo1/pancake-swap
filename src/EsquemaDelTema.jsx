@@ -22,6 +22,6 @@ function ComponentePadre( {Theme} ){
 function ComponenteHijo ( {Theme} ) {
     //Theme aqui es una prop que viene definida desde la funcion App2, donde se seteo
 
-    return <div></div>
+    return <div className={Theme === 'light' ? "DivModoClaro" : "DivModoOscuro"}></div>
     // aqui es donde hay algun componente, un div o algo, que necesita saber el tema de la pagina, por el motivo que sea
 }
