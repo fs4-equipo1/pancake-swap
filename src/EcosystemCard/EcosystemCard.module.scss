@@ -41,14 +41,14 @@
 .cardTextTitle {
   margin: 0;
   font-size: 20px;
-  color: aliceblue;
+  color: var(--colors-text);
 }
 
 .cardText {
   flex-wrap: wrap;
   height: auto;
   font-size: 14px;
-  color: aliceblue;
+  color: var(--colors-text);
   gap: var(--space-8px);
 }
 
@@ -142,7 +142,7 @@
   height: 360px;
 }
 
-.discoverEcosystemLight {
+.discoverEcosystemDark {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -153,11 +153,11 @@
   width: auto;
 }
 
-.discoverEcosystemDark {
+.discoverEcosystemLight {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--gradient-bubblegum);
+  background: var(--colors-gradientBubblegum);
   border-radius: 30px;
   margin: 30px;
   max-width: 80vw;

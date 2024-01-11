@@ -44,7 +44,7 @@ function App2() {
 
       <InfiniteSlider theme={theme} />
 
-      <EcosystemCardContainersContainer />
+      <EcosystemCardContainersContainer theme={theme} />
 
       <CakePotencial theme={theme} />
 
