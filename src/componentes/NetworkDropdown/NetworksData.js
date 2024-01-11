@@ -1,6 +1,6 @@
 export const networkData = [
     {
-      label: "BNB Smart Chain",
+      label: "BNB Chain",
       image: "https://assets.pancakeswap.finance/web/chains/56.png",
     },
     {

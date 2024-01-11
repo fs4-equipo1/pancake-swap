@@ -52,3 +52,16 @@
   left: -5px;
   border-radius: 50%;
 }
+
+.DropdownArrowSVG {
+  display: block;
+  width: 24px;
+  fill: var(--colors-contrast);
+}
+
+.DropdownArrowSVGContainer {
+  display: "flex";
+  justify-content: "center";
+  align-items: "center";
+  height: 100%;
+}
