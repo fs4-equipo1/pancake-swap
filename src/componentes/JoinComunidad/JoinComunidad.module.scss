@@ -4,6 +4,16 @@
     gap: 12px;
     justify-content: center;
 }
+
+.containerSwiper{
+    background-color: grey;
+    color: white;
+    height: 340px;
+    position: relative;
+    width: 340px;
+    border-radius: 72px;
+}
+
 .container{
     background-color:rgba(0, 0, 0, 0.8);
     color: white;
@@ -16,19 +26,26 @@
     backdrop-filter: blur(20px);
     box-sizing: border-box;
 }
-
-.cards{
-    gap: 24px;
+.allContainer{
     display: flex;
-    flex-flow: wrap;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+/*
+.cards{
+    gap: 50px;
+    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-}
+}*/
 
 .join{
     line-height: 1.1;
     font-size: 32px;
 }
+
 .joinComunidad{
     color: rgb(168, 129, 252);
     font-size: 32px;

@@ -3,7 +3,9 @@ import { Autoplay, Pagination, EffectFade } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/pagination";
-import JoinComunidadCardSwiper from "../../mocks/JoinComunidadCardSwiper";
+import { joinComunidadCardData } from "../../mocks/JoinComunidadCardData.mock";
+import { JoinComunidadCard } from "./JoinComunidadCard";
+import "./JoinComunidad.module.scss"
 
 export default () => {
     return (
@@ -15,13 +17,13 @@ export default () => {
             fadeEffect={{ crossFade: true}}
             pagination ={{ clickable: true}}
             autoplay={{
-                delay: 4000,
+                delay: 4500,
                 disableOnInteraction: false,
             }}
         >
-            {JoinComunidadCardSwiper.map((card, index) => (
+            { joinComunidadCardData.map((card, index) => (
                 <SwiperSlide key={index}>
-                    <JoinComunidadCardSwiper
+                    <JoinComunidadCard
                         title= {card.title}
                         logo= {card.logo}
                         subtitle= {card.subtitle}
