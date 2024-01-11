@@ -34,3 +34,4 @@ export const  JoinComunidadCard = ({
     )
 
 }
+export default JoinComunidadCard

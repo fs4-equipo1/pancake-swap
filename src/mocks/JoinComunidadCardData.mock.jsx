@@ -89,7 +89,6 @@ export const joinComunidadCardData = [
         title:(
             <h4>Latest Blog Post</h4>
         ),
-        logo: null,
 
     }
 ]

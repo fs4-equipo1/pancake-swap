@@ -7,7 +7,6 @@ import {
     FaTelegram,
     FaReddit,
     FaInstagram,
-    FaGithub,
     FaDiscord,
     FaYoutube,
   } from "react-icons/fa";
@@ -30,8 +29,10 @@ export function JoinComunidad(){
                         multi="Multilingual Communities" 
                         multiNumbers="15 +"
                         ambassadors="Community Ambassadors"
-                        ambassadorsNum="35 +"/>  
-                        <JoinComunidadSwiper/>         
+                        ambassadorsNum="35 +"/> 
+                    <div className={styles.containerSwiper}>
+                        <JoinComunidadSwiper/>  
+                    </div>        
                     </div>
                 </div>
                 

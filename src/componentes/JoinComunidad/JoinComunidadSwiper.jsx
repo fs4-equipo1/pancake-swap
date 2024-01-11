@@ -4,8 +4,9 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 import { joinComunidadCardData } from "../../mocks/JoinComunidadCardData.mock";
-import { JoinComunidadCard } from "./JoinComunidadCard";
+import  JoinComunidadCard  from "./JoinComunidadCard";
 import "./JoinComunidad.module.scss"
+import "./SwiperComunidad.scss"
 
 export default () => {
     return (
