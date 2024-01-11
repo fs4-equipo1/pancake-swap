@@ -7,6 +7,9 @@
     align-items: center;
     justify-content: space-between;
 
+    border-bottom: 1px solid;
+    border-color: var(--colors-cardBorder);
+
     position: sticky;
     top: 0px;
     z-index: 9000;
