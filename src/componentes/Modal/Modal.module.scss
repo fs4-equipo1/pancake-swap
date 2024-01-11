@@ -26,23 +26,12 @@
 
   .close {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 20px;
+    right: 20px;
     cursor: pointer;
     font-size: 20px;
     color: #000;
   }
 }
-.header{
-  background-color: #494545;
-  height: 74px;
-  object-fit: cover;
-}
-.activate{
-  display: flex;
-  flex-direction: column;
-}
-.buttons{
-  display: flex;
-  flex-direction: row;
-}
+
+

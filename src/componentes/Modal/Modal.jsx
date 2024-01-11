@@ -1,20 +1,18 @@
 import React, { useEffect, useState, useRef } from "react";
 import PropTypes from "prop-types";
 import styles from "./Modal.module.scss";
-import { Icono } from "../Icono/Icono";
-import { IoMdSettings } from "react-icons/io";
-import IconoWrapper from "../IconoWraper/IconoWraper";
 
-const Modal = ({ isOpen, onClose, children, onClick }) => {
+
+const Modal = ({ isOpen, onClose, children, onClick, modal}) => {
   const [modalOpen, setModalOpen] = useState(isOpen);
   const modalRef = useRef();
 
-  const openModal = () => {
+   function openModal(modal){
     setModalOpen(true);
     onClick && onClick();
   };
 
-  const closeModal = () => {
+   function closeModal(modal){
     setModalOpen(false);
     onClose && onClose();
   };
@@ -50,16 +48,9 @@ const Modal = ({ isOpen, onClose, children, onClick }) => {
 
   return (
     <div>
-      <IconoWrapper onClick={openModal}>
-        <Icono icono={<IoMdSettings />} />
-      </IconoWrapper>
-
       {modalOpen && (
         <div className={styles.modal} ref={modalRef}>
           <div className={styles.modalContent}>
-            <button className={styles.close} onClick={closeModal} aria-label="Close">
-              &times;
-            </button>
             {children}
           </div>
         </div>
@@ -73,6 +64,7 @@ Modal.propTypes = {
   onClose: PropTypes.func.isRequired,
   children: PropTypes.node.isRequired,
   onClick: PropTypes.func,
+  modal: PropTypes.string.isRequired,
 };
 
 export default Modal;

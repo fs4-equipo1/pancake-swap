@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Modal from "../Modal/Modal";
-import ModalStyles from "../Modal/Modal.module.scss"
+import settingsStyles from "../Modal/Settings.module.scss";
 import { FaArrowRightFromBracket } from "react-icons/fa6";
 import NavbarDropdown from "../NavbarDropdown/NavbarDropdown";
 import LanguageDropdown from "../LanguageDropdown/LanguageDropdown";
@@ -9,6 +9,10 @@ import Boton from "../Boton/Boton";
 import styles from "./Navbar.module.scss";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
 import Tipografia from "../Tipografia/Tipografia";
+import { Icono } from "../Icono/Icono";
+import { IoMdSettings } from "react-icons/io";
+import IconoWrapper from "../IconoWraper/IconoWraper";
+import ToggleSwitch from "../Activate/Activate";
 
 function Navbar() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -161,34 +165,55 @@ function Navbar() {
           </div>
           <LanguageDropdown />
           <div>
+            <IconoWrapper onClick={openModal}>
+              <Icono icono={<IoMdSettings />} />
+            </IconoWrapper>
             <Modal isOpen={modalOpen} onClose={closeModal}>
-              <div className={ModalStyles.header}>
+              <div className={settingsStyles.header}>
                 <Tipografia texto={"Settings"} isTitle></Tipografia>
+                <button
+                  className={settingsStyles.close}
+                  onClick={closeModal}
+                  aria-label="Close"
+                >
+                  &times;
+                </button>
               </div>
               <div>
-                <div>
-                <Tipografia Texto={"GLOBAL"} isBodyLarge></Tipografia>
-
-                  <div className="textContainer">
-                    <Tipografia Texto={"Dark mode"} isBodyLarge></Tipografia>
+              <Tipografia texto={"GLOBAL"} isBodyLarge></Tipografia>
+                <div className={settingsStyles.modalTop}>
+                  <div className={settingsStyles.textContainer}>
+                    <Tipografia texto={"Dark mode"} isBodyLarge></Tipografia>
                     <Tipografia
-                      Texto={"Subgraph Health Indicator"}
+                      texto={"Subgraph Health Indicator"}
                       isBodyLarge
                     ></Tipografia>
-                    <Tipografia Texto={"Show username"} isBodyLarge></Tipografia>
-                    <Tipografia Texto={"Allow notifications"} isBodyLarge></Tipografia>
-                    <Tipografia Texto={"Token Risk Scanning"} isBodyLarge></Tipografia>
+                    <Tipografia
+                      texto={"Show username"}
+                      isBodyLarge
+                    ></Tipografia>
+                    <Tipografia
+                      texto={"Allow notifications"}
+                      isBodyLarge
+                    ></Tipografia>
+                    <Tipografia
+                      texto={"Token Risk Scanning"}
+                      isBodyLarge
+                    ></Tipografia>
                   </div>
-                  <div className={ModalStyles.activate}>
-                    <ThemeToggle/>
-
+                  <div className={settingsStyles.activate}>
+                    <ThemeToggle />
+                    <ToggleSwitch></ToggleSwitch>
+                    <ToggleSwitch></ToggleSwitch>
+                    <ToggleSwitch></ToggleSwitch>
+                    <ToggleSwitch></ToggleSwitch>
                   </div>
                 </div>
-                <div>
+                <div className={settingsStyles.modalBottom}>
                   <Tipografia
-                    Texto={"Default Transaction Speed (GWEI)"}
+                    texto={"Default Transaction Speed (GWEI)"}
                   ></Tipografia>
-                  <div className={ModalStyles.buttons}>
+                  <div className={settingsStyles.buttons}>
                     <Boton texto={"Default"} isBlue={true}></Boton>
                     <Boton texto={"Standard (3)"} isWhite={true}></Boton>
                     <Boton texto={"Fast (4)"} isWhite={true}></Boton>
@@ -200,7 +225,10 @@ function Navbar() {
           </div>
 
           <NetworkDropdown />
-          <Boton texto={"Connect Wallet"} isBlue={true} />
+          <IconoWrapper onClick={openModal}>
+          <Boton texto={"Connect Wallet"} isBlue={true}/>
+
+          </IconoWrapper>
         </div>
       </nav>
     </div>
