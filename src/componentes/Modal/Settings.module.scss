@@ -1,5 +1,14 @@
 .modal{
   background: var(--colors-gradientCardHeader);
+
+  .modalContent {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 25px;
+    width: 425px;
+    height: 420px;
+    position: relative;
+  }
 }
 .header{
     height: 74px;
