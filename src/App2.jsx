@@ -38,23 +38,23 @@ function App2() {
     <div className={styles.leSection}>
       <Navbar theme={theme} toggleTheme={toggleTheme}/>
 
-      <HeroSwiper />
+      <HeroSwiper theme={theme} toggleTheme={toggleTheme}/>
 
-      <FavoriteDex />
+      <FavoriteDex theme={theme} toggleTheme={toggleTheme}/>
 
-      <InfiniteSlider />
+      <InfiniteSlider theme={theme} toggleTheme={toggleTheme}/>
 
-      <EcosystemCardContainersContainer />
+      <EcosystemCardContainersContainer theme={theme} toggleTheme={toggleTheme}/>
 
-      <CakePotencial />
+      <CakePotencial theme={theme} toggleTheme={toggleTheme}/>
 
-      <VerticalSliderSection />
+      <VerticalSliderSection theme={theme} toggleTheme={toggleTheme}/>
 
-      <JoinComunidad />
+      <JoinComunidad theme={theme} toggleTheme={toggleTheme}/>
 
-      <NewsSwiper />
+      <NewsSwiper theme={theme} toggleTheme={toggleTheme}/>
 
-      <DexNowSection/>
+      <DexNowSection theme={theme} toggleTheme={toggleTheme}/>
 
       <Footer theme={theme} toggleTheme={toggleTheme}/>
     </div>
