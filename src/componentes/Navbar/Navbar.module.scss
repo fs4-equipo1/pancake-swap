@@ -2,12 +2,10 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    max-height: 56px;
-    background-color: #fff;
+    height: 56px;
+    background-color: var(--colors-backgroundAlt);
     align-items: center;
     justify-content: space-between;
-    // padding: 0px 50px;
-    // margin: 0px 50px;
 
     position: sticky;
     top: 0px;
@@ -17,24 +15,26 @@
 .dropdownPrimary {
     display: flex;
     flex-direction: row;
-    gap: 35px;
-    z-index: 1000;
+    height: 100%;
     padding: 0px 15px;
 }
 
 .dropdownSecondary {   
-    gap: 20px;
     display: flex;
     flex-direction: row;
-    justify-content: center;  // Fix the typo here
+    // justify-content: center;
     align-items: center;
+
+    gap: 0px 15px;
+    height: 100%;
     padding: 0px 15px;
 
 }
 
 .navbarImg {
+    display: block;
     width: 160px;
-    height: 25px;
+    object-fit: contain;
 }
 
 .bluecircle {
@@ -52,4 +52,10 @@
     width: 28px;  
   }
 
-  
+  .navButtonContainer {
+    display: flex;
+    justify-content: center;
+    height: 32px;
+    color: var(--colors-invertedContrast);
+
+  }

@@ -6,6 +6,7 @@ import { Icono } from "../Icono/Icono";
 import { IoMdSettings } from "react-icons/io";
 import styles from "./Navbar.module.scss";
 import { FaArrowRightFromBracket } from "react-icons/fa6";
+import ThemeToggle from "../ThemeToggle/ThemeToggle";
 
 function Navbar() {
  
@@ -138,6 +139,7 @@ function Navbar() {
           <NavbarDropdown title={"..."} items={itemsPunto} />
 
         </div>
+        <ThemeToggle />
         <div className={styles.dropdownSecondary}>
           <div className={styles.bluecircle}>
             <img
@@ -153,7 +155,9 @@ function Navbar() {
             href="https://www.instagram.com/pancakeswap_official"
           />
           <NetworkDropdown />
-          <Boton texto={"Connect Wallet"} isBlue={true} />
+          <div className={styles.navButtonContainer}>
+            <Boton texto={"Connect Wallet"} isBlue={true} />
+          </div>
         </div>
       </nav>
   );
