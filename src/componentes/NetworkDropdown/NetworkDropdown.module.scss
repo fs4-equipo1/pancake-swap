@@ -8,6 +8,7 @@
   padding-right: 8px;
   position: relative;
   border-radius: 16px;
+  color: var(--colors-contrast);
 
   &:hover {
     .dropdownCoinContent {
@@ -19,13 +20,15 @@
 .dropdownCoinContent {
   width: 200px;
   z-index: 1000;
-  background-color: #fff;
+  background-color: var(--colors-backgroundAlt);
   text-align: center;
   padding: 10px;
   display: none;
   position: absolute;
   top: 100%;
   left: -40px;
+  border: 1px solid;
+  border-color: var(--colors-cardBorder);
   border-radius: 16px;
 }
 
@@ -48,4 +51,17 @@
   position: relative;
   left: -5px;
   border-radius: 50%;
+}
+
+.DropdownArrowSVG {
+  display: block;
+  width: 24px;
+  fill: var(--colors-contrast);
+}
+
+.DropdownArrowSVGContainer {
+  display: "flex";
+  justify-content: "center";
+  align-items: "center";
+  height: 100%;
 }
