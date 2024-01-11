@@ -44,8 +44,8 @@
 }
 
 .slider:hover:before {
-  border: solid 3px var(--colors-secondary80);
-  border-color: var(--colors-secondary80);
+  border: solid 3px var(--colors-secondary);
+  border-color: var(--colors-secondary);
 }
 
 .switch input:checked + .slider {
