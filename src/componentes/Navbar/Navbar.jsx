@@ -1,14 +1,30 @@
-import Boton from "../Boton/Boton";
+import React, { useState } from "react";
+import Modal from "../Modal/Modal";
+import settingsStyles from "../Modal/Settings.module.scss";
+import { FaArrowRightFromBracket } from "react-icons/fa6";
+import NavbarDropdown from "../NavbarDropdown/NavbarDropdown";
 import LanguageDropdown from "../LanguageDropdown/LanguageDropdown";
 import NetworkDropdown from "../NetworkDropdown/NetworkDropdown";
-import NavbarDropdown from "../NavbarDropdown/NavbarDropdown";
+import Boton from "../Boton/Boton";
+import styles from "./Navbar.module.scss";
+import ThemeToggle from "../ThemeToggle/ThemeToggle";
+import Tipografia from "../Tipografia/Tipografia";
 import { Icono } from "../Icono/Icono";
 import { IoMdSettings } from "react-icons/io";
-import styles from "./Navbar.module.scss";
-import { FaArrowRightFromBracket } from "react-icons/fa6";
-import ThemeToggle from "../ThemeToggle/ThemeToggle";
+import IconoWrapper from "../IconoWraper/IconoWraper";
+import ToggleSwitch from "../Activate/Activate";
 
 function Navbar() {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
   const itemsTrade = [
     {
       texto: "Swap",
@@ -125,8 +141,9 @@ function Navbar() {
     },
   ];
   return (
-    <nav className={styles.navbar}>
-      <div className={styles.dropdownPrimary}>
+    <div>
+      <nav className={styles.navbar}>
+        <div className={styles.dropdownPrimary}>
         <svg
           viewBox="0 0 1281 199"
           class="sc-grXZZQ ktVOoD desktop-icon"
@@ -158,33 +175,90 @@ function Navbar() {
             fill="#633001"
           ></path>
         </svg>
-        <NavbarDropdown title={"Trade"} items={itemsTrade} />
-        <NavbarDropdown title={"Earn"} items={itemsEarn} punto={"success"} />
-        <NavbarDropdown title={"Game"} items={itemsGame} />
-        <NavbarDropdown title={"NFT"} items={itemsNft} />
-        <NavbarDropdown title={"..."} items={itemsPunto} />
-      </div>
-      <ThemeToggle />
-      <div className={styles.dropdownSecondary}>
-        <div className={styles.bluecircle}>
-          <img
-            src="https://cdn.discordapp.com/attachments/1185220628794593330/1186043627458277518/bluecircleicon.ico?ex=6591d034&is=657f5b34&hm=2286b225c46783a62484255d51c01670db25ee68e9ee9210e5ce883a89f81835&"
-            alt="Blue Circle Icon"
-            className={styles.bluecircleImage}
-          />
-          <p>$2.273</p>
+          <NavbarDropdown title={"Trade"} items={itemsTrade} />
+          <NavbarDropdown title={"Earn"} items={itemsEarn} punto={"success"} />
+          <NavbarDropdown title={"Game"} items={itemsGame} />
+          <NavbarDropdown title={"NFT"} items={itemsNft} />
+          <NavbarDropdown title={"..."} items={itemsPunto} />
         </div>
-        <LanguageDropdown />
-        <Icono
-          icono={<IoMdSettings />}
-          href="https://www.instagram.com/pancakeswap_official"
-        />
-        <NetworkDropdown />
-        <div className={styles.navButtonContainer}>
-          <Boton texto={"Connect Wallet"} isBlue={true} />
+        <div className={styles.dropdownSecondary}>
+          <div className={styles.bluecircle}>
+            <img
+              src="https://cdn.discordapp.com/attachments/1185220628794593330/1186043627458277518/bluecircleicon.ico?ex=6591d034&is=657f5b34&hm=2286b225c46783a62484255d51c01670db25ee68e9ee9210e5ce883a89f81835&"
+              alt="Blue Circle Icon"
+              className={styles.bluecircleImage}
+            />
+            <p>$2.273</p>
+          </div>
+          <LanguageDropdown />
+          <div>
+            <IconoWrapper onClick={openModal}>
+              <Icono icono={<IoMdSettings />} />
+            </IconoWrapper>
+            <Modal isOpen={modalOpen} onClose={closeModal}>
+              <div className={settingsStyles.header}>
+                <Tipografia texto={"Settings"} isTitle></Tipografia>
+                <button
+                  className={settingsStyles.close}
+                  onClick={closeModal}
+                  aria-label="Close"
+                >
+                  &times;
+                </button>
+              </div>
+              <div>
+              <Tipografia texto={"GLOBAL"} isBodyLarge></Tipografia>
+                <div className={settingsStyles.modalTop}>
+                  <div className={settingsStyles.textContainer}>
+                    <Tipografia texto={"Dark mode"} isBodyLarge></Tipografia>
+                    <Tipografia
+                      texto={"Subgraph Health Indicator"}
+                      isBodyLarge
+                    ></Tipografia>
+                    <Tipografia
+                      texto={"Show username"}
+                      isBodyLarge
+                    ></Tipografia>
+                    <Tipografia
+                      texto={"Allow notifications"}
+                      isBodyLarge
+                    ></Tipografia>
+                    <Tipografia
+                      texto={"Token Risk Scanning"}
+                      isBodyLarge
+                    ></Tipografia>
+                  </div>
+                  <div className={settingsStyles.activate}>
+                    <ThemeToggle />
+                    <ToggleSwitch></ToggleSwitch>
+                    <ToggleSwitch></ToggleSwitch>
+                    <ToggleSwitch></ToggleSwitch>
+                    <ToggleSwitch></ToggleSwitch>
+                  </div>
+                </div>
+                <div className={settingsStyles.modalBottom}>
+                  <Tipografia
+                    texto={"Default Transaction Speed (GWEI)"}
+                  ></Tipografia>
+                  <div className={settingsStyles.buttons}>
+                    <Boton texto={"Default"} isBlue={true}></Boton>
+                    <Boton texto={"Standard (3)"} isWhite={true}></Boton>
+                    <Boton texto={"Fast (4)"} isWhite={true}></Boton>
+                    <Boton texto={"Instant (5)"} isWhite={true}></Boton>
+                  </div>
+                </div>
+              </div>
+            </Modal>
+          </div>
+
+          <NetworkDropdown />
+          <IconoWrapper onClick={openModal}>
+          <Boton texto={"Connect Wallet"} isBlue={true}/>
+
+          </IconoWrapper>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
   );
 }
 
