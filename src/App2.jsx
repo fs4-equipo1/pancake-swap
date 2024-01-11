@@ -3,7 +3,7 @@ import FavoriteDex from "./componentes/FavouriteDex/FavoriteDex";
 import { EcosystemCardContainersContainer } from "./EcosystemCard/EcosystemCard";
 // import Tipografia from "./componentes/Tipografia/Tipografia";
 import Navbar from "./componentes/Navbar/Navbar";
-import Footer, { FooterSection } from "./componentes/Footer/Footer";
+import Footer from "./componentes/Footer/Footer";
 import InfiniteSlider from "./componentes/InfiniteSlider/InfiniteSlider";
 import { JoinComunidad } from "./componentes/JoinComunidad/JoinComunidad";
 // import { CardComunidad } from "./componentes/JoinComunidad/CardComunidad";
@@ -14,33 +14,30 @@ import CakePotencial from "./componentes/CakePotencial/CakePotencial";
 import { BaseSection } from "./MainBaseComponents/BaseSection";
 import NewsSwiper from "./componentes/NewsSwiper/NewsSwiper";
 import { VerticalSliderSection } from "./componentes/VerticalSliderSection/VerticalSliderSection";
-import styles from "./MainBaseComponents/BaseSection.module.scss"
-import DexNowSection from "./componentes/DexNow/DexNow";
+import styles from "./MainBaseComponents/BaseSection.module.scss";
 
 function App2() {
   return (
     <div className={styles.leSection}>
-        <Navbar />
+      <Navbar />
 
-        <HeroSwiper />
+      <HeroSwiper />
 
-        <FavoriteDex />
+      <FavoriteDex />
 
-        <InfiniteSlider />
+      <InfiniteSlider />
 
-        <EcosystemCardContainersContainer />
+      <EcosystemCardContainersContainer />
 
-        <CakePotencial />
+      <CakePotencial />
 
-        <VerticalSliderSection/>
+      <VerticalSliderSection />
 
-        <JoinComunidad />
+      <JoinComunidad />
 
-        <NewsSwiper />
+      <NewsSwiper />
 
-        <DexNowSection />
-
-        <FooterSection />
+      <Footer />
     </div>
   );
 }
