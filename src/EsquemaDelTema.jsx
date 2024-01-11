@@ -6,11 +6,11 @@ function App2 (){
 
     LaFuncionQueDejaElegirElTema()
 
-    return <ComponenteAbuelo Theme={Theme}/> //Esta parte ya esta hecha en el App2.jsx
+    return <ComponenteAbuelo Theme={Theme}/> //Se pasa el theme declarado en App2 todos los componentes de App2. Esta parte ya esta hecha en el App2.jsx. 
 }
 
 function ComponenteAbuelo( {Theme} ){
-    return <ComponentePadre Theme={Theme}/> //Pasamos la prop ya metida en el componente abuelo al componente padre, dandole el mismo nombre, o no, eso ya como queramos
+    return <ComponentePadre Theme={Theme}/> //Se pasa la prop ya metida en el componente abuelo al componente padre, dandole el mismo nombre, o no, eso ya como queramos
 }
 
 function ComponentePadre( {Theme} ){
