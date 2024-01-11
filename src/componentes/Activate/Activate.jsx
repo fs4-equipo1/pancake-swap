@@ -9,9 +9,10 @@ const ToggleSwitch = () => {
   };
 
   return (
-    <div className={`${styles['toggle-switch']} ${isToggled ? styles.toggled : ''}`} onClick={handleToggle}>
-      <div className={styles.slider}></div>
-    </div>
+<label class={styles.switch}>
+  <input type="checkbox" />
+  <span class={styles.slider}></span>
+</label>
   );
 };
 
