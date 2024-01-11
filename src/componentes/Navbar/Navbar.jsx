@@ -14,7 +14,7 @@ import { IoMdSettings } from "react-icons/io";
 import IconoWrapper from "../IconoWraper/IconoWraper";
 import ToggleSwitch from "../Activate/Activate";
 
-function Navbar() {
+function Navbar({ theme, toggleTheme }) {
   const [modalOpen, setModalOpen] = useState(false);
 
   const openModal = () => {
@@ -228,7 +228,7 @@ function Navbar() {
                     ></Tipografia>
                   </div>
                   <div className={settingsStyles.activate}>
-                    <ThemeToggle />
+                    <ThemeToggle theme={theme} onToggle={toggleTheme} />
                     <ToggleSwitch/>
                     <ToggleSwitch/>
                     <ToggleSwitch/>

@@ -1,19 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import styles from './ThemeToggle.module.scss';
 
-const ThemeToggle = () => {
-  const [theme, setTheme] = useState('light');
-
-  const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === 'dark' ? 'light' : 'dark'));
-  };
-
+const ThemeToggle = ({ theme, onToggle }) => {
   useEffect(() => {
     document.body.dataset.theme = theme;
   }, [theme]);
 
   return (
-    <button onClick={toggleTheme} className={`${styles.toggleButton} ${styles[theme]}`}>
+    <button onClick={onToggle} className={`${styles.toggleButton} ${styles[theme]}`}>
       {theme === 'dark' ? (
         <>
           <img src="../public/images/svgexport-83.png" />

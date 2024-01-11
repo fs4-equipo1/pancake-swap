@@ -5,7 +5,7 @@ import FooterIcons from "./FooterIcons";
 import { FooterBuyCake } from "./FooterBuyCake";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
 
-export function Footer() {
+export function Footer({ theme, toggleTheme }) {
   return (
     <div className={styles.footerSection}>
       <div className={styles.footerContainer}>
@@ -52,7 +52,7 @@ export function Footer() {
           {/* <hr style={{opacity:'30%'}}></hr> */}
           <div className={styles.footerEnd}>
             <div className={styles.footerEndLangAndTheme}>
-              <ThemeToggle />
+              <ThemeToggle theme={theme} onToggle={toggleTheme} />
               <LanguageDropdown reverse={true} />
             </div>
             <FooterBuyCake />
