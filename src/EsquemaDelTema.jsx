@@ -1,7 +1,7 @@
 function App2 (){
     
     function LaFuncionQueDejaElegirElTema(){
-        Theme = "Claro u oscuro, lo que sea"
+        Theme = "Claro u oscuro, lo que sea" //Esta funcion es un setState que declara el Tema que tiene toda la pagina.
     }
 
     LaFuncionQueDejaElegirElTema()
