@@ -1,19 +1,19 @@
 .toggleButton {
     width: 56px;
     height: 32px;
-    background-color: #666171;
+    background-color: #878096;
     border-radius: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
   
-    &.dark {
-      background-color: #666171;
+    &.dark .themeIcon{
+      background-color: #27262c;
     }
   
-    &.light {
-      background-color: #666171;
+    &.light .themeIcon{
+      background-color: #eeeeee;
     }
   
     &:hover {
@@ -29,7 +29,7 @@
   .themeIcon,
   .nonHoveredIcon {
     border-radius: 50%;
-    background-color: #27262c;
+    // background-color: #27262c;
 
     border: 2px solid transparent; 
   }

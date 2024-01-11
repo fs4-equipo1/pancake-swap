@@ -22,9 +22,7 @@ const ThemeToggle = () => {
       ) : (
         <>
         
-          <img src="../public/images/svgexport-82.png" alt="Light Icon" className={styles.themeIcon}
-         />
-        
+          <img src="../public/images/svgexport-82.png" alt="Light Icon" className={styles.themeIcon}  />
           <img src="../public/images/svgexport-84.png" alt="Light Icon" />
         </>
       )}
