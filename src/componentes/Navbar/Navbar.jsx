@@ -141,7 +141,7 @@ function Navbar() {
     },
   ];
   return (
-    <div>
+
       <nav className={styles.navbar}>
         <div className={styles.dropdownPrimary}>
         <svg
@@ -258,7 +258,7 @@ function Navbar() {
           </IconoWrapper>
         </div>
       </nav>
-    </div>
+
   );
 }
 
