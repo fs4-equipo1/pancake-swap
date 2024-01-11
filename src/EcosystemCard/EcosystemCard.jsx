@@ -42,6 +42,7 @@ export function EcosystemCardsContainer({
   cardData,
   objectId,
   isReverse,
+  theme
 }) {
   const filteredData = cardData.filter((obj) => obj.id === objectId);
 
@@ -92,7 +93,7 @@ function EcosystemImgAndTitle(){
   )
 }
 
-export function EcosystemCardContainersContainer(){
+export function EcosystemCardContainersContainer({ theme, toggleTheme }){
   return(
     <div>
       <EcosystemImgAndTitle />
