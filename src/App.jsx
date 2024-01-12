@@ -3,7 +3,7 @@ import imagenes from "../public/assets/imagenes";
 import FavoriteDex from "./componentes/FavouriteDex/FavoriteDex";
 import styles from "./styles/pages/home.module.scss";
 import { EcosystemCardsData } from "./EcosystemCard/EcosystemCardsData";
-import { EcosystemCardsContainer } from "./EcosystemCard/EcosystemCard";
+import { EcosystemCards } from "./EcosystemCard/EcosystemCard";
 import Boton from "./componentes/Boton/Boton";
 import background from "./assets/background.png";
 // import Tipografia from "./componentes/Tipografia/Tipografia";

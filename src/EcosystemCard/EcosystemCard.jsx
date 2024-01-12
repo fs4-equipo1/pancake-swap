@@ -56,7 +56,7 @@ function EcosystemImgAndTitle(){
   )
 }
 
-export function EcosystemCardsContainer({
+export function EcosystemCard({
   path,
   titulo,
   cardData,
@@ -93,18 +93,18 @@ export function EcosystemCardsContainer({
   );
 }
 
-export function EcosystemCardContainersContainer({ theme }){
+export function EcosystemCards({ theme }){
   return(
     <div>
       <EcosystemImgAndTitle />
-      <EcosystemCardsContainer
+      <EcosystemCard
           theme={theme}
           path={"../../Assets/Images/trade-bunny.png"}
           titulo={"Trade"}
           cardData={EcosystemCardsData}
           objectId={1}
         />
-        <EcosystemCardsContainer
+        <EcosystemCard
           theme={theme}
           path={"../../Assets/Images/asset36.png"}
           titulo={"Earn"}
@@ -112,7 +112,7 @@ export function EcosystemCardContainersContainer({ theme }){
           objectId={2}
           isReverse
         />
-        <EcosystemCardsContainer
+        <EcosystemCard
           theme={theme}
           path={"../../Assets/Images/asset8.png"}
           titulo={"Game & NFT"}

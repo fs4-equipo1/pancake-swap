@@ -1,6 +1,6 @@
 import HeroSwiper from "./componentes/HeroSwiper/HeroSwiper";
 import FavoriteDex from "./componentes/FavouriteDex/FavoriteDex";
-import { EcosystemCardContainersContainer } from "./EcosystemCard/EcosystemCard";
+import { EcosystemCards } from "./EcosystemCard/EcosystemCard";
 // import Tipografia from "./componentes/Tipografia/Tipografia";
 import Navbar from "./componentes/Navbar/Navbar";
 import Footer from "./componentes/Footer/Footer";
@@ -33,7 +33,7 @@ function App2() {
 
       <InfiniteSlider theme={theme} />
 
-      <EcosystemCardContainersContainer theme={theme} />
+      <EcosystemCards theme={theme} />
 
       <CakePotencial theme={theme} />
 
