@@ -146,7 +146,7 @@ function Navbar({ theme, toggleTheme }) {
         <NavbarDropdown title={"Earn"} items={itemsEarn} punto={"success"} />
         <NavbarDropdown title={"Game"} items={itemsGame} />
         <NavbarDropdown title={"NFT"} items={itemsNft} />
-        <NavbarDropdown title={"..."} items={itemsPunto} />
+        <NavbarDropdown title={"···"} items={itemsPunto} />
       </div>
       <div className={styles.dropdownSecondary}>
         <div className={styles.blueCircle}>
@@ -157,7 +157,7 @@ function Navbar({ theme, toggleTheme }) {
               <img
                 src="https://cdn.discordapp.com/attachments/1185220628794593330/1186043627458277518/bluecircleicon.ico?ex=6591d034&is=657f5b34&hm=2286b225c46783a62484255d51c01670db25ee68e9ee9210e5ce883a89f81835&"
                 alt="Cake Icon"
-                width="28px"
+                width="25px"
               />
               </div>
             }
