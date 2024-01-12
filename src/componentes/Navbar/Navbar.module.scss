@@ -40,19 +40,28 @@
     object-fit: contain;
 }
 
-.bluecircle {
+.bluecircle, .blueCircleLink {
     justify-content: center;
     gap: 5px;
     margin: 10px;
     height: 28px;
     width: 45px;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
+    align-items: center;
+    color: var(--colors-textSubtle);
   }
-  
-  .bluecircleimage {
+
+  .bluecircleImage {
     height: 100%; 
-    width: 28px;  
+    width: 28px;
+    
+  }
+  .blueCircleLink:hover {
+    transition: transform 0.3s ease 0s;
+    .bluecircleImage {
+      transform: scale(1.2);
+    }
   }
 
   .navButtonContainer {
