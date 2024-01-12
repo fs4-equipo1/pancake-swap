@@ -4,6 +4,7 @@ import styles from "./Footer.module.scss";
 import FooterIcons from "./FooterIcons";
 import { FooterBuyCake } from "./FooterBuyCake";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
+import { Logo } from "../Logo/Logo";
 
 export function Footer({ theme, toggleTheme }) {
   return (
@@ -39,13 +40,9 @@ export function Footer({ theme, toggleTheme }) {
             title={"ABOUT"}
             items={["Terms Of Service", "Blog", "Brand Assets", "Careers"]}
           />
-          <img
-            src={
-              "https://cdn.discordapp.com/attachments/1146380288776220734/1186038041333207050/vecake-title.de07d9b9.png?ex=6591cb00&is=657f5600&hm=28843fe8c1fb35f0112536f74a1ae45023861dff72317cf761797d8e043cb597&"
-            }
-            alt="Description of the image"
-            style={{ width: "160px", height: "25px" }}
-          ></img>
+          <div>
+            <Logo isInverted/>
+          </div>
         </div>
         <div className={styles.footerBottom}>
           <FooterIcons />
