@@ -136,7 +136,7 @@ function Navbar({ theme, toggleTheme }) {
     },
   ];
 
-  const cakePrice = CoinPrice();
+  const cakePrice = CoinPrice()[0];
 
   return (
     <nav className={styles.navbar}>
