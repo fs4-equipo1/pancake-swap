@@ -17,6 +17,7 @@ import { VerticalSliderSection } from "./componentes/VerticalSliderSection/Verti
 import styles from "./MainBaseComponents/BaseSection.module.scss"
 import DexNowSection from "./componentes/DexNow/DexNow";
 import { CakeFigures } from "./componentes/CakeFigures/CakeFigures";
+import BotonArriba from "./componentes/BotonArriba/BotonArriba";
 
 function App2() {
   return (
@@ -35,7 +36,6 @@ function App2() {
 
         <VerticalSliderSection/>
 
-        {/* Solo para ver si funciona CakeFigures: */}
         <CakeFigures />
 
         <JoinComunidad />
@@ -43,6 +43,8 @@ function App2() {
         <NewsSwiper />
 
         <DexNowSection />
+
+        <BotonArriba />
 
         <FooterSection />
     </div>
