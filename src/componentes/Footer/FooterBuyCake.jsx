@@ -1,6 +1,9 @@
 import styles from "./FooterBuyCake.module.scss";
 import Boton from "../Boton/Boton";
+import CoinPrice from "../CustomHooks/CoinPrice";
+
 export function FooterBuyCake() {
+  const cakePrice = CoinPrice()[0];
   return (
     <div className={styles.footerBuyCake}>
       <img
@@ -11,7 +14,7 @@ export function FooterBuyCake() {
         height="28"
         style={{ marginRight: "10px" }}
       />
-      <p style={{ marginRight: "20px", color: "#B8ADD2" }}>2.245$ </p>
+      <p style={{ marginRight: "20px", color: "#B8ADD2" }}>{`$${cakePrice}`}</p>
       <div>
         <Boton texto={"Buy CAKE"} isBlue={true} />
       </div>
