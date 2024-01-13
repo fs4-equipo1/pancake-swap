@@ -10,12 +10,12 @@ const CoinPrice = () => {
   const fetchCoinPrice = async () => {
     try {
       const response = await axios.get(
-        "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=pancakeswap-token&order=market_cap_asc&per_page=100&page=1&sparkline=false&locale=en"
+        "https://api.coingecko.com/api/v3/coins/pancakeswap-token?tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=falsen"
       );
-      const marketPrice = response.data.current_price;
-      const marketCap = response.data.market_cap;
-      const circulatingSupply = response.data.circulating_supply;
-      const totalSupply = response.data.total_supply;
+      const marketPrice = response.data.market_data.current_price.usd;
+      const marketCap = response.data.market_data.market_cap.usd;
+      const circulatingSupply = response.data.market_data.circulating_supply;
+      const totalSupply = response.data.market_data.total_supply;
       setPrice(marketPrice);
       setMarket(marketCap)
       setCirculating(circulatingSupply)
