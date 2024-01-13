@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { FaArrowUp } from 'react-icons/fa';
+import  { useEffect, useState } from 'react';
+import { MdOutlineArrowUpward } from "react-icons/md";
 import classes from "./BotonArriba.module.scss";
 
 const BotonArriba = () => {
@@ -32,7 +32,7 @@ const BotonArriba = () => {
     style={{display: visible ? 'inline' : 'none'}}
     className={classes.buttonToTop}
     >
-      <FaArrowUp size={20} color="white" />
+      <MdOutlineArrowUpward  size={20} color="white" />
     </button>
   );
 }
