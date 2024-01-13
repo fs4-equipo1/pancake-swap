@@ -29,14 +29,14 @@ const CoinPrice = () => {
     fetchCoinPrice();
     const interval = setInterval(() => {
       fetchCoinPrice();
-    }, 180000);
+    }, 10000);
 
     return () => {
       clearInterval(interval);
     };
   }, []);
 
-  APInformation = [price, market, circulating, total]
+  const APInformation = [price, market, circulating, total]
 
   return APInformation;
 };
