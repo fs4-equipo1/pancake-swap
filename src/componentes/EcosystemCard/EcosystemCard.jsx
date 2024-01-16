@@ -3,7 +3,7 @@ import styles from "./EcosystemCard.module.scss";
 import classNames from "classnames/bind";
 
 import { EcosystemCardsData } from "./EcosystemCardsData";
-import Tipografia from "../componentes/Tipografia/Tipografia";
+import Tipografia from "../Tipografia/Tipografia";
 
 const cx = classNames.bind(styles);
 
