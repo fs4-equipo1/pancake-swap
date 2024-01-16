@@ -16,6 +16,7 @@ import ToggleSwitch from "../Activate/Activate";
 import { Logo } from "../Logo/Logo";
 import CoinPrice from "../CustomHooks/CoinPrice";
 
+
 function Navbar({ theme, toggleTheme }) {
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
   const [isWalletModalOpen, setIsWalletModalOpen] = useState(false);
@@ -181,7 +182,9 @@ function Navbar({ theme, toggleTheme }) {
 
         <NetworkDropdown />
         <IconoWrapper onClick={() => setIsWalletModalOpen(true)}>
-          <Boton texto={"Connect Wallet"} isBlue={true} />
+          <Boton  texto={"Connect Wallet"} isBlue={true} />
+          {/* <Boton className={"buttonShort"} texto={"Connect "} isBlue={true} /> */}
+
         </IconoWrapper>
 
         {isWalletModalOpen && (

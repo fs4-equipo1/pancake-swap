@@ -91,3 +91,9 @@
   position: absolute;
   right: 8px;
 }
+
+@media (max-width: 425px){
+  .dropdownContainer{
+    display: none;
+  }
+}

@@ -73,3 +73,44 @@
     color: var(--colors-invertedContrast);
 
   }
+
+  .iconResponsive{
+    display: none;
+  }
+.logoPancake{
+  margin-top: 13px;
+  width: 160px;
+  height: 25px;
+}
+.buttonShort{
+  display: none;
+}
+
+  @media (max-width: 768px){
+    .logoPancake{
+      display: none;
+    }
+    .iconResponsive{
+      display: block;
+      margin-top: 13px;
+    }
+    
+
+    @media (max-width: 425px){
+      .navbar{
+        display: flex;
+        justify-content: center;
+      }
+      .blueCircle{
+        display: none;
+        
+      }
+      .buttonLong{
+        display: none;
+      }
+      .buttonShort{
+        display: block;
+      }
+      }
+    }
+  
