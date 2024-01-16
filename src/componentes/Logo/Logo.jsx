@@ -1,4 +1,4 @@
-import styles from "../Navbar/Navbar.module.scss"
+import styles from "./Logo.module.scss"
 
 export function Logo({isInverted}){
     return(

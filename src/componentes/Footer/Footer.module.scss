@@ -62,3 +62,13 @@
   background: #27262c;
   width: 100%;
 }
+
+@media (max-width: 768px) {
+  .footerTop{
+    display: flex;
+    flex-direction: column;
+  }
+  .iconResponsive{
+    display: none;
+  }
+}
