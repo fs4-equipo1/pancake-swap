@@ -13,6 +13,7 @@ import { VerticalSliderSection } from "./componentes/VerticalSliderSection/Verti
 import styles from "./MainBaseComponents/BaseSection.module.scss";
 import { useState } from "react";
 import DexNowSection from "./componentes/DexNow/DexNow";
+import { CakeFigures } from "./componentes/CakeFigures/CakeFigures";
 import BotonArriba from "./componentes/BotonArriba/BotonArriba";
 
 export function App() {
@@ -40,13 +41,13 @@ export function App() {
 
       <VerticalSliderSection theme={theme} />
 
+      <CakeFigures theme={theme} /> 
+
       <JoinComunidad theme={theme} />
 
       <NewsSwiper theme={theme} />
 
       <DexNowSection theme={theme} />
-      
-      <BotonArriba/>
 
       <Footer theme={theme} toggleTheme={toggleTheme}/>
     </div>
