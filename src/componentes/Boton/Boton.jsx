@@ -3,14 +3,15 @@ import classNames from "classnames/bind";
 
 const cx = classNames.bind(styles);
 
-const Boton = ({ texto, isTransparent, isBlue, isWhite }) => {
+const Boton = ({ texto, isLearn, isTransparent, isBlue, isWhite, icon }) => {
   const className = cx({
     button: true,
     transparent: isTransparent,
     blue: isBlue,
     white: isWhite,
+    learn: isLearn,
   });
-  return <button className={className}>{texto}</button>;
+  return <button className={className}>{texto}{icon}</button>;
 };
 
 export default Boton;
