@@ -5,7 +5,7 @@ export function BaseSection({flexDirection, backgroundColor, children}) {
   let givenBackgroundColor = backgroundColor;
   return (
     <section
-      className={styles.leSection}
+      className={styles.baseSection}
       style={{ flexDirection: givenFlexDirection, background: givenBackgroundColor}}
     >
         {children}

@@ -26,7 +26,7 @@ export function App() {
   //fin funciones para Theme Toggle
 
   return (
-    <div className={styles.leSection}>
+    <div className={styles.baseSection}>
       <Navbar theme={theme} toggleTheme={toggleTheme}/>
 
       <HeroSwiper theme={theme} />
