@@ -5,13 +5,12 @@
     justify-content: center;
 }
 .container{
-    background-color: var(--colors-background);
-    color: white;
+    background-color: rgba(255, 255, 255, 0.90);
     height: 628px;
     width: 936px;
     padding: 40px;
     border-radius: 72px;
-    border: 1px solid #383241;
+    // border: 1px solid #383241;
     position: relative;
     backdrop-filter: blur(20px);
     box-sizing: border-box;
@@ -34,6 +33,7 @@
     color: var(--colors-secondary);
     font-size: 32px;
 }
+
 .tittleComunity{
     display: flex;
     justify-content: center;
@@ -42,10 +42,23 @@
     margin-bottom: 12px;
     gap: 8px;
 }
+
 .phraseComunity{
-    line-height: 1.5;
+    display: flex;
     margin-bottom: 40px;
-    text-align: center;
-    font-weight: 600;
-    color: var(--colors-textSubtle);
+    justify-content: center;
+
+}
+
+
+.joinComunidadSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    background: var(--colors-gradientBlue);
+
+    padding: 50px 0px;
 }

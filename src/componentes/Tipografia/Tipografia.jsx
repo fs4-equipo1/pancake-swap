@@ -20,6 +20,7 @@ const Tipografia = ({
   isSubtitle,
   isBodyLarge,
   isBody,
+  isCentered
 }) => {
   const classNames = cx({
     titleLarge: isTitleLarge,
@@ -30,7 +31,7 @@ const Tipografia = ({
     body: isBody,
   });
   return (
-    <div className={classNames} style={{ color: `var(${color})` }}>
+    <div className={classNames} style={isCentered ? {textAlign: 'center' , color: `var(${color})`} : {textAlign: 'start' , color: `var(${color})`}}>
       {texto}
     </div>
   );

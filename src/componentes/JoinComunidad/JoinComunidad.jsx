@@ -12,17 +12,24 @@ import {
   FaDiscord,
   FaYoutube,
 } from "react-icons/fa";
+import Tipografia from "../Tipografia/Tipografia";
 
 export function JoinComunidad() {
   return (
     <div className={styles.container}>
       <div>
         <div className={styles.tittleComunity}>
-          <h2 className={styles.join}>Join our </h2>
-          <h2 className={styles.joinComunidad}> Comunity</h2>
+          <Tipografia color={"--colors-text"} texto={"Join our"} isTitle />
+          <Tipografia color={"--colors-secondary"} texto={"Comunity"} isTitle />
         </div>
         <div className={styles.phraseComunity}>
-          Together we can make the PancakeSwap community even stronger
+          <Tipografia
+            color={"--colors-textSubtle"}
+            texto={
+              "Together we can make the PancakeSwap community even stronger"
+            }
+            isBodyLarge
+          />
         </div>
         <div className={styles.cards}>
           <div>
@@ -84,5 +91,9 @@ export function JoinComunidad() {
 }
 
 export function JoinComunidadSection() {
-  return <JoinComunidad />;
+  return (
+    <div className={styles.joinComunidadSection}>
+      <JoinComunidad />
+    </div>
+  );
 }
