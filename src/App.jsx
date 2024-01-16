@@ -14,8 +14,8 @@ import styles from "./componentes/MainBaseComponents/BaseSection.module.scss";
 import { useState } from "react";
 import DexNowSection from "./componentes/DexNow/DexNow";
 import { CakeFigures } from "./componentes/CakeFigures/CakeFigures";
-import BotonArriba from "./componentes/BotonArriba/BotonArriba";
 import { BaseSection } from "./componentes/MainBaseComponents/BaseSection";
+import BotonArriba from "./componentes/BotonArriba/BotonArriba";
 
 export function App() {
   // funciones para Theme Toggle
@@ -51,6 +51,8 @@ export function App() {
       <DexNowSection theme={theme} />
 
       <Footer theme={theme} toggleTheme={toggleTheme}/>
+
+      <BotonArriba/>
 
     </BaseSection>
   );
