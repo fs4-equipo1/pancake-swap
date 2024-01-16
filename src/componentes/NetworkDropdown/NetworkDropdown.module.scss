@@ -1,0 +1,67 @@
+.dropdownCoinContainer {
+  align-items: center;
+  background-color: var(--colors-tertiary);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px -2px 0px inset;
+  cursor: pointer;
+  display: inline-flex;
+  height: 32px;
+  padding-right: 8px;
+  position: relative;
+  border-radius: 16px;
+  color: var(--colors-contrast);
+
+  &:hover {
+    .dropdownCoinContent {
+      display: block;
+    }
+  }
+}
+
+.dropdownCoinContent {
+  width: 200px;
+  z-index: 1000;
+  background-color: var(--colors-backgroundAlt);
+  text-align: center;
+  padding: 10px;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -40px;
+  border: 1px solid;
+  border-color: var(--colors-cardBorder);
+  border-radius: 16px;
+}
+
+.activeNetwork {
+  display: flex;
+  align-items: center;
+}
+
+.buttonWithImage {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align items to the start of the container */
+  margin-bottom: 8px; /* Adjust spacing between buttons if needed */
+}
+
+.buttonImage {
+  height: 32px;
+  color: var(--colors-textSubtle);
+  width: 32px;
+  position: relative;
+  left: -5px;
+  border-radius: 50%;
+}
+
+.DropdownArrowSVG {
+  display: block;
+  width: 24px;
+  fill: var(--colors-contrast);
+}
+
+.DropdownArrowSVGContainer {
+  display: "flex";
+  justify-content: "center";
+  align-items: "center";
+  height: 100%;
+}

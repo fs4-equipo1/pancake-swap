@@ -1,0 +1,75 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 56px;
+    background-color: var(--colors-backgroundAlt);
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid;
+    border-color: var(--colors-cardBorder);
+
+    position: sticky;
+    top: 0px;
+    z-index: 9000;
+}
+
+.dropdownPrimary {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    padding: 0px 15px;
+}
+
+.dropdownSecondary {   
+    display: flex;
+    flex-direction: row;
+    // justify-content: center;
+    align-items: center;
+
+    gap: 0px 15px;
+    height: 100%;
+    padding: 0px 15px;
+
+}
+
+.navbarImg {
+    display: block;
+    width: 160px;
+    object-fit: contain;
+}
+
+.bluecircle, .blueCircleLink {
+    justify-content: center;
+    margin: 10px;
+    height: 28px;
+    width: 45px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    color: var(--colors-textSubtle);
+  }
+
+  .bluecircleImage {
+    height: 100%; 
+    width: 25px;
+    margin-right: 8px; 
+    display: flex;
+    align-items: center;
+  }
+  
+  .blueCircleLink:hover {
+    transition: transform 0.3s ease 0s;
+    .bluecircleImage {
+      transform: scale(1.2);
+    }
+  }
+
+  .navButtonContainer {
+    display: flex;
+    justify-content: center;
+    height: 32px;
+    color: var(--colors-invertedContrast);
+
+  }

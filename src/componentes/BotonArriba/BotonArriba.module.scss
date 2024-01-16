@@ -1,0 +1,25 @@
+
+.buttonToTop {
+    display: none;
+    position: fixed;
+    bottom: 115px;
+    right: 10px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: var(--colors-primary);
+    color: var(--colors-white);
+    cursor: pointer;
+    // padding: 0px 24px;
+    border-radius: 16px;
+    height: 48px;
+    width: 48px;
+    box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+
+
+    &:hover {
+      opacity: 0.65;
+    }
+
+    }
+    

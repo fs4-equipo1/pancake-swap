@@ -1,0 +1,19 @@
+// .imgSeparator{
+// //    position: absolute;
+// //    top: 50%;
+// //    left: 50%;
+// //    right: 50%;
+// //    display: flex;
+   
+.imgSeparator{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 450px;
+    max-height: 450px;
+    overflow: hidden;
+}
+
+.imgSeparator img{
+    width: 150%;
+}
