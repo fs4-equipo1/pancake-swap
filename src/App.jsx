@@ -50,6 +50,7 @@ export function App() {
       <DexNowSection theme={theme} />
 
       <Footer theme={theme} toggleTheme={toggleTheme}/>
+
     </div>
   );
 }
