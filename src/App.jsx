@@ -13,6 +13,7 @@ import { VerticalSliderSection } from "./componentes/VerticalSliderSection/Verti
 import styles from "./MainBaseComponents/BaseSection.module.scss";
 import { useState } from "react";
 import DexNowSection from "./componentes/DexNow/DexNow";
+import BotonArriba from "./componentes/BotonArriba/BotonArriba";
 
 export function App() {
   // funciones para Theme Toggle
@@ -44,6 +45,8 @@ export function App() {
       <NewsSwiper theme={theme} />
 
       <DexNowSection theme={theme} />
+      
+      <BotonArriba/>
 
       <Footer theme={theme} toggleTheme={toggleTheme}/>
     </div>
