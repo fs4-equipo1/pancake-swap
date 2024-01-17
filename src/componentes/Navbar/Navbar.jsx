@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Modal from "../Modal/Modal";
 import settingsStyles from "../Modal/Settings.module.scss";
 import { FaArrowRightFromBracket } from "react-icons/fa6";
@@ -21,14 +21,14 @@ function Navbar({ theme, toggleTheme }) {
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
   const [isWalletModalOpen, setIsWalletModalOpen] = useState(false);
   const [buttonText, setButtonText] = useState(
-    window.innerWidth <= 425 ? "Connect" : "Connect Wallet"
+    window.innerWidth <= 800 ? "Connect" : "Connect Wallet"
   );
 
  
 
   useEffect(() => {
     const handleResize = () => {
-      setButtonText(window.innerWidth <= 850 ? "Connect" : "Connect Wallet");
+      setButtonText(window.innerWidth <= 800 ? "Connect" : "Connect Wallet");
     };
     window.addEventListener("resize", handleResize);
     return () => {
@@ -196,12 +196,9 @@ function Navbar({ theme, toggleTheme }) {
         </div>
 
         <NetworkDropdown />
-        <IconoWrapper onClick={() => setIsWalletModalOpen(true)}>
-          <Boton   texto={buttonText} isBlue={true} />
-          
-
-        </IconoWrapper>
-
+        
+          <Boton onClick ={() => setIsWalletModalOpen(true)} texto={buttonText} isBlue={true} />
+        
         {isWalletModalOpen && (
           <Modal onClose={() => setIsWalletModalOpen(false)}>
             <div>
