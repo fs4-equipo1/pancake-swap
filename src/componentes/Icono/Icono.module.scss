@@ -10,21 +10,21 @@
   align-items: center;
   display: flex;
   border-radius: 32px;
+  color: var(--colors-primary);
   background-color: var(--colors-backgroundAlt);
   width: 48px;
   height: 48px;
-  background-color: #27262c;
   transition: background-color 0.25s ease-in-out 0s;
 }
 
 .icono-adicional svg {
   height: 18px;
-  color: #1fc7d4;
+  color: var(--colors-primary);
   justify-self: center;
 }
 
 .icono-adicional:hover svg {
-  color: #27262c;
+  color: var(--colors-backgroundAlt);
   transition: 0.45s ease;
 }
 
