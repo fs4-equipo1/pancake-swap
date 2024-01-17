@@ -24,6 +24,8 @@ function Navbar({ theme, toggleTheme }) {
     window.innerWidth <= 425 ? "Connect" : "Connect Wallet"
   );
 
+ 
+
   useEffect(() => {
     const handleResize = () => {
       setButtonText(window.innerWidth <= 850 ? "Connect" : "Connect Wallet");
