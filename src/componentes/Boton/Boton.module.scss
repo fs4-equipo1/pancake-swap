@@ -33,8 +33,8 @@
 }
 
 .blue {
-  background-color: #1fc7d4;
-  color: var(--colors-light-invertedContrast);
+  background-color: var(--colors-primary);
+  color: var(--colors-invertedContrast);
 
   box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
 }
