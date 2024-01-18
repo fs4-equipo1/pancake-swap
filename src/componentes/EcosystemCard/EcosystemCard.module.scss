@@ -179,3 +179,22 @@
   display: flex;
   gap: 6px;
 }
+
+
+@media (max-width: 768px){
+  .discoverEcosystemDark{
+    max-width: 95vw;
+  }
+
+  .discoverEcosystemLight{
+    max-width: 95vw;
+  }
+  
+  
+
+}
+
+@media (max-width: 425px){
+  
+
+}
