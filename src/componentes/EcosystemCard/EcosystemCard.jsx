@@ -4,6 +4,7 @@ import classNames from "classnames/bind";
 
 import { EcosystemCardsData } from "./EcosystemCardsData";
 import Tipografia from "../Tipografia/Tipografia";
+import { useMediaQuery } from "./useMediaQuerie";
 
 const cx = classNames.bind(styles);
 
@@ -94,6 +95,8 @@ export function EcosystemCard({
 }
 
 export function EcosystemCards({ theme }){
+  const isLargeOrExtraLargeDevice = useMediaQuery("(min-width: 768px)")
+
   return(
     <div>
       <EcosystemImgAndTitle />
@@ -110,7 +113,7 @@ export function EcosystemCards({ theme }){
           titulo={"Earn"}
           cardData={EcosystemCardsData}
           objectId={2}
-          isReverse
+          isReverse={isLargeOrExtraLargeDevice}
         />
         <EcosystemCard
           theme={theme}
