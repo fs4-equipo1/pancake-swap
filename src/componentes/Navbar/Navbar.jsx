@@ -15,10 +15,29 @@ import IconoWrapper from "../IconoWraper/IconoWraper";
 import ToggleSwitch from "../Activate/Activate";
 import { Logo } from "../Logo/Logo";
 import CoinPrice from "../CustomHooks/CoinPrice";
-
-function Navbar({ theme, toggleTheme }) {
+import { useStoreState, useStoreActions } from "easy-peasy";
+import axios from "axios";
+function Navbar() {
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
   const [isWalletModalOpen, setIsWalletModalOpen] = useState(false);
+
+  const { theme, user } = useStoreState((state) => state);
+  const { toggleTheme, setUser } = useStoreActions((actions) => actions);
+
+  const handleWalletConnect = async () => {
+    try {
+      const response = await axios.get(
+        "https://random-data-api.com/api/users/random_user?size=1"
+      );
+      setUser({
+        username: response.data[0].username,
+        uid: response.data[0].uid,
+        isLoggedIn: true,
+      });
+    } catch (error) {
+      console.error(error.message);
+    }
+  };
 
   const itemsTrade = [
     {
@@ -138,6 +157,7 @@ function Navbar({ theme, toggleTheme }) {
 
   const cakePrice = CoinPrice()[0];
 
+  console.log(user);
   return (
     <nav className={styles.navbar}>
       <div className={styles.dropdownPrimary}>
@@ -150,15 +170,18 @@ function Navbar({ theme, toggleTheme }) {
       </div>
       <div className={styles.dropdownSecondary}>
         <div className={styles.blueCircle}>
-          <a className={styles.blueCircleLink }href={"https://www.coingecko.com/en/coins/pancakeswap"}>
+          <a
+            className={styles.blueCircleLink}
+            href={"https://www.coingecko.com/en/coins/pancakeswap"}
+          >
             {`$${cakePrice}`}
             {
               <div className={styles.bluecircleImage}>
-              <img
-                src="https://cdn.discordapp.com/attachments/1185220628794593330/1186043627458277518/bluecircleicon.ico?ex=6591d034&is=657f5b34&hm=2286b225c46783a62484255d51c01670db25ee68e9ee9210e5ce883a89f81835&"
-                alt="Cake Icon"
-                width="25px"
-              />
+                <img
+                  src="https://cdn.discordapp.com/attachments/1185220628794593330/1186043627458277518/bluecircleicon.ico?ex=6591d034&is=657f5b34&hm=2286b225c46783a62484255d51c01670db25ee68e9ee9210e5ce883a89f81835&"
+                  alt="Cake Icon"
+                  width="25px"
+                />
               </div>
             }
           </a>
@@ -188,7 +211,7 @@ function Navbar({ theme, toggleTheme }) {
           <Modal onClose={() => setIsWalletModalOpen(false)}>
             <div>
               WALLET MODAL
-              <button onClick={() => setIsWalletModalOpen(false)}>CLOSE</button>
+              <Boton texto={"Connect with MM"} onClick={handleWalletConnect} />
             </div>
           </Modal>
         )}

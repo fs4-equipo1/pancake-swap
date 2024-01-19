@@ -5,8 +5,11 @@ import FooterIcons from "./FooterIcons";
 import { FooterBuyCake } from "./FooterBuyCake";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
 import { Logo } from "../Logo/Logo";
+import { useStoreState, useStoreActions } from "easy-peasy";
 
-export function Footer({ theme, toggleTheme }) {
+export function Footer() {
+  const { theme } = useStoreState((state) => state);
+  const { toggleTheme } = useStoreActions((actions) => actions);
   return (
     <div className={styles.footerSection}>
       <div className={styles.footerContainer}>
@@ -41,7 +44,7 @@ export function Footer({ theme, toggleTheme }) {
             items={["Terms Of Service", "Blog", "Brand Assets", "Careers"]}
           />
           <div>
-            <Logo isInverted/>
+            <Logo isInverted />
           </div>
         </div>
         <div className={styles.footerBottom}>
