@@ -62,6 +62,9 @@
   background: #27262c;
   width: 100%;
 }
+.buyCakeNone{
+  display: none;
+}
 
 @media (max-width: 768px) {
   .footerTop{
@@ -69,6 +72,14 @@
     flex-direction: column;
   }
   .iconResponsive{
+    display: none;
+  }
+}
+@media (max-width: 425px) {
+  .buyCakeNone{
+    display: block;
+  }
+  .footerEnd{
     display: none;
   }
 }
