@@ -72,7 +72,9 @@ export function EcosystemCard({
       className={theme === 'light' ? styles.discoverEcosystemDark : styles.discoverEcosystemLight}
       style={{ flexDirection: isReverse ? "row-reverse" : "row" }}
     >
-      <img className={isReverse ? styles.ecosystemImgReversed : styles.ecosystemImg} src={path}/>
+
+        <img className={isReverse ? styles.ecosystemImgReversed : styles.ecosystemImg} src={path}/>
+        
       <div className={styles.ecosystemSegment}>
         <div className={styles.ecosystemTitle}>{titulo}</div>
         <div className={styles.cardcontainer}>
