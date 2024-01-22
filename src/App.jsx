@@ -28,7 +28,7 @@ export function App() {
 
   return (
     <BaseSection>
-      <Navbar theme={theme} toggleTheme={toggleTheme}/>
+      {/* <Navbar theme={theme} toggleTheme={toggleTheme}/>
 
       <HeroSwiper theme={theme} />
 
@@ -52,7 +52,9 @@ export function App() {
 
       <Footer theme={theme} toggleTheme={toggleTheme}/>
 
-      <BotonArriba/>
+      <BotonArriba/> */}
+
+      <EcosystemCards theme={theme}/>
 
     </BaseSection>
   );
