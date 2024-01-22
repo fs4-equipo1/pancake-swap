@@ -16,6 +16,7 @@ import DexNowSection from "./componentes/DexNow/DexNow";
 import { CakeFigures } from "./componentes/CakeFigures/CakeFigures";
 import { BaseSection } from "./componentes/MainBaseComponents/BaseSection";
 import BotonArriba from "./componentes/BotonArriba/BotonArriba";
+import DropdownSticky from "./componentes/DropdownFoooter/DropdownSticky";
 
 export function App() {
   // funciones para Theme Toggle
@@ -48,11 +49,15 @@ export function App() {
 
       <NewsSwiper theme={theme} />
 
+
+
       <DexNowSection theme={theme} />
 
       <Footer theme={theme} toggleTheme={toggleTheme}/>
 
       <BotonArriba/>
+      
+      <DropdownSticky />
 
     </BaseSection>
   );

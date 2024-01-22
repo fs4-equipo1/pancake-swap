@@ -1,0 +1,24 @@
+.dropdownContent {
+
+    top: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    border-radius: 8px;
+}
+  
+  .dropdownContentUp {
+    position: sticky;
+    transform: translateY(-200px); /* Ajusta el espacio entre el botón y el dropdown */
+    z-index: 9999;
+
+  } 
+
+  .dropdownCont {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+
