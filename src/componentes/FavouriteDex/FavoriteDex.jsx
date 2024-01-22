@@ -8,6 +8,9 @@ const cx = classNames.bind(styles);
 export function FavoriteDex() {
   return (
     <div className={styles.favoriteDex}>
+      <div className={styles.imgContainer}>
+        <img className={styles.img} src="./Assets/Images/space-bunny.webp" />
+      </div>
       <div className={styles.container}>
         <div className={styles.textContainer}>
           <Tipografia
@@ -26,15 +29,13 @@ export function FavoriteDex() {
           <div className={styles.subtext}>
             <Tipografia
               color={"--colors-textSubtle"}
-              texto={
-                "Trade, earn, and own crypto on the all-in-one"
-              }
+              texto={"Trade, earn, and own crypto on the all-in-one"}
               isSubtitle
             ></Tipografia>
-            <Tipografia 
-            color={"--colors-textSubtle"}
-            texto={"multichain DEX"}
-            isSubtitle
+            <Tipografia
+              color={"--colors-textSubtle"}
+              texto={"multichain DEX"}
+              isSubtitle
             ></Tipografia>
           </div>
         </div>
@@ -42,9 +43,6 @@ export function FavoriteDex() {
           <Boton texto={"Connect wallet"} isBlue></Boton>
           <Boton texto={"Trade now"} isTransparent></Boton>
         </div>
-      </div>
-      <div className={styles.imgContainer}>
-        <img className={styles.img} src="./Assets/Images/space-bunny.webp"/>
       </div>
     </div>
   );
