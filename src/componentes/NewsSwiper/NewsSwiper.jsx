@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import { NewsSwiperCardData } from "../../mocks/NewsSwiperCard";
+import { NewsSwiperCardData } from "../../mocks/NewsSwiperCard.mock";
 import NewsSwiperCard from "../NewsSwiperCard/NewsSwiperCard";
 import "./NewsSwiper.scss";
 import SwiperPrev from "../../../Assets/Icons/SwiperPrev";
@@ -22,7 +22,7 @@ export default () => {
         <Swiper
           className="news-swiper"
           modules={[Navigation]}
-          slidesPerView={4}
+          slidesPerView="auto"
           navigation={{
             prevEl: ".prev",
             nextEl: ".next",
