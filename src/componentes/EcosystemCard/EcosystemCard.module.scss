@@ -183,13 +183,26 @@
 
 @media (max-width: 768px){
   .discoverEcosystemDark{
-    flex-direction: column;
-    max-width: 95vw;
+    display: block;
+    /*flex-direction: column;*/
+    width: 95vw;
+    max-width: 100%;
   }
 
   .discoverEcosystemLight{
-    flex-direction: column;
-    max-width: 95vw;
+    display: block;
+    /*flex-direction: column;*/
+    width: 95vw;
+    max-width: 100%;
+  }
+
+  .ecosystemImgReversed{
+    left: 25px;
+    right: 0px;
+  }
+
+  .ecosystemSegment {
+    max-width: 90vw;
   }
   
 
