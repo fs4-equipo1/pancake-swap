@@ -62,7 +62,7 @@ export const heroSwiperCardData = [
         </div>
       </div>
     ),
-    botonPrimary: <Boton texto="Get Started" icon={<ArrowRight />} isBlue />,
+    botonPrimary: <Boton texto="Get Started" icon={<ArrowRight color={"white"}/>} isBlue isTextWhite />,
     botonSecondary: <Boton texto="Learn More" isWhite />,
     bunnyPng: (
       <img
@@ -175,7 +175,7 @@ export const heroSwiperCardData = [
           }}
         >
           Try Now
-          <ArrowLink />
+          <ArrowLink color={"#34fba6"}/>
         </a>
       </div>
     ),
@@ -235,7 +235,7 @@ export const heroSwiperCardData = [
         UP TO 1001× LEVERAGE
       </div>
     ),
-    botonPrimary: <Boton texto="Trade Now" icon={<ArrowRight />} isBlue />,
+    botonPrimary: <Boton texto="Trade Now" icon={<ArrowRight color={"white"}/>} isBlue isTextWhite />,
     botonSecondary: null,
     bunnyPng: (
       <img
