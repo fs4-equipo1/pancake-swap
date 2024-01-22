@@ -237,3 +237,26 @@
     width: 100%;
     // height: 100%;
   }
+
+
+
+@media (max-width: 768px){
+  .leftball {
+    display: none;
+  }
+
+  .rightball {
+    display: none;
+  }
+
+  .middleball {
+    display: none;
+  }
+
+
+}
+
+
+@media (max-width: 426px) {
+
+}
