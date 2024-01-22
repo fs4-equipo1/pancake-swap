@@ -15,7 +15,7 @@
   position: relative;
 
   height: 250px;
-  min-width: 100px;
+  min-width: 120px;
   max-width: 140px;
   // gap: var(--space-8px);
 
@@ -187,6 +187,7 @@
     /*flex-direction: column;*/
     width: 95vw;
     max-width: 100%;
+    margin: 0px;
   }
 
   .discoverEcosystemLight{
@@ -194,6 +195,8 @@
     /*flex-direction: column;*/
     width: 95vw;
     max-width: 100%;
+    margin: 0px;
+
   }
 
   .ecosystemImgReversed{
@@ -203,12 +206,32 @@
 
   .ecosystemSegment {
     max-width: 90vw;
+  } 
+
+  .ecosystemTitle {
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
   }
-  
 
 }
 
-@media (max-width: 425px) {
+@media (max-width: 426px) {
+  .cardcontainer{
+    gap: 20px;
+  }
+
+  .card {
+    min-width: 100px;
+    max-width: 100px;
+    // gap: var(--space-8px);
   
+    // overflow: hidden;
+  }
+
+  .ecosystemImg{
+    left: 0px
+  }
   
 }
