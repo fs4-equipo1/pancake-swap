@@ -66,31 +66,7 @@
   color: var(--colors-textSubtle);
 }
 
-.swap-on-hover {
-  width: 108px;
-  height: 108px;
-}
-
-.swap-on-hover img {
-  top: 0;
-  left: 0;
-  position: absolute;
-  overflow: hidden;
-  
-  object-fit: cover;
-  transition: opacity 0.5s linear;
-}
-
-.swap-on-hover .swap-on-hover__front-image {
-  z-index: 9999;
-  transition: opacity 0.5s linear;
-  cursor: pointer;
-}
-
 .card:hover {
-  .swap-on-hover > .swap-on-hover__front-image {
-    opacity: 0;
-  }
   .cardlink {
     transition: 0.2s linear;
     color: var(--colors-primaryBright);
@@ -218,6 +194,17 @@
     flex-direction: column;
     text-align: center;
   }
+
+  .cardImgPurple {
+    display: block;
+    opacity: 0!important;
+  }
+  
+  .cardImgColor {
+    display: block;
+    opacity: 1!important;
+  }
+  
 
 }
 
