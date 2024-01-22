@@ -1,3 +1,4 @@
+import Tipografia from "../Tipografia/Tipografia";
 import styles from "./InfiniteSlider.module.scss";
 
 export function InfiniteSlider() {
@@ -5,13 +6,17 @@ export function InfiniteSlider() {
     <section className={styles.shapfuture}>
     <div className={styles.containerL}>
     <div className={styles.shapingSection}>
-      <div className={styles.subtitle32}>
+      {/* <div className={styles.subtitle32}>
         <div className={styles.titletop}>
           <p>Shaping the Future of Decentralized Trading:</p>
         </div>
         <div className={styles.secondtitle}>
           <p>PancakeSwap Unstoppable Expansion</p>
         </div>
+      </div> */}
+      <div className={styles.subtitle32}>
+        <Tipografia isSubtitleLarge color={'--colors-text'} texto={'Shaping the Future of Decentralized Trading:'}/>
+        <Tipografia isSubtitleLarge color={'--colors-text'} texto={'PancakeSwap Unstoppable Expansion'}/>
       </div>
       <div className={styles.numberscontainer}>
         <div className={styles.numberscard}>

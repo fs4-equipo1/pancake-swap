@@ -112,24 +112,26 @@
 
 
   .subtitle32 {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    font-size: var(--fontSizes-32px);
-    color: var(--colors-text)
+    width: 100%;
+    // font-size: var(--fontSizes-32px);
+    // color: var(--colors-text)
   }
   
-  .subtitle-32 > .titletop {
-    color: var(--colors-text);
-    font-size: 32px;
-    font-weight: 600;
-  }
+  // .subtitle-32 > .titletop {
+  //   color: var(--colors-text);
+  //   font-size: 32px;
+  //   font-weight: 600;
+  // }
 
-  .subtitle32 > .secondtitle {
-    color: var(--colors-text);
-    font-size: 32px;
-    margin-bottom: var(--space-48px);
-    font-weight: 600;
-  }
+  // .subtitle32 > .secondtitle {
+  //   color: var(--colors-text);
+  //   font-size: 32px;
+  //   margin-bottom: var(--space-48px);
+  //   font-weight: 600;
+  // }
   
   .numberscontainer {
     margin-bottom: var(--space-48px);
