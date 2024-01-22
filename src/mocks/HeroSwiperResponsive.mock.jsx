@@ -31,7 +31,7 @@ export const heroSwiperCardDataTablet = [
     ),
     secondText: null,
     botonPrimary: (
-      <Boton texto="Get Started" icon={<ArrowRight />} isBlue isSmall />
+      <Boton texto="Get Started" icon={<ArrowRight color={"white"}/>} isBlue isSmall isTextWhite />
     ),
     botonSecondary: null,
     bunnyPng: (
@@ -90,7 +90,7 @@ export const heroSwiperCardDataTablet = [
           }}
         >
           Try Now
-          <ArrowLink />
+          <ArrowLink color={"#34fba6"}/>
         </a>
       </div>
     ),
@@ -152,7 +152,7 @@ export const heroSwiperCardDataTablet = [
       </div>
     ),
     botonPrimary: (
-      <Boton texto="Trade Now" icon={<ArrowRight />} isBlue isSmall />
+      <Boton texto="Trade Now" icon={<ArrowRight color={"white"} />} isBlue isSmall isTextWhite/>
     ),
     botonSecondary: null,
     bunnyPng: (
@@ -200,7 +200,7 @@ export const heroSwiperCardDataMobile = [
     ),
     secondText: null,
     botonPrimary: (
-      <Boton texto="Get Started" icon={<ArrowRight />} isBlue isSmall />
+      <Boton texto="Get Started" icon={<ArrowRight color={"white"}/>} isBlue isSmall isTextWhite />
     ),
     botonSecondary: null,
     bunnyPng: (
@@ -257,7 +257,7 @@ export const heroSwiperCardDataMobile = [
           }}
         >
           Try Now
-          <ArrowLink />
+          <ArrowLink color={"#34fba6"}/>
         </a>
       </div>
     ),
@@ -318,7 +318,7 @@ export const heroSwiperCardDataMobile = [
       </div>
     ),
     botonPrimary: (
-      <Boton texto="Trade Now" icon={<ArrowRight />} isBlue isSmall />
+      <Boton texto="Trade Now" icon={<ArrowRight color={"white"}/>} isBlue isSmall isTextWhite/>
     ),
     botonSecondary: null,
     bunnyPng: (

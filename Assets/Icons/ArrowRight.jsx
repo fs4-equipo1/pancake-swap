@@ -1,8 +1,8 @@
-export function ArrowRight() {
+export function ArrowRight({ color }) {
   return (
     <svg
       viewBox="0 0 24 24"
-      color="#191326"
+      fill={color}
       width="20px"
       xmlns="http://www.w3.org/2000/svg"
     >
