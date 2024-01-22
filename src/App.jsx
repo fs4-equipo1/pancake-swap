@@ -54,7 +54,7 @@ export function App() {
 
       <BotonArriba/> */}
 
-    <InfiniteSlider theme={theme} />
+      <EcosystemCards theme={theme}/>
 
     </BaseSection>
   );
