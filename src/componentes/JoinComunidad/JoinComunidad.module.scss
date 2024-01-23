@@ -15,6 +15,66 @@
     border-radius: 45px;
 }
 
+.containerOrder{
+    width: 100%;
+    height: 345px;
+    padding: 24px;
+    margin: 0px;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+.titleSwiper{
+    color: #f4eeff;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 24px;
+    font-size: 16px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    vertical-align: baseline;
+}
+
+.logoSwiper{
+    display: flex;
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    justify-content: center;
+    background: linear-gradient(rgb(83, 222, 233) 0%, rgb(31, 199, 212) 100%);
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+.verifiContainer{
+    display: flex;
+    align-items: center;
+}
+
+.subtitleSwiper{
+    font-weight: 600;
+    line-height: 1.5;
+    margin-top: 10px;
+    font-size: 14px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    vertical-align: baseline;
+}
+
+.verificadoSwiper{
+    align-self: center;
+    fill: #a881fc;
+    color: #a881fc;
+    flex-shrink: 0;
+    margin-left: 3px;
+    margin-top: 9px;
+}
+
 .container{
     background-color:rgba(0, 0, 0, 0.8);
     color: white;

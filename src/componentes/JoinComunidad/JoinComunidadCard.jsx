@@ -16,20 +16,25 @@ export const  JoinComunidadCard = ({
 }) => {
     return (
         <div className={styles.containerSwiper}>
-            <div>{title}</div>
-            <div>{logo}</div>
-            <div>{subtitle}</div>
-            <div>{verificado}</div>
-            <div>
-                <div>{nombreCuenta}</div>
-                <div>{fecha}</div>
-                <div>{likes}</div>
-                <div>{numlikes}</div>
-                <div>{estadisticas}</div>
-                <div>{numEstadisticas}</div>
+            <div className={styles.containerOrder}>
+                <div className={styles.titleSwiper}>{title}</div>
+                <div className={styles.logoSwiper}>{logo}</div>
+                <div className={styles.verifiContainer}>
+                    <div className={styles.subtitleSwiper}>{subtitle}</div>
+                    <div className={styles.verificadoSwiper}>{verificado}</div>
+                </div>
+                
+                <div>
+                    <div>{nombreCuenta}</div>
+                    <div>{fecha}</div>
+                    <div>{likes}</div>
+                    <div>{numlikes}</div>
+                    <div>{estadisticas}</div>
+                    <div>{numEstadisticas}</div>
+                </div>
+                <div>{texto}</div>
+                <div>{enlace}</div>
             </div>
-            <div>{texto}</div>
-            <div>{enlace}</div>
         </div>
     )
 
