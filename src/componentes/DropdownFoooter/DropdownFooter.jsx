@@ -7,7 +7,7 @@ const DropdownFooter = ({ title, itemsKey, punto }) => {
     earn: [
       {
         texto: "Farms",
-        icono: <null />,
+        icono: <img src="" alt="" />,
       },
       {
         texto: "CAKE Staking",
@@ -99,6 +99,7 @@ const DropdownFooter = ({ title, itemsKey, punto }) => {
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
+   
   };
 
   const closeDropdown = () => {
