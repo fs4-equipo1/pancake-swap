@@ -56,18 +56,8 @@
   gap: 8px;
 }
 
-.first-title {
-  color: var(--colors-text);
+.first-title, .second-title {
   line-height: 1.5;
-  font-size: 40px;
-  font-weight: 600;
-  text-align: center;
-}
-
-.second-title {
-  color: var(--colors-secondary);
-  line-height: 1.5;
-  font-size: 40px;
   font-weight: 600;
   text-align: center;
 }
