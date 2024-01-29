@@ -5,11 +5,8 @@ import FooterIcons from "./FooterIcons";
 import { FooterBuyCake } from "./FooterBuyCake";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
 import { Logo } from "../Logo/Logo";
-import { useStoreState, useStoreActions } from "easy-peasy";
 
 export function Footer() {
-  const { theme } = useStoreState((state) => state);
-  const { toggleTheme } = useStoreActions((actions) => actions);
   return (
     <div className={styles.footerSection}>
       <div className={styles.footerContainer}>
@@ -52,7 +49,7 @@ export function Footer() {
           {/* <hr style={{opacity:'30%'}}></hr> */}
           <div className={styles.footerEnd}>
             <div className={styles.footerEndLangAndTheme}>
-              <ThemeToggle theme={theme} onToggle={toggleTheme} />
+              <ThemeToggle />
               <LanguageDropdown reverse={true} />
             </div>
             <FooterBuyCake />

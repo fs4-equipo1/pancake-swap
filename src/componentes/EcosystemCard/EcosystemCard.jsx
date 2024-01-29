@@ -4,7 +4,8 @@ import classNames from "classnames/bind";
 
 import { EcosystemCardsData } from "./EcosystemCardsData";
 import Tipografia from "../Tipografia/Tipografia";
-import { useStoreState } from "easy-peasy";
+import { useStoreState, useStoreActions } from "../../store";
+
 
 const cx = classNames.bind(styles);
 

@@ -15,14 +15,17 @@ import IconoWrapper from "../IconoWraper/IconoWraper";
 import ToggleSwitch from "../Activate/Activate";
 import { Logo } from "../Logo/Logo";
 import CoinPrice from "../CustomHooks/CoinPrice";
-import { useStoreState, useStoreActions } from "easy-peasy";
+import { useStoreState, useStoreActions } from "../../store";
+
 import axios from "axios";
 function Navbar() {
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
   const [isWalletModalOpen, setIsWalletModalOpen] = useState(false);
+  const { theme } = useStoreState((state) => state.theme);
+  const { user } = useStoreState((state) => state.user);
 
-  const { theme, user } = useStoreState((state) => state);
-  const { toggleTheme, setUser } = useStoreActions((actions) => actions);
+  const { setUser } = useStoreActions((actions) => actions.user);
+  const { toggleTheme } = useStoreActions((actions) => actions.theme);
 
   const handleWalletConnect = async () => {
     try {
@@ -157,7 +160,6 @@ function Navbar() {
 
   const cakePrice = CoinPrice()[0];
 
-  console.log(user);
   return (
     <nav className={styles.navbar}>
       <div className={styles.dropdownPrimary}>
@@ -220,7 +222,7 @@ function Navbar() {
   );
 }
 
-const SettingsModal = ({ closeModal, theme, toggleTheme }) => {
+const SettingsModal = ({ closeModal }) => {
   return (
     <>
       <div className={settingsStyles.header}>
@@ -245,7 +247,7 @@ const SettingsModal = ({ closeModal, theme, toggleTheme }) => {
             <Tipografia texto={"Token Risk Scanning"} isBodyLarge></Tipografia>
           </div>
           <div className={settingsStyles.activate}>
-            <ThemeToggle theme={theme} onToggle={toggleTheme} />
+            <ThemeToggle />
             <ToggleSwitch />
             <ToggleSwitch />
             <ToggleSwitch />

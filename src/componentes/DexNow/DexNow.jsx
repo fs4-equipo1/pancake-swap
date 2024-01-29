@@ -2,11 +2,7 @@ import styles from "./DexNow.module.scss";
 
 import background from "../../assets/background.png";
 import Boton from "../Boton/Boton";
-import { useStoreState } from "easy-peasy";
 const DexNow = ({ titleLarge }) => {
-  const { todos } = useStoreState((state) => state);
-
-  console.log(todos);
 
   return (
     <div>

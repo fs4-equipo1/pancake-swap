@@ -6,10 +6,8 @@ import "swiper/css/pagination";
 import { heroSwiperCardData } from "../../mocks/HeroSwiperCard.mock";
 import HeroSwiperCard from "../HeroSwiperCard/HeroSwiperCard";
 import "./HeroSwiper.scss";
-import { useContext } from "react";
 
 export default () => {
-
   return (
     <Swiper
       modules={[Pagination, Autoplay, EffectFade]}
