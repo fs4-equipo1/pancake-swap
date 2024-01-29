@@ -2,7 +2,7 @@ import { useState } from "react";
 import styles from "./DropdownFooter.module.scss";
 import { FaArrowRightFromBracket } from "react-icons/fa6";
 
-const DropdownFooter = ({ title, itemsKey, punto }) => {
+const DropdownFooter = ({ title, itemsKey, punto, imageSrc }) => {
   const dropdownItems = {
     // icon: <img src="../public/assets/earn.png" alt="trade Icon" />,
     earn: [
@@ -114,15 +114,16 @@ const DropdownFooter = ({ title, itemsKey, punto }) => {
 
   return (
     <div className={styles.dropdownContainer}>
-      <button className={styles.dropdownBtn} onClick={toggleDropdown}>
-        {title}
-      </button>
-      {punto && (
-        <div
-          className={styles.punto}
-          style={{ backgroundColor: `var(--colors-${punto})` }}
-        />
-      )}
+    <button className={styles.dropdownBtn} onClick={toggleDropdown}>
+      {imageSrc && <img src={imageSrc} alt={`Image for ${title}`} className={styles.image} />}
+      <span className={styles.title}>{title}</span>
+    </button>
+    {punto && (
+      <div
+        className={styles.punto}
+        style={{ backgroundColor: `var(--colors-${punto})` }}
+      />
+    )}
       {isOpen && (
         <div
           className={`${styles.dropdownContent} ${styles.dropdownContentUp}`}
