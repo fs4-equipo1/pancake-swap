@@ -1,13 +1,14 @@
-import React, { useState } from "react";
-import ReactDOM from "react-dom";
+import { useState } from "react";
 import styles from "./DropdownFooter.module.scss";
+import { FaArrowRightFromBracket } from "react-icons/fa6";
 
 const DropdownFooter = ({ title, itemsKey, punto }) => {
   const dropdownItems = {
+    // icon: <img src="../public/assets/earn.png" alt="trade Icon" />,
     earn: [
       {
         texto: "Farms",
-        icono: <img src="" alt="" />,
+        icono: <null />,
       },
       {
         texto: "CAKE Staking",
@@ -30,10 +31,11 @@ const DropdownFooter = ({ title, itemsKey, punto }) => {
         icono: <null />,
       },
     ],
+    
     game: [
       {
         texto: "Gaming Marketplace",
-        icono: <null />,
+        icono: <FaArrowRightFromBracket />,
       },
       {
         texto: "Prediction (BETA)",
@@ -71,11 +73,11 @@ const DropdownFooter = ({ title, itemsKey, punto }) => {
       },
       {
         texto: "Blog",
-        icono: <null />,
+        icono: <FaArrowRightFromBracket />,
       },
       {
         texto: "Docs",
-        icono: <null />,
+        icono: <FaArrowRightFromBracket />,
       },
     ],
     nft: [
@@ -95,11 +97,10 @@ const DropdownFooter = ({ title, itemsKey, punto }) => {
   };
 
   const [isOpen, setIsOpen] = useState(false);
-  const items = dropdownItems[itemsKey];
+  const items = dropdownItems[itemsKey]; 
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
-   
   };
 
   const closeDropdown = () => {

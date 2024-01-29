@@ -49,8 +49,6 @@ export function App() {
 
       <NewsSwiper theme={theme} />
 
-
-
       <DexNowSection theme={theme} />
 
       <Footer theme={theme} toggleTheme={toggleTheme}/>
