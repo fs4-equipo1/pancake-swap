@@ -7,13 +7,25 @@ import NewsSwiperCard from "../NewsSwiperCard/NewsSwiperCard";
 import "./NewsSwiper.scss";
 import SwiperPrev from "../../../Assets/Icons/SwiperPrev";
 import SwiperNext from "../../../Assets/Icons/SwiperNext";
+import Tipografia from "../Tipografia/Tipografia";
 
 export default () => {
   return (
     <div className="featured-news-container">
       <div className="title-container">
-        <div className="first-title">Featured</div>
-        <div className="second-title">News</div>
+        <div className="first-title">
+        <Tipografia
+            color={"--colors-text"}
+            texto={"Featured"}
+            isTitle
+          ></Tipografia></div>
+        <div className="second-title">
+        <Tipografia
+            color={"--colors-secondary"}
+            texto={"News"}
+            isTitle
+          ></Tipografia>
+        </div>
       </div>
       <div className="swiper-container">
         <div className="prev">
