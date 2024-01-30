@@ -28,11 +28,11 @@ export function App() {
 
   return (
     <BaseSection>
-      {/* <Navbar theme={theme} toggleTheme={toggleTheme}/> */}
+      <Navbar theme={theme} toggleTheme={toggleTheme}/>
 
       <HeroSwiper theme={theme} />
 
-      {/* <FavoriteDex theme={theme} />
+      <FavoriteDex theme={theme} />
 
       <InfiniteSlider theme={theme} />
 
@@ -44,15 +44,15 @@ export function App() {
 
       <CakeFigures theme={theme} /> 
 
-      <JoinComunidad theme={theme} /> */}
+      <JoinComunidad theme={theme} />
 
       <NewsSwiper theme={theme} />
 
-      {/* <DexNowSection theme={theme} /> */}
+      <DexNowSection theme={theme} />
 
-      {/* <Footer theme={theme} toggleTheme={toggleTheme}/> */}
+      <Footer theme={theme} toggleTheme={toggleTheme}/>
 
-      {/* <BotonArriba/> */}
+      <BotonArriba/>
 
     </BaseSection>
   );
