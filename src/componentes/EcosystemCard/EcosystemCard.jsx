@@ -97,7 +97,7 @@ export function EcosystemCard({
 }
 
 export function EcosystemCards({ theme }){
-  const isLargeOrExtraLargeDevice = useMediaQuery("(min-width: 768px)")
+  const isLargeOrExtraLargeDevice = useMediaQuery("(min-width: 769px)")
 
   return(
     <div>

@@ -161,3 +161,72 @@
   margin: 20px;
   gap: 6px;
 }
+
+
+
+
+
+@media (max-width: 768px){
+  .discoverEcosystemDark{
+    display: block;
+    width: 95vw;
+    // max-width: 100%;
+    margin: 0px;
+  }
+
+  .discoverEcosystemLight{
+    display: block;
+    width: 95vw;
+    max-width: 100%;
+    margin: 0px;
+
+  }
+
+  .ecosystemImg{
+    left: 0px;
+    right: 0px;
+  }
+
+  .ecosystemSegment {
+    max-width: 90vw;
+  } 
+
+  .sectionTitle {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cardImgPurple {
+    display: block;
+    opacity: 0!important;
+  }
+  
+  .cardImgColor {
+    display: block;
+    opacity: 1!important;
+  }
+  
+
+}
+
+@media (max-width: 426px) {
+  .cardcontainer{
+    gap: 0px;
+    padding: 0px;
+  }
+
+  .card {
+    min-width: 110px;
+    max-width: 110px;
+    // gap: var(--space-8px);
+  
+    // overflow: hidden;
+  }
+
+  .ecosystemImg{
+    left: 0px;
+    width: 250px;
+  }
+  
+}
