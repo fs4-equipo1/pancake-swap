@@ -9,7 +9,7 @@ export default function DropdownSticky() {
       <DropdownFooter title="Earn" itemsKey="earn" imageSrc="/assets/earn.png" />
       <DropdownFooter title="Game" itemsKey="game" imageSrc="/assets/game.png" />
       <DropdownFooter title="NFT" itemsKey="nft" imageSrc="/assets/nft.png" />
-      <DropdownFooter title="..." itemsKey="more" />
+      <DropdownFooter title=". . ." itemsKey="more" />
     </div>
 
   )
