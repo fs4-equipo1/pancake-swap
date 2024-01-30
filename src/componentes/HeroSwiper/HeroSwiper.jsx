@@ -6,9 +6,34 @@ import "swiper/css/pagination";
 import { heroSwiperCardData } from "../../mocks/HeroSwiperCard.mock";
 import HeroSwiperCard from "../HeroSwiperCard/HeroSwiperCard";
 import "./HeroSwiper.scss";
-import { useContext } from "react";
+import { useEffect, useState } from "react";
+import { heroSwiperCardDataTablet } from "../../mocks/HeroSwiperResponsive.mock";
+import { heroSwiperCardDataMobile } from "../../mocks/HeroSwiperResponsive.mock";
 
 export default () => {
+  const [dataSwiper, setDataSwiper] = useState(
+    window.innerWidth >= 1084
+      ? heroSwiperCardData
+      : window.innerWidth >= 590
+      ? heroSwiperCardDataTablet
+      : heroSwiperCardDataMobile
+  );
+
+  useEffect(() => {
+    const handleResize = () => {
+      setDataSwiper(
+        window.innerWidth >= 1084
+          ? heroSwiperCardData
+          : window.innerWidth >= 590
+          ? heroSwiperCardDataTablet
+          : heroSwiperCardDataMobile
+      );
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <Swiper
@@ -23,7 +48,7 @@ export default () => {
         disableOnInteraction: false,
       }}
     >
-      {heroSwiperCardData.map((card, index) => (
+      {dataSwiper.map((card, index) => (
         <SwiperSlide key={index}>
           <HeroSwiperCard
             backgroundImg={card.backgroundImg}
