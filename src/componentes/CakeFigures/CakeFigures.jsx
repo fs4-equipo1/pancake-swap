@@ -28,7 +28,7 @@ export function CakeFigures() {
     <div className={classes.containerOfCards}>
         <CakeFiguresCard titulo={"Circulating Supply"} numero={formatCirculatingSupply}/>
         <CakeFiguresCard titulo={"Total Supply"} numero={formatTotalSupply}/>
-        <CakeFiguresCard titulo={"Market Cap"} numero={`$ ${formatMarketCap}`}/>
+        <CakeFiguresCard titulo={"Market Cap"} numero={`$${formatMarketCap}`}/>
         <CakeFiguresCard titulo={"Token Burn"} numero={`1,126,580,112`}/>
         <CakeFiguresCard titulo={"Current Emissions"} numero={`1,36/block`}/>
     </div>
