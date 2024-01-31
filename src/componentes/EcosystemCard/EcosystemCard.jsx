@@ -75,8 +75,8 @@ export function EcosystemCard({ path, titulo, cardData, objectId, isReverse }) {
     <div
       className={
         theme === "light"
-          ? styles.discoverEcosystemDark
-          : styles.discoverEcosystemLight
+          ? styles.discoverEcosystemLight
+          : styles.discoverEcosystemDark
       }
       style={{ flexDirection: isReverse ? "row-reverse" : "row" }}
     >
