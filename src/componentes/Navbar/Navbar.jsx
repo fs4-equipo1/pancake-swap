@@ -14,17 +14,15 @@ import { IoMdSettings } from "react-icons/io";
 import IconoWrapper from "../IconoWraper/IconoWraper";
 import ToggleSwitch from "../Activate/Activate";
 import { Logo } from "../Logo/Logo";
-import CoinPrice from "../CustomHooks/CoinPrice";
+import useCoinPrice from "../CustomHooks/useCoinPrice";
 import { useStoreState, useStoreActions } from "../../store";
 
-function Navbar({ theme, toggleTheme }) {
+function Navbar() {
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
   const [isWalletModalOpen, setIsWalletModalOpen] = useState(false);
   const [buttonText, setButtonText] = useState(
     window.innerWidth <= 800 ? "Connect" : "Connect Wallet"
   );
-
- 
 
   useEffect(() => {
     const handleResize = () => {
@@ -152,7 +150,7 @@ function Navbar({ theme, toggleTheme }) {
     },
   ];
 
-  const cakePrice = CoinPrice()[0];
+  const { price } = useCoinPrice();
 
   return (
     <nav className={styles.navbar}>
@@ -170,7 +168,7 @@ function Navbar({ theme, toggleTheme }) {
             className={styles.blueCircleLink}
             href={"https://www.coingecko.com/en/coins/pancakeswap"}
           >
-            {`$${cakePrice}`}
+            {`$${price}`}
             {
               <div className={styles.bluecircleImage}>
                 <img
@@ -195,9 +193,13 @@ function Navbar({ theme, toggleTheme }) {
         </div>
 
         <NetworkDropdown />
-        
-          <Boton onClick ={() => setIsWalletModalOpen(true)} texto={buttonText} isBlue={true} />
-        
+
+        <Boton
+          onClick={() => setIsWalletModalOpen(true)}
+          texto={buttonText}
+          isBlue={true}
+        />
+
         {isWalletModalOpen && (
           <Modal onClose={() => setIsWalletModalOpen(false)}>
             <div>

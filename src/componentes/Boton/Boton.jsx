@@ -9,10 +9,11 @@ const Boton = ({
   isTransparent,
   isBlue,
   isWhite,
+  isSmall,
+  isTextWhite,
   icon,
   onClick,
 }) => {
-
   const className = cx({
     button: true,
     transparent: isTransparent,
@@ -20,7 +21,7 @@ const Boton = ({
     white: isWhite,
     learn: isLearn,
     small: isSmall,
-    textWhite: isTextWhite
+    textWhite: isTextWhite,
   });
 
   return (
