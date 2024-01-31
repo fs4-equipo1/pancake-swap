@@ -12,13 +12,17 @@ const Boton = ({
   icon,
   onClick,
 }) => {
+
   const className = cx({
     button: true,
     transparent: isTransparent,
     blue: isBlue,
     white: isWhite,
     learn: isLearn,
+    small: isSmall,
+    textWhite: isTextWhite
   });
+
   return (
     <button onClick={onClick} className={className}>
       {texto}

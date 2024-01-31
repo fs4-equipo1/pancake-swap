@@ -16,6 +16,8 @@ import DexNowSection from "./componentes/DexNow/DexNow";
 import { CakeFigures } from "./componentes/CakeFigures/CakeFigures";
 import { BaseSection } from "./componentes/MainBaseComponents/BaseSection";
 import BotonArriba from "./componentes/BotonArriba/BotonArriba";
+import DropdownSticky from "./componentes/DropdownFoooter/DropdownSticky";
+
 export function App() {
   return (
     <BaseSection>
@@ -43,8 +45,13 @@ export function App() {
 
       <Footer />
 
+      <BotonArriba/>
+      
+      <DropdownSticky />
+
       <BotonArriba />
     </BaseSection>
+    
   );
 }
 

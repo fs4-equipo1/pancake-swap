@@ -73,3 +73,34 @@
     color: var(--colors-invertedContrast);
 
   }
+
+  .iconResponsive{
+    display: none;
+  }
+
+.buttonShort{
+  display: none;
+}
+
+
+    
+
+    @media (max-width: 425px){
+      .navbar{
+        display: flex;
+        justify-content: center;
+      }
+      .blueCircle{
+        display: none;
+        
+      }
+      .buttonLong{
+        display: none;
+      }
+      .buttonShort{
+        display: block;
+        width: auto;
+      }
+      }
+    
+  

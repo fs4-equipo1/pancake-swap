@@ -11,6 +11,7 @@ export function Footer() {
     <div className={styles.footerSection}>
       <div className={styles.footerContainer}>
         <div className={styles.footerTop}>
+          <div className={styles.buyCakeNone}> <FooterBuyCake/> </div>
           <FooterColumn
             title={"ECOSYSTEM"}
             items={[
@@ -52,7 +53,7 @@ export function Footer() {
               <ThemeToggle />
               <LanguageDropdown reverse={true} />
             </div>
-            <FooterBuyCake />
+            <FooterBuyCake /> 
           </div>
         </div>
       </div>

@@ -1,0 +1,42 @@
+.container {
+  position: relative;
+
+  // padding: 20px;
+  background-color: green;
+  border-radius: 15px;
+
+}
+
+.dropdown {
+
+  background-color: red;
+
+  padding: 10px;
+}
+
+.items {
+  position: absolute;
+  top: 44px;
+  width: auto;
+  background-color: rgb(59, 71, 75);
+  padding: 10px;
+}
+
+.item {
+  width: 100%;
+  padding: 5px 0px;
+  color: black;
+
+  display: flex;
+  align-items: center;
+ justify-content: space-between;
+
+  white-space: nowrap;
+}
+
+.punto {
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50px;
+}

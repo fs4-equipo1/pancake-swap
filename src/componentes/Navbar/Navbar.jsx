@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
 import Modal from "../Modal/Modal";
 import settingsStyles from "../Modal/Settings.module.scss";
 import { FaArrowRightFromBracket } from "react-icons/fa6";
@@ -17,28 +17,24 @@ import { Logo } from "../Logo/Logo";
 import CoinPrice from "../CustomHooks/CoinPrice";
 import { useStoreState, useStoreActions } from "../../store";
 
-import axios from "axios";
-function Navbar() {
+function Navbar({ theme, toggleTheme }) {
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
   const [isWalletModalOpen, setIsWalletModalOpen] = useState(false);
-  const { user } = useStoreState((state) => state.user);
+  const [buttonText, setButtonText] = useState(
+    window.innerWidth <= 800 ? "Connect" : "Connect Wallet"
+  );
 
-  const { setUser } = useStoreActions((actions) => actions.user);
+ 
 
-  const handleWalletConnect = async () => {
-    try {
-      const response = await axios.get(
-        "https://random-data-api.com/api/users/random_user?size=1"
-      );
-      setUser({
-        username: response.data[0].username,
-        uid: response.data[0].uid,
-        isLoggedIn: true,
-      });
-    } catch (error) {
-      console.error(error.message);
-    }
-  };
+  useEffect(() => {
+    const handleResize = () => {
+      setButtonText(window.innerWidth <= 800 ? "Connect" : "Connect Wallet");
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const itemsTrade = [
     {
@@ -199,10 +195,9 @@ function Navbar() {
         </div>
 
         <NetworkDropdown />
-        <IconoWrapper onClick={() => setIsWalletModalOpen(true)}>
-          <Boton texto={"Connect Wallet"} isBlue={true} />
-        </IconoWrapper>
-
+        
+          <Boton onClick ={() => setIsWalletModalOpen(true)} texto={buttonText} isBlue={true} />
+        
         {isWalletModalOpen && (
           <Modal onClose={() => setIsWalletModalOpen(false)}>
             <div>
