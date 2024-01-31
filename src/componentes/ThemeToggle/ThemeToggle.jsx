@@ -1,10 +1,9 @@
 import React, { useEffect } from "react";
 import styles from "./ThemeToggle.module.scss";
-import { useStoreState, useStoreActions } from "../../store";
+import { useTheme } from "../../context/ThemeContext";
 
 const ThemeToggle = () => {
-  const { theme } = useStoreState((state) => state.theme);
-  const { toggleTheme } = useStoreActions((actions) => actions.theme);
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <button

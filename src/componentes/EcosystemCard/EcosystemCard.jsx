@@ -5,7 +5,7 @@ import classNames from "classnames/bind";
 import { EcosystemCardsData } from "./EcosystemCardsData";
 import Tipografia from "../Tipografia/Tipografia";
 import { useStoreState, useStoreActions } from "../../store";
-
+import { useTheme } from "../../context/ThemeContext";
 
 const cx = classNames.bind(styles);
 
@@ -70,8 +70,7 @@ function EcosystemImgAndTitle() {
 
 export function EcosystemCard({ path, titulo, cardData, objectId, isReverse }) {
   const filteredData = cardData.filter((obj) => obj.id === objectId);
-  const { theme } = useStoreState((state) => state);
-
+  const { theme } = useTheme();
   return (
     <div
       className={

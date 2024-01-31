@@ -18,14 +18,15 @@ import CoinPrice from "../CustomHooks/CoinPrice";
 import { useStoreState, useStoreActions } from "../../store";
 
 import axios from "axios";
+import { useTheme } from "../../context/ThemeContext";
 function Navbar() {
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
   const [isWalletModalOpen, setIsWalletModalOpen] = useState(false);
-  const { theme } = useStoreState((state) => state.theme);
+  const { theme } = useTheme();
   const { user } = useStoreState((state) => state.user);
 
   const { setUser } = useStoreActions((actions) => actions.user);
-  const { toggleTheme } = useStoreActions((actions) => actions.theme);
+  const { toggleTheme } = useTheme();
 
   const handleWalletConnect = async () => {
     try {
