@@ -88,13 +88,6 @@ export function EcosystemCard({ path, titulo, cardData, objectId, isReverse }) {
         src={path}
       />
 
-      <img
-        className={
-          isReverse ? styles.ecosystemImgReversed : styles.ecosystemImg
-        }
-        src={path}
-      />
-
       <div className={styles.ecosystemSegment}>
         <div className={styles.ecosystemTitle}>{titulo}</div>
         <div className={styles.cardcontainer}>
