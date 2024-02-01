@@ -10,7 +10,7 @@ export const WalletConnect = () => {
     const initializeWalletConnect = async () => {
       try {
         const core = new Core({
-          projectId: import.meta.env.VITE_CONNECT_WALLET,
+          projectId: process.env.REACT_APP_VITE_CONNECT_WALLET,
         });
 
         const wallet = await Web3Wallet.init({
@@ -45,8 +45,27 @@ export const WalletConnect = () => {
   }, []);
 
   const handleConnect = async () => {
+    const wallet = await Web3Wallet.init({
+        core,
+        metadata: {
+          name: "Demo app",
+          description: "Demo Client as Wallet/Peer",
+          url: "www.walletconnect.com",
+          icons: [],
+        },
+      });
+      wallet.on("session_request", async (event) => {
+            
+      });
   
-  };
+      wallet.on("session_proposal", async (proposal) => {
+            
+      });
+  
+      wallet.activate();
+};
+  
+
 
   return (
     <div>
