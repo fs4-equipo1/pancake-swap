@@ -10,7 +10,7 @@ export function WalletConnect() {
     console.log("switched to " + chain?.id);
   }, [chain?.id]);
   return (
-    <div className="App">
+    <div className="WalletConnect">
       <w3m-button />
       <button onClick={() => open({ view: "Networks" })}>Send</button>
       <p>{chain?.name}</p>
