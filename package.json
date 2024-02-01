@@ -10,12 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-<<<<<<< HEAD
-    "@web3modal/wagmi": "^3.5.7",
-=======
     "@walletconnect/core": "^2.11.0",
     "@walletconnect/web3wallet": "^1.10.0",
->>>>>>> 884d17c8247c8c133d8021257f17867609462adf
+    "@web3modal/wagmi": "^3.5.7",
     "axios": "^1.6.5",
     "classnames": "^2.3.2",
     "ethers": "^6.10.0",

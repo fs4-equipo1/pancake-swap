@@ -16,11 +16,7 @@ import DexNowSection from "./componentes/DexNow/DexNow";
 import { CakeFigures } from "./componentes/CakeFigures/CakeFigures";
 import { BaseSection } from "./componentes/MainBaseComponents/BaseSection";
 import BotonArriba from "./componentes/BotonArriba/BotonArriba";
-<<<<<<< HEAD
-import { WalletConnect } from "./componentes/WalletConnect/WalletConnect";
-=======
-import WalletConnect from "./componentes/WalletConnect/WalletConnect";
->>>>>>> 884d17c8247c8c133d8021257f17867609462adf
+import { WalletConnect } from "./componentes/WalletConnect/WalletConnect"
 
 export function App() {
   // funciones para Theme Toggle
@@ -58,13 +54,9 @@ export function App() {
       <Footer theme={theme} toggleTheme={toggleTheme}/>
 
       <BotonArriba/>
-
-<<<<<<< HEAD
-    <WalletConnect />
-=======
+      
       <WalletConnect />
 
->>>>>>> 884d17c8247c8c133d8021257f17867609462adf
     </BaseSection>
   );
 }
