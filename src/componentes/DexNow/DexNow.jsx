@@ -2,8 +2,8 @@ import styles from "./DexNow.module.scss";
 
 import background from "../../assets/background.png";
 import Boton from "../Boton/Boton";
-
 const DexNow = ({ titleLarge }) => {
+
   return (
     <div>
       <div className={styles.dexTitle}>{titleLarge}</div>

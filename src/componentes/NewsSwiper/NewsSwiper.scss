@@ -29,6 +29,7 @@
   margin-right: 46px;
   min-width: 280px;
   max-width: 280px;
+  width: auto;
   height: 387px;
   background: var(--colors-backgroundAlt);
   box-shadow: 0px 2px 0px 0px var(--colors-cardBorder);
@@ -55,18 +56,8 @@
   gap: 8px;
 }
 
-.first-title {
-  color: var(--colors-text);
+.first-title, .second-title {
   line-height: 1.5;
-  font-size: 40px;
-  font-weight: 600;
-  text-align: center;
-}
-
-.second-title {
-  color: var(--colors-secondary);
-  line-height: 1.5;
-  font-size: 40px;
   font-weight: 600;
   text-align: center;
 }

@@ -17,47 +17,45 @@ import { CakeFigures } from "./componentes/CakeFigures/CakeFigures";
 import { BaseSection } from "./componentes/MainBaseComponents/BaseSection";
 import BotonArriba from "./componentes/BotonArriba/BotonArriba";
 import { WalletConnect } from "./componentes/WalletConnect/WalletConnect"
+import DropdownSticky from "./componentes/DropdownFoooter/DropdownSticky";
 
 export function App() {
-  // funciones para Theme Toggle
-  const [theme, setTheme] = useState('light');
-
-  const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === 'dark' ? 'light' : 'dark'));
-  };
-  //fin funciones para Theme Toggle
-
   return (
     <BaseSection>
-      <Navbar theme={theme} toggleTheme={toggleTheme}/>
+      <Navbar />
 
-      <HeroSwiper theme={theme} />
+      <HeroSwiper />
 
-      <FavoriteDex theme={theme} />
+      <FavoriteDex />
 
-      <InfiniteSlider theme={theme} />
+      <InfiniteSlider />
 
-      <EcosystemCards theme={theme} />
+      <EcosystemCards />
 
-      <CakePotencial theme={theme} />
+      <CakePotencial />
 
-      <VerticalSliderSection theme={theme} />
+      <VerticalSliderSection />
 
-      <CakeFigures theme={theme} /> 
+      <CakeFigures />
 
-      <JoinComunidad theme={theme} />
+      <JoinComunidad />
 
-      <NewsSwiper theme={theme} />
+      <NewsSwiper />
 
-      <DexNowSection theme={theme} />
+      <DexNowSection />
 
-      <Footer theme={theme} toggleTheme={toggleTheme}/>
+      <Footer />
 
       <BotonArriba/>
       
-      <WalletConnect />
+      {/* <WalletConnect /> */}
+
+      <DropdownSticky />
+
+      <BotonArriba />
 
     </BaseSection>
+    
   );
 }
 
