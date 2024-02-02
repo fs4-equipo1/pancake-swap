@@ -6,7 +6,7 @@ import { FooterBuyCake } from "./FooterBuyCake";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
 import { Logo } from "../Logo/Logo";
 
-export function Footer({ theme, toggleTheme }) {
+export function Footer() {
   return (
     <div className={styles.footerSection}>
       <div className={styles.footerContainer}>
@@ -42,7 +42,7 @@ export function Footer({ theme, toggleTheme }) {
             items={["Terms Of Service", "Blog", "Brand Assets", "Careers"]}
           />
           <div>
-            <Logo isInverted/>
+            <Logo isInverted />
           </div>
         </div>
         <div className={styles.footerBottom}>
@@ -50,7 +50,7 @@ export function Footer({ theme, toggleTheme }) {
           {/* <hr style={{opacity:'30%'}}></hr> */}
           <div className={styles.footerEnd}>
             <div className={styles.footerEndLangAndTheme}>
-              <ThemeToggle theme={theme} onToggle={toggleTheme} />
+              <ThemeToggle />
               <LanguageDropdown reverse={true} />
             </div>
             <FooterBuyCake /> 

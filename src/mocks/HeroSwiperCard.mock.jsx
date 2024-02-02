@@ -152,8 +152,8 @@ export const heroSwiperCardData = [
             fontSize: "22px",
             background:
               "-webkit-linear-gradient(0deg,rgb(136, 255, 92) 10.97%,rgb(244, 226, 59) 27.39%,rgb(255, 223, 56) 99.79%",
-            webkitBackgroundClip: "text",
-            webkitTextFillColor: "transparent",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
           }}
         >
           1.5M Monthly Players Await!
