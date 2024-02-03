@@ -14,25 +14,26 @@ import JoinComunidadSwiper from "./JoinComunidadSwiper";
 
 export function JoinComunidad(){
     return (
-        <div className={styles.container}>
-            <div>
-                <div className={styles.allContainer}>
+        <div className={styles.allcontainer}>
+                <div className={styles.cardsContainer}>
                     <div className={styles.tittleComunity}>
                         <h2 className={styles.join}>Join our </h2>
                         <h2 className={styles.joinComunidad}> Comunidad</h2>
                     </div>
                     <div className={styles.phraseComunity}>Juntos podremos hacer que la comunidad de PancakeSwap sea aun mas fuerte</div>
-                    <div className={styles.cards}>
-                        <CardComunidad 
-                        comunidades="Community members" 
-                        numeros="1.8M +" 
-                        multi="Multilingual Communities" 
-                        multiNumbers="15 +"
-                        ambassadors="Community Ambassadors"
-                        ambassadorsNum="35 +"/> 
-                    <div className={styles.containerSwiper}>
-                        <JoinComunidadSwiper/>  
-                    </div>        
+                    <div className={styles.soloCards}>
+                        <div className={styles.cards}>
+                            <CardComunidad 
+                            comunidades="Community members" 
+                            numeros="1.8M +" 
+                            multi="Multilingual Communities" 
+                            multiNumbers="15 +"
+                            ambassadors="Community Ambassadors"
+                            ambassadorsNum="35 +"/> 
+                        <div className={styles.containerSwiper}>
+                            <JoinComunidadSwiper/>  
+                        </div>        
+                        </div>
                     </div>
                 </div>
                 
@@ -70,6 +71,5 @@ export function JoinComunidad(){
                     />
                 </div>
             </div>
-        </div>
     )   
 }

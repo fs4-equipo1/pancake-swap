@@ -1,3 +1,24 @@
+@media screen and (min-width: 852px){
+   .allContainer{
+       background-color: red; 
+   }
+   .cardsContainer{
+    display: flex;
+    flex-direction: column;
+   }
+   .soloCards{
+    display: flex;
+    flex-direction: column;
+   }
+}
+
+.soloCards{
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
 .iconosFoot{
     display: flex;
     margin-top: 30px;
@@ -213,7 +234,7 @@ div{
     margin-top: 10px;
     font-size: 14px;
 }
-.container{
+/*.container{
     background-color:rgba(0, 0, 0, 0.8);
     color: white;
     height: 628px;
@@ -224,13 +245,33 @@ div{
     position: relative;
     backdrop-filter: blur(20px);
     box-sizing: border-box;
+}*/
+
+.allcontainer{
+    position: relative;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 16px;
+    border: 1px solid #383241;
+    box-sizing: border-box;
+    backdrop-filter: blur(20px);
+    border-radius: 72px;
 }
 
+.cardsContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/*
 .allContainer{
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
+}*/
 
 .cards{
     gap: 50px;
