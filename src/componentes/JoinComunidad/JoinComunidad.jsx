@@ -18,21 +18,23 @@ export function JoinComunidad(){
                 <div className={styles.cardsContainer}>
                     <div className={styles.tittleComunity}>
                         <h2 className={styles.join}>Join our </h2>
-                        <h2 className={styles.joinComunidad}> Comunidad</h2>
+                        <h2 className={styles.joinComunidad}> Community</h2>
                     </div>
-                    <div className={styles.phraseComunity}>Juntos podremos hacer que la comunidad de PancakeSwap sea aun mas fuerte</div>
+                    <div className={styles.phraseComunity}>Together we can make the PancakeSwap community even stronger</div>
                     <div className={styles.soloCards}>
                         <div className={styles.cards}>
+                            <div className={styles.normalCard}>
                             <CardComunidad 
-                            comunidades="Community members" 
-                            numeros="1.8M +" 
-                            multi="Multilingual Communities" 
-                            multiNumbers="15 +"
-                            ambassadors="Community Ambassadors"
-                            ambassadorsNum="35 +"/> 
-                        <div className={styles.containerSwiper}>
-                            <JoinComunidadSwiper/>  
-                        </div>        
+                                comunidades="Community members" 
+                                numeros="2.0M +" 
+                                multi="Multilingual Communities" 
+                                multiNumbers="15 +"
+                                ambassadors="Community Ambassadors"
+                                ambassadorsNum="35 +"/> 
+                            </div>
+                            <div className={styles.containerSwiper}>
+                                <JoinComunidadSwiper/>  
+                            </div>        
                         </div>
                     </div>
                 </div>
