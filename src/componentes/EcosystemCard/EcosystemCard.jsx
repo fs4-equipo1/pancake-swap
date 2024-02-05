@@ -72,13 +72,14 @@ function EcosystemImgAndTitle() {
 export function EcosystemCard({ path, titulo, cardData, objectId, isReverse }) {
   const filteredData = cardData.filter((obj) => obj.id === objectId);
   const { theme } = useTheme();
+  const className = cx({
+    ecosystemCard: true,
+    discoverEcosystemLight: theme === "light",
+    discoverEcosystemDark: theme === "dark",
+  });
   return (
     <div
-      className={
-        theme === "light"
-          ? styles.discoverEcosystemLight
-          : styles.discoverEcosystemDark
-      }
+      className={className}
       style={{ flexDirection: isReverse ? "row-reverse" : "row" }}
     >
       <img
