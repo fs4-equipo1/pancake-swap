@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
 import Modal from "../Modal/Modal";
 import settingsStyles from "../Modal/Settings.module.scss";
 import { FaArrowRightFromBracket } from "react-icons/fa6";
@@ -14,11 +14,25 @@ import { IoMdSettings } from "react-icons/io";
 import IconoWrapper from "../IconoWraper/IconoWraper";
 import ToggleSwitch from "../Activate/Activate";
 import { Logo } from "../Logo/Logo";
-import CoinPrice from "../CustomHooks/CoinPrice";
+import useCoinPrice from "../CustomHooks/useCoinPrice";
+import { useStoreState, useStoreActions } from "../../store";
 
-function Navbar({ theme, toggleTheme }) {
+function Navbar() {
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
   const [isWalletModalOpen, setIsWalletModalOpen] = useState(false);
+  const [buttonText, setButtonText] = useState(
+    window.innerWidth <= 800 ? "Connect" : "Connect Wallet"
+  );
+
+  useEffect(() => {
+    const handleResize = () => {
+      setButtonText(window.innerWidth <= 800 ? "Connect" : "Connect Wallet");
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const itemsTrade = [
     {
@@ -136,7 +150,7 @@ function Navbar({ theme, toggleTheme }) {
     },
   ];
 
-  const cakePrice = CoinPrice()[0];
+  const { price } = useCoinPrice();
 
   return (
     <nav className={styles.navbar}>
@@ -150,15 +164,18 @@ function Navbar({ theme, toggleTheme }) {
       </div>
       <div className={styles.dropdownSecondary}>
         <div className={styles.blueCircle}>
-          <a className={styles.blueCircleLink }href={"https://www.coingecko.com/en/coins/pancakeswap"}>
-            {`$${cakePrice}`}
+          <a
+            className={styles.blueCircleLink}
+            href={"https://www.coingecko.com/en/coins/pancakeswap"}
+          >
+            {`$${price}`}
             {
               <div className={styles.bluecircleImage}>
-              <img
-                src="https://cdn.discordapp.com/attachments/1185220628794593330/1186043627458277518/bluecircleicon.ico?ex=6591d034&is=657f5b34&hm=2286b225c46783a62484255d51c01670db25ee68e9ee9210e5ce883a89f81835&"
-                alt="Cake Icon"
-                width="25px"
-              />
+                <img
+                  src="https://cdn.discordapp.com/attachments/1185220628794593330/1186043627458277518/bluecircleicon.ico?ex=6591d034&is=657f5b34&hm=2286b225c46783a62484255d51c01670db25ee68e9ee9210e5ce883a89f81835&"
+                  alt="Cake Icon"
+                  width="25px"
+                />
               </div>
             }
           </a>
@@ -170,25 +187,24 @@ function Navbar({ theme, toggleTheme }) {
           </IconoWrapper>
           {isSettingsModalOpen && (
             <Modal onClose={() => setIsSettingsModalOpen(false)}>
-              <SettingsModal
-                closeModal={() => setIsSettingsModalOpen(false)}
-                theme={theme}
-                toggleTheme={toggleTheme}
-              />
+              <SettingsModal closeModal={() => setIsSettingsModalOpen(false)} />
             </Modal>
           )}
         </div>
 
         <NetworkDropdown />
-        <IconoWrapper onClick={() => setIsWalletModalOpen(true)}>
-          <Boton texto={"Connect Wallet"} isBlue={true} />
-        </IconoWrapper>
+
+        <Boton
+          onClick={() => setIsWalletModalOpen(true)}
+          texto={buttonText}
+          isBlue={true}
+        />
 
         {isWalletModalOpen && (
           <Modal onClose={() => setIsWalletModalOpen(false)}>
             <div>
               WALLET MODAL
-              <button onClick={() => setIsWalletModalOpen(false)}>CLOSE</button>
+              <Boton texto={"Connect with MM"} onClick={handleWalletConnect} />
             </div>
           </Modal>
         )}
@@ -197,7 +213,7 @@ function Navbar({ theme, toggleTheme }) {
   );
 }
 
-const SettingsModal = ({ closeModal, theme, toggleTheme }) => {
+const SettingsModal = ({ closeModal }) => {
   return (
     <>
       <div className={settingsStyles.header}>
@@ -222,7 +238,7 @@ const SettingsModal = ({ closeModal, theme, toggleTheme }) => {
             <Tipografia texto={"Token Risk Scanning"} isBodyLarge></Tipografia>
           </div>
           <div className={settingsStyles.activate}>
-            <ThemeToggle theme={theme} onToggle={toggleTheme} />
+            <ThemeToggle />
             <ToggleSwitch />
             <ToggleSwitch />
             <ToggleSwitch />

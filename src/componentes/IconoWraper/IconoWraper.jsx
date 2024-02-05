@@ -1,4 +1,4 @@
-import React from "react";
+
 import styles from "./IconoWraper.module.scss";
 
 const IconoWrapper = ({ onClick, children }) => {

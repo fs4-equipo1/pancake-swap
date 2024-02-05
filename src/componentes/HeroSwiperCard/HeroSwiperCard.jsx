@@ -13,7 +13,7 @@ export const HeroSwiperCard = ({
   return (
     <div
       className={styles.container}
-      style={{ background: `${colorBackground} url(${backgroundImg})` }}
+      style={{ background: `${colorBackground} url(${backgroundImg})`}}
     >
       <div className={styles.logo}>{topLogo}</div>
       <div className={styles.title}>{titleText}</div>
