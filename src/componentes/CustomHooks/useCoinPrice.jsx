@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const CoinPrice = () => {
+const useCoinPrice = () => {
   const [price, setPrice] = useState(null);
   const [market, setMarket] = useState(null);
   const [circulating, setCirculating] = useState(null);
@@ -10,16 +10,17 @@ const CoinPrice = () => {
   const fetchCoinPrice = async () => {
     try {
       const response = await axios.get(
-        "https://api.coingecko.com/api/v3/coins/pancakeswap-token?tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=falsen"
+        "https://api.coingecko.com/api/v3/coins/pancakeswap-token?tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=false"
       );
       const marketPrice = response.data.market_data.current_price.usd;
       const marketCap = response.data.market_data.market_cap.usd;
       const circulatingSupply = response.data.market_data.circulating_supply;
       const totalSupply = response.data.market_data.total_supply;
+
       setPrice(marketPrice);
-      setMarket(marketCap)
-      setCirculating(circulatingSupply)
-      setTotal(totalSupply)
+      setMarket(marketCap);
+      setCirculating(circulatingSupply);
+      setTotal(totalSupply);
     } catch (err) {
       console.error(err);
     }
@@ -29,16 +30,14 @@ const CoinPrice = () => {
     fetchCoinPrice();
     const interval = setInterval(() => {
       fetchCoinPrice();
-    }, 10000);
+    }, 60000);
 
     return () => {
       clearInterval(interval);
     };
   }, []);
 
-  const APInformation = [price, market, circulating, total]
-
-  return APInformation;
+  return { price, market, circulating, total };
 };
 
-export default CoinPrice;
+export default useCoinPrice;

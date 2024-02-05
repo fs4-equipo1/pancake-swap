@@ -23,7 +23,6 @@
   // overflow: hidden;
 }
 
-
 .cardImgPurple {
   width: 90px; /* 90px */
   height: auto;
@@ -36,7 +35,7 @@
   position: absolute;
   top: 0%;
   opacity: 0.7; // 0%
-  
+
   display: block;
 }
 
@@ -67,6 +66,27 @@
   color: var(--colors-textSubtle);
 }
 
+.swap-on-hover {
+  width: 108px;
+  height: 108px;
+}
+
+.swap-on-hover img {
+  top: 0;
+  left: 0;
+  position: absolute;
+  overflow: hidden;
+
+  object-fit: cover;
+  transition: opacity 0.5s linear;
+}
+
+.swap-on-hover .swap-on-hover__front-image {
+  z-index: 9999;
+  transition: opacity 0.5s linear;
+  cursor: pointer;
+}
+
 .card:hover {
   .cardlink {
     transition: 0.2s linear;
@@ -92,7 +112,7 @@
   background-color: aliceblue;
 }
 
-.ecosystemImgContainer{
+.ecosystemImgContainer {
   width: 20%;
 }
 
@@ -104,7 +124,7 @@
   margin-top: 25px;
 }
 
-.ecosystemImgReversed{
+.ecosystemImgReversed {
   width: 300px;
   position: relative;
   height: auto;
@@ -126,8 +146,8 @@
 .discoverEcosystemDark {
   display: flex;
   justify-content: space-between;
+  background: var(--colors-gradientBubblegum);
   align-items: center;
-  background: var(--colors-backgroundAlt);
   border-radius: 30px;
   margin: 30px;
   max-width: 80vw;
@@ -138,23 +158,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: var(--colors-gradientBubblegum);
+  background: var(--colors-backgroundAlt);
   border-radius: 30px;
   margin: 30px;
   max-width: 90vw;
   width: auto;
 }
 
-.headerContainer{
+.headerContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  
 }
 
-.sectionTitle{
+.sectionTitle {
   display: flex;
   color: var(--colors-secondary);
   font-size: 40px;
@@ -162,71 +181,65 @@
   gap: 6px;
 }
 
+.ecosystemTitle {
+  @media (max-width: 768px) {
+    .discoverEcosystemDark {
+      display: block;
+      width: 95vw;
+      // max-width: 100%;
+      margin: 0px;
+    }
 
+    .discoverEcosystemLight {
+      display: block;
+      width: 95vw;
+      max-width: 100%;
+      margin: 0px;
+    }
 
+    .ecosystemImg {
+      left: 0px;
+      right: 0px;
+    }
 
+    .ecosystemSegment {
+      max-width: 90vw;
+    }
 
-@media (max-width: 768px){
-  .discoverEcosystemDark{
-    display: block;
-    width: 95vw;
-    // max-width: 100%;
-    margin: 0px;
+    .sectionTitle {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .cardImgPurple {
+      display: block;
+      opacity: 0 !important;
+    }
+
+    .cardImgColor {
+      display: block;
+      opacity: 1 !important;
+    }
   }
 
-  .discoverEcosystemLight{
-    display: block;
-    width: 95vw;
-    max-width: 100%;
-    margin: 0px;
+  @media (max-width: 426px) {
+    .cardcontainer {
+      gap: 0px;
+      padding: 0px;
+    }
 
+    .card {
+      min-width: 110px;
+      max-width: 110px;
+      // gap: var(--space-8px);
+
+      // overflow: hidden;
+    }
+
+    .ecosystemImg {
+      left: 0px;
+      width: 250px;
+    }
   }
-
-  .ecosystemImg{
-    left: 0px;
-    right: 0px;
-  }
-
-  .ecosystemSegment {
-    max-width: 90vw;
-  } 
-
-  .sectionTitle {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .cardImgPurple {
-    display: block;
-    opacity: 0!important;
-  }
-  
-  .cardImgColor {
-    display: block;
-    opacity: 1!important;
-  }
-  
-
-}
-
-@media (max-width: 426px) {
-  .cardcontainer{
-    gap: 0px;
-    padding: 0px;
-  }
-
-  .card {
-    min-width: 110px;
-    max-width: 110px;
-    // gap: var(--space-8px);
-  
-    // overflow: hidden;
-  }
-
-  .ecosystemImg{
-    left: 0px;
-    width: 250px;
-  }
-  
 }

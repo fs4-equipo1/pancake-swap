@@ -1,6 +1,7 @@
 .swiper {
   height: 205px;
-  max-width: 75%;
+  width: 85%;
+  max-width: 1200px;
   border-radius: 36px;
   overflow: visible;
   padding: 48px 0px;
@@ -13,8 +14,9 @@
   overflow: visible;
 }
 
-.swiper-pagination-horizontal.swiper-pagination-bullets {
-  top: 220px;
+.swiper > .swiper-pagination-horizontal.swiper-pagination-bullets {
+  position: absolute;
+  bottom: 55px;
 }
 .swiper-pagination-horizontal.swiper-pagination-bullets
 .swiper-pagination-bullet {
@@ -37,4 +39,16 @@
 
 .swiper-pagination-bullet:last-child {
   border-radius: 0px 4px 4px 0px;
+}
+
+@media (max-width:1083px) {
+  .swiper {
+    height: 180px;
+  }
+}
+
+@media (max-width:669px) {
+  .swiper-pagination-bullet {
+    width: 22px;
+  }
 }
