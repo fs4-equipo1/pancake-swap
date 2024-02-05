@@ -13,14 +13,7 @@ const DexNow = ({ titleLarge }) => {
 
 export function DexNowSection() {
   return (
-    <div
-      className={styles.DexNowSection}
-      style={{
-        backgroundImage: `url(${background})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
+    <div className={styles.dexNowSection}>
       <div>
         <DexNow titleLarge={"Join Everyone's Favorite DEX Now!"} />
       </div>

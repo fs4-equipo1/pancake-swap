@@ -1,15 +1,53 @@
+@media screen and (min-width: 968px){
+    div.dexNowSection{
+        padding: 48px 0px;
+        overflow: hidden;
+        justify-content: center;   
+        text-align: center;
+    }
+ }
+ @media screen and (min-width: 425px){
+    div.dexNowSection{
+        padding: 48px 0px;
+        overflow: hidden;
+        justify-content: center;   
+        text-align: center;
+    }
+ }
+ @media screen and (min-width: 375px){
+    div.dexNowSection{
+        padding: 48px 0px;
+        overflow: hidden;
+        justify-content: center;   
+        text-align: center;
+    }
+ }
+
+ @media screen and (min-width: 768px){
+    div.dexNowSection{
+        padding: 48px 0px;
+        overflow: hidden;
+        justify-content: center;   
+        text-align: center;
+    }
+ }
+
 .dexTitle{
     font-size: 40px;
     margin-bottom: 40px;
 }
 
-.DexNowSection{
+.dexNowSection{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: #ffffff;
+    position: relative;
 
     width: 100%;
     min-height: 550px;
+    background-image: url(../../assets/background.png);
+    background-size: cover;
+    background-position: center;
 }
