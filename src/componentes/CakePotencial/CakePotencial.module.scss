@@ -1,29 +1,37 @@
-.containerText{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 32px;
+.containerText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  padding: 0px 16px;
+  text-align: center;
+  line-height: 1.2;
+  margin: 40px 0px 40px 0px;
 }
-.titleCake{
-    font-size: 40px;
-    display: flex;
-    
+.titleCake {
+  font-size: 40px;
+  display: flex;
+  color: var(--colors-text);
 }
 
-.buyCake{
-    display: flex;
-    flex-direction: row;
+.buyCake {
+  display: flex;
+  flex-direction: row;
 }
 
-.cake{
-    color: var(--colors-secondary);
-    margin-left: 10px;
+.cake {
+  color: var(--colors-secondary);
+  margin-left: 6px;
 }
-.experienceP{
-    color: var(--colors-text99);
-    font-size: 20px;
-    padding: 0 16px;
-    line-height: 110%;
-    
+.experienceP {
+  color: var(--colors-text99);
+  font-size: 20px;
+  line-height: 110%;
+}
+
+@media (max-width: 768px) {
+  .containerText {
+    margin: 15px 15px 40px 15px;
+  }
 }
