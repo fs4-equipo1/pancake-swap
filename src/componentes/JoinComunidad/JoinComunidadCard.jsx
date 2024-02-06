@@ -11,8 +11,7 @@ export const  JoinComunidadCard = ({
     fecha
 }) => {
     return (
-        <div className={styles.containerSwiper}>
-            <div className={styles.containerOrder}>
+        <div>
                 <div className={styles.titleSwiper}>{title}</div>
                 <div>{logo}</div>
                 <div>{image}</div>
@@ -21,7 +20,6 @@ export const  JoinComunidadCard = ({
                 <div>{fecha}</div>
                 <div>{texto}</div>
                 <div className={styles.enlaceComunidad}>{enlace}</div>
-            </div>
         </div>
     )
 
