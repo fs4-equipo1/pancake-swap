@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
 import Modal from "../Modal/Modal";
 import settingsStyles from "../Modal/Settings.module.scss";
 import { FaArrowRightFromBracket } from "react-icons/fa6";
@@ -16,9 +16,25 @@ import ToggleSwitch from "../Activate/Activate";
 import { Logo } from "../Logo/Logo";
 import CoinPrice from "../CustomHooks/CoinPrice";
 
+
 function Navbar({ theme, toggleTheme }) {
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
   const [isWalletModalOpen, setIsWalletModalOpen] = useState(false);
+  const [buttonText, setButtonText] = useState(
+    window.innerWidth <= 800 ? "Connect" : "Connect Wallet"
+  );
+
+ 
+
+  useEffect(() => {
+    const handleResize = () => {
+      setButtonText(window.innerWidth <= 800 ? "Connect" : "Connect Wallet");
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const itemsTrade = [
     {
@@ -180,10 +196,9 @@ function Navbar({ theme, toggleTheme }) {
         </div>
 
         <NetworkDropdown />
-        <IconoWrapper onClick={() => setIsWalletModalOpen(true)}>
-          <Boton texto={"Connect Wallet"} isBlue={true} />
-        </IconoWrapper>
-
+        
+          <Boton onClick ={() => setIsWalletModalOpen(true)} texto={buttonText} isBlue={true} />
+        
         {isWalletModalOpen && (
           <Modal onClose={() => setIsWalletModalOpen(false)}>
             <div>

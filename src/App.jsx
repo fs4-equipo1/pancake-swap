@@ -1,6 +1,6 @@
 import HeroSwiper from "./componentes/HeroSwiper/HeroSwiper";
 import FavoriteDex from "./componentes/FavouriteDex/FavoriteDex";
-import { EcosystemCards } from "./EcosystemCard/EcosystemCard";
+import { EcosystemCards } from "./componentes/EcosystemCard/EcosystemCard";
 // import Tipografia from "./componentes/Tipografia/Tipografia";
 import Navbar from "./componentes/Navbar/Navbar";
 import Footer from "./componentes/Footer/Footer";
@@ -10,11 +10,13 @@ import { JoinComunidad } from "./componentes/JoinComunidad/JoinComunidad";
 import CakePotencial from "./componentes/CakePotencial/CakePotencial";
 import NewsSwiper from "./componentes/NewsSwiper/NewsSwiper";
 import { VerticalSliderSection } from "./componentes/VerticalSliderSection/VerticalSliderSection";
-import styles from "./MainBaseComponents/BaseSection.module.scss";
+import styles from "./componentes/MainBaseComponents/BaseSection.module.scss";
 import { useState } from "react";
 import DexNowSection from "./componentes/DexNow/DexNow";
 import { CakeFigures } from "./componentes/CakeFigures/CakeFigures";
+import { BaseSection } from "./componentes/MainBaseComponents/BaseSection";
 import BotonArriba from "./componentes/BotonArriba/BotonArriba";
+import DropdownSticky from "./componentes/DropdownFoooter/DropdownSticky";
 
 export function App() {
   // funciones para Theme Toggle
@@ -26,7 +28,7 @@ export function App() {
   //fin funciones para Theme Toggle
 
   return (
-    <div className={styles.leSection}>
+    <BaseSection>
       <Navbar theme={theme} toggleTheme={toggleTheme}/>
 
       <HeroSwiper theme={theme} />
@@ -51,7 +53,11 @@ export function App() {
 
       <Footer theme={theme} toggleTheme={toggleTheme}/>
 
-    </div>
+      <BotonArriba/>
+      
+      <DropdownSticky />
+
+    </BaseSection>
   );
 }
 
