@@ -14,6 +14,7 @@ import { IoMdSettings } from "react-icons/io";
 import IconoWrapper from "../IconoWraper/IconoWraper";
 import ToggleSwitch from "../Activate/Activate";
 import { Logo } from "../Logo/Logo";
+import { useWeb3Modal } from "@web3modal/wagmi/react";
 import useCoinPrice from "../CustomHooks/useCoinPrice";
 import { useStoreState, useStoreActions } from "../../store";
 
@@ -152,6 +153,8 @@ function Navbar() {
 
   const { price } = useCoinPrice();
 
+  const { open } = useWeb3Modal();
+
   return (
     <nav className={styles.navbar}>
       <div className={styles.dropdownPrimary}>
@@ -193,12 +196,9 @@ function Navbar() {
         </div>
 
         <NetworkDropdown />
-
-        <Boton
-          onClick={() => setIsWalletModalOpen(true)}
-          texto={buttonText}
-          isBlue={true}
-        />
+        <IconoWrapper>
+          <Boton onClick={() => open({ view: "Connect" })} texto={"Connect Wallet"} isBlue={true} />
+        </IconoWrapper>
 
         {isWalletModalOpen && (
           <Modal onClose={() => setIsWalletModalOpen(false)}>

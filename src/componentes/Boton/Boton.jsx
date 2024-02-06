@@ -23,9 +23,8 @@ const Boton = ({
     small: isSmall,
     textWhite: isTextWhite,
   });
-
   return (
-    <button onClick={onClick} className={className}>
+    <button className={className} onClick={onClick}>
       {texto}
       {icon}
     </button>
