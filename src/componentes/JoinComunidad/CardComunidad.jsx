@@ -6,17 +6,17 @@ export function CardComunidad({comunidades, numeros, multi, multiNumbers, ambass
         <div className={styles.cardComunidad}>
             <div className={styles.cardComunidadContent}>
                 <div>
-                    <Tipografia texto={comunidades} isSubtitleLarge/>
-                    <Tipografia color={"--colors-warning"} texto={numeros} isTitleLarge/>
+                    <Tipografia texto={comunidades} isBodyLarge/>
+                    <Tipografia color={"--colors-warning"} texto={numeros} isTitle/>
                 </div>
                 <div>
-                    <Tipografia texto={multi} isSubtitleLarge/>
-                    <Tipografia color={"--colors-warning"} texto={multiNumbers} isTitleLarge/>
+                    <Tipografia texto={multi} isBodyLarge/>
+                    <Tipografia color={"--colors-warning"} texto={multiNumbers} isTitle/>
 
                 </div>
                 <div>
-                    <Tipografia texto={ambassadors} isSubtitleLarge/>
-                    <Tipografia color={"--colors-warning"} texto={ambassadorsNum} isTitleLarge/>
+                    <Tipografia texto={ambassadors} isBodyLarge/>
+                    <Tipografia color={"--colors-warning"} texto={ambassadorsNum} isTitle/>
                 
                 </div>
             </div>

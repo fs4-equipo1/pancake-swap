@@ -1,0 +1,29 @@
+.containerText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+.titleCake{
+    font-size: 40px;
+    display: flex;
+    
+}
+
+.buyCake{
+    display: flex;
+    flex-direction: row;
+}
+
+.cake{
+    color: var(--colors-secondary);
+    margin-left: 10px;
+}
+.experienceP{
+    color: var(--colors-text99);
+    font-size: 20px;
+    padding: 0 16px;
+    line-height: 110%;
+    
+}

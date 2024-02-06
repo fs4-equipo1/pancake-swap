@@ -1,0 +1,18 @@
+
+.logoImage{
+    margin-top: 13px;
+    width: 160px;
+    height: 25px;
+  }
+  .iconResponsive{
+    display: none;
+  }
+  @media (max-width: 768px){
+    .logoImage{
+      display: none;
+    }
+    .iconResponsive{
+      display: block;
+      margin-top: 13px;
+    }
+}

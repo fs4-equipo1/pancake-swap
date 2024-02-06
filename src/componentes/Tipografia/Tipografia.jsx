@@ -30,10 +30,11 @@ const Tipografia = ({
     body: isBody,
   });
   return (
-    <h1 className={classNames} style={{ color: `var(${color})` }}>
+    <div className={classNames} style={{ color: `var(${color})` }}>
       {texto}
-    </h1>
+    </div>
   );
 };
 
 export default Tipografia;
+

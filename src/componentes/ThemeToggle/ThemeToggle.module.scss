@@ -1,0 +1,36 @@
+.toggleButton {
+    width: 56px;
+    height: 32px;
+    background-color: #878096;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  
+    &.dark .themeIcon{
+      background-color: #27262c;
+    }
+  
+    &.light .themeIcon{
+      background-color: #eeeeee;
+    }
+  
+    &:hover {
+      .themeIcon {
+        border: 2px solid #5c2eb9;
+      }
+      .nonHoveredIcon {
+        border: 2px solid transparent;
+      }
+    }
+  }
+  
+  .themeIcon,
+  .nonHoveredIcon {
+    border-radius: 50%;
+    // background-color: #27262c;
+
+    border: 2px solid transparent; 
+  }
+  

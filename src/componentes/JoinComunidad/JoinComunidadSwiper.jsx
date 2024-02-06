@@ -8,7 +8,6 @@ import  JoinComunidadCard  from "./JoinComunidadCard";
 import "./JoinComunidad.module.scss"
 import "./SwiperComunidad.scss"
 
-
 export default () => {
     return (
         <Swiper
