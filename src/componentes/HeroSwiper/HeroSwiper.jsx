@@ -40,6 +40,7 @@ export default () => {
       modules={[Pagination, Autoplay, EffectFade]}
       spaceBetween={50}
       slidesPerView={1}
+      className="hero-swiper"
       effect={"fade"}
       fadeEffect={{ crossFade: true }}
       pagination={{ clickable: true }}
