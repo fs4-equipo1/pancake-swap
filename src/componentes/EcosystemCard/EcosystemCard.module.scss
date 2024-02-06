@@ -96,6 +96,9 @@
 
 .ecosystemTitle {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   color: var(--colors-secondary);
   font-size: 40px;
   margin: 20px;
@@ -143,26 +146,29 @@
   height: 360px;
 }
 
-.discoverEcosystemDark {
-  display: flex;
-  justify-content: space-between;
-  background: var(--colors-gradientBubblegum);
-  align-items: center;
-  border-radius: 30px;
-  margin: 30px;
-  max-width: 80vw;
-  width: auto;
-}
-
-.discoverEcosystemLight {
+.ecosystemCard {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: var(--colors-backgroundAlt);
   border-radius: 30px;
   margin: 30px;
   max-width: 90vw;
   width: auto;
+
+  @media (max-width: 768px) {
+    display: block;
+    width: 95vw;
+    max-width: 100%;
+    margin: 0px;
+  }
+}
+
+.discoverEcosystemDark {
+  background: var(--colors-gradientBubblegum);
+}
+
+.discoverEcosystemLight {
+  background: var(--colors-backgroundAlt);
 }
 
 .headerContainer {
@@ -181,65 +187,56 @@
   gap: 6px;
 }
 
-.ecosystemTitle {
-  @media (max-width: 768px) {
-    .discoverEcosystemDark {
-      display: block;
-      width: 95vw;
-      // max-width: 100%;
-      margin: 0px;
-    }
-
-    .discoverEcosystemLight {
-      display: block;
-      width: 95vw;
-      max-width: 100%;
-      margin: 0px;
-    }
-
-    .ecosystemImg {
-      left: 0px;
-      right: 0px;
-    }
-
-    .ecosystemSegment {
-      max-width: 90vw;
-    }
-
-    .sectionTitle {
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-    }
-
-    .cardImgPurple {
-      display: block;
-      opacity: 0 !important;
-    }
-
-    .cardImgColor {
-      display: block;
-      opacity: 1 !important;
-    }
+@media (max-width: 768px) {
+  .ecosystemCard {
+    display: block;
+    width: 95vw;
+    max-width: 100%;
+    margin: 0px;
   }
 
-  @media (max-width: 426px) {
-    .cardcontainer {
-      gap: 0px;
-      padding: 0px;
-    }
+  .ecosystemImg {
+    left: 0px;
+    right: 0px;
+  }
 
-    .card {
-      min-width: 110px;
-      max-width: 110px;
-      // gap: var(--space-8px);
+  .ecosystemSegment {
+    max-width: 90vw;
+  }
 
-      // overflow: hidden;
-    }
+  .sectionTitle {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
 
-    .ecosystemImg {
-      left: 0px;
-      width: 250px;
-    }
+  .cardImgPurple {
+    display: block;
+    opacity: 0 !important;
+  }
+
+  .cardImgColor {
+    display: block;
+    opacity: 1 !important;
+  }
+}
+
+@media (max-width: 426px) {
+  .cardcontainer {
+    gap: 0px;
+    padding: 0px;
+  }
+
+  .card {
+    min-width: 110px;
+    max-width: 110px;
+    // gap: var(--space-8px);
+
+    // overflow: hidden;
+  }
+
+  .ecosystemImg {
+    left: 0px;
+    width: 250px;
   }
 }
