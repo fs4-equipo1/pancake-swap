@@ -4,8 +4,9 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 import { joinComunidadCardData } from "../../mocks/JoinComunidadCardData.mock";
-import { JoinComunidadCard } from "./JoinComunidadCard";
+import  JoinComunidadCard  from "./JoinComunidadCard";
 import "./JoinComunidad.module.scss"
+import "./SwiperComunidad.scss"
 
 export default () => {
     return (
@@ -26,14 +27,10 @@ export default () => {
                     <JoinComunidadCard
                         title= {card.title}
                         logo= {card.logo}
+                        image={card.image}
+                        fecha={card.fecha}
                         subtitle= {card.subtitle}
-                        verificado={card.verificado}
-                        nombreCuenta = {card.nombreCuenta}
-                        fecha= {card.fecha}
-                        likes= {card.likes}
-                        numlikes= {card.numlikes}
-                        estadisticas = {card.estadisticas}
-                        numEstadisticas = {card.numEstadisticas}
+                        socialMedia= {card.socialMedia}
                         texto = {card.texto}
                         enlace = {card.enlace}
                     />

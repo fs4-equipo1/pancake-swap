@@ -1,3 +1,4 @@
+import { JoinComunidad } from "./componentes/JoinComunidad/JoinComunidad";
 import HeroSwiper from "./componentes/HeroSwiper/HeroSwiper";
 import FavoriteDex from "./componentes/FavouriteDex/FavoriteDex";
 import { EcosystemCards } from "./componentes/EcosystemCard/EcosystemCard";
@@ -21,6 +22,7 @@ import DropdownSticky from "./componentes/DropdownFoooter/DropdownSticky";
 
 export function App() {
   return (
+
     <BaseSection>
       <Navbar />
 
@@ -48,8 +50,6 @@ export function App() {
 
       <BotonArriba/>
       
-      {/* <WalletConnect /> */}
-
       <DropdownSticky />
 
       <BotonArriba />

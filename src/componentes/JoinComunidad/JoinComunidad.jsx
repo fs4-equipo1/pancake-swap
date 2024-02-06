@@ -7,40 +7,39 @@ import {
     FaTelegram,
     FaReddit,
     FaInstagram,
-    FaGithub,
     FaDiscord,
     FaYoutube,
   } from "react-icons/fa";
+import JoinComunidadSwiper from "./JoinComunidadSwiper";
 
 export function JoinComunidad(){
     return (
-        <div className={styles.container}>
-            <div>
-                <div className={styles.tittleComunity}>
-                    <h2 className={styles.join}>Join our </h2>
-                    <h2 className={styles.joinComunidad}> Comunidad</h2>
-                </div>
-                <div className={styles.phraseComunity}>Juntos podremos hacer que la comunidad de PancakeSwap sea aun mas fuerte</div>
-                <div className={styles.cards}>
-                    <div>
-                        <CardComunidad 
-                        comunidades="Community members" 
-                        numeros="1.8M +" 
-                        multi="Multilingual Communities" 
-                        multiNumbers="15 +"
-                        ambassadors="Community Ambassadors"
-                        ambassadorsNum="35 +"/> 
+        <div className={styles.allcontainer}>
+                <div className={styles.cardsContainer}>
+                    <div className={styles.tittleComunity}>
+                        <h2 className={styles.join}>Join our </h2>
+                        <h2 className={styles.joinComunidad}> Community</h2>
                     </div>
-                    <div>
-                        <CardComunidad 
-                            comunidades="Community members" 
-                            numeros="1.8M +" 
-                            multi="Multilingual Communities" 
-                            multiNumbers="15 +"
-                            ambassadors="Community Ambassadors"
-                            ambassadorsNum="35 +"/> 
+                    <div className={styles.phraseComunity}>Together we can make the PancakeSwap community even stronger</div>
+                    <div className={styles.soloCards}>
+                        <div className={styles.cards}>
+                            <div className={styles.normalCard}>
+                            <CardComunidad 
+                                comunidades="Community members" 
+                                numeros="2.0M +" 
+                                multi="Multilingual Communities" 
+                                multiNumbers="15 +"
+                                ambassadors="Community Ambassadors"
+                                ambassadorsNum="35 +"/> 
+                            </div>
+                            <div className={styles.containerSwiper}>
+                                <JoinComunidadSwiper/>  
+                            </div>        
+                        </div>
                     </div>
                 </div>
+                
+
                 <div className={styles.iconosFoot}>
                     <Icono
                         icono={<FaTwitter />}
@@ -74,6 +73,5 @@ export function JoinComunidad(){
                     />
                 </div>
             </div>
-        </div>
     )   
 }

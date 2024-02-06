@@ -3,34 +3,27 @@ import styles from "./JoinComunidad.module.scss"
 export const  JoinComunidadCard = ({
     title,
     logo,
+    image,
     subtitle,
-    verificado,
-    nombreCuenta,
-    fecha,
-    likes,
-    numlikes,
-    estadisticas,
-    numEstadisticas,
+    socialMedia,
     texto, 
-    enlace
+    enlace,
+    fecha
 }) => {
     return (
         <div className={styles.containerSwiper}>
-            <div>{title}</div>
-            <div>{logo}</div>
-            <div>{subtitle}</div>
-            <div>{verificado}</div>
-            <div>
-                <div>{nombreCuenta}</div>
+            <div className={styles.containerOrder}>
+                <div className={styles.titleSwiper}>{title}</div>
+                <div>{logo}</div>
+                <div>{image}</div>
+                <div>{subtitle}</div>
+                <div>{socialMedia}</div>
                 <div>{fecha}</div>
-                <div>{likes}</div>
-                <div>{numlikes}</div>
-                <div>{estadisticas}</div>
-                <div>{numEstadisticas}</div>
+                <div>{texto}</div>
+                <div className={styles.enlaceComunidad}>{enlace}</div>
             </div>
-            <div>{texto}</div>
-            <div>{enlace}</div>
         </div>
     )
 
 }
+export default JoinComunidadCard
