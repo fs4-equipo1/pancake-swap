@@ -16,10 +16,10 @@
 
 .swiper > .swiper-pagination-horizontal.swiper-pagination-bullets {
   position: absolute;
-  bottom: 55px;
+  top: 220px;
 }
 .swiper-pagination-horizontal.swiper-pagination-bullets
-.swiper-pagination-bullet {
+  .swiper-pagination-bullet {
   margin: 0;
 }
 
@@ -41,13 +41,16 @@
   border-radius: 0px 4px 4px 0px;
 }
 
-@media (max-width:1083px) {
+@media (max-width: 1083px) {
   .swiper {
     height: 180px;
   }
+  .swiper > .swiper-pagination-horizontal.swiper-pagination-bullets {
+    top: 196px;
+  }
 }
 
-@media (max-width:669px) {
+@media (max-width: 669px) {
   .swiper-pagination-bullet {
     width: 22px;
   }
