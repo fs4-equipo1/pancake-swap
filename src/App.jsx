@@ -6,7 +6,6 @@ import { EcosystemCards } from "./componentes/EcosystemCard/EcosystemCard";
 import Navbar from "./componentes/Navbar/Navbar";
 import Footer from "./componentes/Footer/Footer";
 import InfiniteSlider from "./componentes/InfiniteSlider/InfiniteSlider";
-import { JoinComunidad } from "./componentes/JoinComunidad/JoinComunidad";
 // import { CardComunidad } from "./componentes/JoinComunidad/CardComunidad";
 import CakePotencial from "./componentes/CakePotencial/CakePotencial";
 import NewsSwiper from "./componentes/NewsSwiper/NewsSwiper";
