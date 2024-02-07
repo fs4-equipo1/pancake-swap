@@ -197,7 +197,7 @@ function Navbar() {
 
         <NetworkDropdown />
         <IconoWrapper>
-          <Boton onClick={() => open({ view: "Connect" })} texto={"Connect Wallet"} isBlue={true} />
+        <Boton onClick ={() => setIsWalletModalOpen(true)} texto={buttonText} isBlue={true} />
         </IconoWrapper>
 
         {isWalletModalOpen && (
