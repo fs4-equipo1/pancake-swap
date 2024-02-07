@@ -1,7 +1,8 @@
 .cardcontainer {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  // justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
   height: fit-content;
   padding: 20px;
@@ -42,7 +43,7 @@
 .cardTextTitle {
   margin: 0;
   font-size: 20px;
-  color: var(--colors-text);
+  color: var(--colors-secondary);
 }
 
 .cardText {
@@ -173,12 +174,15 @@
 @media (max-width: 768px) {
   .ecosystemCard {
     display: flex;
-    flex-direction: column;
+    // flex-direction: column;
     flex-wrap: wrap;
-
+    align-items: center;
+    justify-content: center;
+    
     width: 95vw;
     max-width: 100%;
     margin: 0px;
+    padding: 20px 0px;
     margin-bottom: 40px;
   }
 
@@ -215,7 +219,8 @@
 
 @media (max-width: 426px) {
   .cardcontainer {
-    gap: 0px;
+    justify-content: center;
+    gap: 10px;
     padding: 0px;
   }
 
