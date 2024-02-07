@@ -3,6 +3,7 @@
   flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
+  // overflow: hidden;
 
   // gap: 20px;
   height: auto;
@@ -43,13 +44,14 @@
 }
 
 .vidContainer {
-  display: flex;
+  display: block;
+  position: relative;
   overflow: hidden;
   width: 648px;
   height: 648px;
 }
 
-.vid {
+.vid{
   object-fit: cover;
   position: absolute;
   width: 648px;
