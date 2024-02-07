@@ -80,7 +80,7 @@ export function EcosystemCard({ path, titulo, cardData, objectId, isReverse }) {
   return (
     <div
       className={className}
-      style={{ flexDirection: isReverse ? "row-reverse" : "row" }}
+      style={{ flexDirection: isReverse ? "row-reverse" : "row"}}
     >
       <img
         className={
@@ -112,7 +112,7 @@ export function EcosystemCard({ path, titulo, cardData, objectId, isReverse }) {
 
 export function EcosystemCards() {
   return (
-    <div>
+    <div className={styles.section}>
       <EcosystemImgAndTitle />
       <EcosystemCard
         path={"../../Assets/Images/trade-bunny.png"}
