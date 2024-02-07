@@ -7,7 +7,7 @@ const IconoWrapper = ({ onClick, children }) => {
     };
   
     return (
-      <div onClick={handleClick} className={styles.iconoWrapper}>
+      <div onClick={handleClick} className={styles.iconoWraper}>
         {children}
       </div>
     );
