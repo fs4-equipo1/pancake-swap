@@ -105,16 +105,6 @@
   gap: 6px;
 }
 
-.ecosystemContainer {
-  width: 60vw;
-  justify-content: left;
-  display: flex;
-  position: relative;
-  height: fit-content;
-  border-radius: 25px;
-  background-color: aliceblue;
-}
-
 .ecosystemImgContainer {
   width: 20%;
 }
@@ -141,10 +131,10 @@
   max-width: 80vw;
 }
 
-.ecosystemImgLeft {
-  width: 296px;
-  height: 360px;
-}
+// .ecosystemImgLeft {
+//   width: 296px;
+//   height: 360px;
+// }
 
 .ecosystemCard {
   display: flex;
@@ -154,13 +144,6 @@
   margin: 30px;
   max-width: 90vw;
   width: auto;
-
-  @media (max-width: 768px) {
-    display: block;
-    width: 95vw;
-    max-width: 100%;
-    margin: 0px;
-  }
 }
 
 .discoverEcosystemDark {
@@ -189,7 +172,10 @@
 
 @media (max-width: 768px) {
   .ecosystemCard {
-    display: block;
+    display: flex;
+    // flex-direction: column;
+    flex-wrap: wrap;
+
     width: 95vw;
     max-width: 100%;
     margin: 0px;
@@ -197,6 +183,11 @@
   }
 
   .ecosystemImg {
+    left: 0px;
+    right: 0px;
+  }
+
+  .ecosystemImgReversed{
     left: 0px;
     right: 0px;
   }
@@ -237,6 +228,11 @@
   }
 
   .ecosystemImg {
+    left: 0px;
+    width: 250px;
+  }
+
+  .ecosystemImgReversed{
     left: 0px;
     width: 250px;
   }
