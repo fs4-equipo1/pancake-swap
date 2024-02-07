@@ -10,3 +10,9 @@
 .imgSeparator img{
     width: 150%;
 }
+
+@media (max-width: 426px) {
+    .imgSeparator{
+        display: none;
+    }
+}
