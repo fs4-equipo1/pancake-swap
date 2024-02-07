@@ -1,7 +1,7 @@
 .favoriteDex {
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 
   // gap: 20px;
@@ -42,13 +42,18 @@
   height: 50px;
 }
 
-.imgContainer {
+.vidContainer {
   display: flex;
   overflow: hidden;
+  width: 648px;
+  height: 648px;
 }
 
-.img {
+.vid {
   object-fit: cover;
+  position: absolute;
+  width: 648px;
+  height: 648px;
 }
 
 @media (max-width: 768px) {
@@ -61,7 +66,7 @@
     display: flex;
     gap: 20px;
   }
-  .imgContainer {
+  .vidContainer, .vid {
     width: 500px;
     height: 500px;
   }
@@ -101,7 +106,7 @@
     display: flex;
     gap: 20px;
   }
-  .imgContainer {
+  .vidContainer, .vid {
     width: 400px;
     height: 400px;
   }
