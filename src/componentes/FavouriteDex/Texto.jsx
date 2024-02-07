@@ -32,7 +32,7 @@ export function Texto() {
               texto={"Everyone's"}
               isSubtitleLarge
             ></Tipografia>
-            <div className={styles.separador}>
+            {/* <div className={styles.separador}> */}
               <Tipografia
                 color={"--colors-secondary"}
                 texto={"Favorite"}
@@ -43,19 +43,20 @@ export function Texto() {
                 texto={"DEX"}
                 isSubtitleLarge
               />
-            </div>
+            {/* </div>                 //Comentado ya que al probar, no tiene efecto.
+            */}
           </div>
           <div className={styles.subtext}>
             <Tipografia
               color={"--colors-textSubtle"}
-              texto={"Trade, earn, and own crypto on the all-in-"}
+              texto={"Trade, earn, and own crypto on the all-in-one multichain DEX"}
               isBodyLarge
             ></Tipografia>
-            <Tipografia
+            {/* <Tipografia
               color={"--colors-textSubtle"}
-              texto={"one multichain DEX"}
+              texto={"one multichain DEX"}      //Comentado e incluido en un unico elemento tipografia
               isBodyLarge
-            ></Tipografia>
+            ></Tipografia> */}
           </div>
         </div>
       )}
@@ -67,14 +68,14 @@ export function Texto() {
               texto={"Everyone's"}
               isTitle
             ></Tipografia>
-            <div className={styles.separador}>
+            {/* <div className={styles.separador}> */}
               <Tipografia
                 color={"--colors-secondary"}
                 texto={"Favorite"}
                 isTitle
               />
               <Tipografia color={"--colors-text"} texto={"DEX"} isTitle />
-            </div>
+            {/* </div> */}
           </div>
           <div className={styles.subtext}>
             <Tipografia
