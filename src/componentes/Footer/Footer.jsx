@@ -11,7 +11,17 @@ export function Footer() {
     <div className={styles.footerSection}>
       <div className={styles.footerContainer}>
         <div className={styles.footerTop}>
-          <div className={styles.buyCakeNone}> <FooterBuyCake/> </div>
+        <img src="../public/assets/logoPancakeBlanco.png" className={styles.pancakeImage} />
+         <div className={styles.line}></div>
+          <div className={styles.buyCakeNone}> <FooterBuyCake/>
+          <div className={styles.footerEndLangAndTheme}>
+              <ThemeToggle />
+              <LanguageDropdown reverse={true} />
+             
+            </div>
+            <div className={styles.lineEnd}></div>
+             </div>
+        
           <FooterColumn
             title={"ECOSYSTEM"}
             items={[
@@ -41,15 +51,17 @@ export function Footer() {
             title={"ABOUT"}
             items={["Terms Of Service", "Blog", "Brand Assets", "Careers"]}
           />
-          <div>
+          <div className={styles.logo}>
             <Logo isInverted />
           </div>
         </div>
         <div className={styles.footerBottom}>
           <FooterIcons />
           {/* <hr style={{opacity:'30%'}}></hr> */}
+          
           <div className={styles.footerEnd}>
             <div className={styles.footerEndLangAndTheme}>
+              
               <ThemeToggle />
               <LanguageDropdown reverse={true} />
             </div>
@@ -58,6 +70,7 @@ export function Footer() {
         </div>
       </div>
     </div>
+    
   );
 }
 

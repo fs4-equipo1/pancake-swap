@@ -67,6 +67,16 @@
   display: none;
 }
 
+.pancakeImage{
+  display: none;
+}
+.line{
+  display: none;
+}
+.lineEnd{
+  display: none;
+}
+
 @media (max-width: 768px) {
   .footerTop{
     display: flex;
@@ -79,9 +89,33 @@
 @media (max-width: 426px) {
   .buyCakeNone{
     display: block;
+    margin-top: -10px;
+
   }
   .footerEnd{
-    // display: none;
+    display: none;
     padding-bottom: 30px;
   }
+  .logo{
+    display: none;
+  }
+.pancakeImage{
+  display: block;
+  margin-top: 13px;
+  width: 160px;
+  height: 25px;
+}
+.line{
+  display: block;
+  border-bottom: 0.1px solid #aaaaaa;
+}
+.lineEnd{
+  display: block;
+  border-bottom: 0.1px solid #aaaaaa;
+  margin-top: 30px;
+}
+.footerTop{
+  display: flex;
+  gap: 30px;
+}
 }

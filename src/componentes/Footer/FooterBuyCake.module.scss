@@ -1,21 +1,35 @@
 .footerBuyCake {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  
 }
 
 .imagePancake{
   
-  width: 160px;
-  height: 25px;
-  margin-bottom: 20px;
+  
+  display: none;
   
 }
 .logoPrice{
   display: flex;
   flex-direction: row;
+
+}
+
+@media (max-width: 425px){
+  
+  .footerBuyCake{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+.imagePancake{
+  width: 160px;
+  height: 25px;
+  margin-bottom: 20px;
+}
 
 }

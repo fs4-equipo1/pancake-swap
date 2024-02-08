@@ -5,9 +5,7 @@ import useCoinPrice from "../CustomHooks/useCoinPrice";
 export function FooterBuyCake() {
   const { price } = useCoinPrice();
   return (
-    <div>
-    <img className={styles.imagePancake} src="../public/assets/logoPancakeBlanco.png" alt="" />
-    <hr />
+    <div>    
     <div className={styles.footerBuyCake}>
       <div className={styles.logoPrice}>
       <img
@@ -26,7 +24,7 @@ export function FooterBuyCake() {
       </div>
       
     </div>
-    <hr/>
     </div>
+    
   );
 }
