@@ -19,7 +19,7 @@ export function FavoriteDex() {
           width="1080"
         >
           <source
-            src="https://assets.pancakeswap.finance/web/landing/bunnyv2.webm"
+            src="./Assets/Gifs/bunnyv2.webm"
             type="video/webm"
           />
         </video>
@@ -32,7 +32,7 @@ export function FavoriteDex() {
           className={styles.vid}
         >
           <source
-            src="https://assets.pancakeswap.finance/web/landing/star.webm"
+            src="./Assets/Gifs/star.webm"
             type="video/webm"
           />
         </video>
@@ -45,7 +45,7 @@ export function FavoriteDex() {
           className={styles.vid}
         >
           <source
-            src="https://assets.pancakeswap.finance/web/landing/hero-cake.webm"
+            src="./Assets/Gifs/hero-cake.webm"
             type="video/webm"
           />
         </video>
@@ -58,7 +58,7 @@ export function FavoriteDex() {
           className={styles.vid}
         >
           <source
-            src="https://assets.pancakeswap.finance/web/landing/rock01.webm"
+            src="./Assets/Gifs/rock01.webm"
             type="video/webm"
           />
         </video>
@@ -71,7 +71,7 @@ export function FavoriteDex() {
           className={styles.vid}
         >
           <source
-            src="https://assets.pancakeswap.finance/web/landing/rock02.webm"
+            src="./Assets/Gifs/rock02.webm"
             type="video/webm"
           />
         </video>
@@ -84,7 +84,7 @@ export function FavoriteDex() {
           className={styles.vid}
         >
           <source
-            src="https://assets.pancakeswap.finance/web/landing/rock03.webm"
+            src="./Assets/Gifs/rock03.webm"
             type="video/webm"
           />
         </video>
