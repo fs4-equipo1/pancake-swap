@@ -1,4 +1,5 @@
 .dexTitle{
+    text-align: center;
     font-size: 40px;
     margin-bottom: 40px;
 }
@@ -8,7 +9,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #ffffff;
+    color: var(--colors-white);
 
     width: 100%;
     min-height: 550px;
