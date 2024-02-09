@@ -92,7 +92,7 @@ export function FavoriteDex() {
       <div className={styles.container}>
         <Texto />
         <div className={styles.buttons}>
-          <Boton texto={"Connect wallet"} isBlue></Boton>
+          <Boton texto={"Connect wallet"} isBlue style='padding: 12px 24px'></Boton>
           <Boton texto={"Trade now"} isTransparent></Boton>
         </div>
       </div>
