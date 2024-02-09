@@ -17,11 +17,12 @@
   position: relative;
 
   height: 250px;
-  // min-width: 120px;
-  max-width: 250px;
+  height: 250px;
+  min-width: 120px;
+  max-width: 140px;
+  // gap: var(--space-8px);
 
-  flex-basis: calc(33.3% - 48px);
-  flex-grow: 1;
+  // overflow: hidden;
 }
 
 .cardImgPurple {
