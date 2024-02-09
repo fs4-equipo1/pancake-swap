@@ -63,7 +63,7 @@ export function Footer() {
           <FooterIcons />
 
           <div className={styles.footerEnd}>
-            <hr />
+            {/* <hr /> */}
             <div className={styles.footerEndLangAndTheme}>
               <ThemeToggle />
               <LanguageDropdown reverse={true} />
