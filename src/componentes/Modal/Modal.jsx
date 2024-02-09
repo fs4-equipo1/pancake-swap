@@ -26,7 +26,7 @@ const Modal = ({ onClose, children }) => {
           onClose();
           console.log("clicked");
         }}
-      ></div>
+      />
     </div>
   );
 };

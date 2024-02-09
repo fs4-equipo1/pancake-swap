@@ -248,10 +248,10 @@ const SettingsModal = ({ closeModal }) => {
         <div className={settingsStyles.modalBottom}>
           <Tipografia texto={"Default Transaction Speed (GWEI)"}></Tipografia>
           <div className={settingsStyles.buttons}>
-            <Boton texto={"Default"} isBlue={true}></Boton>
-            <Boton texto={"Standard (3)"} isWhite={true}></Boton>
-            <Boton texto={"Fast (4)"} isWhite={true}></Boton>
-            <Boton texto={"Instant (5)"} isWhite={true}></Boton>
+            <Boton texto={"Default"} isBlue={true} isSmall={true}></Boton>
+            <Boton texto={"Standard (3)"} isWhite={true} isSmall={true}></Boton>
+            <Boton texto={"Fast (4)"} isWhite={true} isSmall={true}></Boton>
+            <Boton texto={"Instant (5)"} isWhite={true} isSmall={true}></Boton>
           </div>
         </div>
       </div>
