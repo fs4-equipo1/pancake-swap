@@ -24,9 +24,10 @@
     }
 }
 
-@media(min-width: 375px){
+@media(min-width: 319px){
     div.soloCards div.cards{
         flex-direction: column;
+        flex-wrap: wrap;
     }
     div.cardsContainer div.tittleComunity{
         flex-direction: column;
