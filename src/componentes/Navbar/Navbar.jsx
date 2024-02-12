@@ -17,17 +17,23 @@ import { Logo } from "../Logo/Logo";
 import { useWeb3Modal } from "@web3modal/wagmi/react";
 import useCoinPrice from "../CustomHooks/useCoinPrice";
 import { useStoreState, useStoreActions } from "../../store";
+import React from "react";
+import { useTranslation } from "react-i18next";
 
 function Navbar() {
+  const { t, i18n } = useTranslation();
+  const handleLanguage = (language) => {
+    i18n.changeLanguage(language);
+  };
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
   const [isWalletModalOpen, setIsWalletModalOpen] = useState(false);
   const [buttonText, setButtonText] = useState(
-    window.innerWidth <= 800 ? "Connect" : "Connect Wallet"
+    window.innerWidth <= 800 ? t(Connect) : t(ConnectWallet)
   );
 
   useEffect(() => {
     const handleResize = () => {
-      setButtonText(window.innerWidth <= 800 ? "Connect" : "Connect Wallet");
+      setButtonText(window.innerWidth <= 800 ? t(Connect) : t(ConnectWallet));
     };
     window.addEventListener("resize", handleResize);
     return () => {
@@ -37,31 +43,31 @@ function Navbar() {
 
   const itemsTrade = [
     {
-      texto: "Swap",
+      texto: t(Swap),
       icono: <null />,
     },
     {
-      texto: "Liquidity",
+      texto: t(Liquidity),
       icono: <null />,
     },
     {
-      texto: "Perpetual",
+      texto: t(Perpetual),
       icono: <FaArrowRightFromBracket />,
     },
     {
-      texto: "Bridge",
+      texto: t(Bridge),
       icono: <FaArrowRightFromBracket />,
     },
     {
-      texto: "Limit (V2)",
+      texto: t(Limit),
       icono: <null />,
     },
     {
-      texto: "Buy Crypto",
+      texto: t(BuyCrypto),
       icono: <null />,
     },
     {
-      texto: "Trading Reward",
+      texto: t(TradingReward),
       icono: <null />,
     },
   ];
@@ -153,7 +159,7 @@ function Navbar() {
 
   const { price } = useCoinPrice();
 
-  const { open } = useWeb3Modal();
+  const { open } = useWeb3Modal(); 
 
   return (
     <nav className={styles.navbar}>
