@@ -36,7 +36,7 @@
   position: absolute;
   top: 100%;
   left: 0;
-  width: 100%;
+  width: 270px;
   background-color: var(--colors-backgroundAlt);
   border: 1px solid;
   border-color: var(--colors-cardBorder);
@@ -96,5 +96,8 @@
 @media (max-width: 850px){
   .dropdownContainer{
     display: none;
+  }
+  .dropdownContent {
+    width: 100%;
   }
 }
