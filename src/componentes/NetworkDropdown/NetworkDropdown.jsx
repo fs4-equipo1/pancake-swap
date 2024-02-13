@@ -1,6 +1,8 @@
 import { useState } from "react";
 import styles from "./NetworkDropdown.module.scss";
 import { networkData } from "./NetworksData";
+import { useTransaction } from "wagmi";
+import { useTranslation } from "react-i18next";
 
 const NetworkDropdown = () => {
   const [activeNetwork, setActiveNetwork] = useState({
@@ -11,6 +13,8 @@ const NetworkDropdown = () => {
   const handleButtonClick = (network) => {
     setActiveNetwork(network);
   };
+
+  const { t } = useTranslation();
 
   return (
     <div className={styles.dropdownCoinContainer}>
@@ -25,7 +29,7 @@ const NetworkDropdown = () => {
       </div>
 
       <div className={styles.dropdownCoinContent}>
-        <p>Select a Network</p>
+        <p>{t('SelectaNetwork')}</p>
         <hr></hr>
         {networkData.map((network) => (
           <div key={network.label} className={styles.buttonWithImage}>

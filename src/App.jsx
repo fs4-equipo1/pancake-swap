@@ -18,11 +18,15 @@ import { BaseSection } from "./componentes/MainBaseComponents/BaseSection";
 import BotonArriba from "./componentes/BotonArriba/BotonArriba";
 import { WalletConnect } from "./componentes/WalletConnect/WalletConnect"
 import DropdownSticky from "./componentes/DropdownFoooter/DropdownSticky";
+import { I18nextProvider } from 'react-i18next';
+import i18n from './i18n/i18n'
 
 export function App() {
   return (
-
+    <I18nextProvider i18n={i18n}>
+    
     <BaseSection>
+
       <Navbar />
 
       <HeroSwiper />
@@ -54,6 +58,8 @@ export function App() {
       <BotonArriba />
 
     </BaseSection>
+
+    </I18nextProvider>
     
   );
 }

@@ -22,18 +22,15 @@ import { useTranslation } from "react-i18next";
 
 function Navbar() {
   const { t, i18n } = useTranslation();
-  const handleLanguage = (language) => {
-    i18n.changeLanguage(language);
-  };
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
   const [isWalletModalOpen, setIsWalletModalOpen] = useState(false);
   const [buttonText, setButtonText] = useState(
-    window.innerWidth <= 800 ? t(Connect) : t(ConnectWallet)
+    window.innerWidth <= 800 ? t('Connect') : t('ConnectWallet')
   );
 
   useEffect(() => {
     const handleResize = () => {
-      setButtonText(window.innerWidth <= 800 ? t(Connect) : t(ConnectWallet));
+      setButtonText(window.innerWidth <= 800 ? t('Connect') : t('ConnectWallet'));
     };
     window.addEventListener("resize", handleResize);
     return () => {
@@ -43,116 +40,116 @@ function Navbar() {
 
   const itemsTrade = [
     {
-      texto: t(Swap),
+      texto: t('Swap'),
       icono: <null />,
     },
     {
-      texto: t(Liquidity),
+      texto: t('Liquidity'),
       icono: <null />,
     },
     {
-      texto: t(Perpetual),
+      texto: t('Perpetual'),
       icono: <FaArrowRightFromBracket />,
     },
     {
-      texto: t(Bridge),
+      texto: t('Bridge'),
       icono: <FaArrowRightFromBracket />,
     },
     {
-      texto: t(Limit),
+      texto: t('Limit'),
       icono: <null />,
     },
     {
-      texto: t(BuyCrypto),
+      texto: t('BuyCrypto'),
       icono: <null />,
     },
     {
-      texto: t(TradingReward),
+      texto: t('TradingReward'),
       icono: <null />,
     },
   ];
   const itemsEarn = [
     {
-      texto: "Farms",
+      texto: t("Farms"),
       icono: <null />,
     },
     {
-      texto: "CAKE Staking",
+      texto: t("CAKEStaking"),
       icono: <null />,
     },
     {
-      texto: "Pools",
+      texto: t("Pools"),
       icono: <null />,
     },
     {
-      texto: "Position Manager",
+      texto: t("PositionManager"),
       icono: <null />,
     },
     {
-      texto: "Liquid Staking",
+      texto: t("LiquidStaking"),
       icono: <null />,
     },
     {
-      texto: "Simple Staking",
+      texto: t("SimpleStaking"),
       icono: <null />,
     },
   ];
   const itemsGame = [
     {
-      texto: "Gaming Marketplace",
+      texto: t("GamingMarketplace"),
       icono: <FaArrowRightFromBracket />,
     },
     {
-      texto: "Prediction (BETA)",
+      texto: t("Prediction(BETA)"),
       icono: <null />,
     },
     {
-      texto: "Lottery",
+      texto: t("Lottery"),
       icono: <null />,
     },
     {
-      texto: "Pottery (BETA)",
+      texto: t("Pottery(BETA)"),
       icono: <null />,
     },
   ];
   const itemsNft = [
     {
-      texto: "Overview",
+      texto: t("Overview"),
       icono: <null />,
     },
     {
-      texto: "Colecctions",
+      texto: t("Colecctions"),
       icono: <null />,
     },
     {
-      texto: "Activity",
+      texto: t("Activity"),
       icono: <null />,
     },
   ];
 
   const itemsPunto = [
     {
-      texto: "Info",
+      texto: t("Info"),
       icono: <null />,
     },
     {
-      texto: "IFO",
+      texto: t("IFO"),
       icono: <null />,
     },
     {
-      texto: "Affiliate Program",
+      texto: t("AffiliateProgram"),
       icono: <null />,
     },
     {
-      texto: "Voting",
+      texto: t("Voting"),
       icono: <null />,
     },
     {
-      texto: "LeaderBoard",
+      texto: t("LeaderBoard"),
       icono: <null />,
     },
     {
-      texto: "Blog",
+      texto: t("Blog"),
       icono: <FaArrowRightFromBracket />,
     },
   ];
@@ -165,10 +162,10 @@ function Navbar() {
     <nav className={styles.navbar}>
       <div className={styles.dropdownPrimary}>
         <Logo />
-        <NavbarDropdown title={"Trade"} items={itemsTrade} />
-        <NavbarDropdown title={"Earn"} items={itemsEarn} punto={"success"} />
-        <NavbarDropdown title={"Game"} items={itemsGame} />
-        <NavbarDropdown title={"NFT"} items={itemsNft} />
+        <NavbarDropdown title={t("Trade")} items={itemsTrade} />
+        <NavbarDropdown title={t("Earn")} items={itemsEarn} punto={"success"} />
+        <NavbarDropdown title={t("Game")} items={itemsGame} />
+        <NavbarDropdown title={t("NFT")} items={itemsNft} />
         <NavbarDropdown title={"···"} items={itemsPunto} />
       </div>
       <div className={styles.dropdownSecondary}>
