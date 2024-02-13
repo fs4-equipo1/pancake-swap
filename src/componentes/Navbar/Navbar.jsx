@@ -14,9 +14,12 @@ import { IoMdSettings } from "react-icons/io";
 import IconoWrapper from "../IconoWraper/IconoWraper";
 import ToggleSwitch from "../Activate/Activate";
 import { Logo } from "../Logo/Logo";
-import { useWeb3Modal } from "@web3modal/wagmi/react";
+import { useWeb3Modal, useWeb3ModalEvents } from "@web3modal/wagmi/react";
 import useCoinPrice from "../CustomHooks/useCoinPrice";
 import { useStoreState, useStoreActions } from "../../store";
+import { useAccount, useDisconnect, useFeeData } from "wagmi";
+import { add } from "lodash";
+import axios from "axios";
 
 function Navbar() {
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
@@ -153,7 +156,38 @@ function Navbar() {
 
   const { price } = useCoinPrice();
 
-  const { open } = useWeb3Modal();
+  const { open, selectedNetworkId } = useWeb3Modal();
+  const { disconnect } = useDisconnect();
+
+  const { address, isDisconnected } = useAccount();
+
+  //Fetch de usuario para llamar a la api, y cambiar los datos en mi app, o si no existe, crear uno nuevo
+  const fetchUsuario = async () => {
+    try {
+      const response = await axios.get(
+        `http://localhost:3004/users/${address}`
+      );
+
+      setUser(response.data); // la respuesta de la base de datos, con username nfts, favoritos, avatar, location
+    } catch (err) {
+      console.error(err.message);
+    }
+  };
+
+  //UseEffect para manejar el cambio de billetera y hacer el fetch de usuario
+  useEffect(() => {
+    if (address) {
+      console.log(`La billetera connectada es: ${address}`);
+      console.log("Cambio la direccion, guarda el usuario en el store model");
+      fetchUsuario();
+    } else {
+      console.log("Billetera desconectada");
+    }
+  }, [address]);
+
+  useEffect(() => {
+    console.log(selectedNetworkId, "seleceted id");
+  }, [selectedNetworkId]);
 
   return (
     <nav className={styles.navbar}>
@@ -196,17 +230,20 @@ function Navbar() {
         </div>
 
         <NetworkDropdown />
-        <IconoWrapper>
-        <Boton onClick ={() => setIsWalletModalOpen(true)} texto={buttonText} isBlue={true} />
-        </IconoWrapper>
 
-        {isWalletModalOpen && (
-          <Modal onClose={() => setIsWalletModalOpen(false)}>
-            <div>
-              WALLET MODAL
-              <Boton texto={"Connect with MM"} onClick={handleWalletConnect} />
-            </div>
-          </Modal>
+        {isDisconnected && (
+          <Boton
+            onClick={() => open({ view: "Connect" })}
+            texto={"Connect Wallet"}
+            isBlue={true}
+          />
+        )}
+        {!isDisconnected && (
+          <Boton
+            onClick={() => disconnect()}
+            texto={"Disconnect Wallet"}
+            isBlue={true}
+          />
         )}
       </div>
     </nav>
