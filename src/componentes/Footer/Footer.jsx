@@ -4,7 +4,7 @@ import styles from "./Footer.module.scss";
 import FooterIcons from "./FooterIcons";
 import { FooterBuyCake } from "./FooterBuyCake";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
-import { Logo } from "../Logo/Logo";
+import { LogoWhite } from "../Logo/LogoWhite";
 
 export function Footer() {
   return (
@@ -56,7 +56,7 @@ export function Footer() {
             items={["Terms Of Service", "Blog", "Brand Assets", "Careers"]}
           />
           <div className={styles.logo}>
-            <Logo isInverted />
+            <LogoWhite />
           </div>
         </div>
         <div className={styles.footerBottom}>
