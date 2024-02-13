@@ -2,6 +2,7 @@ import Tipografia from "../Tipografia/Tipografia";
 import { CakeFiguresCard } from "./CakeFiguresCard";
 import classes from "./CakeFigures.module.scss";
 import useCoinPrice from "../CustomHooks/useCoinPrice";
+import { t } from "i18next";
 
 export function CakeFigures() {
   const { market, circulating, total } = useCoinPrice();
@@ -21,18 +22,18 @@ export function CakeFigures() {
   return (
     <div className={classes.seccionClass}>
       <div className={classes.cakeFiguresTitulo}>
-        <Tipografia color={"--colors-text"} texto={"CAKE"} isSubtitle />{" "}
-        <Tipografia color={"--colors-secondary"} texto={"Figures"} isSubtitle />
+        <Tipografia color={"--colors-text"} texto={t("CAKE")} isSubtitle />{" "}
+        <Tipografia color={"--colors-secondary"} texto={t("Figures")} isSubtitle />
       </div>
       <div className={classes.containerOfCards}>
         <CakeFiguresCard
-          titulo={"Circulating Supply"}
+          titulo={t("CirculatingSupply")}
           numero={formatCirculatingSupply}
         />
-        <CakeFiguresCard titulo={"Total Supply"} numero={formatTotalSupply} />
-        <CakeFiguresCard titulo={"Market Cap"} numero={`$${formatMarketCap}`} />
-        <CakeFiguresCard titulo={"Token Burn"} numero={`1,126,580,112`} />
-        <CakeFiguresCard titulo={"Current Emissions"} numero={`1,36/block`} />
+        <CakeFiguresCard titulo={t("TotalSupply")} numero={formatTotalSupply} />
+        <CakeFiguresCard titulo={t("MarketCap")} numero={`$${formatMarketCap}`} />
+        <CakeFiguresCard titulo={t("TokenBurn")} numero={`1,126,580,112`} />
+        <CakeFiguresCard titulo={t("CurrentEmissions")} numero={`1,36/block`} />
       </div>
     </div>
   );

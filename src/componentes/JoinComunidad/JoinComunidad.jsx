@@ -12,26 +12,27 @@ import {
 } from "react-icons/fa";
 import JoinComunidadSwiper from "./JoinComunidadSwiper";
 import { useTheme } from "../../context/ThemeContext";
+import { t } from "i18next";
 
 export function JoinComunidad() {
   return (
     <div className={styles.allcontainer}>
       <div className={styles.cardsContainer}>
         <div className={styles.tittleComunity}>
-          <h2 className={styles.join}>Join our </h2>
-          <h2 className={styles.joinComunidad}> Community</h2>
+          <h2 className={styles.join}>{t("Joinour")} </h2>
+          <h2 className={styles.joinComunidad}> {t("Community")}</h2>
         </div>
         <div className={styles.phraseComunity}>
-          Together we can make the PancakeSwap community even stronger
+         {t("textJC")}
         </div>
         <div className={styles.soloCards}>
           <div className={styles.cards}>
               <CardComunidad
-                comunidades="Community members"
+                comunidades={t("CommunityMembers")}
                 numeros="2.0M +"
-                multi="Multilingual Communities"
+                multi={t("MultilingualCommunities")}
                 multiNumbers="15 +"
-                ambassadors="Community Ambassadors"
+                ambassadors={t("CommunityAmbassadors")}
                 ambassadorsNum="35 +"
               />
             <div className={styles.containerSwiper}>

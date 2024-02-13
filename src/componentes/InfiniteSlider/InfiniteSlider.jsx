@@ -1,3 +1,4 @@
+import { t } from "i18next";
 import Tipografia from "../Tipografia/Tipografia";
 import styles from "./InfiniteSlider.module.scss";
 
@@ -7,24 +8,24 @@ export function InfiniteSlider() {
     <div className={styles.containerL}>
     <div className={styles.shapingSection}>
       <div className={styles.titlesContainer}>
-        <Tipografia isSubtitleLarge color={'--colors-text'} texto={'Shaping the Future of Decentralized Trading:'}/>
-        <Tipografia isSubtitleLarge color={'--colors-text'} texto={'PancakeSwap Unstoppable Expansion'}/>
+        <Tipografia isSubtitleLarge color={'--colors-text'} texto={t("titleIS")}/>
+        <Tipografia isSubtitleLarge color={'--colors-text'} texto={t("subtitleIS")}/>
       </div>
       <div className={styles.numberscontainer}>
         <div className={styles.numberscard}>
-          <div className={styles.totaltitle}>Total Users:</div>
+          <div className={styles.totaltitle}>{t("TotalUsers")}</div>
           <div className={styles.totalnumbers}>1,267,400</div>
-          <div className={styles.lastdays}>in the last 30 days</div>
+          <div className={styles.lastdays}>{t("last30days")}</div>
         </div>
         <div className={styles.numberscard}>
-        <div className={styles.totaltitle}>Total Traders:</div>
+        <div className={styles.totaltitle}>{t("TotalTraders")}</div>
         <div className={styles.totalnumbers}>18,912,145</div>
-        <div className={styles.lastdays}>in the last 30 days</div>
+        <div className={styles.lastdays}>{t("last30days")}</div>
         </div>
         <div className={styles.numberscard}>
-          <div className={styles.totaltitle}>Total Value Locked:</div>
+          <div className={styles.totaltitle}>{t("TotalValue")}</div>
           <div className={styles.totalnumbers}>1,521,686,350$</div>
-          <div className={styles.lastdays}>in the last 30 days</div>
+          <div className={styles.lastdays}>{t("last30days")}</div>
         </div>
       </div>
       <div className={styles.scroll}>

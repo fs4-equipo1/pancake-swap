@@ -1,12 +1,14 @@
 import styles from "./FavoriteDex.module.scss";
 import Tipografia from "../Tipografia/Tipografia";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export function Texto() {
   const windoWidth = window.outerWidth;
   const [isLaptop, setIsLaptop] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const { t } = useTranslation();
   useEffect(() => {
     const handleResize = () => {
       setIsLaptop(windoWidth >= 1024 ? true : false);
@@ -29,18 +31,18 @@ export function Texto() {
           <div className={styles.title}>
             <Tipografia
               color={"--colors-text"}
-              texto={"Everyone's"}
+              texto={t("Everyones")}
               isSubtitleLarge
             ></Tipografia>
             {/* <div className={styles.separador}> */}
               <Tipografia
                 color={"--colors-secondary"}
-                texto={"Favorite"}
+                texto={t("Favorite")}
                 isSubtitleLarge
               />
               <Tipografia
                 color={"--colors-text"}
-                texto={"DEX"}
+                texto={t("DEX")}
                 isSubtitleLarge
               />
             {/* </div>                 //Comentado ya que al probar, no tiene efecto.
@@ -49,7 +51,7 @@ export function Texto() {
           <div className={styles.subtext}>
             <Tipografia
               color={"--colors-textSubtle"}
-              texto={"Trade, earn, and own crypto on the all-in-one multichain DEX"}
+              texto={t("textoFD")}
               isBodyLarge
             ></Tipografia>
             {/* <Tipografia
@@ -65,27 +67,27 @@ export function Texto() {
           <div className={styles.title}>
             <Tipografia
               color={"--colors-text"}
-              texto={"Everyone's"}
+              texto={t("Everyones")}
               isTitle
             ></Tipografia>
             {/* <div className={styles.separador}> */}
               <Tipografia
                 color={"--colors-secondary"}
-                texto={"Favorite"}
+                texto={t("Favorite")}
                 isTitle
               />
-              <Tipografia color={"--colors-text"} texto={"DEX"} isTitle />
+              <Tipografia color={"--colors-text"} texto={t("DEX")} isTitle />
             {/* </div> */}
           </div>
           <div className={styles.subtext}>
             <Tipografia
               color={"--colors-textSubtle"}
-              texto={"Trade, earn, and own crypto on the all-in-one"}
+              texto={t("textoFD1")}
               isSubtitle
             ></Tipografia>
             <Tipografia
               color={"--colors-textSubtle"}
-              texto={"multichain DEX"}
+              texto={t("textoFD2")}
               isSubtitle
             ></Tipografia>
           </div>
@@ -96,27 +98,27 @@ export function Texto() {
           <div className={styles.title}>
             <Tipografia
               color={"--colors-text"}
-              texto={"Everyone's"}
+              texto={t("Everyones")}
               isTitleLarge
             ></Tipografia>
             <div className={styles.separador}>
               <Tipografia
                 color={"--colors-secondary"}
-                texto={"Favorite"}
+                texto={t("Favorite")}
                 isTitleLarge
               />
-              <Tipografia color={"--colors-text"} texto={"DEX"} isTitleLarge />
+              <Tipografia color={"--colors-text"} texto={t("DEX")} isTitleLarge />
             </div>
           </div>
           <div className={styles.subtext}>
             <Tipografia
               color={"--colors-textSubtle"}
-              texto={"Trade, earn, and own crypto on the all-in-one"}
+              texto={t("textoFD1")}
               isSubtitle
             ></Tipografia>
             <Tipografia
               color={"--colors-textSubtle"}
-              texto={"multichain DEX"}
+              texto={t("textoFD2")}
               isSubtitle
             ></Tipografia>
           </div>

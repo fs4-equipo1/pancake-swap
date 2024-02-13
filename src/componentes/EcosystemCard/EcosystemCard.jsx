@@ -7,6 +7,7 @@ import Tipografia from "../Tipografia/Tipografia";
 import { useStoreState, useStoreActions } from "../../store";
 import { useTheme } from "../../context/ThemeContext";
 import { useMediaQuery } from "./useMediaQuerie";
+import { t } from "i18next";
 
 const cx = classNames.bind(styles);
 
@@ -62,8 +63,8 @@ function EcosystemImgAndTitle() {
         ></path>
       </svg>
       <div className={styles.ecosystemTitle}>
-        <Tipografia color={"--colors-text"} texto={"Discover the"} isTitle />
-        <Tipografia color={"--colors-secondary"} texto={"Ecosystem"} isTitle />
+        <Tipografia color={"--colors-text"} texto={t("DiscoverThe")} isTitle />
+        <Tipografia color={"--colors-secondary"} texto={t("Ecosystem")} isTitle />
       </div>
     </div>
   );
@@ -116,20 +117,20 @@ export function EcosystemCards() {
       <EcosystemImgAndTitle />
       <EcosystemCard
         path={"../../Assets/Images/trade-bunny.png"}
-        titulo={"Trade"}
+        titulo={t("Trade")}
         cardData={EcosystemCardsData}
         objectId={1}
       />
       <EcosystemCard
         path={"../../Assets/Images/asset36.png"}
-        titulo={"Earn"}
+        titulo={t("Earn")}
         cardData={EcosystemCardsData}
         objectId={2}
         isReverse
       />
       <EcosystemCard
         path={"../../Assets/Images/asset8.png"}
-        titulo={"Game & NFT"}
+        titulo={t("GameNFT")}
         cardData={EcosystemCardsData}
         objectId={3}
       />
