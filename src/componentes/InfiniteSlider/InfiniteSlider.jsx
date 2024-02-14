@@ -1,8 +1,10 @@
+import { ShapingFuture } from "../BackgroundSections/ShapingFuture";
 import Tipografia from "../Tipografia/Tipografia";
 import styles from "./InfiniteSlider.module.scss";
 
 export function InfiniteSlider() {
   return (
+    <ShapingFuture>
     <section className={styles.shapfuture}>
     <div className={styles.containerL}>
     <div className={styles.shapingSection}>
@@ -94,6 +96,7 @@ export function InfiniteSlider() {
     </div>
     </div>
     </section>
+    </ShapingFuture>
   );
 }
 

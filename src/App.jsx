@@ -18,16 +18,18 @@ import { BaseSection } from "./componentes/MainBaseComponents/BaseSection";
 import BotonArriba from "./componentes/BotonArriba/BotonArriba";
 import { WalletConnect } from "./componentes/WalletConnect/WalletConnect"
 import DropdownSticky from "./componentes/DropdownFoooter/DropdownSticky";
+import { HeroSection } from "./componentes/BackgroundSections/HeroSection";
 
 export function App() {
   return (
 
     <BaseSection>
       <Navbar />
-
-      <HeroSwiper />
-
-      <FavoriteDex />
+      
+      <HeroSection>
+        <HeroSwiper />
+        <FavoriteDex />
+      </HeroSection>
 
       <InfiniteSlider />
 

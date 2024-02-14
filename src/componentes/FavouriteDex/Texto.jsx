@@ -80,14 +80,14 @@ export function Texto() {
           <div className={styles.subtext}>
             <Tipografia
               color={"--colors-textSubtle"}
-              texto={"Trade, earn, and own crypto on the all-in-one"}
+              texto={"Trade, earn, and own crypto on the all-in-one multichain DEX"}
               isSubtitle
             ></Tipografia>
-            <Tipografia
+            {/* <Tipografia
               color={"--colors-textSubtle"}
               texto={"multichain DEX"}
               isSubtitle
-            ></Tipografia>
+            ></Tipografia> */}
           </div>
         </div>
       )}

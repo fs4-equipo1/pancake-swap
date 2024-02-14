@@ -63,7 +63,7 @@ export const heroSwiperCardData = [
       </div>
     ),
     botonPrimary: <Boton texto="Get Started" icon={<ArrowRight color={"white"}/>} isBlue isTextWhite />,
-    botonSecondary: <Boton texto="Learn More" isWhite />,
+    botonSecondary: <Boton texto="Learn More" isLearnWhite />,
     bunnyPng: (
       <img
         style={{
