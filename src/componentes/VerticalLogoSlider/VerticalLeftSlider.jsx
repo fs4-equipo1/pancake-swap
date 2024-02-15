@@ -1,12 +1,14 @@
 import { t } from "i18next";
 import styles from "./VerticalLeftSlider.module.scss";
+import { useTranslation } from "react-i18next";
 
 function VerticalLeftSlider() {
+  const { t } = useTranslation();
   return (
     <div className={styles.containerL}>
       <div className={styles.titleInfinite}>
         <div className={styles.titleSlider}>
-          <h2>Ecosystem</h2>
+          <h2>{t("Ecosystem")}</h2>
         </div>
         <div className={styles.scroll}>
           <div>
