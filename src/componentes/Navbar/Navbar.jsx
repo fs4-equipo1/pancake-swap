@@ -235,7 +235,7 @@ function Navbar() {
           <Boton
             onClick={() => open({ view: "Connect" })}
             texto={"Connect Wallet"}
-            texto={window.innerWidth >= '426'}
+            // texto={window.innerWidth >= '426'} habia error por texto duplicado. Falta por arreglar este boton.
             isBlue={true}
           />
         )}
