@@ -127,5 +127,25 @@
     "NewsTitle8": "zkSync Era welcomes PancakeSwap to the ecosystem",
     "NewsText8": "ZkSync Era will be the third zero-knowledge platform on which PancakeSwap will launch.",
     "NewsTitle9": "PancakeSwap: Supporting the DeFi ecosystem with an always-available infrastructure",
-    "NewsText9": "PancakeSwap implements Google Cloud to maintain platform availability at all times so that users can trade seamlessly around the clock."
+    "NewsText9": "PancakeSwap implements Google Cloud to maintain platform availability at all times so that users can trade seamlessly around the clock.",
+
+    "FavouriteDEX":"Join Everyone's Favorite DEX Now!",
+
+    "Tokenomics":"Tokenomics",
+    "Litepaper":"Litepaper",
+    "CAKEEmissionProjection":"CAKE Emission Projection",
+    "BUSINESS":"BUSINESS",
+    "FarmsAndSyrupPools":"Farms And Syrup Pools",
+    "DEVELOPERS":"DEVELOPERS",
+    "Contributing":"Contributing",
+    "BugBounty":"Bug Bounty",
+    "SUPPORT":"SUPPORT",
+    "Contact":"Contact",
+    "Troubleshooting":"Troubleshooting",
+    "Documentation":"Documentation",
+    "ABOUT":"ABOUT",
+    "TermsOfService":"Terms Of Service",
+    "BrandAssets":"Brand Assets",
+    "Careers":"Careers"
+
 }

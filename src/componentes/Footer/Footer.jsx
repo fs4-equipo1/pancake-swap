@@ -5,6 +5,7 @@ import FooterIcons from "./FooterIcons";
 import { FooterBuyCake } from "./FooterBuyCake";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
 import { Logo } from "../Logo/Logo";
+import { t } from "i18next";
 
 export function Footer() {
   return (
@@ -27,33 +28,33 @@ export function Footer() {
           </div>
 
           <FooterColumn
-            title={"ECOSYSTEM"}
+            title={t("Ecosystem")}
             items={[
-              "Trade",
-              "Earn",
-              "Game",
+              t("Trade"),
+              t("Earn"),
+              t("Game"),
               "NFT",
-              "Tokenomics",
-              "Litepaper",
-              "CAKE Emission Projection",
+              t("Tokenomics"),
+              t("Litepaper"),
+              t("CAKEEmissionProjection"),
               "Merchandise",
             ]}
           />
           <FooterColumn
-            title={"BUSINESS"}
-            items={["Farms And Syrup Pools", "IFO", "NFT Marketplace"]}
+            title={t("BUSINESS")}
+            items={[t("FarmsAndSyrupPools"), "IFO", t("NFTMarketplace")]}
           />
           <FooterColumn
-            title={"DEVELOPERS"}
-            items={["Contributing", "Github", "Bug Bounty"]}
+            title={t("DEVELOPERS")}
+            items={[t("Contributing"), "Github", t("BugBounty")]}
           />
           <FooterColumn
-            title={"SUPPORT"}
-            items={["Contact", "Troubleshooting", "Documentation"]}
+            title={t("SUPPORT")}
+            items={[t("Contact"), t("Troubleshooting"), t("Documentation")]}
           />
           <FooterColumn
-            title={"ABOUT"}
-            items={["Terms Of Service", "Blog", "Brand Assets", "Careers"]}
+            title={t("ABOUT")}
+            items={[t("TermsOfService"), "Blog", t("BrandAssets"), t("Careers")]}
           />
           <div className={styles.logo}>
             <Logo isInverted />

@@ -2,6 +2,7 @@ import styles from "./DexNow.module.scss";
 
 import background from "../../assets/background.png";
 import Boton from "../Boton/Boton";
+import { t } from "i18next";
 const DexNow = ({ titleLarge }) => {
 
   return (
@@ -22,10 +23,10 @@ export function DexNowSection() {
       }}
     >
       <div>
-        <DexNow titleLarge={"Join Everyone's Favorite DEX Now!"} />
+        <DexNow titleLarge={t("FavouriteDEX")} />
       </div>
       <div>
-        <Boton texto={"Connect Wallet"} isBlue={true} />
+        <Boton texto={t("ConnectWallet")} isBlue={true} />
       </div>
     </div>
   );
