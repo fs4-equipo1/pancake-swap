@@ -45,7 +45,7 @@ export default () => {
       fadeEffect={{ crossFade: true }}
       pagination={{ clickable: true }}
       autoplay={{
-        delay: 5000,
+        delay: 50000,
         disableOnInteraction: false,
       }}
     >
