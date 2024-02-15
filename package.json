@@ -27,7 +27,8 @@
     "sass": "^1.69.5",
     "swiper": "^11.0.5",
     "viem": "^1.21.4",
-    "wagmi": "^1.4.13"
+    "wagmi": "^1.4.13",
+    "web3modal": "^1.9.12"
   },
   "devDependencies": {
     "@types/react": "^18.2.37",
