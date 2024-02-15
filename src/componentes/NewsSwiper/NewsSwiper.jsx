@@ -8,8 +8,10 @@ import "./NewsSwiper.scss";
 import SwiperPrev from "../../../Assets/Icons/SwiperPrev";
 import SwiperNext from "../../../Assets/Icons/SwiperNext";
 import Tipografia from "../Tipografia/Tipografia";
+import { useTranslation } from "react-i18next";
 
 export default () => {
+  const { t } = useTranslation();
   return (
     <div className="featured-news-container">
       <div className="title-container">

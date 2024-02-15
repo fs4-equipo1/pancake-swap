@@ -2,7 +2,10 @@ import { t } from "i18next";
 import { ArrowLink } from "../../../Assets/Icons/ArrowLink";
 import Boton from "../Boton/Boton";
 import styles from "./CakePotencial.module.scss";
+import { useTranslation } from "react-i18next";
+
 export function CakePotencial() {
+  const { t } = useTranslation();
   return (
     <div className={styles.containerText}>
       <div className={styles.titleCake}>

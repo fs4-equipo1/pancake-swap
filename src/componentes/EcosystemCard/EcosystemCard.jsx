@@ -8,8 +8,10 @@ import { useStoreState, useStoreActions } from "../../store";
 import { useTheme } from "../../context/ThemeContext";
 import { useMediaQuery } from "./useMediaQuerie";
 import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 
 const cx = classNames.bind(styles);
+
 
 export function Card({
   imageSrc,
@@ -54,6 +56,7 @@ export function Card({
 }
 
 function EcosystemImgAndTitle() {
+  const {t} = useTranslation();
   return (
     <div className={styles.headerContainer}>
       <svg viewBox="0 0 48 48" height="48px" width="48px" mb="24px">
@@ -112,6 +115,7 @@ export function EcosystemCard({ path, titulo, cardData, objectId, isReverse }) {
 }
 
 export function EcosystemCards() {
+  const {t} = useTranslation();
   return (
     <div className={styles.section}>
       <EcosystemImgAndTitle />

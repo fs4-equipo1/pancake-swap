@@ -6,8 +6,10 @@ import { FooterBuyCake } from "./FooterBuyCake";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
 import { Logo } from "../Logo/Logo";
 import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 
 export function Footer() {
+  const {t} = useTranslation();
   return (
     <div className={styles.footerSection}>
       <div className={styles.footerContainer}>

@@ -3,6 +3,7 @@ import styles from "./DexNow.module.scss";
 import background from "../../assets/background.png";
 import Boton from "../Boton/Boton";
 import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 const DexNow = ({ titleLarge }) => {
 
   return (
@@ -13,6 +14,7 @@ const DexNow = ({ titleLarge }) => {
 };
 
 export function DexNowSection() {
+  const { t } = useTranslation();
   return (
     <div
       className={styles.DexNowSection}

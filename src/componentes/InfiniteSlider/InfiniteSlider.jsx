@@ -1,8 +1,9 @@
-import { t } from "i18next";
 import Tipografia from "../Tipografia/Tipografia";
 import styles from "./InfiniteSlider.module.scss";
+import { useTranslation } from "react-i18next";
 
 export function InfiniteSlider() {
+  const { t } = useTranslation();
   return (
     <section className={styles.shapfuture}>
     <div className={styles.containerL}>

@@ -3,8 +3,10 @@ import { CakeFiguresCard } from "./CakeFiguresCard";
 import classes from "./CakeFigures.module.scss";
 import useCoinPrice from "../CustomHooks/useCoinPrice";
 import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 
 export function CakeFigures() {
+  const { t } = useTranslation();
   const { market, circulating, total } = useCoinPrice();
   const formatCirculatingSupply = new Intl.NumberFormat("en-US", {
     //Formatea el numero
