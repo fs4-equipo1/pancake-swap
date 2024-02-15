@@ -40,7 +40,12 @@
     "TryNow":"Try Now",
 
     "YouCAKEYourVoice":"Your CAKE, Your Voice",
+    "Introducing":"Introducing",
+    "GaugesVoting":"Gauges Voting",
+    "andveCAKE":"and veCAKE",
     "PancakeGamingMarketplace":"Pancake Gaming Marketplace",
+    "ExploreYour":"Explore Your",
+    "MonthlyPlayers":"1.5M Monthly Players Await!",
     "PerpetualFutures":"Perpetual Futures",
     "UPTO1001×LEVERAGE":"UP TO 1001× LEVERAGE",
 
@@ -110,6 +115,8 @@
     "CommunityAmbassadors":"Community Ambassadors",
     "TopTweetOfTheWeek": "Top Tweet of the week",
 
+    "Featured":"Featured",
+    "News":"News",
     "From":"From",
     "NewsTitle1": "PancakeSwap seeks 300M CAKE token supply revamp",
     "NewsText1": "Decentralized exchange (DEX) PancakeSwap is looking to slash the maximum supply of its ecosystem token, CAKE, from 750 million to 450 million.",

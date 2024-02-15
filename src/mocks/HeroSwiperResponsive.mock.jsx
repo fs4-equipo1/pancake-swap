@@ -2,6 +2,7 @@ import images from "../../Assets/SwiperImages/HeroSwiperImages";
 import Boton from "../componentes/Boton/Boton";
 import { ArrowLink } from "../../Assets/Icons/ArrowLink";
 import { ArrowRight } from "../../Assets/Icons/ArrowRight";
+import { t } from "i18next";
 
 export const heroSwiperCardDataTablet = [
   {
@@ -26,12 +27,12 @@ export const heroSwiperCardDataTablet = [
           fontSize: "24px",
         }}
       >
-        Your CAKE, Your Voice
+        {t("YouCAKEYourVoice")}
       </h4>
     ),
     secondText: null,
     botonPrimary: (
-      <Boton texto="Get Started" icon={<ArrowRight color={"white"}/>} isBlue isSmall isTextWhite />
+      <Boton texto={t("GetStarted")} icon={<ArrowRight color={"white"}/>} isBlue isSmall isTextWhite />
     ),
     botonSecondary: null,
     bunnyPng: (
@@ -71,7 +72,7 @@ export const heroSwiperCardDataTablet = [
           lineHeight: 1.1,
         }}
       >
-        Pancake Gaming Marketplace
+        {t("PancakeGamingMarketplace")}
       </h4>
     ),
     secondText: null,
@@ -89,7 +90,7 @@ export const heroSwiperCardDataTablet = [
             gap: "10px",
           }}
         >
-          Try Now
+          {t("Try Now")}
           <ArrowLink color={"#34fba6"}/>
         </a>
       </div>
@@ -135,7 +136,7 @@ export const heroSwiperCardDataTablet = [
           color: "var(--colors-gold)",
         }}
       >
-        Perpetual Futures
+        {t("PerpetualFutures")}
       </h6>
     ),
     secondText: (
@@ -148,11 +149,11 @@ export const heroSwiperCardDataTablet = [
           lineHeight: 1.1,
         }}
       >
-        UP TO 1001× LEVERAGE
+        {t("UPTO1001×LEVERAGE")}
       </div>
     ),
     botonPrimary: (
-      <Boton texto="Trade Now" icon={<ArrowRight color={"white"} />} isBlue isSmall isTextWhite/>
+      <Boton texto={t("TradeNow")} icon={<ArrowRight color={"white"} />} isBlue isSmall isTextWhite/>
     ),
     botonSecondary: null,
     bunnyPng: (
@@ -195,12 +196,12 @@ export const heroSwiperCardDataMobile = [
           fontSize: "18px",
         }}
       >
-        Your CAKE, Your Voice
+        {t("YouCAKEYourVoice")}
       </h4>
     ),
     secondText: null,
     botonPrimary: (
-      <Boton texto="Get Started" icon={<ArrowRight color={"white"}/>} isBlue isSmall isTextWhite />
+      <Boton texto={t("GetStarted")} icon={<ArrowRight color={"white"}/>} isBlue isSmall isTextWhite />
     ),
     botonSecondary: null,
     bunnyPng: (
@@ -238,7 +239,7 @@ export const heroSwiperCardDataMobile = [
           fontSize: "20px",
         }}
       >
-        Gaming Marketplace
+        {t("GamingMarketplace")}
       </h4>
     ),
     secondText: null,
@@ -256,7 +257,7 @@ export const heroSwiperCardDataMobile = [
             gap: "10px",
           }}
         >
-          Try Now
+          {t("TryNow")}
           <ArrowLink color={"#34fba6"}/>
         </a>
       </div>
@@ -302,7 +303,7 @@ export const heroSwiperCardDataMobile = [
           color: "var(--colors-gold)",
         }}
       >
-        Perpetual Futures
+        {t("PerpetualFutures")}
       </h6>
     ),
     secondText: (
@@ -314,11 +315,11 @@ export const heroSwiperCardDataMobile = [
           fontSize: "18px",
         }}
       >
-        UP TO 1001× LEVERAGE
+        {t("UPTO1001×LEVERAGE")}
       </div>
     ),
     botonPrimary: (
-      <Boton texto="Trade Now" icon={<ArrowRight color={"white"}/>} isBlue isSmall isTextWhite/>
+      <Boton texto={t("TradeNow")} icon={<ArrowRight color={"white"}/>} isBlue isSmall isTextWhite/>
     ),
     botonSecondary: null,
     bunnyPng: (

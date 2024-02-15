@@ -2,6 +2,7 @@ import images from "../../Assets/SwiperImages/HeroSwiperImages";
 import { ArrowLink } from "../../Assets/Icons/ArrowLink";
 import { ArrowRight } from "../../Assets/Icons/ArrowRight";
 import Boton from "../componentes/Boton/Boton";
+import { t } from "i18next";
 
 export const heroSwiperCardData = [
   {
@@ -25,7 +26,7 @@ export const heroSwiperCardData = [
           lineHeight: 1.3,
         }}
       >
-        Your CAKE, Your Voice
+        {t("YouCAKEYourVoice")}
       </h4>
     ),
     secondText: (
@@ -43,7 +44,7 @@ export const heroSwiperCardData = [
             marginRight: "var(--space-4px)",
           }}
         >
-          Introducing
+          {t("Introducing")}
         </div>
         <div
           style={{
@@ -51,14 +52,14 @@ export const heroSwiperCardData = [
             marginRight: "var(--space-4px)",
           }}
         >
-          Gauges Voting
+          {t("GaugesVoting")}
         </div>
         <div
           style={{
             color: "var(--colors-secondary)",
           }}
         >
-          and veCAKE
+          {t("andveCAKE")}
         </div>
       </div>
     ),
@@ -111,7 +112,7 @@ export const heroSwiperCardData = [
           color: "var(--colors-gold)",
         }}
       >
-        PancakeSwap Gaming Marketplace
+        {t("PancakeGamingMarketplace")}
       </h4>
     ),
     secondText: (
@@ -130,7 +131,7 @@ export const heroSwiperCardData = [
             fontSize: "22px",
           }}
         >
-          Explore Your
+          {t("ExploreYour")}
         </div>
         <div
           style={{
@@ -156,7 +157,7 @@ export const heroSwiperCardData = [
             WebkitTextFillColor: "transparent",
           }}
         >
-          1.5M Monthly Players Await!
+          {t("MonthlyPlayers")}
         </div>
       </div>
     ),
@@ -174,7 +175,7 @@ export const heroSwiperCardData = [
             gap: "10px",
           }}
         >
-          Try Now
+          {t("TryNow")}
           <ArrowLink color={"#34fba6"}/>
         </a>
       </div>
@@ -220,7 +221,7 @@ export const heroSwiperCardData = [
           color: "var(--colors-gold)",
         }}
       >
-        Perpetual Futures
+        {t("PerpetualFutures")}
       </h6>
     ),
     secondText: (
@@ -232,7 +233,7 @@ export const heroSwiperCardData = [
           fontSize: "38px",
         }}
       >
-        UP TO 1001× LEVERAGE
+        {t("UPTO1001×LEVERAGE")}
       </div>
     ),
     botonPrimary: <Boton texto="Trade Now" icon={<ArrowRight color={"white"}/>} isBlue isTextWhite />,
