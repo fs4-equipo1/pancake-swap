@@ -235,6 +235,7 @@ function Navbar() {
           <Boton
             onClick={() => open({ view: "Connect" })}
             texto={"Connect Wallet"}
+            texto={window.innerWidth >= '426'}
             isBlue={true}
           />
         )}

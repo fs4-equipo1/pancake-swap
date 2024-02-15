@@ -52,7 +52,9 @@
     position: relative;
     z-index: 2;
     
-    width: 90vw;
+    @media (min-width: 426px){
+        width: 70vw;
+    }
 
     color: white;
     background: rgba(0, 0, 0, 0.8);
