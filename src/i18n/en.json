@@ -107,5 +107,25 @@
     "textJC":"Together we can make the PancakeSwap community even stronger",
     "CommunityMembers":"Community members",
     "MultilingualCommunities":"Multilingual Communities",
-    "CommunityAmbassadors":"Community Ambassadors"
+    "CommunityAmbassadors":"Community Ambassadors",
+
+    "From":"From",
+    "NewsTitle1": "PancakeSwap seeks 300M CAKE token supply revamp",
+    "NewsText1": "Decentralized exchange (DEX) PancakeSwap is looking to slash the maximum supply of its ecosystem token, CAKE, from 750 million to 450 million.",
+    "NewsTitle2": "PancakeSwap Proposes to Reduce CAKE Token Supply by 300 Million",
+    "NewsText2": "PancakeSwap floated a vote proposal to reduce the maximum supply of CAKE from 750 million to 450 million. The voting period began in early hours on Thursday and will last until 8:00 am UTC on Friday.",
+    "NewsTitle3": "PancakeSwap implements new ‘Gauges’ voting system",
+    "NewsText3": "The decentralized exchange launched a new feature that allows governance tokenholders to vote on which pools will receive the most rewards.",
+    "NewsTitle4": "PancakeSwap Launches Gaming Marketplace",
+    "NewsText4": "The decentralized exchange PancakeSwap has launched a gaming marketplace. The new platform lets developers build, launch and update games with web3 elements, such ...",
+    "NewsTitle5": "PancakeSwap adds portfolio manager function in partnership with Bril",
+    "NewsText5": "Decentralized crypto exchange PancakeSwap now has portfolio manager functionality, according to an Oct. 30 announcement. The feature has been added in partnership ...",
+    "NewsTitle6": "PancakeSwap Expands to Coinbase-Incubated Base Network",
+    "NewsText6": "PancakeSwap joins DeFi heavyweights like Uniswap, SushiSwap, and 1inch launching on the buzzy layer-2 network Base.",
+    "NewsTitle7": "PancakeSwap Deploys on Ethereum Scaling Network Arbitrum in Expansion Drive",
+    "NewsText7": "The decentralized exchange has joined several networks this year in the search for new users and revenue streams.",
+    "NewsTitle8": "zkSync Era welcomes PancakeSwap to the ecosystem",
+    "NewsText8": "ZkSync Era will be the third zero-knowledge platform on which PancakeSwap will launch.",
+    "NewsTitle9": "PancakeSwap: Supporting the DeFi ecosystem with an always-available infrastructure",
+    "NewsText9": "PancakeSwap implements Google Cloud to maintain platform availability at all times so that users can trade seamlessly around the clock."
 }

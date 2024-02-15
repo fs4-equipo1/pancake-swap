@@ -108,5 +108,25 @@
     "textJC":"Juntos podemos fortalecer aún más la comunidad PancakeSwap",
     "CommunityMembers":"Miembros de la comunidad",
     "MultilingualCommunities":"Comunidades multilingües",
-    "CommunityAmbassadors":"Embajadores de la comunidad"    
+    "CommunityAmbassadors":"Embajadores de la comunidad",
+    
+    "From":"Desde",
+    "NewsTitle1": "PancakeSwap busca renovar el suministro de tokens CAKE de 300 millones",
+    "NewsText1": "El intercambio descentralizado (DEX) PancakeSwap busca reducir el suministro máximo de su token de ecosistema, CAKE, de 750 millones a 450 millones.",
+    "NewsTitle2": "PancakeSwap propone reducir el suministro de tokens CAKE en 300 millones",
+    "NewsText2": "PancakeSwap presentó una propuesta de votación para reducir el suministro máximo de CAKE de 750 millones a 450 millones. El período de votación comenzó en las primeras horas del jueves y durará hasta las 8:00 am UTC del viernes.",
+    "NewsTitle3": "PancakeSwap implementa un nuevo sistema de votación 'Gauges'",
+    "NewsText3": "El intercambio descentralizado lanzó una nueva característica que permite a los poseedores de tokens de gobernanza votar sobre qué grupos recibirán la mayor cantidad de recompensas.",
+    "NewsTitle4": "PancakeSwap lanza el mercado de juegos",
+    "NewsText4": "El intercambio descentralizado PancakeSwap ha lanzado un mercado de juegos. La nueva plataforma permite a los desarrolladores crear, lanzar y actualizar juegos con elementos web3, como...",
+    "NewsTitle5": "PancakeSwap agrega la función de administrador de cartera en asociación con Bril",
+    "NewsText5": "El intercambio de cifrado descentralizado PancakeSwap ahora tiene la funcionalidad de administrador de cartera, según un anuncio del 30 de octubre. La función se ha agregado en asociación...",
+    "NewsTitle6": "PancakeSwap se expande a la red base incubada por Coinbase",
+    "NewsText6": "PancakeSwap se une a los pesos pesados de DeFi como Uniswap, SushiSwap y 1inch que se lanzan en la animada red de capa 2 Base.",
+    "NewsTitle7": "PancakeSwap se implementa en Ethereum Scaling Network Arbitrum en Expansion Drive",
+    "NewsText7": "El intercambio descentralizado se ha unido a varias redes este año en la búsqueda de nuevos usuarios y fuentes de ingresos.",
+    "NewsTitle8": "zkSync Era da la bienvenida a PancakeSwap al ecosistema",
+    "NewsText8": "ZkSync Era será la tercera plataforma de conocimiento cero en la que se lanzará PancakeSwap.",
+    "NewsTitle9": "PancakeSwap: respaldando el ecosistema DeFi con una infraestructura siempre disponible",
+    "NewsText9": "PancakeSwap implementa Google Cloud para mantener la disponibilidad de la plataforma en todo momento para que los usuarios puedan operar sin problemas las 24 horas del día."
 }

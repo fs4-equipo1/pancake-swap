@@ -1,69 +1,70 @@
+import { t } from "i18next";
 import images from "../../Assets/SwiperImages/NewsSwiperImages";
 
 
 export const NewsSwiperCardData = [
     {
         image: <img src= {images.image1} alt="Imagen-1" className="featured-new-img"></img>,
-        from: "From [Cointelegraph]",
+        from: t("From") + "[Cointelegraph]",
         date: "Dec 28, 2023",
-        cardTitle: "PancakeSwap seeks 300M CAKE token supply revamp",
-        cardText: "Decentralized exchange (DEX) PancakeSwap is looking to slash the maximum supply of its ecosystem token, CAKE, from 750 million to 450 million."
+        cardTitle: t("NewsTitle1"),
+        cardText: t("NewsText1")
     },
     {
         image: <img src= {images.image2} alt="Imagen-2" className="featured-new-img"></img>,
-        from: "From [CoinDesk]",
+        from: t("From") + "[CoinDesk]",
         date: "Dec 28, 2023",
-        cardTitle: "PancakeSwap Proposes to Reduce CAKE Token Supply by 300 Million",
-        cardText: "PancakeSwap floated a vote proposal to reduce the maximum supply of CAKE from 750 million to 450 million. The voting period began in early hours on Thursday and will last until 8:00 am UTC on Friday."
+        cardTitle: t("NewsTitle2"),
+        cardText: t("NewsText2")
     },
     {
         image: <img src= {images.image3} alt="Imagen-3" className="featured-new-img"></img>,
-        from: "From [Cointelegraph]",
+        from: t("From") + "[Cointelegraph]",
         date: "Nov 23, 2023",
-        cardTitle: "PancakeSwap implements new ‘Gauges’ voting system",
-        cardText: "The decentralized exchange launched a new feature that allows governance tokenholders to vote on which pools will receive the most rewards."
+        cardTitle: t("NewsTitle3"),
+        cardText: t("NewsText3")
     },
     {
         image: <img src= {images.image4} alt="Imagen-4" className="featured-new-img"></img>,
-        from: "From [The Block]",
+        from: t("From") + "[The Block]",
         date: "Nov 15, 2023",
-        cardTitle: "PancakeSwap Launches Gaming Marketplace",
-        cardText: "The decentralized exchange PancakeSwap has launched a gaming marketplace. The new platform lets developers build, launch and update games with web3 elements, such ..."
+        cardTitle: t("NewsTitle4"),
+        cardText: t("NewsText4")
     },
     {
         image: <img src= {images.image5} alt="Imagen-5" className="featured-new-img"></img>,
-        from: "From [Cointelegraph]",
+        from: t("From") + "[Cointelegraph]",
         date: "Oct 30, 2023",
-        cardTitle: "PancakeSwap adds portfolio manager function in partnership with Bril",
-        cardText: "Decentralized crypto exchange PancakeSwap now has portfolio manager functionality, according to an Oct. 30 announcement. The feature has been added in partnership ..."
+        cardTitle: t("NewsTitle5"),
+        cardText: t("NewsText5")
     },
     {
         image: <img src= {images.image6} alt="Imagen-6" className="featured-new-img"></img>,
-        from: "From [Decrypt]",
+        from: t("From") + "[Decrypt]",
         date: "Aug 31, 2023",
-        cardTitle: "PancakeSwap Expands to Coinbase-Incubated Base Network",
-        cardText: "PancakeSwap joins DeFi heavyweights like Uniswap, SushiSwap, and 1inch launching on the buzzy layer-2 network Base."
+        cardTitle: t("NewsTitle6"),
+        cardText: t("NewsText6")
     },
     {
         image: <img src= {images.image7} alt="Imagen-7" className="featured-new-img"></img>,
-        from: "From [CoinDesk]",
+        from: t("From") + "[CoinDesk]",
         date: "Aug 10, 2023",
-        cardTitle: "PancakeSwap Deploys on Ethereum Scaling Network Arbitrum in Expansion Drive",
-        cardText: "The decentralized exchange has joined several networks this year in the search for new users and revenue streams."
+        cardTitle: t("NewsTitle7"),
+        cardText: t("NewsText7")
     },
     {
         image: <img src= {images.image8} alt="Imagen-8" className="featured-new-img"></img>,
-        from: "From [Blockworks]",
+        from: t("From") + "[Blockworks]",
         date: "Jul 28, 2023",
-        cardTitle: "zkSync Era welcomes PancakeSwap to the ecosystem",
-        cardText: "ZkSync Era will be the third zero-knowledge platform on which PancakeSwap will launch."
+        cardTitle: t("NewsTitle8"),
+        cardText: t("NewsText8")
     },
     {
         image: <img src= {images.image9} alt="Imagen-9" className="featured-new-img"></img>,
-        from: "From [Google Cloud]",
+        from: t("From") + "[Google Cloud]",
         date: "Jul 11, 2023",
-        cardTitle: "PancakeSwap: Supporting the DeFi ecosystem with an always-available infrastructure",
-        cardText: "PancakeSwap implements Google Cloud to maintain platform availability at all times so that users can trade seamlessly around the clock."
+        cardTitle: t("NewsTitle9"),
+        cardText: t("NewsText9")
     },
 
 ]
