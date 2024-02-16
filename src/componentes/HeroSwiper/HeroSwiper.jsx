@@ -20,12 +20,12 @@ export default () => {
 
   const { t } = useTranslation();
 
- /* const getTitleKey = (index) => {
+  /*const getTitleKey = (index) => {
     switch (index % 3){
       case 0 = 
     }
   }*/
-  /*const heroSwiperCardData = [
+  const heroSwiperCardData = [
     {
       backgroundImg: images.background1,
       colorBackground: "transparent",
@@ -275,7 +275,7 @@ export default () => {
       decorationPng: null,
     },
   ];
-*/
+
   const heroSwiperCardDataTablet = [
     {
       backgroundImg: images.background1,
