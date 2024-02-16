@@ -1,3 +1,4 @@
+import { ShapingFuture } from "../BackgroundSections/ShapingFuture";
 import Tipografia from "../Tipografia/Tipografia";
 import styles from "./InfiniteSlider.module.scss";
 import { useTranslation } from "react-i18next";
@@ -5,6 +6,7 @@ import { useTranslation } from "react-i18next";
 export function InfiniteSlider() {
   const { t } = useTranslation();
   return (
+    <ShapingFuture>
     <section className={styles.shapfuture}>
     <div className={styles.containerL}>
     <div className={styles.shapingSection}>
@@ -96,6 +98,7 @@ export function InfiniteSlider() {
     </div>
     </div>
     </section>
+    </ShapingFuture>
   );
 }
 

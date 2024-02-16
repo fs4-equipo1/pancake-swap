@@ -1,16 +1,123 @@
-.dexTitle{
-    text-align: center;
-    font-size: 40px;
-    margin-bottom: 40px;
+.DexNowSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 550px;
+  position: relative;
 }
 
-.DexNowSection{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: var(--colors-white);
+.contentContainer {
+  height: 550px;
+  max-width: 1000px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--colors-white);
+}
 
-    width: 100%;
-    min-height: 550px;
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--colors-white);
+  margin: 10px 30px 10px 30px;
+}
+
+.dexTitle {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.cakeRight {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  animation: 3s ease-in-out 2.5s infinite normal none running transformCakeRight;
+}
+
+@keyframes transformCakeRight {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  50% {
+    transform: translate(8px) translateY(6px);
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
+}
+
+.cakeLeft {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  animation: 3s ease-in-out 1s infinite normal none running transformCakeLeft;
+}
+
+@keyframes transformCakeLeft {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  50% {
+    transform: translate(3px) translateY(2px);
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
+}
+
+.rockRight {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  animation: 3s ease-in-out 0.5s infinite normal none running transformRockRight;
+}
+
+@keyframes transformRockRight {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  50% {
+    transform: translate(3px) translateY(3px);
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
+}
+
+.rockLeft {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  animation: 3s ease-in-out 3.5s infinite normal none running transformRockLeft;
+}
+
+@keyframes transformRockLeft {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  50% {
+    transform: translate(1px) translateY(1px);
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
+}
+
+@media (max-width: 698px) {
+  .cakeLeft {
+    display: none;
+  }
+
+  .cakeRight,
+  .rockLeft,
+  .rockRight {
+    width: 140px;
+  }
 }

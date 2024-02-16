@@ -20,6 +20,7 @@ import { WalletConnect } from "./componentes/WalletConnect/WalletConnect"
 import DropdownSticky from "./componentes/DropdownFoooter/DropdownSticky";
 import { I18nextProvider } from 'react-i18next';
 import i18n from './i18n/i18n'
+import { HeroSection } from "./componentes/BackgroundSections/HeroSection";
 
 export function App() {
   return (
@@ -28,10 +29,11 @@ export function App() {
     <BaseSection>
 
       <Navbar />
-
-      <HeroSwiper />
-
-      <FavoriteDex />
+      
+      <HeroSection>
+        <HeroSwiper />
+        <FavoriteDex />
+      </HeroSection>
 
       <InfiniteSlider />
 
