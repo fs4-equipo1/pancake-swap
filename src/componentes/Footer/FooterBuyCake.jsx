@@ -1,9 +1,11 @@
 import styles from "./FooterBuyCake.module.scss";
 import Boton from "../Boton/Boton";
 import useCoinPrice from "../CustomHooks/useCoinPrice";
+import { useTranslation } from "react-i18next";
 
 export function FooterBuyCake() {
   const { price } = useCoinPrice();
+  const { t } = useTranslation();
   return (
     <div>    
     <div className={styles.footerBuyCake}>
@@ -19,7 +21,7 @@ export function FooterBuyCake() {
       <p style={{ marginRight: "20px", color: "#B8ADD2" }}>{`$${price}`}</p>
       </div>
       <div>
-        <Boton texto={"Buy CAKE"} isBlue={true} />
+        <Boton texto={t("BuyCAKE")} isBlue={true} />
         
       </div>
       
