@@ -5,7 +5,6 @@ import Boton from "../Boton/Boton";
 import { t } from "i18next";
 import { useTranslation } from "react-i18next";
 const DexNow = ({ titleLarge }) => {
-
   return (
     <div>
       <div className={styles.dexTitle}>{titleLarge}</div>

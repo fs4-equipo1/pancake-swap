@@ -1,0 +1,32 @@
+.animationToken {
+    animation: 2.5s ease-in-out 0s infinite normal none running Token;
+}
+
+@keyframes Token{
+    0% {
+        transform: translate(0px, 0px);
+    }
+    50% {
+        transform: translate(0px, 8px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+
+.animationCube {
+    animation: 2.5s ease-in-out 0s infinite normal none running Cube;
+}
+
+@keyframes Cube{
+    0% {
+        transform: translate(0px, 0px);
+    }
+    50% {
+        transform: translate(-6px, 6px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}

@@ -2,6 +2,7 @@ import images from "../../Assets/SwiperImages/HeroSwiperImages";
 import { ArrowLink } from "../../Assets/Icons/ArrowLink";
 import { ArrowRight } from "../../Assets/Icons/ArrowRight";
 import Boton from "../componentes/Boton/Boton";
+import styles from "../componentes/HeroSwiperCard/SwiperAnimations.module.scss"
 import { t } from "i18next";
 
 export const heroSwiperCardData = [
@@ -63,8 +64,15 @@ export const heroSwiperCardData = [
         </div>
       </div>
     ),
-    botonPrimary: <Boton texto="Get Started" icon={<ArrowRight color={"white"}/>} isBlue isTextWhite />,
-    botonSecondary: <Boton texto="Learn More" isWhite />,
+    botonPrimary: (
+      <Boton
+        texto="Get Started"
+        icon={<ArrowRight color={"white"} />}
+        isBlue
+        isTextWhite
+      />
+    ),
+    botonSecondary: <Boton texto="Learn More" isLearnWhite />,
     bunnyPng: (
       <img
         style={{
@@ -80,6 +88,7 @@ export const heroSwiperCardData = [
     ),
     decorationPng: (
       <img
+        className={styles.animationToken}
         style={{
           position: "absolute",
           right: "35%",
@@ -196,6 +205,7 @@ export const heroSwiperCardData = [
     ),
     decorationPng: (
       <img
+        className={styles.animationCube}
         style={{
           position: "absolute",
           right: "29%",
@@ -236,7 +246,14 @@ export const heroSwiperCardData = [
         {t("UPTO1001×LEVERAGE")}
       </div>
     ),
-    botonPrimary: <Boton texto="Trade Now" icon={<ArrowRight color={"white"}/>} isBlue isTextWhite />,
+    botonPrimary: (
+      <Boton
+        texto="Trade Now"
+        icon={<ArrowRight color={"white"} />}
+        isBlue
+        isTextWhite
+      />
+    ),
     botonSecondary: null,
     bunnyPng: (
       <img

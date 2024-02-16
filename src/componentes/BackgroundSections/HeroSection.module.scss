@@ -1,0 +1,23 @@
+.heroSectionDark,
+.heroSectionLight {
+  width: 100%;
+  height: max-content;
+  position: relative;
+  z-index: 1;
+  overflow: visible;
+}
+
+.heroSectionDark {
+  background: radial-gradient(103.12%50%at 50%50%, #21193a 0%, #191326 100%);
+  background: -webkit-radial-gradient(
+    50%50%,
+    103.12%50%,
+    #21193a 0%,
+    #191326 100%
+  );
+}
+
+.heroSectionLight {
+  background: linear-gradient(139.73deg, #e6fdff 0%, #f3efff 100%);
+  background: -webkit-linear-gradient(310.27deg, #e6fdff 0%, #f3efff 100%);
+}

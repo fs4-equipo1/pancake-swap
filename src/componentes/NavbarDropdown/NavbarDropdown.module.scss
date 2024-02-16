@@ -36,7 +36,7 @@
   position: absolute;
   top: 100%;
   left: 0;
-  width: 100%;
+  width: 270px;
   background-color: var(--colors-backgroundAlt);
   border: 1px solid;
   border-color: var(--colors-cardBorder);
@@ -82,10 +82,10 @@
 }
 
 .punto {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  margin: 0px 5px;
+  margin: -7px;
 }
 
 .icon {
@@ -96,5 +96,8 @@
 @media (max-width: 850px){
   .dropdownContainer{
     display: none;
+  }
+  .dropdownContent {
+    width: 100%;
   }
 }

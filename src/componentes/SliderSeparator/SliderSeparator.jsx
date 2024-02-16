@@ -1,10 +1,19 @@
-import styles from "./SliderSeparator.module.scss"
+import { useTheme } from "../../context/ThemeContext";
+import styles from "./SliderSeparator.module.scss";
 function SliderSeparator() {
-    return (
+  const { theme } = useTheme();
+  return (
+    <>
       <div className={styles.imgSeparator}>
         <img src="..\src\assets\conejito.png" alt="Slider Separator" />
+        {theme === "dark" ? (
+          <div className={styles.imgSeparatorDark}></div>
+        ) : (
+          ""
+        )}
       </div>
-    );
-  }
-  
-  export default SliderSeparator;
+    </>
+  );
+}
+
+export default SliderSeparator;

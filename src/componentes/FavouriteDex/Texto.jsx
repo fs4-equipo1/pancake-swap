@@ -85,11 +85,11 @@ export function Texto() {
               texto={t("textoFD1")}
               isSubtitle
             ></Tipografia>
-            <Tipografia
+            {/* <Tipografia
               color={"--colors-textSubtle"}
               texto={t("textoFD2")}
               isSubtitle
-            ></Tipografia>
+            ></Tipografia> */}
           </div>
         </div>
       )}

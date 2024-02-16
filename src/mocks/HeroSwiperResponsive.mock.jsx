@@ -2,6 +2,7 @@ import images from "../../Assets/SwiperImages/HeroSwiperImages";
 import Boton from "../componentes/Boton/Boton";
 import { ArrowLink } from "../../Assets/Icons/ArrowLink";
 import { ArrowRight } from "../../Assets/Icons/ArrowRight";
+import styles from "../componentes/HeroSwiperCard/SwiperAnimations.module.scss";
 import { t } from "i18next";
 
 export const heroSwiperCardDataTablet = [
@@ -32,7 +33,13 @@ export const heroSwiperCardDataTablet = [
     ),
     secondText: null,
     botonPrimary: (
-      <Boton texto={t("GetStarted")} icon={<ArrowRight color={"white"}/>} isBlue isSmall isTextWhite />
+      <Boton
+        texto={t("GetStarted")}
+        icon={<ArrowRight color={"white"} />}
+        isBlue
+        isSmall
+        isTextWhite
+      />
     ),
     botonSecondary: null,
     bunnyPng: (
@@ -48,7 +55,20 @@ export const heroSwiperCardDataTablet = [
         alt="Bunny"
       ></img>
     ),
-    decorationPng: null,
+    decorationPng: (
+      <img
+        className={styles.animationToken}
+        style={{
+          position: "absolute",
+          right: "44%",
+          top: -29,
+          height: "77px",
+          width: "72px",
+        }}
+        src={images.cakeToken}
+        alt="Bunny"
+      ></img>
+    ),
   },
   {
     backgroundImg: null,
@@ -111,6 +131,7 @@ export const heroSwiperCardDataTablet = [
     ),
     decorationPng: (
       <img
+        className={styles.animationCube}
         style={{
           position: "absolute",
           right: "29%",
@@ -153,7 +174,13 @@ export const heroSwiperCardDataTablet = [
       </div>
     ),
     botonPrimary: (
-      <Boton texto={t("TradeNow")} icon={<ArrowRight color={"white"} />} isBlue isSmall isTextWhite/>
+      <Boton
+        texto={t("TradeNow"
+       )} icon={<ArrowRight color={"white"} />}
+        isBlue
+        isSmall
+        isTextWhite
+      />
     ),
     botonSecondary: null,
     bunnyPng: (
@@ -201,7 +228,13 @@ export const heroSwiperCardDataMobile = [
     ),
     secondText: null,
     botonPrimary: (
-      <Boton texto={t("GetStarted")} icon={<ArrowRight color={"white"}/>} isBlue isSmall isTextWhite />
+      <Boton
+        texto={t("GetStarted"
+       )} icon={<ArrowRight color={"white"} />}
+        isBlue
+        isSmall
+        isTextWhite
+      />
     ),
     botonSecondary: null,
     bunnyPng: (
@@ -216,7 +249,20 @@ export const heroSwiperCardDataMobile = [
         alt="Bunny"
       ></img>
     ),
-    decorationPng: null,
+    decorationPng: (
+      <img
+        className={styles.animationToken}
+        style={{
+          position: "absolute",
+          right: "35%",
+          top: -29,
+          height: "58px",
+          width: "54px",
+        }}
+        src={images.cakeToken}
+        alt="Bunny"
+      ></img>
+    ),
   },
   {
     backgroundImg: null,
@@ -278,6 +324,7 @@ export const heroSwiperCardDataMobile = [
     ),
     decorationPng: (
       <img
+        className={styles.animationCube}
         style={{
           position: "absolute",
           right: "19%",
@@ -319,7 +366,13 @@ export const heroSwiperCardDataMobile = [
       </div>
     ),
     botonPrimary: (
-      <Boton texto={t("TradeNow")} icon={<ArrowRight color={"white"}/>} isBlue isSmall isTextWhite/>
+      <Boton
+        texto={t("TradeNow")}
+        icon={<ArrowRight color={"white"} />}
+        isBlue
+        isSmall
+        isTextWhite
+      />
     ),
     botonSecondary: null,
     bunnyPng: (
