@@ -7,9 +7,13 @@ import { joinComunidadCardData } from "../../mocks/JoinComunidadCardData.mock";
 import JoinComunidadCard from "./JoinComunidadCard";
 import "./JoinComunidad.module.scss";
 import "./SwiperComunidad.scss";
+import { useTranslation } from "react-i18next";
 
 
 export default () => {
+
+  const {t} = useTranslation();
+
   return (
     <Swiper
       style={{ width: "100%", height: '100%', padding: '0px'}}
@@ -27,7 +31,7 @@ export default () => {
       {joinComunidadCardData.map((card, index) => (
         <SwiperSlide key={index}>
           <JoinComunidadCard
-            title={card.title}
+            title={index % 2 === 0 ? t(card.title = ("TopTweetOfTheWeek")) : t(card.title = ("LatestBlogSpot"))}
             logo={card.logo}
             image={card.image}
             fecha={card.fecha}

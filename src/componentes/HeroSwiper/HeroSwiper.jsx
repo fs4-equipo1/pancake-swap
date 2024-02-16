@@ -14,12 +14,18 @@ import { ArrowLink } from "../../../Assets/Icons/ArrowLink";
 import { ArrowRight } from "../../../Assets/Icons/ArrowRight";
 import { useTranslation } from "react-i18next";
 import Boton from "../Boton/Boton";
+import { heroSwiperCardData } from "../../mocks/HeroSwiperCard.mock";
 
 export default () => {
 
   const { t } = useTranslation();
 
-  const heroSwiperCardData = [
+ /* const getTitleKey = (index) => {
+    switch (index % 3){
+      case 0 = 
+    }
+  }*/
+  /*const heroSwiperCardData = [
     {
       backgroundImg: images.background1,
       colorBackground: "transparent",
@@ -269,7 +275,7 @@ export default () => {
       decorationPng: null,
     },
   ];
-
+*/
   const heroSwiperCardDataTablet = [
     {
       backgroundImg: images.background1,

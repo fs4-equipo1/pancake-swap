@@ -26,7 +26,7 @@ export const heroSwiperCardData = [
           lineHeight: 1.3,
         }}
       >
-        {t("YouCAKEYourVoice")}
+        Your CAKE, Your Voice
       </h4>
     ),
     secondText: (
