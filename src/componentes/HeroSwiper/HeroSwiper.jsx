@@ -20,11 +20,6 @@ export default () => {
 
   const { t } = useTranslation();
 
- /* const getTitleKey = (index) => {
-    switch (index % 3){
-      case 0 = 
-    }
-  }*/
   /*const heroSwiperCardData = [
     {
       backgroundImg: images.background1,

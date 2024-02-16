@@ -63,8 +63,8 @@ export const heroSwiperCardData = [
         </div>
       </div>
     ),
-    botonPrimary: <Boton texto="Get Started" icon={<ArrowRight color={"white"}/>} isBlue isTextWhite />,
-    botonSecondary: <Boton texto="Learn More" isWhite />,
+    botonPrimary: <Boton texto={t("GetStarted")} icon={<ArrowRight color={"white"}/>} isBlue isTextWhite />,
+    botonSecondary: <Boton texto={t("LearnMore")} isWhite />,
     bunnyPng: (
       <img
         style={{
@@ -236,7 +236,7 @@ export const heroSwiperCardData = [
         {t("UPTO1001×LEVERAGE")}
       </div>
     ),
-    botonPrimary: <Boton texto="Trade Now" icon={<ArrowRight color={"white"}/>} isBlue isTextWhite />,
+    botonPrimary: <Boton texto={t("TradeNow")} icon={<ArrowRight color={"white"}/>} isBlue isTextWhite />,
     botonSecondary: null,
     bunnyPng: (
       <img
