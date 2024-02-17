@@ -20,16 +20,13 @@ export default () => {
 
   const { t } = useTranslation();
 
-<<<<<<< HEAD
   /*const heroSwiperCardData = [
-=======
   /*const getTitleKey = (index) => {
     switch (index % 3){
       case 0 = 
     }
   }*/
   const heroSwiperCardData = [
->>>>>>> 706935f87f5ee79271fbdc521a5d773db98dc1eb
     {
       backgroundImg: images.background1,
       colorBackground: "transparent",
