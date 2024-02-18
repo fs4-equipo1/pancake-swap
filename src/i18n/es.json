@@ -52,10 +52,10 @@
 
     "Everyones":"El DEX",
     "Favorite":"Preferido",
-    "DEX":"de todos",
-    "textoFD":"Opere, gane y posea criptomonedas en el DEX multicadena todo en uno",
+    "DEX":"",
+    "textoFD":"Opere, gane y posea criptomonedas en el DEX multicadena",
     "textoFD1":"Opere, gane y posea criptomonedas en el DEX multicadena",
-    "textoFD2":"todo en uno",
+    "textoFD2":"",
 
     "titleIS":"Dando forma al futuro del comercio descentralizado:",
     "subtitleIS":"Expansión imparable de PancakeSwap",
@@ -156,7 +156,8 @@
     "ABOUT":"ACERCA DE",
     "TermsOfService":"Términos de servicio",
     "BrandAssets":"Activos de marca",
-    "Careers":"Carreras"
+    "Careers":"Carreras",
 
+    "tradClass": "styleEspañol"
 
 }

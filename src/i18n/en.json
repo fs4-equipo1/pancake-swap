@@ -155,6 +155,8 @@
     "ABOUT":"ABOUT",
     "TermsOfService":"Terms Of Service",
     "BrandAssets":"Brand Assets",
-    "Careers":"Careers"
+    "Careers":"Careers",
+
+    "tradClass": "styleIngles"
 
 }

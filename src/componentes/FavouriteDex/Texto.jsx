@@ -8,7 +8,7 @@ export function Texto() {
   const [isLaptop, setIsLaptop] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const { t } = useTranslation();
+const { t } = useTranslation();
   useEffect(() => {
     const handleResize = () => {
       setIsLaptop(windoWidth >= 1024 ? true : false);
@@ -34,7 +34,7 @@ export function Texto() {
               texto={t("Everyones")}
               isSubtitleLarge
             ></Tipografia>
-            {/* <div className={styles.separador}> */}
+            <div className={styles.separador}> {/*  descomente esta linea */}
               <Tipografia
                 color={"--colors-secondary"}
                 texto={t("Favorite")}
@@ -45,7 +45,7 @@ export function Texto() {
                 texto={t("DEX")}
                 isSubtitleLarge
               />
-            {/* </div>                 //Comentado ya que al probar, no tiene efecto.
+            </div>               {/*    //Comentado ya que al probar, no tiene efecto.
             */}
           </div>
           <div className={styles.subtext}>
@@ -70,24 +70,24 @@ export function Texto() {
               texto={t("Everyones")}
               isTitle
             ></Tipografia>
-            {/* <div className={styles.separador}> */}
+            <div className={styles.separador}>  {/*linea descomenntada */}
               <Tipografia
                 color={"--colors-secondary"}
                 texto={t("Favorite")}
                 isTitle
               />
               <Tipografia color={"--colors-text"} texto={t("DEX")} isTitle />
-            {/* </div> */}
+            </div> {/**/}
           </div>
           <div className={styles.subtext}>
             <Tipografia
               color={"--colors-textSubtle"}
-              texto={t("textoFD1")}
+              texto={t("textoFD")}
               isSubtitle
             ></Tipografia>
             {/* <Tipografia
               color={"--colors-textSubtle"}
-              texto={t("textoFD2")}
+              texto={"multichain DEX"}
               isSubtitle
             ></Tipografia> */}
           </div>
@@ -113,14 +113,14 @@ export function Texto() {
           <div className={styles.subtext}>
             <Tipografia
               color={"--colors-textSubtle"}
-              texto={t("textoFD1")}
+              texto={t("textoFD")}
               isSubtitle
             ></Tipografia>
-            <Tipografia
+            {/*<Tipografia
               color={"--colors-textSubtle"}
-              texto={t("textoFD2")}
+              texto={"multichain DEX"}
               isSubtitle
-            ></Tipografia>
+            ></Tipografia>*/}
           </div>
         </div>
       )}
