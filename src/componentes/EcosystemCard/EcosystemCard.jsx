@@ -189,7 +189,7 @@ export function EcosystemCards() {
     },
     {
       id: 2,
-      imgsrc: "./Assets/Images/earn-position-manager.png",
+      imgsrc: "./Assets/Images/earn-pm-purple.webp",
       imgsrcColor: "./Assets/Images/earn-position-manager.png",
       title: t("PositionManager"),
       content: t("cardContainer8.5"),
@@ -197,7 +197,7 @@ export function EcosystemCards() {
     },
     {
       id: 3,
-      imgsrc: "./Assets/Images/game-gaming-marketplace.png",
+      imgsrc: "./Assets/Images/game-gaming-marketplace-purple.webp",
       imgsrcColor: "./Assets/Images/game-gaming-marketplace.png",
       title: t("GamingMarketplace"),
       content: t("cardContainer14"),
