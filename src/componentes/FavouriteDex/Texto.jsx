@@ -51,14 +51,14 @@ const { t } = useTranslation();
           <div className={styles.subtext}>
             <Tipografia
               color={"--colors-textSubtle"}
-              texto={t("textoFD")}
+              texto={t("textoFD1")}
               isBodyLarge
             ></Tipografia>
-            {/* <Tipografia
+            <Tipografia
               color={"--colors-textSubtle"}
-              texto={"one multichain DEX"}      //Comentado e incluido en un unico elemento tipografia
+              texto={t("textoFD2")}      //Comentado e incluido en un unico elemento tipografia
               isBodyLarge
-            ></Tipografia> */}
+            ></Tipografia>
           </div>
         </div>
       )}
@@ -82,14 +82,14 @@ const { t } = useTranslation();
           <div className={styles.subtext}>
             <Tipografia
               color={"--colors-textSubtle"}
-              texto={t("textoFD")}
+              texto={t("textoFD1")}
               isSubtitle
             ></Tipografia>
-            {/* <Tipografia
+            <Tipografia
               color={"--colors-textSubtle"}
-              texto={"multichain DEX"}
+              texto={t("textoFD2")}
               isSubtitle
-            ></Tipografia> */}
+            ></Tipografia>
           </div>
         </div>
       )}
@@ -113,14 +113,14 @@ const { t } = useTranslation();
           <div className={styles.subtext}>
             <Tipografia
               color={"--colors-textSubtle"}
-              texto={t("textoFD")}
+              texto={t("textoFD1")}
               isSubtitle
             ></Tipografia>
-            {/*<Tipografia
+            <Tipografia
               color={"--colors-textSubtle"}
-              texto={"multichain DEX"}
+              texto={t("textoFD2")}
               isSubtitle
-            ></Tipografia>*/}
+            ></Tipografia>
           </div>
         </div>
       )}

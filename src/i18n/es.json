@@ -54,8 +54,8 @@
     "Favorite":"Preferido",
     "DEX":"",
     "textoFD":"Opere, gane y posea criptomonedas en el DEX multicadena",
-    "textoFD1":"Opere, gane y posea criptomonedas en el DEX multicadena",
-    "textoFD2":"",
+    "textoFD1":"Opere, gane y posea criptomonedas en el DEX",
+    "textoFD2":"multicadena todo en uno",
 
     "titleIS":"Dando forma al futuro del comercio descentralizado:",
     "subtitleIS":"Expansión imparable de PancakeSwap",
@@ -79,6 +79,7 @@
     "StakeNow":"Apuesta ahora",
     "cardContainer7":"Apuesta CAKE, gana varias recompensas",
     "cardContainer8":"Obtenga recompensas manteniendo la flexibilidad",
+    "cardContainer8.5":"Automatiza tu liquidez PancakeSwap v3",
     "Prediction":"Predicción",
     "cardContainer9":"Pronostique los precios de los tokens en minutos",
     "PancakeProtectors":"Protectores de Pancake",

@@ -188,6 +188,14 @@ export function EcosystemCards() {
       button: t("StakeNow"),
     },
     {
+      id: 2,
+      imgsrc: "./Assets/Images/earn-simplestaking-purple.png",
+      imgsrcColor: "./Assets/Images/earn-simplestaking.png",
+      title: t("PositionManager"),
+      content: t("cardContainer8.5"),
+      button: t("StakeNow"),
+    },
+    {
       id: 3,
       imgsrc: "./Assets/Images/gamenft-prediction-purple.png",
       imgsrcColor: "./Assets/Images/gamenft-prediction.png",
