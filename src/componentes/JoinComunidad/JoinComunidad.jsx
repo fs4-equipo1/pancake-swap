@@ -12,9 +12,11 @@ import {
 } from "react-icons/fa";
 import JoinComunidadSwiper from "./JoinComunidadSwiper";
 import { useTheme } from "../../context/ThemeContext";
+import { ComunidadSection } from "../BackgroundSections/ComunidadSection";
 
 export function JoinComunidad() {
   return (
+    <ComunidadSection>
     <div className={styles.allcontainer}>
       <div className={styles.cardsContainer}>
         <div className={styles.tittleComunity}>
@@ -74,5 +76,6 @@ export function JoinComunidad() {
         />
       </div>
     </div>
+    </ComunidadSection>
   );
 }
