@@ -22,6 +22,8 @@ import { useTranslation } from "react-i18next";
 import { useAccount, useDisconnect, useFeeData } from "wagmi";
 import { add } from "lodash";
 import axios from "axios";
+import classNames from "classnames/bind";
+const cx = classNames.bind();
 
 function Navbar() {
   const { t, i18n } = useTranslation();
@@ -37,11 +39,19 @@ function Navbar() {
         window.innerWidth <= 800 ? t("Connect") : t("ConnectWallet")
       );
     };
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [t]);
+
+  const className = cx({
+    es: i18n.language === "es",
+    en: i18n.language === "en"
+  });
+
+  console.log('Const Classname:', className)
 
   const itemsTrade = [
     {
