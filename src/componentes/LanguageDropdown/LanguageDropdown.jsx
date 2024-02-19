@@ -61,10 +61,11 @@ return (
           onMouseEnter={handleContentMouseEnter}
           onMouseLeave={handleContentMouseLeave}
         >
+           {i18n.language === "en" ? (
           <button className={styles.item} onClick={() => handleLanguage('en')}>English</button>
-          
+           ) : ( 
           <button className={styles.item} onClick={() => handleLanguage('es')}>Spanish</button>
-       
+           )}
         </div>
       )}
     </div>
