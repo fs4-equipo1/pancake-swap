@@ -62,17 +62,9 @@ return (
           onMouseLeave={handleContentMouseLeave}
         >
           <button className={styles.item} onClick={() => handleLanguage('en')}>English</button>
-          <button className={styles.item}>Deutsch</button>
+          
           <button className={styles.item} onClick={() => handleLanguage('es')}>Spanish</button>
-          <button className={styles.item}>Français</button>
-          <button className={styles.item} onClick={() => handleLanguage('en')}>English</button>
-          <button className={styles.item}>Deutsch</button>
-          <button className={styles.item} onClick={() => handleLanguage('es')}>Spanish</button>
-          <button className={styles.item}>Français</button>
-          <button className={styles.item} onClick={() => handleLanguage('en')}>English</button>
-          <button className={styles.item}>Deutsch</button>
-          <button className={styles.item} onClick={() => handleLanguage('es')}>Spanish</button>
-          <button className={styles.item}>Français</button>
+       
         </div>
       )}
     </div>
