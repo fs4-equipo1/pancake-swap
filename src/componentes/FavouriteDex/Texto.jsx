@@ -4,13 +4,15 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 export function Texto() {
-  const windoWidth = window.outerWidth;
+  //const windoWidth = window.outerWidth;
   const [isLaptop, setIsLaptop] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-const { t } = useTranslation();
+  const { t } = useTranslation();
+
   useEffect(() => {
     const handleResize = () => {
+      const windoWidth = window.outerWidth;
       setIsLaptop(windoWidth >= 1024 ? true : false);
       setIsTablet(windoWidth <= 768 && windoWidth >= 426 ? true : false);
       setIsMobile(windoWidth <= 425 ? true : false);
@@ -23,7 +25,8 @@ const { t } = useTranslation();
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [windoWidth]);
+  }, []);  // aquí havia windoWidth en los square brackets
+
   return (
     <div>
       {isMobile && (
@@ -51,14 +54,14 @@ const { t } = useTranslation();
           <div className={styles.subtext}>
             <Tipografia
               color={"--colors-textSubtle"}
-              texto={t("textoFD1")}
+              texto={t("textoFD")}
               isBodyLarge
             ></Tipografia>
-            <Tipografia
+            {/*<Tipografia
               color={"--colors-textSubtle"}
               texto={t("textoFD2")}      //Comentado e incluido en un unico elemento tipografia
               isBodyLarge
-            ></Tipografia>
+            ></Tipografia>*/}
           </div>
         </div>
       )}
@@ -82,14 +85,14 @@ const { t } = useTranslation();
           <div className={styles.subtext}>
             <Tipografia
               color={"--colors-textSubtle"}
-              texto={t("textoFD1")}
+              texto={t("textoFD")}
               isSubtitle
             ></Tipografia>
-            <Tipografia
+            {/*<Tipografia
               color={"--colors-textSubtle"}
               texto={t("textoFD2")}
               isSubtitle
-            ></Tipografia>
+            ></Tipografia>*/}
           </div>
         </div>
       )}
