@@ -13,8 +13,10 @@ import { heroSwiperCardData } from "../../mocks/HeroSwiperCard.mock";
 import useSetDataSwiper from "./useSetDataSwiper";
 
 export default () => {
-  
+
   const { dataSwiper } = useSetDataSwiper();
+
+
 
   return (
     <Swiper

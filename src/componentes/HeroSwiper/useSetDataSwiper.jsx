@@ -3,10 +3,23 @@ import images from "../../../Assets/SwiperImages/HeroSwiperImages";
 import { ArrowLink } from "../../../Assets/Icons/ArrowLink";
 import { ArrowRight } from "../../../Assets/Icons/ArrowRight";
 import { useTranslation } from "react-i18next";
-
+import "./HeroSwiper.scss";
 import Boton from "../Boton/Boton";
+import classNames from "classnames/bind";
+
+const cx = classNames.bind();
 const useSetDataSwiper = () => {
-  const { t } = useTranslation();
+  
+  const { t, i18n } = useTranslation();
+
+
+  const className = cx({
+    es: i18n.language === "es",
+    en: i18n.language === "en"
+  });
+
+  console.log('Const Classname:', className)
+
 
   const heroSwiperCardData = [
     {
