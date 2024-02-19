@@ -238,14 +238,15 @@ function Navbar() {
 
         {isDisconnected && (
           <Boton
+            isConnectWallet
             onClick={() => open({ view: "Connect" })}
             texto={buttonText}
-            // texto={window.innerWidth >= '426'} habia error por texto duplicado. Falta por arreglar este boton.
             isBlue={true}
           />
         )}
         {!isDisconnected && (
           <Boton
+            isConnectWallet 
             onClick={() => disconnect()}
             texto={t("DisconnectWallet")}
             isBlue={true}

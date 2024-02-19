@@ -32,21 +32,20 @@ const NetworkDropdown = () => {
         <p>{t('SelectaNetwork')}</p>
         <hr></hr>
         {networkData.map((network) => (
-          <div key={network.label} className={styles.buttonWithImage}>
+          <button onClick={() => handleButtonClick(network)} key={network.label} className={styles.buttonWithImage}>
             <img
               src={network.image}
               alt={network.label}
               className={styles.buttonImage}
             />
             <button
-              onClick={() => handleButtonClick(network)}
               className={
                 activeNetwork.label === network.label ? styles.active : ""
               }
             >
               {network.label}
             </button>
-          </div>
+          </button>
         ))}
       </div>
     </div>
