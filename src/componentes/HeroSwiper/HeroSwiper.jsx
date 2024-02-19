@@ -12,7 +12,7 @@ import { useEffect, useState } from "react";
 import { heroSwiperCardData } from "../../mocks/HeroSwiperCard.mock";
 import useSetDataSwiper from "./useSetDataSwiper";
 
-export default () => {
+export function HeroSwiper () {
 
   const { dataSwiper } = useSetDataSwiper();
 
@@ -49,4 +49,6 @@ export default () => {
       ))}
     </Swiper>
   );
-};
+}
+
+export default HeroSwiper
