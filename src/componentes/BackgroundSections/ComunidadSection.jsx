@@ -15,11 +15,15 @@ export function ComunidadSection({ children }) {
             <img className={styles.x} src="../Assets/Images/asset79.png" alt="X Icon" />
             </div>
             <div className={styles.rightIcons}>
-            <img className={styles.com} src="../Assets/Images/asset1.png" alt="Comment Icon" />
+            <img className={styles.comment} src="../Assets/Images/asset1.png" alt="Comment Icon" />
             <img className={styles.ring} src="../Assets/Images/asset2.png" alt="Ring Icon" />
             <img className={styles.heart} src="../Assets/Images/asset3.png" alt="Like Icon" />
             <img className={styles.speaker} src="../Assets/Images/asset4.png" alt="Speaker Icon" />
-            <img className={styles.com2} src="../Assets/Images/asset5.png" alt="Comment Icon" />
+            <img className={styles.comment2} src="../Assets/Images/asset5.png" alt="Comment Icon" />
+            </div>
+            <div className={styles.leftResponsiveIcons}>
+            <img className={styles.leftRing} src="../Assets/Images/asset2.png" alt="Ring Icon" />
+            <img className={styles.pinkComment} src="../Assets/Images/asset1.png" alt="Comment Icon" />
             </div>
             </section>
       ) : (
