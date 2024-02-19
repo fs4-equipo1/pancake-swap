@@ -49,7 +49,7 @@ export function App() {
 
       <Footer />
 
-      <BotonArriba/>
+      {/* <BotonArriba/> */}
       
       <DropdownSticky />
 
