@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import "./HeroSwiper.scss";
 import Boton from "../Boton/Boton";
 import classNames from "classnames/bind";
+import styles from "../HeroSwiperCard/SwiperAnimations.module.scss"
 
 const cx = classNames.bind();
 const useSetDataSwiper = () => {
@@ -104,6 +105,7 @@ const useSetDataSwiper = () => {
       ),
       decorationPng: (
         <img
+          className={styles.animationToken}
           style={{
             position: "absolute",
             right: "35%",
@@ -220,6 +222,7 @@ const useSetDataSwiper = () => {
       ),
       decorationPng: (
         <img
+          className={styles.animationCube}
           style={{
             position: "absolute",
             right: "29%",
@@ -336,7 +339,20 @@ const useSetDataSwiper = () => {
           alt="Bunny"
         ></img>
       ),
-      decorationPng: null,
+      decorationPng: (
+        <img
+          className={styles.animationToken}
+          style={{
+            position: "absolute",
+            right: "44%",
+            top: -29,
+            height: "77px",
+            width: "72px",
+          }}
+          src={images.cakeToken}
+          alt="Bunny"
+        ></img>
+      ),
     },
     {
       backgroundImg: null,
@@ -399,6 +415,7 @@ const useSetDataSwiper = () => {
       ),
       decorationPng: (
         <img
+          className={styles.animationCube}
           style={{
             position: "absolute",
             right: "29%",
@@ -516,7 +533,20 @@ const useSetDataSwiper = () => {
           alt="Bunny"
         ></img>
       ),
-      decorationPng: null,
+      decorationPng: (
+        <img
+          className={styles.animationToken}
+          style={{
+            position: "absolute",
+            right: "35%",
+            top: -29,
+            height: "58px",
+            width: "54px",
+          }}
+          src={images.cakeToken}
+          alt="Bunny"
+        ></img>
+      ),
     },
     {
       backgroundImg: null,
@@ -578,6 +608,7 @@ const useSetDataSwiper = () => {
       ),
       decorationPng: (
         <img
+          className={styles.animationCube}
           style={{
             position: "absolute",
             right: "19%",

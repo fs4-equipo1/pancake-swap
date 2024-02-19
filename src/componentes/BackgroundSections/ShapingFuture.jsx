@@ -1,5 +1,5 @@
 import { useTheme } from "../../context/ThemeContext";
-// import { DiagonalSVG } from "../BackgroundSVG/DiagonalSVG.JSX";
+import { DiagonalSVG } from "../BackgroundSVG/DiagonalSVG.JSX";
 import styles from "./ShapingFuture.module.scss";
 
 export function ShapingFuture({ children }) {
@@ -11,7 +11,7 @@ export function ShapingFuture({ children }) {
       ) : (
         <section className={styles.shapingFutureLight}>{children}</section>
       )}
-      {/* <DiagonalSVG /> */}
+      <DiagonalSVG />
     </>
   );
 }
