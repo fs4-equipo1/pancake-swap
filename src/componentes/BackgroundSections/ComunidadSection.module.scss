@@ -11,7 +11,6 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  z-index: -10;
 }
 
 .ComunidadDark {
@@ -39,6 +38,7 @@
   position: absolute;
   top: 110px;
   left: 10px;
+  z-index: 1;
 }
 
 .discord {
@@ -113,6 +113,7 @@
   bottom: -110px;
   left: calc(50% - 106px);
   display: block;
+  z-index: 1;
 }
 
 .pinkComment {
