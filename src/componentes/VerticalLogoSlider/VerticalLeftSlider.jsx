@@ -4,6 +4,7 @@ function VerticalLeftSlider() {
   return (
     <div className={styles.containerL}>
       <div className={styles.titleInfinite}>
+        <div className={styles.lineVertical}></div>
         <div className={styles.titleSlider}>
           <h2>Ecosystem</h2>
         </div>
