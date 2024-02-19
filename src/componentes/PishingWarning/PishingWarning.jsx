@@ -1,7 +1,9 @@
 import { useState } from "react";
 import styles from "./PishingWarning.module.scss"
+import { useTranslation } from "react-i18next";
 
 export function PishingWarning() {
+    const { t } = useTranslation();
     const [isActive, setIsActive] = useState(true);
 
   const handleClickCloseWarning = () => {
@@ -15,10 +17,10 @@ export function PishingWarning() {
             <div className={styles.headerImg}>
                 <img src="../Assets/Images/phishing-warning-bunny.webp" alt="phishing-warning" className={styles.phishingImg}></img>
                 <div className={styles.headerCard}>
-                    <span className={styles.phishing}>Phishing warning: </span>
-                    <span className={styles.text}> please make sure you're visiting </span>
-                    <span className={styles.link}>https://pancakeswap.finance </span>
-                    <span className={styles.text}> - check the URL carefully.</span>
+                    <span className={styles.phishing}>{t("WarningTitle")}</span>
+                    <span className={styles.text}>{t("WarningText")}</span>
+                    <span className={styles.link}>{t("WarningURL")}</span>
+                    <span className={styles.text}>{t("WarningText2")}</span>
                 </div>
             </div>
             
