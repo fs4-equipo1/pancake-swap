@@ -14,10 +14,12 @@ import JoinComunidadSwiper from "./JoinComunidadSwiper";
 import { useTheme } from "../../context/ThemeContext";
 import { t } from "i18next";
 import { useTranslation } from "react-i18next";
+import { ComunidadSection } from "../BackgroundSections/ComunidadSection";
 
 export function JoinComunidad() {
   const { t } = useTranslation();
   return (
+    <ComunidadSection>
     <div className={styles.allcontainer}>
       <div className={styles.cardsContainer}>
         <div className={styles.tittleComunity}>
@@ -77,5 +79,6 @@ export function JoinComunidad() {
         />
       </div>
     </div>
+    </ComunidadSection>
   );
 }

@@ -5,6 +5,7 @@ function VerticalRightSlider() {
   return (
     <div className={styles.containerR}>
       <div className={styles.titleInfinite}>
+      <div className={styles.lineVertical}></div>
         <div className={styles.titleSlider}>
           <h2>{t("Partners")}</h2>
         </div>
