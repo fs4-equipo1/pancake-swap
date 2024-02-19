@@ -14,20 +14,19 @@
 }
 
 .dropdownContent {
-  position: absolute;
+  position: fixed;
   bottom: 0;
+  left: 0;
   margin-bottom: 50px;
   background-color: white;
   color: var(--colors-secondary);
   display: flex;
   flex-direction: column;
-  border-radius: 10px;
+  border-radius: 10px 10px 0px 0px;
   font-family: Kanit, sans-serif;
   font-size: 16px;
   font-weight: 600;
-  width: 90%;
-
-  left: 0;
+  width: 100%;
 }
 
 .dropdownItem {
