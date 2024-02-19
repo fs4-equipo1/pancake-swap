@@ -30,7 +30,7 @@ export function Footer() {
           </div>
 
           <FooterColumn
-            title={t("Ecosystem")}
+            title={t("ECOSYSTEM")}
             items={[
               t("Trade"),
               t("Earn"),
