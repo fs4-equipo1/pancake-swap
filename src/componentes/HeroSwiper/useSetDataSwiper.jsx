@@ -89,7 +89,7 @@ const useSetDataSwiper = () => {
           isTextWhite
         />
       ),
-      botonSecondary: <Boton texto={t("LearnMore")} isWhite />,
+      botonSecondary: <Boton texto={t("LearnMore")} isWhite isLearnWhite />,
       bunnyPng: (
         <img
           style={{
