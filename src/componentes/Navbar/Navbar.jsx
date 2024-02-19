@@ -28,12 +28,14 @@ function Navbar() {
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
   const [isWalletModalOpen, setIsWalletModalOpen] = useState(false);
   const [buttonText, setButtonText] = useState(
-    window.innerWidth <= 800 ? t('Connect') : t('ConnectWallet')
+    window.innerWidth <= 800 ? t("Connect") : t("ConnectWallet")
   );
 
   useEffect(() => {
     const handleResize = () => {
-      setButtonText(window.innerWidth <= 800 ? t('Connect') : t('ConnectWallet'));
+      setButtonText(
+        window.innerWidth <= 800 ? t("Connect") : t("ConnectWallet")
+      );
     };
     window.addEventListener("resize", handleResize);
     return () => {
@@ -43,31 +45,31 @@ function Navbar() {
 
   const itemsTrade = [
     {
-      texto: t('Swap'),
+      texto: t("Swap"),
       icono: <null />,
     },
     {
-      texto: t('Liquidity'),
+      texto: t("Liquidity"),
       icono: <null />,
     },
     {
-      texto: t('Perpetual'),
+      texto: t("Perpetual"),
       icono: <FaArrowRightFromBracket />,
     },
     {
-      texto: t('Bridge'),
+      texto: t("Bridge"),
       icono: <FaArrowRightFromBracket />,
     },
     {
-      texto: t('Limit'),
+      texto: t("Limit"),
       icono: <null />,
     },
     {
-      texto: t('BuyCrypto'),
+      texto: t("BuyCrypto"),
       icono: <null />,
     },
     {
-      texto: t('TradingReward'),
+      texto: t("TradingReward"),
       icono: <null />,
     },
   ];
@@ -237,7 +239,7 @@ function Navbar() {
         {isDisconnected && (
           <Boton
             onClick={() => open({ view: "Connect" })}
-            texto={"Connect Wallet"}
+            texto={buttonText}
             // texto={window.innerWidth >= '426'} habia error por texto duplicado. Falta por arreglar este boton.
             isBlue={true}
           />
@@ -245,7 +247,7 @@ function Navbar() {
         {!isDisconnected && (
           <Boton
             onClick={() => disconnect()}
-            texto={"Disconnect Wallet"}
+            texto={t("DisconnectWallet")}
             isBlue={true}
           />
         )}

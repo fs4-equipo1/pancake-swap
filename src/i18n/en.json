@@ -33,6 +33,7 @@
     "Docs": "Docs",
     "SelectaNetwork":"Select a Network",
     "ConnectWallet":"Connect Wallet",
+    "DisconnectWallet": "Disconnect Wallet",
     "Connect":"Connect",
     "TradeNow":"Trade Now",
     "GetStarted":"Get Started",
