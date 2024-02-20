@@ -9,9 +9,9 @@ const ToggleSwitch = () => {
   };
 
   return (
-<label class={styles.switch}>
+<label className={styles.switch}>
   <input type="checkbox" />
-  <span class={styles.slider}></span>
+  <span className={styles.slider}></span>
 </label>
   );
 };
