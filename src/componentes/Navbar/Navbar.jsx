@@ -198,7 +198,7 @@ function Navbar() {
       return address;
     }
   };
-  console.log(formatAddress)
+  console.log(formatAddress())
 
   //UseEffect para manejar el cambio de billetera y hacer el fetch de usuario
   useEffect(() => {
@@ -268,7 +268,7 @@ function Navbar() {
         {!isDisconnected && (
           <WalletDropdown 
           user={`${address}`}
-          // disconnectHandler={disconnect()} 
+          disconnectHandler={() => disconnect()} 
           />
         )}
       </div>

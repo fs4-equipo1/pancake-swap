@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./WalletDropdown.module.scss";
-import { FaArrowRightFromBracket } from "react-icons/fa6";
+import { FaArrowRightFromBracket, FaChevronDown } from "react-icons/fa6";
 import { useTranslation } from "react-i18next";
 
 const WalletDropdown = ({ user, disconnectHandler }) => {
@@ -49,7 +49,7 @@ const WalletDropdown = ({ user, disconnectHandler }) => {
       <div className={styles.dropdownBtn}>
         {/* <span className={styles.walletIcon}>""</span> */}
         <span className={styles.user}>{user}</span>
-        {/* <span className={styles.arrowDown}>""</span> */}
+        <span className={styles.arrowDown}><FaChevronDown /></span>
       </div>
       {isOpen && (
         <div className={styles.dropdownContent}>
