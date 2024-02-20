@@ -23,6 +23,7 @@ import { useAccount, useDisconnect, useFeeData } from "wagmi";
 import { add } from "lodash";
 import axios from "axios";
 import classNames from "classnames/bind";
+import WalletDropdown from "../WalletDropdown/WalletDropdown";
 const cx = classNames.bind();
 
 function Navbar() {
@@ -189,6 +190,16 @@ function Navbar() {
     }
   };
 
+  //función que formatea el usuario y lo acorta para mostrar en el boton.
+  const formatAddress = (address) => {
+    if (address.length > 8) {
+      return `${address.substring(0, 2)}...${address.substring(address.length - 4)}`;
+    } else {
+      return address;
+    }
+  };
+  console.log(formatAddress(address))
+
   //UseEffect para manejar el cambio de billetera y hacer el fetch de usuario
   useEffect(() => {
     if (address) {
@@ -255,11 +266,9 @@ function Navbar() {
           />
         )}
         {!isDisconnected && (
-          <Boton
-            isConnectWallet 
-            onClick={() => disconnect()}
-            texto={t("DisconnectWallet")}
-            isBlue={true}
+          <WalletDropdown 
+          user={`${address}`}
+          disconnectHandler={() => disconnect()} 
           />
         )}
       </div>

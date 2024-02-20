@@ -1,0 +1,77 @@
+.walletConnected {
+    align-items: center;
+    background-color: var(--colors-tertiary);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px -2px 0px inset;
+    cursor: pointer;
+    display: inline-flex;
+    flex-wrap: wrap;
+    height: 32px;
+    width: 100px;
+    // overflow: hidden;
+    padding-right: 8px;
+    position: relative;
+    border-radius: 16px;
+    color: var(--colors-contrast);
+  
+    &:hover {
+      .dropdownCoinContent {
+        display: block;
+      }
+    }
+  }
+  
+  .dropdownBtn {
+    display: block;
+    padding: 0px 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--colors-textSubtle);
+    font-size: 16px;
+  }
+  
+  .dropdownContent {
+    // display: none;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 270px;
+    background-color: var(--colors-backgroundAlt);
+    border: 1px solid;
+    border-color: var(--colors-cardBorder);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 8px 0;
+    text-align: start;
+  
+    a {
+      display: block;
+      padding: 8px 0;
+      color: #7b93af;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      padding-left: 10px;
+      background-color: var(--colors-backgroundAlt2);
+     
+      &:hover {
+        background-color: var(--colors-tertiary);
+      }
+    }
+  }
+ 
+  
+  .icon {
+    position: absolute;
+    right: 8px;
+  }
+  
+//   @media (max-width: 850px){
+//     .dropdownContainer{
+//       display: none;
+//     }
+//     .dropdownContent {
+//       width: 100%;
+//     }
+//   }
