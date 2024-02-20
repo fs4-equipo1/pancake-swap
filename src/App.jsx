@@ -52,8 +52,6 @@ export function App() {
       <DexNowSection />
 
       <Footer />
-
-      {/* <BotonArriba/> */}
       
       <DropdownSticky />
 
