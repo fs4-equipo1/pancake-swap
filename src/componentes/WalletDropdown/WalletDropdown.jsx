@@ -2,6 +2,8 @@ import { useState } from "react";
 import styles from "./WalletDropdown.module.scss";
 import { FaArrowRightFromBracket, FaChevronDown } from "react-icons/fa6";
 import { useTranslation } from "react-i18next";
+import { WalletIcon } from "../../../Assets/Icons/WalletIcon";
+import { WarningIcon } from "../../../Assets/Icons/WarningIcon";
 
 const WalletDropdown = ({ user, disconnectHandler }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,11 +21,12 @@ const WalletDropdown = ({ user, disconnectHandler }) => {
   const itemsWalletDropdown = [
     {
       texto: t("Wallet"),
-      icono: <null />,
+      icono: <WarningIcon />,
     },
     {
       texto: t("Recent Transaccions"),
       icono: <null />,
+      hr: <hr></hr>
     },
     {
       texto: t("Your NFTs"),
@@ -47,7 +50,7 @@ const WalletDropdown = ({ user, disconnectHandler }) => {
       onMouseLeave={handleMouseLeave}
     >
       <div className={styles.dropdownBtn}>
-        {/* <span className={styles.walletIcon}>""</span> */}
+        <span className={styles.walletIcon}><WalletIcon fill="var(--colors-primary)" /></span>
         <span className={styles.user}>{user}</span>
         <span className={styles.arrowDown}><FaChevronDown /></span>
       </div>

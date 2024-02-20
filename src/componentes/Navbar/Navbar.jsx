@@ -191,14 +191,13 @@ function Navbar() {
   };
 
   //función que formatea el usuario y lo acorta para mostrar en el boton.
-  const formatAddress = (address) => {
-    if (address.length > 8) {
+  function formatAddress (address) {
+    if (typeof address === 'string' && address.length >= 6) {
       return `${address.substring(0, 2)}...${address.substring(address.length - 4)}`;
     } else {
-      return address;
-    }
-  };
-  console.log(formatAddress())
+      return "Loading...";
+  }
+}
 
   //UseEffect para manejar el cambio de billetera y hacer el fetch de usuario
   useEffect(() => {
@@ -267,7 +266,7 @@ function Navbar() {
         )}
         {!isDisconnected && (
           <WalletDropdown 
-          user={`${address}`}
+          user={`${formatAddress(address)}`}
           disconnectHandler={() => disconnect()} 
           />
         )}
