@@ -4,6 +4,7 @@ import { FaArrowRightFromBracket, FaChevronDown } from "react-icons/fa6";
 import { useTranslation } from "react-i18next";
 import { WalletIcon } from "../../../Assets/Icons/WalletIcon";
 import { WarningIcon } from "../../../Assets/Icons/WarningIcon";
+import { GoDotFill } from "react-icons/go";
 
 const WalletDropdown = ({ user, disconnectHandler }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,12 +22,11 @@ const WalletDropdown = ({ user, disconnectHandler }) => {
   const itemsWalletDropdown = [
     {
       texto: t("Wallet"),
-      icono: <WarningIcon />,
+      icono: <WarningIcon className={styles.warning} />,
     },
     {
       texto: t("Recent Transaccions"),
       icono: <null />,
-      hr: <hr></hr>
     },
     {
       texto: t("Your NFTs"),
@@ -34,7 +34,7 @@ const WalletDropdown = ({ user, disconnectHandler }) => {
     },
     {
       texto: t("Make a Profile"),
-      icono: <null />,
+      icono: <GoDotFill className={styles.redDot} />,
     },
     {
       texto: t("Disconnect"),
@@ -50,9 +50,13 @@ const WalletDropdown = ({ user, disconnectHandler }) => {
       onMouseLeave={handleMouseLeave}
     >
       <div className={styles.dropdownBtn}>
-        <span className={styles.walletIcon}><WalletIcon fill="var(--colors-primary)" /></span>
+        <span className={styles.walletIcon}>
+          <WalletIcon fill="var(--colors-primary)" />
+        </span>
         <span className={styles.user}>{user}</span>
-        <span className={styles.arrowDown}><FaChevronDown /></span>
+        <span className={styles.arrowDown}>
+          <FaChevronDown />
+        </span>
       </div>
       {isOpen && (
         <div className={styles.dropdownContent}>

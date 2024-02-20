@@ -1,120 +1,109 @@
 .walletConnected {
-    align-items: center;
-    background-color: var(--colors-tertiary);
-    box-shadow: rgba(0, 0, 0, 0.1) 0px -2px 0px inset;
-    cursor: pointer;
-    display: inline-flex;
-    flex-wrap: wrap;
-    height: 32px;
-    width: 110px;
-    // overflow: hidden;
-    padding-right: 8px;
-    position: relative;
-    border-radius: 16px;
-    color: var(--colors-contrast);
-  
-    &:hover {
-      .dropdownCoinContent {
-        display: block;
-      }
-    }
-  }
-  
-  .dropdownBtn {
-    // display: block;
-    // padding: 0px 20px;
-    // background-color: transparent;
-    // border: none;
-    // cursor: pointer;
-    // color: var(--colors-textSubtle);
-    // font-size: 16px;
-      display: flex;
-      flex-direction: row;
-      gap: 2px;
-      height: 30px;
-      color: var(--colors-textSubtle);
-      width: 40px;
-      position: relative;
-      padding: 4px;
-      border-radius: 50%;
-    }
+  align-items: center;
+  background-color: var(--colors-tertiary);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px -2px 0px inset;
+  cursor: pointer;
+  display: inline-flex;
+  flex-wrap: wrap;
+  height: 32px;
+  width: 110px;
+  padding-right: 8px;
+  position: relative;
+  border-radius: 16px;
+  color: var(--colors-contrast);
 
-  .walletIcon {
-    background-color: var(--colors-background);
-    border-color: var(--colors-primary);
-    border-radius: 50%;
-    border-style: solid;
-    border-width: 2px;
-    display: flex;
-    height: 26px;
-    justify-content: center;
-    width: 26px;
-    z-index: 1;
-    left: 0px;
-    position: absolute;
-    top: 0px;
-  }
-
-  .icon {
-    z-index: 200;
-  }
-
-  .user {
-    margin-left: 30px;
-    color: var(--colors-text);
-  }
-  
-  
-  .dropdownContent {
-    // display: none;
-    // display: flex;
-    // flex-direction: column;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 270px;
-    background-color: var(--colors-backgroundAlt);
-    border: 1px solid;
-    border-color: var(--colors-cardBorder);
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 8px 0;
-    text-align: start;
-  
-    a {
+  &:hover {
+    .dropdownCoinContent {
       display: block;
-      padding: 8px 0;
-      color: #7b93af;
-      text-decoration: none;
-      justify-content: space-between;
-      transition: color 0.3s ease;
-      padding-left: 10px;
-      background-color: var(--colors-backgroundAlt2);
-     
-      &:hover {
-        background-color: var(--colors-tertiary);
-      }
     }
   }
- 
-  
-  .itemIcon {
-    position: absolute;
-    right: 8px;
-  }
+}
 
-  .redBton {
-    background-color: var(--colors-failure);
-    border-radius: 50%;
-    height: 8px;
-    width: 8px;
+.dropdownBtn {
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+  height: 30px;
+  color: var(--colors-textSubtle);
+  width: 40px;
+  position: relative;
+  padding: 4px;
+  border-radius: 50%;
+}
+
+.walletIcon {
+  background-color: var(--colors-background);
+  border-color: var(--colors-primary);
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 2px;
+  display: flex;
+  height: 26px;
+  justify-content: center;
+  width: 26px;
+  z-index: 1;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+}
+
+.icon {
+  z-index: 200;
+}
+
+.user {
+  margin-left: 30px;
+  color: var(--colors-text);
+}
+
+.dropdownContent {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 270px;
+  background-color: var(--colors-backgroundAlt);
+  border: 1px solid;
+  border-color: var(--colors-cardBorder);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 8px 0;
+  text-align: start;
+
+  a {
+    display: block;
+    padding: 8px 0;
+    color: #7b93af;
+    text-decoration: none;
+    justify-content: space-between;
+    transition: color 0.3s ease;
+    padding-left: 10px;
+    background-color: var(--colors-backgroundAlt2);
+
+    &:hover {
+      background-color: var(--colors-tertiary);
+    }
   }
-  
-//   @media (max-width: 850px){
-//     .dropdownContainer{
-//       display: none;
-//     }
-//     .dropdownContent {
-//       width: 100%;
-//     }
-//   }
+}
+
+a:nth-child(2),
+a:nth-child(4) {
+  border-bottom: 1px solid var(--colors-tertiary);
+}
+
+.itemIcon {
+  position: absolute;
+  right: 8px;
+}
+
+.redDot {
+  background-color: var(--colors-failure);
+  color: var(--colors-failure);
+  border-radius: 50%;
+  margin-right: 6px;
+  height: 8px;
+  width: 8px;
+}
+
+.warning {
+  margin-right: 4px;
+}
