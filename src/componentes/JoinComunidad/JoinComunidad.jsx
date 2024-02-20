@@ -11,8 +11,6 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import JoinComunidadSwiper from "./JoinComunidadSwiper";
-import { useTheme } from "../../context/ThemeContext";
-import { t } from "i18next";
 import { useTranslation } from "react-i18next";
 import { ComunidadSection } from "../BackgroundSections/ComunidadSection";
 
