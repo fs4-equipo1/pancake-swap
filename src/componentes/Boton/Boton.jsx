@@ -12,6 +12,7 @@ const Boton = ({
   isLearnWhite,
   isSmall,
   isTextWhite,
+  isConnectWallet,
   icon,
   onClick,
 }) => {
@@ -24,6 +25,7 @@ const Boton = ({
     learn: isLearn,
     small: isSmall,
     textWhite: isTextWhite,
+    connectWallet: isConnectWallet,
   });
   return (
     <button className={className} onClick={onClick}>

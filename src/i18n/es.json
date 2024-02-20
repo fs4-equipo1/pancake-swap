@@ -1,4 +1,9 @@
 {
+  "WarningTitle":"Advertencia de pishing: ",
+  "WarningText":" asegúrate de visitar ",
+  "WarningURL":" https://pancakeswap.finance",
+  "WarningText2":"  - verifica cuidadosamente la URL.",
+
   "Trade": "Comercio",
   "Swap": "Intercambio",
   "Liquidity": "Liquidez",

@@ -1,5 +1,10 @@
 
 {
+    "WarningTitle":"Phishing warning: ",
+    "WarningText":" please make sure you're visiting ",
+    "WarningURL":" https://pancakeswap.finance",
+    "WarningText2":"  - check the URL carefully.",
+
     "Trade":"Trade",
     "Swap":"Swap",
     "Liquidity":"Liquidity",

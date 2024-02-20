@@ -5,7 +5,7 @@ export const networkData = [
     },
     {
       label: "Ethereum",
-      image: "https://assets.pancakeswap.finance/web/chains/59144.png",
+      image: "https://assets.pancakeswap.finance/web/chains/1.png",
     },
     {
       label: "Polygon zkEVM",

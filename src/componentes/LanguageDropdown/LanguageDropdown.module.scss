@@ -37,6 +37,7 @@
     &.reverse-content {
       top: -40px;
     }
+    &:hover{background-color: var(--colors-tertiary);}
   }
   
   .dropdown-content .react-icons {
