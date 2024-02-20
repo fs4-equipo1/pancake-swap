@@ -67,7 +67,7 @@
 }
 .rightIcons {
   position: absolute;
-  width: 520px;
+  width: 320px;
   height: 520px;
   left: calc(50% - 166px);
   top: -206px;
@@ -108,7 +108,7 @@
 
 .leftResponsiveIcons {
   position: absolute;
-  width: 520px;
+  width: 320px;
   height: 520px;
   bottom: -110px;
   left: calc(50% - 106px);
@@ -130,46 +130,57 @@
   z-index: -3;
 }
 
-@media screen and (min-width: 1200px) {
-  .socialIcons {
+@media (min-width:768px){
+  .socialIcons{
     display: block;
   }
-  .rightIcons {
-    left: calc(100% - 326px);
-    top: -180px;
-  }
-  .leftResponsiveIcons {
-    display: none;
-  }
 }
 
-@media screen and (min-width: 968px) {
-  .rightIcons {
-    left: calc(50% + 94px);
-    top: -140px;
-  }
-  .leftResponsiveIcons {
-    left: calc(50% - 426px);
-  }
+@media (min-width: 425px) {
+  
+  
 }
 
-@media screen and (min-width: 576px) {
-  .rightIcons {
-    transform: scale(1);
-    left: calc(50% - 136px);
-    top: -186px;
-  }
-  .leftResponsiveIcons {
-    left: 50px;
-  }
-  .pinkComment {
-    width: 150px;
-    top: 250px;
-    left: 100px;
-  }
-  .leftRing {
-    width: 250px;
-    top: 200px;
-    left: -50px;
-  }
-}
+// @media screen and (min-width: 1200px) {
+//   .socialIcons {
+//     display: block;
+//   }
+//   .rightIcons {
+//     left: calc(100% - 326px);
+//     top: -180px;
+//   }
+//   .leftResponsiveIcons {
+//     display: none;
+//   }
+// }
+
+// @media screen and (min-width: 968px) {
+//   .rightIcons {
+//     left: calc(50% + 94px);
+//     top: -140px;
+//   }
+//   .leftResponsiveIcons {
+//     left: calc(50% - 426px);
+//   }
+// }
+
+// @media screen and (min-width: 576px) {
+//   .rightIcons {
+//     transform: scale(1);
+//     left: calc(50% - 136px);
+//     top: -186px;
+//   }
+//   .leftResponsiveIcons {
+//     left: 50px;
+//   }
+//   .pinkComment {
+//     width: 150px;
+//     top: 250px;
+//     left: 100px;
+//   }
+//   .leftRing {
+//     width: 250px;
+//     top: 200px;
+//     left: -50px;
+//   }
+// }
