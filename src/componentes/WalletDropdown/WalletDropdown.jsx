@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import styles from "./WalletDropdown.module.scss";
 import { FaArrowRightFromBracket, FaChevronDown } from "react-icons/fa6";
 import { useTranslation } from "react-i18next";
@@ -13,6 +13,7 @@ const WalletDropdown = ({ user, disconnectHandler }) => {
   const [showBalanceModal, setShowBalanceModal] = useState(false);
   const { wallet } = useWallet();
   const { activeNetwork } = useActiveNetwork(); 
+  const selectedCurrency = activeNetwork.selectedCurrency;
 
   const handleMouseEnter = () => {
     setIsOpen(true);
@@ -94,7 +95,7 @@ const WalletDropdown = ({ user, disconnectHandler }) => {
         <div className={styles.modalBackdrop} onClick={handleCloseModal}>
           <div className={styles.modal}>
             <h2>Balance</h2>
-            <h5>{activeNetwork.selectedCurrency}</h5>
+            <h5>{activeNetwork.label}</h5>
             <p>{wallet ? wallet.balance : "No se ha conectado ninguna billetera"}</p>
           </div>
         </div>

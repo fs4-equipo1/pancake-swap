@@ -10,7 +10,10 @@ export const ActiveNetworkProvider = ({ children }) => {
   });
 
   const updateActiveNetwork = (network) => {
-    setActiveNetwork(network);
+    setActiveNetwork({
+      ...activeNetwork, 
+      ...network, 
+    });
     console.log("Información de la red activa actualizada:", network);
   };
 
@@ -20,6 +23,7 @@ export const ActiveNetworkProvider = ({ children }) => {
     </ActiveNetworkContext.Provider>
   );
 };
+
 
 export const useActiveNetwork = () => {
   const context = useContext(ActiveNetworkContext);
