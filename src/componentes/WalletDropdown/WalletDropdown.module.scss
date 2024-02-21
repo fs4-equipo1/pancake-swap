@@ -23,7 +23,7 @@
 .dropdownBtn {
   display: flex;
   flex-direction: row;
-  gap: 2px;
+  gap: 8px;
   // height: 30px;
   color: var(--colors-textSubtle);
   // width: 30px;
@@ -36,6 +36,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--colors-text);
 }
 
 .walletIcon {
@@ -44,13 +45,13 @@
   border-radius: 50%;
   border-style: solid;
   border-width: 2px;
-  margin-right: 8px;
   height: 35px;
   width: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1;
+  // margin-right: 8px;
   // left: 0px;
   // position: absolute;
   // top: 0px;
