@@ -1,14 +1,15 @@
 .walletConnected {
+  display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   background-color: var(--colors-tertiary);
   box-shadow: rgba(0, 0, 0, 0.1) 0px -2px 0px inset;
   cursor: pointer;
-  display: inline-flex;
-  flex-wrap: wrap;
   height: 32px;
-  width: 120px;
+  // width: 120px;
   padding-right: 8px;
-  position: relative;
+  // position: relative;
   border-radius: 16px;
   color: var(--colors-contrast);
 
@@ -23,12 +24,18 @@
   display: flex;
   flex-direction: row;
   gap: 2px;
-  height: 30px;
+  // height: 30px;
   color: var(--colors-textSubtle);
-  width: 40px;
-  position: relative;
-  padding: 4px;
+  // width: 30px;
+  // position: relative;
+  // padding: 4px;
   border-radius: 50%;
+}
+
+.arrowDown{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .walletIcon {
@@ -37,14 +44,16 @@
   border-radius: 50%;
   border-style: solid;
   border-width: 2px;
+  margin-right: 8px;
+  height: 35px;
+  width: 35px;
   display: flex;
-  height: 26px;
   justify-content: center;
-  width: 26px;
+  align-items: center;
   z-index: 1;
-  left: 0px;
-  position: absolute;
-  top: 0px;
+  // left: 0px;
+  // position: absolute;
+  // top: 0px;
 }
 
 .icon {
@@ -52,7 +61,11 @@
 }
 
 .user {
-  margin-left: 30px;
+  display: flex;
+  justify-content: center;
+  width: auto;
+  align-items: center;
+  // margin-left: 30px;
   color: var(--colors-text);
 }
 
