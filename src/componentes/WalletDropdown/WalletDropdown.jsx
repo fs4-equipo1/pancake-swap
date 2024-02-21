@@ -26,11 +26,11 @@ const WalletDropdown = ({ user, disconnectHandler }) => {
     },
     {
       texto: t("Recent Transaccions"),
-      icono: <div />,
+      icono: null
     },
     {
       texto: t("Your NFTs"),
-      icono: <div />,
+      icono: null
     },
     {
       texto: t("Make a Profile"),
