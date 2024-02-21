@@ -5,12 +5,17 @@ export const WalletContext = createContext();
 
 export const WalletContextProvider = ({ children }) => {
   const [wallet, setWallet] = useState(null);
+  const [walletAddress, setWalletAddress] = useState(null); 
 
   const connectWallet = async () => {
     try {
       const web3Modal = createWeb3Modal();
       const provider = await web3Modal.connect();
       setWallet(provider);
+      
+      if (provider && provider.selectedAddress) {
+        setWalletAddress(provider.selectedAddress);
+      }
     } catch (error) {
       console.error("Error al conectar la billetera:", error);
     }
@@ -20,6 +25,7 @@ export const WalletContextProvider = ({ children }) => {
     if (wallet && wallet.close) {
       wallet.close();
       setWallet(null);
+      setWalletAddress(null); 
     }
   };
 
@@ -27,6 +33,7 @@ export const WalletContextProvider = ({ children }) => {
     <WalletContext.Provider
       value={{
         wallet,
+        walletAddress, 
         connectWallet,
         disconnectWallet,
       }}

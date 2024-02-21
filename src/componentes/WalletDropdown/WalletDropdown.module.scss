@@ -124,29 +124,86 @@ a:nth-child(4) {
 
 //Modal de balance
 
-.modalBackdrop {
+.modalContainer {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.modal {
-  background-color: white;
+.theModal {
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--colors-backgroundAlt);
   padding: 20px;
-  border-radius: 8px;
+  width: 40vw;
+  height: 40vw;
+  border-radius: 30px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  @media (max-width: 426px) {
+    width: auto;
+    height: auto;
+    
+  }
 }
 
-.modal h2 {
-  margin-top: 0;
+.modalTitle{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.modal p {
-  margin-bottom: 0;
+.modalContent{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: inherit;
+}
+
+.addressBox{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--colors-backgroundDisabled);
+  border: solid var(--colors-silver) 1px;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+
+.svgContainer{
+  display: flex;
+  width: auto;
+  padding: 0px 10px;
+  svg{
+    width: 16px;
+    height: 16px;
+    fill: var(--colors-silver);
+  }
+}
+
+.modalClose {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+}
+
+.closeSVG {
+  fill: var(--colors-primary);
+  width: 30px;
+}
+
+
+.balanceTitle{
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
 }
