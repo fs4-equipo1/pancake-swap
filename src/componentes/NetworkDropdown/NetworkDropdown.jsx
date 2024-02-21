@@ -38,13 +38,13 @@ const NetworkDropdown = () => {
               alt={network.label}
               className={styles.buttonImage}
             />
-            <button
+            <div
               className={
                 activeNetwork.label === network.label ? styles.active : ""
               }
             >
               {network.label}
-            </button>
+            </div>
           </button>
         ))}
       </div>
