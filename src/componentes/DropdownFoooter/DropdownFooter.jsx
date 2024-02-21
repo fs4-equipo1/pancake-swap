@@ -8,27 +8,27 @@ const DropdownFooter = ({ title, itemsKey, punto, imageSrc }) => {
     earn: [
       {
         texto: "Farms",
-        icono: <null />,
+        icono: null,
       },
       {
         texto: "CAKE Staking",
-        icono: <null />,
+        icono: null,
       },
       {
         texto: "Pools",
-        icono: <null />,
+        icono: null,
       },
       {
         texto: "Position Manager",
-        icono: <null />,
+        icono: null,
       },
       {
         texto: "Liquid Staking",
-        icono: <null />,
+        icono: null,
       },
       {
         texto: "Simple Staking",
-        icono: <null />,
+        icono: null,
       },
     ],
     
@@ -39,37 +39,37 @@ const DropdownFooter = ({ title, itemsKey, punto, imageSrc }) => {
       },
       {
         texto: "Prediction (BETA)",
-        icono: <null />,
+        icono: null,
       },
       {
         texto: "Lottery",
-        icono: <null />,
+        icono: null,
       },
       {
         texto: "Pottery (BETA)",
-        icono: <null />,
+        icono: null,
       },
     ],
     more: [
       {
         texto: "Info",
-        icono: <null />,
+        icono: null,
       },
       {
         texto: "IFO",
-        icono: <null />,
+        icono: null,
       },
       {
         texto: "Affiliate Program",
-        icono: <null />,
+        icono: null,
       },
       {
         texto: "Voting",
-        icono: <null />,
+        icono: null,
       },
       {
         texto: "Leaderboard",
-        icono: <null />,
+        icono: null,
       },
       {
         texto: "Blog",
@@ -83,15 +83,15 @@ const DropdownFooter = ({ title, itemsKey, punto, imageSrc }) => {
     nft: [
       {
         texto: "Overview",
-        icono: <null />,
+        icono: null,
       },
       {
         texto: "Collections",
-        icono: <null />,
+        icono: null,
       },
       {
         texto: "Activity",
-        icono: <null />,
+        icono: null,
       },
     ],
   };
@@ -114,10 +114,10 @@ const DropdownFooter = ({ title, itemsKey, punto, imageSrc }) => {
 
   return (
     <div className={styles.dropdownContainer}>
-    <button className={styles.dropdownBtn} onClick={toggleDropdown}>
-      {imageSrc && <img src={imageSrc} alt={`Image for ${title}`} className={styles.image} />}
-      <span className={styles.title}>{title}</span>
-    </button>
+      <button className={styles.dropdownBtn} onClick={toggleDropdown}>
+        {imageSrc && <img src={imageSrc} alt={`Image for ${title}`} className={styles.image} />}
+        {title==='. . .' && <span className={styles.moreText}>{title}</span> || <span className={styles.title}>{title}</span>}
+      </button>
     {punto && (
       <div
         className={styles.punto}
