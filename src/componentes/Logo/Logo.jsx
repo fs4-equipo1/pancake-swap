@@ -3,7 +3,7 @@ import { useTheme } from "../../context/ThemeContext";
 export function Logo({ isInverted }) {
   const { theme } = useTheme();
   return (
-    <div>
+    <div className={styles.pancakeLogo}>
       {theme === 'dark' ? (
         <>
           <img src="../public/assets/logoPancakeBlanco.png" className={styles.logoImage} />
