@@ -1,17 +1,14 @@
-import { useState } from "react";
+import React from "react";
 import styles from "./NetworkDropdown.module.scss";
 import { networkData } from "./NetworksData";
-import { useTransaction } from "wagmi";
 import { useTranslation } from "react-i18next";
+import { useActiveNetwork } from "../../context/ActiveNetworkContext";
 
 const NetworkDropdown = () => {
-  const [activeNetwork, setActiveNetwork] = useState({
-    label: "BNB Chain",
-    image: "https://assets.pancakeswap.finance/web/chains/56.png",
-  });
+  const { activeNetwork, updateActiveNetwork } = useActiveNetwork();
 
   const handleButtonClick = (network) => {
-    setActiveNetwork(network);
+    updateActiveNetwork(network);
   };
 
   const { t } = useTranslation();
