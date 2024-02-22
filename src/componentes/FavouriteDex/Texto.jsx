@@ -37,7 +37,7 @@ export function Texto() {
               texto={t("Everyones")}
               isSubtitleLarge
             ></Tipografia>
-            <div className={styles.separador}> {/*  descomente esta linea */}
+            <div className={styles.separador}>
               <Tipografia
                 color={"--colors-secondary"}
                 texto={t("Favorite")}
@@ -48,8 +48,7 @@ export function Texto() {
                 texto={t("DEX")}
                 isSubtitleLarge
               />
-            </div>               {/*    //Comentado ya que al probar, no tiene efecto.
-            */}
+            </div>               
           </div>
           <div className={styles.subtext}>
             <Tipografia
