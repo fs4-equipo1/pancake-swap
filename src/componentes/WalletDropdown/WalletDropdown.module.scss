@@ -99,8 +99,8 @@
   }
 }
 
-a:nth-child(2),
-a:nth-child(4) {
+.dropdownItem:nth-child(2),
+.dropdownItem:nth-child(4) {
   border-bottom: 1px solid var(--colors-tertiary);
 }
 
