@@ -11,8 +11,10 @@ export function Metamask() {
             try{
                 const accounts = await window.ethereum.request({
                     method: "eth_requestAccounts",
-                }) 
+                })
                 setWalletAddress(accounts)
+                const account = accounts[0];
+                addWalletInfoToSwiper(account);
             } catch (error){
                 console.log('Error connecting...')
             }
