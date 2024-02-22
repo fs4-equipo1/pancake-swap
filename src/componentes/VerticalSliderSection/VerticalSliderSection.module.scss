@@ -13,8 +13,17 @@
     height: 1px;
     left: 191px;
     top: 55%;
-    z-index: -4;
+    z-index: 4;
   }
+
+.lineLeft::before{
+  content: "";
+  position: absolute;
+  background: var(--colors-secondary);
+  width: 5px;
+  height: 5px;
+  border-radius: 3px;
+}
   
   .lineRight {
     position: absolute;
@@ -26,6 +35,25 @@
     z-index: -4;
   }
   
+  @media screen and (min-width: 968px){
+    .lineLeft::before{
+      inset: -2px 0px auto auto;
+    }
+
+    .lineRight{
+      width: 108px;
+      height: 1px;
+      left: -108px;
+      top: 50%;
+      transform-origin: left center;
+    }
+  }
+  @media screen and (min-width: 768px){
+    .lineLeft::before{
+      inset: -2px 0px auto auto;
+    }
+  }
+
   @media (max-width: 750px) {
     .lineRight,
     .lineLeft {
