@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 export function Texto() {
-  //const windoWidth = window.outerWidth;
+  // const windoWidth = window.outerWidth;
   const [isLaptop, setIsLaptop] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -12,10 +12,10 @@ export function Texto() {
 
   useEffect(() => {
     const handleResize = () => {
-      const windoWidth = window.outerWidth;
-      setIsLaptop(windoWidth >= 1024 ? true : false);
-      setIsTablet(windoWidth <= 768 && windoWidth >= 426 ? true : false);
-      setIsMobile(windoWidth <= 425 ? true : false);
+      const windoWidth = window.innerWidth;
+      setIsLaptop(windoWidth >= 1024);
+      setIsTablet(windoWidth <= 768 && windoWidth >= 426);
+      setIsMobile(windoWidth <= 425);
     };
 
     handleResize();
@@ -37,7 +37,7 @@ export function Texto() {
               texto={t("Everyones")}
               isSubtitleLarge
             ></Tipografia>
-            <div className={styles.separador}> {/*  descomente esta linea */}
+            <div className={styles.separador}>
               <Tipografia
                 color={"--colors-secondary"}
                 texto={t("Favorite")}
@@ -48,8 +48,7 @@ export function Texto() {
                 texto={t("DEX")}
                 isSubtitleLarge
               />
-            </div>               {/*    //Comentado ya que al probar, no tiene efecto.
-            */}
+            </div>               
           </div>
           <div className={styles.subtext}>
             <Tipografia

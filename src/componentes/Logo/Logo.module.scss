@@ -1,9 +1,14 @@
+.pancakeLogo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .logoImage{
-    margin-top: 13px;
+    // margin-top: 13px;
     width: 160px;
     height: 25px;
-    margin-right: 30px;
+    // margin-right: 30px;
   }
   .iconResponsive{
     display: none;
@@ -14,6 +19,6 @@
     }
     .iconResponsive{
       display: block;
-      margin-top: 13px;
+      // margin-top: 13px;
     }
 }

@@ -22,9 +22,11 @@ import { I18nextProvider } from 'react-i18next';
 import i18n from './i18n/i18n'
 import { HeroSection } from "./componentes/BackgroundSections/HeroSection";
 import { PishingWarning } from "./componentes/PishingWarning/PishingWarning";
+import { DataProvider } from "./componentes/DataClientCard/DataContext";
 
 export function App() {
   return (
+    <DataProvider>
     <I18nextProvider i18n={i18n}>
     
     <BaseSection>
@@ -61,7 +63,7 @@ export function App() {
     </BaseSection>
 
     </I18nextProvider>
-    
+    </DataProvider>
   );
 }
 
