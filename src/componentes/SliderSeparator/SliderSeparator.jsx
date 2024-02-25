@@ -5,35 +5,17 @@ import { IoMdEgg } from "react-icons/io";
 
 function SliderSeparator() {
   const { theme } = useTheme();
-  const imgRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          entry.target.classList.add(styles.animating);
-        }else {
-          entry.target.classList.remove(styles.animating);
-        }
-      });
-    });
-    
-    const img = imgRef.current;
-    if(img){
-      observer.observe(img);
-    }
-
-    return () => {
-      if(img){
-        observer.unobserve(img)
-      }
-    };
-  }, []);
-
   return (
     <>
       <div className={styles.imgSeparator}>
-        <img ref={imgRef} src="..\src\assets\conejito.png" alt="Slider Separator" className={styles.coin}/>
+        <video
+          src="..\src\assets\videoTrans.webm" 
+          alt="Slider Separator" 
+          className={styles.coin}
+          autoPlay  
+          muted 
+          playsInline // Esto ayuda a prevenir ciertas restricciones en iOS
+        />
         {theme === "dark" ? (
           <div className={styles.imgSeparatorDark}></div>
         ) : (

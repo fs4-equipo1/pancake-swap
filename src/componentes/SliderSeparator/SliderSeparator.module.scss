@@ -1,18 +1,4 @@
 
-@keyframes comeForwardAndSpin {
-  0%{
-    transform: scale(0.5) rotateY(0deg) translateZ(0);
-    opacity: 0.5;
-  }
-  100%{
-    transform: scale(1) rotateY(360deg) translateZ(0);
-    opacity: 1;
-  }
-  
-}
-.animating {
-  animation: comeForwardAndSpin 2s  linear;
-}
 .imgSeparator {
   display: flex;
   align-items: center;
@@ -34,7 +20,7 @@
   );
 }
 
-.imgSeparator img {
+.imgSeparator video {
   width: 150%;
 }
 
