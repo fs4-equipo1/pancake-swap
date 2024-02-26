@@ -3,12 +3,20 @@ import styles from "./FavoriteDex.module.scss";
 import classNames from "classnames/bind";
 import Texto from "./Texto";
 import { useTranslation } from "react-i18next";
+import { useAccount } from "wagmi";
+import { useWeb3Modal } from "@web3modal/wagmi/react";
+import { useState } from "react";
 
 const cx = classNames.bind(styles);
 
 export function FavoriteDex() {
 
   const { t } = useTranslation()
+  const { open, selectedNetworkId } = useWeb3Modal();
+  const { address, isDisconnected } = useAccount();
+  const [buttonText, setButtonText] = useState(
+    window.innerWidth <= 800 ? t("Connect") : t("ConnectWallet")
+  );
 
   return (
     <div className={styles.favoriteDex}>
@@ -96,7 +104,13 @@ export function FavoriteDex() {
       <div className={styles.container}>
         <Texto />
         <div className={styles.buttons}>
-          <Boton texto={t("ConnectWallet")} isBlue style='padding: 12px 24px'></Boton>
+        {isDisconnected && (
+          <Boton
+            onClick={() => open({ view: "Connect" })}
+            texto={buttonText}
+            isBlue={true}
+          />
+        )}
           <Boton texto={t("TradeNow")} isTransparent></Boton>
         </div>
       </div>

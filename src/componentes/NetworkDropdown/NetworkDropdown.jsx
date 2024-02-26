@@ -3,11 +3,26 @@ import styles from "./NetworkDropdown.module.scss";
 import { networkData } from "./NetworksData";
 import { useTranslation } from "react-i18next";
 import { useActiveNetwork } from "../../context/ActiveNetworkContext";
+import { useSwitchNetwork } from "wagmi";
 
 const NetworkDropdown = () => {
   const { activeNetwork, updateActiveNetwork } = useActiveNetwork();
-
-  const handleButtonClick = (network) => {
+  const { chains, error, isLoading, pendingChainId, switchNetwork } =
+    useSwitchNetwork();
+  const addNetworkToMetamask = async (network) => {
+    try {
+      await window.ethereum.request({
+        method: "wallet_addEthereumChain",
+        params: [network.chainId],
+      });
+      console.log(`Red ${network.label} agregada a Metamask.`);
+    } catch (error) {
+      console.error("Error al agregar la red a Metamask:", error);
+    }
+  };
+  const handleButtonClick = async (network) => {
+    addNetworkToMetamask(network);  // Requires custom parameters -> https://docs.metamask.io/wallet/reference/wallet_addethereumchain/
+    switchNetwork?.(network.chainId);
     updateActiveNetwork(network);
   };
 
@@ -26,10 +41,14 @@ const NetworkDropdown = () => {
       </div>
 
       <div className={styles.dropdownCoinContent}>
-        <p>{t('SelectaNetwork')}</p>
+        <p>{t("SelectaNetwork")}</p>
         <hr></hr>
         {networkData.map((network) => (
-          <button onClick={() => handleButtonClick(network)} key={network.label} className={styles.buttonWithImage}>
+          <button
+            onClick={() => handleButtonClick(network)}
+            key={network.label}
+            className={styles.buttonWithImage}
+          >
             <img
               src={network.image}
               alt={network.label}
