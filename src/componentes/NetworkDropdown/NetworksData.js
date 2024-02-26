@@ -2,7 +2,7 @@ export const networkData = [
   {
     label: "BNB Chain",
     image: "https://assets.pancakeswap.finance/web/chains/56.png",
-    chainId: 56,
+    chainId: 0x38,
   },
   {
     label: "Ethereum",

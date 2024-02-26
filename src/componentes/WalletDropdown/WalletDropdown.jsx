@@ -8,13 +8,22 @@ import { GoDotFill, GoTypography } from "react-icons/go";
 import { useWallet } from "../../context/WalletContext";
 import { useActiveNetwork } from "../../context/ActiveNetworkContext";
 import Tipografia from "../Tipografia/Tipografia";
+import { useAccount, useBalance } from "wagmi";
+
 
 const WalletDropdown = ({ user, disconnectHandler }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [showBalanceModal, setShowBalanceModal] = useState(false);
-  const { wallet, walletAddress } = useWallet();
-  const { activeNetwork } = useActiveNetwork();
-  const selectedCurrency = activeNetwork.selectedCurrency;
+
+  const { address } = useAccount();
+  const { activeNetwork, updateActiveNetwork } = useActiveNetwork();
+  const balance = useBalance({
+    address: address,
+    chainId: activeNetwork.chainId
+  })
+  
+  // console.log(balance?.data?.formatted, balance?.data?.symbol)
+
 
   const handleMouseEnter = () => {
     setIsOpen(true);
@@ -37,7 +46,7 @@ const WalletDropdown = ({ user, disconnectHandler }) => {
   const itemsWalletDropdown = [
     {
       texto: t("Wallet"),
-      icono: walletAddress ? <WarningIcon className={styles.warning}/> : null,
+      icono: address ? <WarningIcon className={styles.warning}/> : null,
       onClick: handleWalletClick,
     },
     {
@@ -107,8 +116,8 @@ const WalletDropdown = ({ user, disconnectHandler }) => {
             <div className={styles.walletAddress}>
               <Tipografia color={"--colors-text"} texto={"Your address"} />
               <div className={styles.addressBox}>
-                <Tipografia color={"--colors-silver"} texto={wallet
-                    ? walletAddress
+                <Tipografia color={"--colors-silver"} texto={address
+                    ? address
                     : "No wallet connected"} />
                 <div className={styles.svgContainer}>
                   <svg>
@@ -126,7 +135,7 @@ const WalletDropdown = ({ user, disconnectHandler }) => {
               />
               <Tipografia
                 color={"--colors-text"}
-                isBodyLarge
+                isTitle
                 texto={activeNetwork.label}
               />
             </div>
@@ -143,10 +152,10 @@ const WalletDropdown = ({ user, disconnectHandler }) => {
               </div>
               <Tipografia
                 color={"--colors-text99"}
-                isBody
+                isSubtitleLarge
                 texto={
-                  wallet
-                    ? wallet.balance
+                  address
+                    ? `${balance?.data?.formatted} ${balance?.data?.symbol}`
                     : "No wallet connected"
                 }
               />

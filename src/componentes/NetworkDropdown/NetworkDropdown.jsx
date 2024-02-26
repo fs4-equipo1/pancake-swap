@@ -3,11 +3,14 @@ import styles from "./NetworkDropdown.module.scss";
 import { networkData } from "./NetworksData";
 import { useTranslation } from "react-i18next";
 import { useActiveNetwork } from "../../context/ActiveNetworkContext";
+import { useSwitchNetwork } from "wagmi";
 
 const NetworkDropdown = () => {
   const { activeNetwork, updateActiveNetwork } = useActiveNetwork();
-
+  const { chains, error, isLoading, pendingChainId, switchNetwork } =
+    useSwitchNetwork();
   const handleButtonClick = (network) => {
+    switchNetwork?.(network.chainId)
     updateActiveNetwork(network);
   };
 
@@ -26,10 +29,14 @@ const NetworkDropdown = () => {
       </div>
 
       <div className={styles.dropdownCoinContent}>
-        <p>{t('SelectaNetwork')}</p>
+        <p>{t("SelectaNetwork")}</p>
         <hr></hr>
         {networkData.map((network) => (
-          <button onClick={() => handleButtonClick(network)} key={network.label} className={styles.buttonWithImage}>
+          <button
+            onClick={() => handleButtonClick(network)}
+            key={network.label}
+            className={styles.buttonWithImage}
+          >
             <img
               src={network.image}
               alt={network.label}

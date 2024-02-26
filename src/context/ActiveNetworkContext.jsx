@@ -14,7 +14,7 @@ export const ActiveNetworkProvider = ({ children }) => {
       ...activeNetwork, 
       ...network, 
     });
-    console.log("Información de la red activa actualizada:", network);
+    // console.log("Información de la red activa actualizada:", network);
   };
 
   return (
