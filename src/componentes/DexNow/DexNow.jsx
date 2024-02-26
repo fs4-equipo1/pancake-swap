@@ -3,6 +3,9 @@ import styles from "./DexNow.module.scss";
 import background from "../../assets/background.png";
 import Boton from "../Boton/Boton";
 import { useTranslation } from "react-i18next";
+import { useState } from "react";
+import { useAccount } from "wagmi";
+import { useWeb3Modal } from "@web3modal/wagmi/react";
 
 const DexNow = ({ titleLarge }) => {
   return (
@@ -14,6 +17,11 @@ const DexNow = ({ titleLarge }) => {
 
 export function DexNowSection() {
   const { t } = useTranslation();
+  const { open, selectedNetworkId } = useWeb3Modal();
+  const { address, isDisconnected } = useAccount();
+  const [buttonText, setButtonText] = useState(
+    window.innerWidth <= 800 ? t("Connect") : t("ConnectWallet")
+  );
   return (
     <div
       className={styles.DexNowSection}
@@ -29,7 +37,14 @@ export function DexNowSection() {
             <DexNow titleLarge={t("FavouriteDEX")} />
           </div>
           <div>
-            <Boton texto={t("ConnectWallet")} isBlue={true} />
+            {isDisconnected && (
+              <Boton
+                isConnectWallet
+                onClick={() => open({ view: "Connect" })}
+                texto={buttonText}
+                isBlue={true}
+              />
+            )}
           </div>
         </div>
         <img
