@@ -39,7 +39,6 @@ export function DexNowSection() {
           <div>
             {isDisconnected && (
               <Boton
-                isConnectWallet
                 onClick={() => open({ view: "Connect" })}
                 texto={buttonText}
                 isBlue={true}

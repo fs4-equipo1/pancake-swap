@@ -106,7 +106,6 @@ export function FavoriteDex() {
         <div className={styles.buttons}>
         {isDisconnected && (
           <Boton
-            isConnectWallet
             onClick={() => open({ view: "Connect" })}
             texto={buttonText}
             isBlue={true}

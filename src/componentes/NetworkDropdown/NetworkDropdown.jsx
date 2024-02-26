@@ -9,8 +9,20 @@ const NetworkDropdown = () => {
   const { activeNetwork, updateActiveNetwork } = useActiveNetwork();
   const { chains, error, isLoading, pendingChainId, switchNetwork } =
     useSwitchNetwork();
-  const handleButtonClick = (network) => {
-    switchNetwork?.(network.chainId)
+  const addNetworkToMetamask = async (network) => {
+    try {
+      await window.ethereum.request({
+        method: "wallet_addEthereumChain",
+        params: [network.chainId],
+      });
+      console.log(`Red ${network.label} agregada a Metamask.`);
+    } catch (error) {
+      console.error("Error al agregar la red a Metamask:", error);
+    }
+  };
+  const handleButtonClick = async (network) => {
+    addNetworkToMetamask(network);
+    switchNetwork?.(network.chainId);
     updateActiveNetwork(network);
   };
 
