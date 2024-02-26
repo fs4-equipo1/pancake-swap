@@ -21,7 +21,7 @@ const NetworkDropdown = () => {
     }
   };
   const handleButtonClick = async (network) => {
-    addNetworkToMetamask(network);
+    addNetworkToMetamask(network);  // Requires custom parameters -> https://docs.metamask.io/wallet/reference/wallet_addethereumchain/
     switchNetwork?.(network.chainId);
     updateActiveNetwork(network);
   };
