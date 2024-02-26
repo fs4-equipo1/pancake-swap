@@ -12,11 +12,8 @@ import { useEffect, useState } from "react";
 import { heroSwiperCardData } from "../../mocks/HeroSwiperCard.mock";
 import useSetDataSwiper from "./useSetDataSwiper";
 
-export function HeroSwiper () {
-
+export function HeroSwiper() {
   const { dataSwiper } = useSetDataSwiper();
-
-
 
   return (
     <Swiper
@@ -32,23 +29,45 @@ export function HeroSwiper () {
         disableOnInteraction: false,
       }}
     >
-      {dataSwiper.map((card, index) => (
-        <SwiperSlide key={index}>
-          <HeroSwiperCard
-            backgroundImg={card.backgroundImg}
-            colorBackground={card.colorBackground}
-            topLogo={card.topLogo}
-            titleText={card.titleText}
-            secondText={card.secondText}
-            botonPrimary={card.botonPrimary}
-            botonSecondary={card.botonSecondary}
-            bunnyPng={card.bunnyPng}
-            decorationPng={card.decorationPng}
-          />
-        </SwiperSlide>
-      ))}
+      {dataSwiper.map((card, index) => {
+        if (card.showCard) {
+          return (
+            <SwiperSlide key={index}>
+              <HeroSwiperCard
+                backgroundImg={card.backgroundImg}
+                colorBackground={card.colorBackground}
+                topLogo={card.topLogo}
+                titleText={card.titleText}
+                secondText={card.secondText}
+                botonPrimary={card.botonPrimary}
+                botonSecondary={card.botonSecondary}
+                bunnyPng={card.bunnyPng}
+                decorationPng={card.decorationPng}
+              />
+            </SwiperSlide>
+          );
+        } else {
+          if(activeNetwork.chainId == 0x38){
+            return (
+              <SwiperSlide key={index}>
+                <HeroSwiperCard
+                  backgroundImg={card.backgroundImg}
+                  colorBackground={card.colorBackground}
+                  topLogo={card.topLogo}
+                  titleText={card.titleText}
+                  secondText={card.secondText}
+                  botonPrimary={card.botonPrimary}
+                  botonSecondary={card.botonSecondary}
+                  bunnyPng={card.bunnyPng}
+                  decorationPng={card.decorationPng}
+                />
+              </SwiperSlide>
+            );
+          }
+        }
+      })}
     </Swiper>
   );
 }
 
-export default HeroSwiper
+export default HeroSwiper;
