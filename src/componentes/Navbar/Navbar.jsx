@@ -20,10 +20,9 @@ import { useStoreState, useStoreActions } from "../../store";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { useAccount, useDisconnect, useFeeData } from "wagmi";
-import { add } from "lodash";
-import axios from "axios";
 import classNames from "classnames/bind";
 import WalletDropdown from "../WalletDropdown/WalletDropdown";
+import useAddress from "../WalletConnect/useAddress";
 const cx = classNames.bind();
 
 function Navbar() {
@@ -175,40 +174,9 @@ function Navbar() {
   const { open, selectedNetworkId } = useWeb3Modal();
   const { disconnect } = useDisconnect();
 
-  const { address, isDisconnected } = useAccount();
+  const { isDisconnected } = useAccount();
 
-  //Fetch de usuario para llamar a la api, y cambiar los datos en mi app, o si no existe, crear uno nuevo
-  const fetchUsuario = async () => {
-    try {
-      const response = await axios.get(
-        `http://localhost:3004/users/${address}`
-      );
-
-      setUser(response.data); // la respuesta de la base de datos, con username nfts, favoritos, avatar, location
-    } catch (err) {
-      console.error(err.message);
-    }
-  };
-
-  //función que formatea el usuario y lo acorta para mostrar en el boton.
-  function formatAddress (address) {
-    if (typeof address === 'string' && address.length >= 6) {
-      return `${address.substring(0, 2)}...${address.substring(address.length - 4)}`;
-    } else {
-      return "Loading...";
-  }
-}
-
-  //UseEffect para manejar el cambio de billetera y hacer el fetch de usuario
-  useEffect(() => {
-    if (address) {
-      console.log(`La billetera connectada es: ${address}`);
-      console.log("Cambio la direccion, guarda el usuario en el store model");
-      fetchUsuario();
-    } else {
-      console.log("Billetera desconectada");
-    }
-  }, [address]);
+  const { address, formatAddress } = useAddress();
 
   useEffect(() => {
     console.log(selectedNetworkId, "seleceted id");
