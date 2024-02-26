@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useState, useEffect } from "react";
 
 const ActiveNetworkContext = createContext();
 
@@ -32,3 +32,4 @@ export const useActiveNetwork = () => {
   }
   return context;
 };
+
