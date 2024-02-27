@@ -44,7 +44,7 @@ const WalletDropdown = ({ user, disconnectHandler }) => {
   const itemsWalletDropdown = [
     {
       texto: t("Wallet"),
-      icono: address ? <WarningIcon className={styles.warning} /> : null,
+      icono: !address ? <WarningIcon className={styles.warning} /> : null,
       onClick: handleWalletClick,
     },
     {
