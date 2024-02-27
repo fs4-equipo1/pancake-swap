@@ -117,6 +117,7 @@ const useSetDataSwiper = () => {
           alt="Bunny"
         ></img>
       ),
+      showCard: true,
     },
     {
       backgroundImg: images.background2,
@@ -234,6 +235,7 @@ const useSetDataSwiper = () => {
           alt="Bunny"
         ></img>
       ),
+      showCard: true,
     },
     {
       backgroundImg: null,
@@ -286,6 +288,60 @@ const useSetDataSwiper = () => {
         ></img>
       ),
       decorationPng: null,
+      showCard: true,
+    },
+    {
+      backgroundImg: null,
+      colorBackground: "rgb(73, 34, 134)",
+      topLogo: null,
+      titleText: (
+        <h6
+          style={{
+            fontWeight: 900,
+            fontSize: "var(--fontSizes-20px)",
+            margin: "-10px 0px 6px 6px",
+            color: "var(--colors-gold)",
+          }}
+        >
+          {t("PerpetualFutures")}
+        </h6>
+      ),
+      secondText: (
+        <div
+          style={{
+            color: "var(--colors-white)",
+            marginLeft: "var(--space-6px)",
+            marginRight: "var(--space-4px)",
+            fontSize: "38px",
+          }}
+        >
+          {t("UPTO1001×LEVERAGE")}
+        </div>
+      ),
+      botonPrimary: (
+        <Boton
+          texto={t("TradeNow")}
+          icon={<ArrowRight color={"white"} />}
+          isBlue
+          isTextWhite
+        />
+      ),
+      botonSecondary: null,
+      bunnyPng: (
+        <img
+          style={{
+            position: "absolute",
+            right: "var(--space-8px)",
+            bottom: 0,
+            height: "247px",
+            width: "392px",
+          }}
+          src={images.perpetualBunny}
+          alt="Bunny"
+        ></img>
+      ),
+      decorationPng: null,
+      showCard: false,
     },
   ];
 
@@ -353,6 +409,7 @@ const useSetDataSwiper = () => {
           alt="Bunny"
         ></img>
       ),
+      showCard: true,
     },
     {
       backgroundImg: null,
@@ -427,6 +484,7 @@ const useSetDataSwiper = () => {
           alt="Bunny"
         ></img>
       ),
+      showCard: true,
     },
     {
       backgroundImg: null,
@@ -481,6 +539,7 @@ const useSetDataSwiper = () => {
         ></img>
       ),
       decorationPng: null,
+      showCard: true,
     },
   ];
 
@@ -547,6 +606,7 @@ const useSetDataSwiper = () => {
           alt="Bunny"
         ></img>
       ),
+      showCard: true,
     },
     {
       backgroundImg: null,
@@ -620,6 +680,7 @@ const useSetDataSwiper = () => {
           alt="Bunny"
         ></img>
       ),
+      showCard: true,
     },
     {
       backgroundImg: null,
@@ -673,6 +734,7 @@ const useSetDataSwiper = () => {
         ></img>
       ),
       decorationPng: null,
+      showCard: true,
     },
   ];
 

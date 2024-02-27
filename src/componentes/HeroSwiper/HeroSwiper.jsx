@@ -11,6 +11,7 @@ import { useEffect, useState } from "react";
 //import { heroSwiperCardDataMobile } from "../../mocks/HeroSwiperResponsive.mock";
 import { heroSwiperCardData } from "../../mocks/HeroSwiperCard.mock";
 import useSetDataSwiper from "./useSetDataSwiper";
+import { useActiveNetwork } from "../../context/ActiveNetworkContext";
 
 export function HeroSwiper() {
   const { dataSwiper } = useSetDataSwiper();
@@ -47,7 +48,7 @@ export function HeroSwiper() {
             </SwiperSlide>
           );
         } else {
-          if(activeNetwork.chainId == 0x38){
+          if(useActiveNetwork.chainId == 0x38){
             return (
               <SwiperSlide key={index}>
                 <HeroSwiperCard

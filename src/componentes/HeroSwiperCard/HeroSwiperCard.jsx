@@ -8,7 +8,7 @@ export const HeroSwiperCard = ({
   botonPrimary,
   botonSecondary,
   bunnyPng,
-  decorationPng
+  decorationPng,
 }) => {
   return (
     <div
