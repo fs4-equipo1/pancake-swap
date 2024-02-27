@@ -45,19 +45,18 @@ const NetworkDropdown = () => {
   };
 
   const handleButtonClick = async (network) => {
-    console.log(network);
     try {
       const isNetworkAdded = await isNetworkAlreadyAdded(network);
       if (!isNetworkAdded && network.chainId !== "0x1") {
         await addNetworkToMetamask(network);
-        // await switchNetwork?.(network.chainId);
-        // await updateActiveNetwork(network);
       }
-      try {
-        await switchNetwork?.(network.chainId);
-      } catch {
-        throw new Error(i18n(DontHaveEthereumMainnetOnWallet));
-      }
+      await switchNetwork?.(network.chainId);
+      await new Promise((resolve) => {
+        ethereum.on('chainChanged', (chainId) => {
+          console.log('Se ha cambiado exitosamente la red en MetaMask:', chainId);
+          resolve();
+        });
+      });
       await updateActiveNetwork(network);
     } catch {
       console.log(
