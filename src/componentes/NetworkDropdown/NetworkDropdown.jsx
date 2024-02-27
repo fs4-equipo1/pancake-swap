@@ -48,11 +48,12 @@ const NetworkDropdown = () => {
         await addNetworkToMetamask(network);
       }
       await switchNetwork?.(network);
-      await updateActiveNetwork(network);
+      await updateActiveNetwork(network); // Se mueve dentro del bloque try
     } catch {
       console.log("Ha habido un error al añadir la billetera.");
     }
   };
+  
 
   const { t } = useTranslation();
 
@@ -74,7 +75,7 @@ const NetworkDropdown = () => {
         {networkJSON.map((network) => (
           <button
             onClick={() => handleButtonClick(network)}
-            key={network.jsonID}
+            key={network.chainId}
             className={styles.buttonWithImage}
           >
             <img

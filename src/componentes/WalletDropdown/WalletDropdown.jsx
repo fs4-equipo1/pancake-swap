@@ -127,21 +127,32 @@ const WalletDropdown = ({ user, disconnectHandler }) => {
                 </div>
               </div>
               <div className={styles.activeNetworkCont}>
-                <Tipografia
-                  color={"--colors-primary"}
-                  isSubtitle
-                  texto={"Current Network"}
-                />
-                <Tipografia
-                  color={"--colors-text"}
-                  isTitle
-                  texto={activeNetwork.label}
-                />
-                <Tipografia
-                  color={"--colors-text99"}
-                  isSubtitle
-                  texto={`(${activeNetwork?.symbol})`}
-                />
+                <div className={styles.activeNetworkContL}>
+                  <Tipografia
+                    color={"--colors-primary"}
+                    isSubtitle
+                    texto={"Current Network"}
+                  />
+                  <Tipografia
+                    color={"--colors-text"}
+                    isTitle
+                    texto={activeNetwork.chainName}
+                  />
+                  <br />
+                  <Tipografia
+                    color={"--colors-text99"}
+                    isSubtitle
+                    texto={`(${activeNetwork?.nativeCurrency.symbol})`}
+                  />
+                </div>
+                <div className={styles.activeNetworkContR}>
+                  <div className={styles.imageContainer}>
+                    <img
+                      src={activeNetwork.iconUrls[0]}
+                      alt={activeNetwork.chainName}
+                    />
+                  </div>
+                </div>
               </div>
               <div className={styles.balanceCont}>
                 <div className={styles.balanceTitle}>
@@ -161,7 +172,7 @@ const WalletDropdown = ({ user, disconnectHandler }) => {
                   isSubtitleLarge
                   texto={
                     address
-                      ? `${balance?.data?.formatted} ${activeNetwork?.symbol}`
+                      ? `${balance?.data?.formatted} ${activeNetwork?.nativeCurrency.symbol}`
                       : "No wallet connected"
                   }
                 />
