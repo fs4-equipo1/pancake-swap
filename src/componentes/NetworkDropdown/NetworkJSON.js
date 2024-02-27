@@ -15,7 +15,7 @@ export const networkJSON = [
     chainId: "0x1",
     chainName: "Ethereum",
     iconUrls: ["https://assets.pancakeswap.finance/web/chains/1.png"],
-    rpcUrls: ["https://mainnet.infura.io/v3/00bb94f3fa13a355e8279fcc7ac5abb6"],
+    rpcUrls: ["https://mainnet.infura.io/v3/"],
     nativeCurrency: {
       name: "Ethereum",
       symbol: "ETH",
