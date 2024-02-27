@@ -1,5 +1,6 @@
 
 {
+    "DontHaveEthereumMainnetOnWallet": "You don't have Ethereum Mainnet ID added in your wallet. Go to you Wallet's website to know how to achieve it.",
     "WarningTitle":"Phishing warning: ",
     "WarningText":" please make sure you're visiting ",
     "WarningURL":" https://pancakeswap.finance",

@@ -5,28 +5,32 @@ import { networkJSON } from "./NetworkJSON";
 import { useTranslation } from "react-i18next";
 import { useActiveNetwork } from "../../context/ActiveNetworkContext";
 import { useSwitchNetwork } from "wagmi";
+import i18n from "../../i18n/i18n";
 
 const NetworkDropdown = () => {
   const { activeNetwork, updateActiveNetwork } = useActiveNetwork();
   const { chains, error, isLoading, pendingChainId, switchNetwork } =
     useSwitchNetwork();
 
-    const isNetworkAlreadyAdded = async (network) => {
-      try {
-        const accounts = await ethereum.request({
-          method: 'eth_accounts'
-        });
-    
-        const activeChainId = accounts.length > 0 ? await ethereum.request({
-          method: 'eth_chainId'
-        }) : null;
-    
-        return activeChainId === network.chainId;
-      } catch (error) {
-        console.error('Error al verificar la red en MetaMask:', error);
-        return false;
-      }
-    };
+  const isNetworkAlreadyAdded = async (network) => {
+    try {
+      const accounts = await ethereum.request({
+        method: "eth_accounts",
+      });
+
+      const activeChainId =
+        accounts.length > 0
+          ? await ethereum.request({
+              method: "eth_chainId",
+            })
+          : null;
+
+      return activeChainId === network.chainId;
+    } catch (error) {
+      console.error("Error al verificar la red en MetaMask:", error);
+      return false;
+    }
+  };
 
   const addNetworkToMetamask = async (network) => {
     try {
@@ -44,16 +48,23 @@ const NetworkDropdown = () => {
     console.log(network);
     try {
       const isNetworkAdded = await isNetworkAlreadyAdded(network);
-      if (!isNetworkAdded) {
+      if (!isNetworkAdded && network.chainId !== "0x1") {
         await addNetworkToMetamask(network);
+        // await switchNetwork?.(network.chainId);
+        // await updateActiveNetwork(network);
       }
-      await switchNetwork?.(network);
-      await updateActiveNetwork(network); // Se mueve dentro del bloque try
+      try {
+        await switchNetwork?.(network.chainId);
+      } catch {
+        throw new Error(i18n(DontHaveEthereumMainnetOnWallet));
+      }
+      await updateActiveNetwork(network);
     } catch {
-      console.log("Ha habido un error al añadir la billetera.");
+      console.log(
+        "Ha habido un error al añadir la billetera o actualizar la red."
+      );
     }
   };
-  
 
   const { t } = useTranslation();
 
