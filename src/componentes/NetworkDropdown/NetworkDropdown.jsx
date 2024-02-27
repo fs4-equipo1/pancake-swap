@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./NetworkDropdown.module.scss";
 import { networkData } from "./NetworksData";
+import { networkJSON } from "./NetworkJSON";
 import { useTranslation } from "react-i18next";
 import { useActiveNetwork } from "../../context/ActiveNetworkContext";
 import { useSwitchNetwork } from "wagmi";
@@ -9,21 +10,48 @@ const NetworkDropdown = () => {
   const { activeNetwork, updateActiveNetwork } = useActiveNetwork();
   const { chains, error, isLoading, pendingChainId, switchNetwork } =
     useSwitchNetwork();
+
+    const isNetworkAlreadyAdded = async (network) => {
+      try {
+        const accounts = await ethereum.request({
+          method: 'eth_accounts'
+        });
+    
+        const activeChainId = accounts.length > 0 ? await ethereum.request({
+          method: 'eth_chainId'
+        }) : null;
+    
+        return activeChainId === network.chainId;
+      } catch (error) {
+        console.error('Error al verificar la red en MetaMask:', error);
+        return false;
+      }
+    };
+
   const addNetworkToMetamask = async (network) => {
     try {
       await window.ethereum.request({
         method: "wallet_addEthereumChain",
-        params: [network.chainId],
+        params: [network],
       });
       console.log(`Red ${network.label} agregada a Metamask.`);
     } catch (error) {
       console.error("Error al agregar la red a Metamask:", error);
     }
   };
+
   const handleButtonClick = async (network) => {
-    addNetworkToMetamask(network);  // Requires custom parameters -> https://docs.metamask.io/wallet/reference/wallet_addethereumchain/
-    switchNetwork?.(network.chainId);
-    updateActiveNetwork(network);
+    console.log(network);
+    try {
+      const isNetworkAdded = await isNetworkAlreadyAdded(network);
+      if (!isNetworkAdded) {
+        await addNetworkToMetamask(network);
+      }
+      await switchNetwork?.(network);
+      await updateActiveNetwork(network);
+    } catch {
+      console.log("Ha habido un error al añadir la billetera.");
+    }
   };
 
   const { t } = useTranslation();
@@ -32,34 +60,36 @@ const NetworkDropdown = () => {
     <div className={styles.dropdownCoinContainer}>
       <div className={styles.activeNetwork}>
         <img
-          src={activeNetwork.image}
-          alt={activeNetwork.label}
+          src={activeNetwork.iconUrls}
+          alt={activeNetwork.chainName}
           className={styles.buttonImage}
         />
-        <button>{activeNetwork.label}</button>
+        <button>{activeNetwork.chainName}</button>
         <DropdownArrow />
       </div>
 
       <div className={styles.dropdownCoinContent}>
         <p>{t("SelectaNetwork")}</p>
         <hr></hr>
-        {networkData.map((network) => (
+        {networkJSON.map((network) => (
           <button
             onClick={() => handleButtonClick(network)}
-            key={network.label}
+            key={network.jsonID}
             className={styles.buttonWithImage}
           >
             <img
-              src={network.image}
-              alt={network.label}
+              src={network.iconUrls[0]}
+              alt={network.chainName}
               className={styles.buttonImage}
             />
             <div
               className={
-                activeNetwork.label === network.label ? styles.active : ""
+                activeNetwork.chainName === network.chainName
+                  ? styles.active
+                  : ""
               }
             >
-              {network.label}
+              {network.chainName}
             </div>
           </button>
         ))}
