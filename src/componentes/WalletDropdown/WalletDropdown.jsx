@@ -103,7 +103,7 @@ const WalletDropdown = ({ user, disconnectHandler }) => {
         <div className={styles.modalContainer}>
           <div className={styles.theModal}>
             <div className={styles.modalTitle}>
-              <Tipografia color={"--colors-primary"} isTitle texto={"Wallet"} />
+              <Tipografia color={"--colors-primary"} isTitle texto={t("Wallet")} />
               <button className={styles.modalClose} onClick={handleCloseModal}>
                 <svg viewBox="0 0 24 24" className={styles.closeSVG}>
                   <path d="M18.3 5.70997C17.91 5.31997 17.28 5.31997 16.89 5.70997L12 10.59L7.10997 5.69997C6.71997 5.30997 6.08997 5.30997 5.69997 5.69997C5.30997 6.08997 5.30997 6.71997 5.69997 7.10997L10.59 12L5.69997 16.89C5.30997 17.28 5.30997 17.91 5.69997 18.3C6.08997 18.69 6.71997 18.69 7.10997 18.3L12 13.41L16.89 18.3C17.28 18.69 17.91 18.69 18.3 18.3C18.69 17.91 18.69 17.28 18.3 16.89L13.41 12L18.3 7.10997C18.68 6.72997 18.68 6.08997 18.3 5.70997Z"></path>
@@ -112,11 +112,11 @@ const WalletDropdown = ({ user, disconnectHandler }) => {
             </div>
             <div className={styles.modalContent}>
               <div className={styles.walletAddress}>
-                <Tipografia color={"--colors-text"} texto={"Your address"} />
+                <Tipografia color={"--colors-text"} texto={t("YourAddress")} />
                 <div className={styles.addressBox}>
                   <Tipografia
                     color={"--colors-silver"}
-                    texto={address ? address : "No wallet connected"}
+                    texto={address ? address : t("NoWalletConnected")}
                   />
                   <div className={styles.svgContainer}>
                     <svg>
@@ -131,7 +131,7 @@ const WalletDropdown = ({ user, disconnectHandler }) => {
                   <Tipografia
                     color={"--colors-primary"}
                     isSubtitle
-                    texto={"Current Network"}
+                    texto={t("CurrentNetwork")}
                   />
                   <Tipografia
                     color={"--colors-text"}
@@ -159,12 +159,12 @@ const WalletDropdown = ({ user, disconnectHandler }) => {
                   <Tipografia
                     isSubtitle
                     color={"--colors-primary"}
-                    texto={"Your balance of: "}
+                    texto={t("YourBalanceOF")}
                   />
                   <Tipografia
                     isSubtitle
                     color={"--colors-secondary"}
-                    texto={activeNetwork.label}
+                    texto={activeNetwork.chainName}
                   />
                 </div>
                 <Tipografia
