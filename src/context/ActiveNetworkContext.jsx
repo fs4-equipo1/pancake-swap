@@ -5,6 +5,7 @@ const ActiveNetworkContext = createContext();
 export const ActiveNetworkProvider = ({ children }) => {
   const [activeNetwork, setActiveNetwork] = useState({
     label: "BNB Chain",
+    symbol: "BNB",
     image: "https://assets.pancakeswap.finance/web/chains/56.png",
     selectedCurrency: "BNB",
   });
