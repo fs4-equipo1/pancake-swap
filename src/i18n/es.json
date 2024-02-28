@@ -1,4 +1,9 @@
 {
+  "YourBalanceOF": "Tu balance de: ",
+  "CurrentNetwork": "Network actual",
+  "NoWalletConnected": "No hay billetera conectada.",
+  "YourAddress": "Tu dirección:",
+  "DontHaveEthereumMainnetOnWallet":"No tienes un ID de Ethereum Mainnet en tu billetera. Ve al sitio web de tu billetera para aprender como obtenerlo.",
   "WarningTitle":"Advertencia de pishing: ",
   "WarningText":" asegúrate de visitar ",
   "WarningURL":" https://pancakeswap.finance",
