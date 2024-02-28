@@ -12,10 +12,12 @@ import { useEffect, useState } from "react";
 import { heroSwiperCardData } from "../../mocks/HeroSwiperCard.mock";
 import useSetDataSwiper from "./useSetDataSwiper";
 import { useActiveNetwork } from "../../context/ActiveNetworkContext";
+import { useAccount } from "wagmi";
 
 export function HeroSwiper() {
   const { dataSwiper } = useSetDataSwiper();
-
+  const { activeNetwork } = useActiveNetwork();
+  const { isConnected } = useAccount();
   return (
     <Swiper
       modules={[Pagination, Autoplay, EffectFade]}
@@ -48,7 +50,7 @@ export function HeroSwiper() {
             </SwiperSlide>
           );
         } else {
-          if(useActiveNetwork.chainId == 0x38){
+          if(activeNetwork.chainId == "0x38" && isConnected){
             return (
               <SwiperSlide key={index}>
                 <HeroSwiperCard

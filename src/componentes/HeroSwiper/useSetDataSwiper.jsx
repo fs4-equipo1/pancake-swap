@@ -315,7 +315,7 @@ const useSetDataSwiper = () => {
             fontSize: "38px",
           }}
         >
-          {t("UPTO1001×LEVERAGE")}
+          Card prueba
         </div>
       ),
       botonPrimary: (
