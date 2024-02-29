@@ -18,6 +18,16 @@ const useAddress = () => {
       console.error(err.message);
     }
   };
+  //funcion que acorta el nombre de la billetera para mostrar en la card del ususario
+  const formatAddressUser = (address) => {
+    if (typeof address === "string" && address.length >= 8) {
+      return `${address.substring(0, 4)}...${address.substring(
+        address.length - 4
+      )}`;
+    } else {
+      return "Loading...";
+    }
+  };
 
   //función que acorta el nombre de la billetera para mostrar en el boton.
   const formatAddress = (address) => {
@@ -41,7 +51,7 @@ const useAddress = () => {
     }
   }, [address]);
 
-  return { address, formatAddress, };
+  return { address, formatAddress, formatAddressUser };
 };
 
 export default useAddress;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./NetworkDropdown.module.scss";
 import { networkData } from "./NetworksData";
 import { networkJSON } from "./NetworkJSON";
@@ -43,6 +43,10 @@ const NetworkDropdown = () => {
       console.error("Error al agregar la red a Metamask:", error);
     }
   };
+  
+  useEffect(() => {
+    updateActiveNetwork(networkData[0]);
+  }, []);
 
   const handleButtonClick = async (network) => {
     try {
@@ -52,8 +56,11 @@ const NetworkDropdown = () => {
       }
       await switchNetwork?.(network.chainId);
       await new Promise((resolve) => {
-        ethereum.on('chainChanged', (chainId) => {
-          console.log('Se ha cambiado exitosamente la red en MetaMask:', chainId);
+        ethereum.on("chainChanged", (chainId) => {
+          console.log(
+            "Se ha cambiado exitosamente la red en MetaMask:",
+            chainId
+          );
           resolve();
         });
       });
