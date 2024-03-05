@@ -1,9 +1,12 @@
 .cardcontainer {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  //justify-content: space-evenly;
+  align-items: center;
   flex-wrap: wrap;
+  height: fit-content;
   padding: 20px;
+  width: 100%;
 
   gap: var(--space-20px);
 }
@@ -13,15 +16,12 @@
   flex-direction: column;
   justify-content: space-between;
   position: relative;
+  margin: 0px 20px;
 
   height: 250px;
-  min-width: 100px;
+  min-width: 120px;
   max-width: 140px;
-  // gap: var(--space-8px);
-
-  // overflow: hidden;
 }
-
 
 .cardImgPurple {
   width: 90px; /* 90px */
@@ -35,14 +35,14 @@
   position: absolute;
   top: 0%;
   opacity: 0.7; // 0%
-  
+
   display: block;
 }
 
 .cardTextTitle {
   margin: 0;
   font-size: 20px;
-  color: var(--colors-text);
+  color: var(--colors-secondary);
 }
 
 .cardText {
@@ -76,7 +76,7 @@
   left: 0;
   position: absolute;
   overflow: hidden;
-  
+
   object-fit: cover;
   transition: opacity 0.5s linear;
 }
@@ -88,9 +88,6 @@
 }
 
 .card:hover {
-  .swap-on-hover > .swap-on-hover__front-image {
-    opacity: 0;
-  }
   .cardlink {
     transition: 0.2s linear;
     color: var(--colors-primaryBright);
@@ -98,21 +95,21 @@
 }
 
 .ecosystemTitle {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
   color: var(--colors-secondary);
   font-size: 40px;
   margin: 20px;
+  gap: 6px;
+
+  @media (max-width: 768px) {
+  justify-content: center;
+}
 }
 
-.ecosystemContainer {
-  width: 60vw;
-  justify-content: left;
-  display: flex;
-  position: relative;
-  border-radius: 25px;
-  background-color: aliceblue;
-}
-
-.ecosystemImgContainer{
+.ecosystemImgContainer {
   width: 20%;
 }
 
@@ -124,7 +121,7 @@
   margin-top: 25px;
 }
 
-.ecosystemImgReversed{
+.ecosystemImgReversed {
   width: 300px;
   position: relative;
   height: auto;
@@ -138,44 +135,128 @@
   max-width: 80vw;
 }
 
-.ecosystemImgLeft {
-  width: 296px;
-  height: 360px;
-}
+// .ecosystemImgLeft {
+//   width: 296px;
+//   height: 360px;
+// }
 
-.discoverEcosystemDark {
+.ecosystemCard {
   display: flex;
-  justify-content: space-between;
+  //justify-content: space-between;
   align-items: center;
-  background: var(--colors-backgroundAlt);
-  border-radius: 30px;
-  margin: 30px;
-  max-width: 80vw;
-  width: auto;
-}
-
-.discoverEcosystemLight {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: var(--colors-gradientBubblegum);
   border-radius: 30px;
   margin: 30px;
   max-width: 90vw;
-  width: auto;
+  width: 100%; //1000px
 }
 
-.headerContainer{
+.discoverEcosystemDark {
+  background: var(--colors-gradientBubblegum);
+}
+
+.discoverEcosystemLight {
+  background: var(--colors-backgroundAlt);
+}
+
+.headerContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  
+  margin-top: 8px;
+}
+
+.sectionTitle {
+  display: flex;
+  color: var(--colors-secondary);
+  font-size: 40px;
+  margin: 20px;
+  gap: 6px;
+}
+
+@media (max-width: 768px) {
+  .cardcontainer{
+    flex-wrap: wrap;
+  }
+
+
+  .ecosystemCard {
+    display: flex;
+    // flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    
+    width: 95vw;
+    max-width: 100%;
+    margin: 0px;
+    padding: 20px 0px;
+    margin-bottom: 40px;
+  }
+
+  .ecosystemImg {
+    left: 0px;
+    right: 0px;
+  }
+
+  .ecosystemImgReversed{
+    left: 0px;
+    right: 0px;
+  }
+
+  .ecosystemSegment {
+    max-width: 90vw;
+  }
+
+  .sectionTitle {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cardImgPurple {
+    display: block;
+    opacity: 0 !important;
+  }
+
+  .cardImgColor {
+    display: block;
+    opacity: 1 !important;
+  }
+}
+
+@media (max-width: 426px) {
+  .cardcontainer {
+    justify-content: center;
+    gap: 10px;
+    padding: 0px;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    min-width: 110px;
+    max-width: 110px;
+    // gap: var(--space-8px);
+
+    // overflow: hidden;
+  }
+
+  .ecosystemImg {
+    left: 0px;
+    width: 250px;
+  }
+
+  .ecosystemImgReversed{
+    left: 0px;
+    width: 250px;
+  }
 }
 
 
-.ecosystemTitle{
+.section{
   display: flex;
-  gap: 6px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

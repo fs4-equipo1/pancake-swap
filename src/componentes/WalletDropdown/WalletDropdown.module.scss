@@ -1,0 +1,234 @@
+.walletConnected {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--colors-tertiary);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px -2px 0px inset;
+  cursor: pointer;
+  height: 32px;
+  // width: 120px;
+  padding-right: 8px;
+  position: relative;
+  border-radius: 16px;
+  color: var(--colors-contrast);
+
+  &:hover {
+    .dropdownCoinContent {
+      display: block;
+    }
+  }
+}
+
+.dropdownBtn {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  // height: 30px;
+  color: var(--colors-textSubtle);
+  // width: 30px;
+  // position: relative;
+  // padding: 4px;
+  border-radius: 50%;
+}
+
+.arrowDown{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--colors-text);
+}
+
+.walletIcon {
+  background-color: var(--colors-background);
+  border-color: var(--colors-primary);
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 2px;
+  height: 35px;
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  // margin-right: 8px;
+  // left: 0px;
+  // position: absolute;
+  // top: 0px;
+}
+
+.icon {
+  z-index: 200;
+}
+
+.user {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  align-items: center;
+  // margin-left: 30px;
+  color: var(--colors-text);
+}
+
+.dropdownContent {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 270px;
+  background-color: var(--colors-backgroundAlt);
+  border: 1px solid;
+  border-color: var(--colors-cardBorder);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 8px 0;
+  text-align: start;
+
+  a {
+    display: block;
+    padding: 8px 0;
+    color: #7b93af;
+    text-decoration: none;
+    justify-content: space-between;
+    transition: color 0.3s ease;
+    padding-left: 10px;
+    background-color: var(--colors-backgroundAlt2);
+
+    &:hover {
+      background-color: var(--colors-tertiary);
+    }
+  }
+}
+
+.dropdownItem:nth-child(2),
+.dropdownItem:nth-child(4) {
+  border-bottom: 1px solid var(--colors-tertiary);
+}
+
+.itemIcon {
+  position: absolute;
+  right: 8px;
+}
+
+.redDot {
+  background-color: var(--colors-failure);
+  color: var(--colors-failure);
+  border-radius: 50%;
+  margin-right: 6px;
+  height: 8px;
+  width: 8px;
+}
+
+.warning {
+  margin-right: 4px;
+}
+
+//Modal de balance
+
+.modalContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.theModal {
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--colors-backgroundAlt);
+  padding: 20px;
+  width: auto;
+  height: auto;
+
+  max-width: 450px;
+  max-height: 450px;
+  border-radius: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  @media (min-width: 769px) {
+    width: 30vw;
+    height: 30vw;
+    
+  }
+
+  @media (min-width: 426px) {
+    width: 40vw;
+    height: 40vw;
+    
+  }
+
+}
+
+.modalTitle{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.modalContent{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: inherit;
+}
+
+.addressBox{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--colors-backgroundDisabled);
+  border: solid var(--colors-silver) 1px;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+
+.svgContainer{
+  display: flex;
+  width: auto;
+  padding: 0px 10px;
+  svg{
+    width: 16px;
+    height: 16px;
+    fill: var(--colors-silver);
+  }
+}
+
+.modalClose {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+}
+
+.closeSVG {
+  fill: var(--colors-primary);
+  width: 30px;
+}
+
+
+.balanceTitle{
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.imageContainer{
+  display: block;
+  height: 70px;
+  width: 70px;
+  object-fit: contain;
+}
+
+.activeNetworkCont{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}

@@ -8,12 +8,12 @@ export const HeroSwiperCard = ({
   botonPrimary,
   botonSecondary,
   bunnyPng,
-  decorationPng
+  decorationPng,
 }) => {
   return (
     <div
       className={styles.container}
-      style={{ background: `${colorBackground} url(${backgroundImg})` }}
+      style={{ background: `${colorBackground} url(${backgroundImg})`}}
     >
       <div className={styles.logo}>{topLogo}</div>
       <div className={styles.title}>{titleText}</div>

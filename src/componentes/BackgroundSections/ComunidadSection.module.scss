@@ -1,0 +1,186 @@
+.ComunidadDark,
+.ComunidadLight {
+  overflow: visible;
+  width: 100%;
+  height: max-content;
+  padding-top: 50px;
+  margin-top: 40px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.ComunidadDark {
+  background: linear-gradient(180deg, #0b4576 0%, #091115 100%);
+  background: -webkit-linear-gradient(top, #0b4576 0%, #091115 100%);
+}
+
+.ComunidadLight {
+  background: linear-gradient(180deg, #6fb6f1 0%, #eaf2f6 100%);
+  background: -webkit-linear-gradient(top, #6fb6f1 0%, #eaf2f6 100%);
+}
+
+.socialIcons img,
+.rightIcons img,
+.leftResponsiveIcons img {
+  position: absolute;
+  height: auto;
+  max-width: 100%;
+}
+
+.socialIcons {
+  display: none;
+  width: 391px;
+  height: 620px;
+  position: absolute;
+  top: 110px;
+  left: 10px;
+  z-index: 1;
+}
+
+.discord {
+  width: 180px;
+  top: 357px;
+  left: 29px;
+  z-index: -3;
+}
+.x {
+  width: 230px;
+  z-index: -2;
+  top: 0px;
+  left: 30px;
+}
+.telegram {
+  width: 220px;
+  top: 94px;
+  left: 120px;
+  z-index: -3;
+}
+.instagram {
+  width: 240px;
+  left: 78px;
+  top: 244px;
+  z-index: -4;
+}
+.rightIcons {
+  position: absolute;
+  width: 320px;
+  height: 520px;
+  left: calc(50% - 166px);
+  top: -206px;
+  z-index: 1;
+  transform: scale(0.8);
+  transform-origin: center center;
+}
+
+.comment {
+  width: 150px;
+  top: 300px;
+  left: 100px;
+  z-index: -2;
+}
+.ring {
+  width: 250px;
+  top: 200px;
+  left: -50px;
+  z-index: -4;
+}
+.heart {
+  width: 80px;
+  top: 120px;
+  z-index: -2;
+}
+.speaker {
+  width: 250px;
+  top: 100px;
+  left: 50px;
+  z-index: -2;
+}
+.comment2 {
+  width: 120px;
+  top: 120px;
+  z-index: -3;
+  left: 200px;
+}
+
+.leftResponsiveIcons {
+  position: absolute;
+  width: 320px;
+  height: 520px;
+  bottom: -110px;
+  left: calc(50% - 106px);
+  display: block;
+  z-index: 1;
+}
+
+.pinkComment {
+  width: 100px;
+  top: 330px;
+  left: 100px;
+  z-index: -2;
+}
+
+.leftRing {
+  width: 180px;
+  top: 250px;
+  left: -15px;
+  z-index: -3;
+}
+
+@media (min-width:768px){
+  .socialIcons{
+    display: block;
+  }
+}
+
+@media (min-width: 425px) {
+  
+  
+}
+
+// @media screen and (min-width: 1200px) {
+//   .socialIcons {
+//     display: block;
+//   }
+//   .rightIcons {
+//     left: calc(100% - 326px);
+//     top: -180px;
+//   }
+//   .leftResponsiveIcons {
+//     display: none;
+//   }
+// }
+
+// @media screen and (min-width: 968px) {
+//   .rightIcons {
+//     left: calc(50% + 94px);
+//     top: -140px;
+//   }
+//   .leftResponsiveIcons {
+//     left: calc(50% - 426px);
+//   }
+// }
+
+// @media screen and (min-width: 576px) {
+//   .rightIcons {
+//     transform: scale(1);
+//     left: calc(50% - 136px);
+//     top: -186px;
+//   }
+//   .leftResponsiveIcons {
+//     left: 50px;
+//   }
+//   .pinkComment {
+//     width: 150px;
+//     top: 250px;
+//     left: 100px;
+//   }
+//   .leftRing {
+//     width: 250px;
+//     top: 200px;
+//     left: -50px;
+//   }
+// }

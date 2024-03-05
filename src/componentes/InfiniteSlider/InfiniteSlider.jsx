@@ -1,33 +1,34 @@
+import { ShapingFuture } from "../BackgroundSections/ShapingFuture";
+import Tipografia from "../Tipografia/Tipografia";
 import styles from "./InfiniteSlider.module.scss";
+import { useTranslation } from "react-i18next";
 
 export function InfiniteSlider() {
+  const { t } = useTranslation();
   return (
+    <ShapingFuture>
     <section className={styles.shapfuture}>
     <div className={styles.containerL}>
     <div className={styles.shapingSection}>
-      <div className={styles.subtitle32}>
-        <div className={styles.titletop}>
-          <p>Shaping the Future of Decentralized Trading:</p>
-        </div>
-        <div className={styles.secondtitle}>
-          <p>PancakeSwap Unstoppable Expansion</p>
-        </div>
+      <div className={styles.titlesContainer}>
+        <Tipografia isSubtitleLarge color={'--colors-text'} texto={t("titleIS")}/>
+        <Tipografia isSubtitleLarge color={'--colors-text'} texto={t("subtitleIS")}/>
       </div>
       <div className={styles.numberscontainer}>
         <div className={styles.numberscard}>
-          <div className={styles.totaltitle}>Total Users:</div>
+          <div className={styles.totaltitle}>{t("TotalUsers")}</div>
           <div className={styles.totalnumbers}>1,267,400</div>
-          <div className={styles.lastdays}>in the last 30 days</div>
+          <div className={styles.lastdays}>{t("last30days")}</div>
         </div>
         <div className={styles.numberscard}>
-        <div className={styles.totaltitle}>Total Traders:</div>
+        <div className={styles.totaltitle}>{t("TotalTraders")}</div>
         <div className={styles.totalnumbers}>18,912,145</div>
-        <div className={styles.lastdays}>in the last 30 days</div>
+        <div className={styles.lastdays}>{t("last30days")}</div>
         </div>
         <div className={styles.numberscard}>
-          <div className={styles.totaltitle}>Total Value Locked:</div>
+          <div className={styles.totaltitle}>{t("TotalValue")}</div>
           <div className={styles.totalnumbers}>1,521,686,350$</div>
-          <div className={styles.lastdays}>in the last 30 days</div>
+          <div className={styles.lastdays}>{t("last30days")}</div>
         </div>
       </div>
       <div className={styles.scroll}>
@@ -97,6 +98,7 @@ export function InfiniteSlider() {
     </div>
     </div>
     </section>
+    </ShapingFuture>
   );
 }
 

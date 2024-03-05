@@ -14,167 +14,195 @@ import { IoMdSettings } from "react-icons/io";
 import IconoWrapper from "../IconoWraper/IconoWraper";
 import ToggleSwitch from "../Activate/Activate";
 import { Logo } from "../Logo/Logo";
-import CoinPrice from "../CustomHooks/CoinPrice";
+import { useWeb3Modal, useWeb3ModalEvents } from "@web3modal/wagmi/react";
+import useCoinPrice from "../CustomHooks/useCoinPrice";
+import { useStoreState, useStoreActions } from "../../store";
+import React from "react";
+import { useTranslation } from "react-i18next";
+import { useAccount, useDisconnect, useFeeData } from "wagmi";
+import classNames from "classnames/bind";
+import WalletDropdown from "../WalletDropdown/WalletDropdown";
+import useAddress from "../WalletConnect/useAddress";
 
+const cx = classNames.bind();
 
-function Navbar({ theme, toggleTheme }) {
+function Navbar() {
+  const { t, i18n } = useTranslation();
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
   const [isWalletModalOpen, setIsWalletModalOpen] = useState(false);
   const [buttonText, setButtonText] = useState(
-    window.innerWidth <= 800 ? "Connect" : "Connect Wallet"
+    window.innerWidth <= 800 ? t("Connect") : t("ConnectWallet")
   );
-
- 
 
   useEffect(() => {
     const handleResize = () => {
-      setButtonText(window.innerWidth <= 800 ? "Connect" : "Connect Wallet");
+      setButtonText(
+        window.innerWidth <= 800 ? t("Connect") : t("ConnectWallet")
+      );
     };
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [t]);
+
+  const className = cx({
+    es: i18n.language === "es",
+    en: i18n.language === "en",
+  });
+
+  console.log("Const Classname:", className);
 
   const itemsTrade = [
     {
-      texto: "Swap",
+      texto: t("Swap"),
       icono: <null />,
     },
     {
-      texto: "Liquidity",
+      texto: t("Liquidity"),
       icono: <null />,
     },
     {
-      texto: "Perpetual",
+      texto: t("Perpetual"),
       icono: <FaArrowRightFromBracket />,
     },
     {
-      texto: "Bridge",
+      texto: t("Bridge"),
       icono: <FaArrowRightFromBracket />,
     },
     {
-      texto: "Limit (V2)",
+      texto: t("Limit"),
       icono: <null />,
     },
     {
-      texto: "Buy Crypto",
+      texto: t("BuyCrypto"),
       icono: <null />,
     },
     {
-      texto: "Trading Reward",
+      texto: t("TradingReward"),
       icono: <null />,
     },
   ];
   const itemsEarn = [
     {
-      texto: "Farms",
+      texto: t("Farms"),
       icono: <null />,
     },
     {
-      texto: "CAKE Staking",
+      texto: t("CAKEStaking"),
       icono: <null />,
     },
     {
-      texto: "Pools",
+      texto: t("Pools"),
       icono: <null />,
     },
     {
-      texto: "Position Manager",
+      texto: t("PositionManager"),
       icono: <null />,
     },
     {
-      texto: "Liquid Staking",
+      texto: t("LiquidStaking"),
       icono: <null />,
     },
     {
-      texto: "Simple Staking",
+      texto: t("SimpleStaking"),
       icono: <null />,
     },
   ];
   const itemsGame = [
     {
-      texto: "Gaming Marketplace",
+      texto: t("GamingMarketplace"),
       icono: <FaArrowRightFromBracket />,
     },
     {
-      texto: "Prediction (BETA)",
+      texto: t("Prediction(BETA)"),
       icono: <null />,
     },
     {
-      texto: "Lottery",
+      texto: t("Lottery"),
       icono: <null />,
     },
     {
-      texto: "Pottery (BETA)",
+      texto: t("Pottery(BETA)"),
       icono: <null />,
     },
   ];
   const itemsNft = [
     {
-      texto: "Overview",
+      texto: t("Overview"),
       icono: <null />,
     },
     {
-      texto: "Colecctions",
+      texto: t("Colecctions"),
       icono: <null />,
     },
     {
-      texto: "Activity",
+      texto: t("Activity"),
       icono: <null />,
     },
   ];
 
   const itemsPunto = [
     {
-      texto: "Info",
+      texto: t("Info"),
       icono: <null />,
     },
     {
-      texto: "IFO",
+      texto: t("IFO"),
       icono: <null />,
     },
     {
-      texto: "Affiliate Program",
+      texto: t("AffiliateProgram"),
       icono: <null />,
     },
     {
-      texto: "Voting",
+      texto: t("Voting"),
       icono: <null />,
     },
     {
-      texto: "LeaderBoard",
+      texto: t("LeaderBoard"),
       icono: <null />,
     },
     {
-      texto: "Blog",
+      texto: t("Blog"),
       icono: <FaArrowRightFromBracket />,
     },
   ];
 
-  const cakePrice = CoinPrice()[0];
+  const { price } = useCoinPrice();
+
+  const { open, selectedNetworkId } = useWeb3Modal();
+  const { disconnect } = useDisconnect();
+
+  const { isDisconnected } = useAccount();
+
+  const { address, formatAddress } = useAddress();
+
+  useEffect(() => {
+    console.log(selectedNetworkId, "seleceted id");
+  }, [selectedNetworkId]);
 
   return (
     <nav className={styles.navbar}>
       <div className={styles.dropdownPrimary}>
         <Logo />
-        <NavbarDropdown title={"Trade"} items={itemsTrade} />
-        <NavbarDropdown title={"Earn"} items={itemsEarn} punto={"success"} />
-        <NavbarDropdown title={"Game"} items={itemsGame} />
-        <NavbarDropdown title={"NFT"} items={itemsNft} />
+        <NavbarDropdown title={t("Trade")} items={itemsTrade} />
+        <NavbarDropdown title={t("Earn")} items={itemsEarn} punto={"success"} />
+        <NavbarDropdown title={t("Game")} items={itemsGame} />
+        <NavbarDropdown title={t("NFT")} items={itemsNft} />
         <NavbarDropdown title={"···"} items={itemsPunto} />
       </div>
       <div className={styles.dropdownSecondary}>
         <div className={styles.blueCircle}>
-          <a className={styles.blueCircleLink }href={"https://www.coingecko.com/en/coins/pancakeswap"}>
-            {`$${cakePrice}`}
+          <a
+            className={styles.blueCircleLink}
+            href={"https://www.coingecko.com/en/coins/pancakeswap"}
+          >
+            {`$${price}`}
             {
               <div className={styles.bluecircleImage}>
-              <img
-                src="https://cdn.discordapp.com/attachments/1185220628794593330/1186043627458277518/bluecircleicon.ico?ex=6591d034&is=657f5b34&hm=2286b225c46783a62484255d51c01670db25ee68e9ee9210e5ce883a89f81835&"
-                alt="Cake Icon"
-                width="25px"
-              />
+                <img src="public\assets\PancakeSwapIcon.png" alt="Cake Icon" width="25px" />
               </div>
             }
           </a>
@@ -186,33 +214,33 @@ function Navbar({ theme, toggleTheme }) {
           </IconoWrapper>
           {isSettingsModalOpen && (
             <Modal onClose={() => setIsSettingsModalOpen(false)}>
-              <SettingsModal
-                closeModal={() => setIsSettingsModalOpen(false)}
-                theme={theme}
-                toggleTheme={toggleTheme}
-              />
+              <SettingsModal closeModal={() => setIsSettingsModalOpen(false)} />
             </Modal>
           )}
         </div>
 
         <NetworkDropdown />
-        
-          <Boton onClick ={() => setIsWalletModalOpen(true)} texto={buttonText} isBlue={true} />
-        
-        {isWalletModalOpen && (
-          <Modal onClose={() => setIsWalletModalOpen(false)}>
-            <div>
-              WALLET MODAL
-              <button onClick={() => setIsWalletModalOpen(false)}>CLOSE</button>
-            </div>
-          </Modal>
+
+        {isDisconnected && (
+          <Boton
+            isConnectWallet
+            onClick={() => open({ view: "Connect" })}
+            texto={buttonText}
+            isBlue={true}
+          />
+        )}
+        {!isDisconnected && (
+          <WalletDropdown
+            user={`${formatAddress(address)}`}
+            disconnectHandler={() => disconnect()}
+          />
         )}
       </div>
     </nav>
   );
 }
 
-const SettingsModal = ({ closeModal, theme, toggleTheme }) => {
+const SettingsModal = ({ closeModal }) => {
   return (
     <>
       <div className={settingsStyles.header}>
@@ -237,7 +265,7 @@ const SettingsModal = ({ closeModal, theme, toggleTheme }) => {
             <Tipografia texto={"Token Risk Scanning"} isBodyLarge></Tipografia>
           </div>
           <div className={settingsStyles.activate}>
-            <ThemeToggle theme={theme} onToggle={toggleTheme} />
+            <ThemeToggle />
             <ToggleSwitch />
             <ToggleSwitch />
             <ToggleSwitch />
@@ -247,10 +275,10 @@ const SettingsModal = ({ closeModal, theme, toggleTheme }) => {
         <div className={settingsStyles.modalBottom}>
           <Tipografia texto={"Default Transaction Speed (GWEI)"}></Tipografia>
           <div className={settingsStyles.buttons}>
-            <Boton texto={"Default"} isBlue={true}></Boton>
-            <Boton texto={"Standard (3)"} isWhite={true}></Boton>
-            <Boton texto={"Fast (4)"} isWhite={true}></Boton>
-            <Boton texto={"Instant (5)"} isWhite={true}></Boton>
+            <Boton texto={"Default"} isBlue={true} isSmall={true}></Boton>
+            <Boton texto={"Standard (3)"} isWhite={true} isSmall={true}></Boton>
+            <Boton texto={"Fast (4)"} isWhite={true} isSmall={true}></Boton>
+            <Boton texto={"Instant (5)"} isWhite={true} isSmall={true}></Boton>
           </div>
         </div>
       </div>

@@ -4,56 +4,74 @@ import styles from "./Footer.module.scss";
 import FooterIcons from "./FooterIcons";
 import { FooterBuyCake } from "./FooterBuyCake";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
-import { Logo } from "../Logo/Logo";
+import { LogoWhite } from "../Logo/LogoWhite";
+import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 
-export function Footer({ theme, toggleTheme }) {
+export function Footer() {
+  const {t} = useTranslation();
   return (
     <div className={styles.footerSection}>
       <div className={styles.footerContainer}>
         <div className={styles.footerTop}>
-          <div className={styles.buyCakeNone}> <FooterBuyCake/> </div>
+          <img
+            src="../public/assets/logoPancakeBlanco.png"
+            className={styles.pancakeImage}
+          />
+          <div className={styles.line}></div>
+          <div className={styles.buyCakeNone}>
+            {" "}
+            <FooterBuyCake />
+            <div className={styles.footerEndLangAndTheme}>
+              <ThemeToggle />
+              <LanguageDropdown reverse={true} />
+            </div>
+            <div className={styles.lineEnd}></div>
+          </div>
+
           <FooterColumn
-            title={"ECOSYSTEM"}
+            title={t("ECOSYSTEM")}
             items={[
-              "Trade",
-              "Earn",
-              "Game",
+              t("Trade"),
+              t("Earn"),
+              t("Game"),
               "NFT",
-              "Tokenomics",
-              "Litepaper",
-              "CAKE Emission Projection",
+              t("Tokenomics"),
+              t("Litepaper"),
+              t("CAKEEmissionProjection"),
               "Merchandise",
             ]}
           />
           <FooterColumn
-            title={"BUSINESS"}
-            items={["Farms And Syrup Pools", "IFO", "NFT Marketplace"]}
+            title={t("BUSINESS")}
+            items={[t("FarmsAndSyrupPools"), "IFO", t("NFTMarketplace")]}
           />
           <FooterColumn
-            title={"DEVELOPERS"}
-            items={["Contributing", "Github", "Bug Bounty"]}
+            title={t("DEVELOPERS")}
+            items={[t("Contributing"), "Github", t("BugBounty")]}
           />
           <FooterColumn
-            title={"SUPPORT"}
-            items={["Contact", "Troubleshooting", "Documentation"]}
+            title={t("SUPPORT")}
+            items={[t("Contact"), t("Troubleshooting"), t("Documentation")]}
           />
           <FooterColumn
-            title={"ABOUT"}
-            items={["Terms Of Service", "Blog", "Brand Assets", "Careers"]}
+            title={t("ABOUT")}
+            items={[t("TermsOfService"), "Blog", t("BrandAssets"), t("Careers")]}
           />
-          <div>
-            <Logo isInverted/>
+          <div className={styles.logo}>
+            <LogoWhite />
           </div>
         </div>
         <div className={styles.footerBottom}>
           <FooterIcons />
-          {/* <hr style={{opacity:'30%'}}></hr> */}
+
           <div className={styles.footerEnd}>
+            {/* <hr /> */}
             <div className={styles.footerEndLangAndTheme}>
-              <ThemeToggle theme={theme} onToggle={toggleTheme} />
+              <ThemeToggle />
               <LanguageDropdown reverse={true} />
             </div>
-            <FooterBuyCake /> 
+            <FooterBuyCake />
           </div>
         </div>
       </div>

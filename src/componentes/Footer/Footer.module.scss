@@ -33,7 +33,7 @@
   width: 90%;
 }
 
-.footerBottom{
+.footerBottom {
   width: 90%;
 }
 
@@ -42,44 +42,85 @@
   flex-direction: row;
   justify-content: space-between;
   padding-top: 30px;
+  // padding-bottom: 30px;
 
-  
   border-top: 1px solid #7a6eea4f;
 }
 
-.footerEndLangAndTheme{
+.footerEndLangAndTheme {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-
-.footerSection{
+.footerSection {
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
   background: #27262c;
   width: 100%;
 }
-.buyCakeNone{
+.buyCakeNone {
+  display: none;
+}
+
+.pancakeImage {
+  display: none;
+}
+.line {
+  display: none;
+}
+.lineEnd {
   display: none;
 }
 
 @media (max-width: 768px) {
-  .footerTop{
+  .footerTop {
     display: flex;
     flex-direction: column;
   }
-  .iconResponsive{
+
+  .footerEnd {
+    padding-bottom: 30px;
+    justify-content: space-between;
+  }
+
+  .iconResponsive {
     display: none;
   }
 }
-@media (max-width: 425px) {
-  .buyCakeNone{
+@media (max-width: 426px) {
+  .buyCakeNone {
     display: block;
+    margin-top: -10px;
   }
-  .footerEnd{
+  .footerEnd {
+    display: none!important;
+    padding-bottom: 30px;
+  }
+
+  .logo {
     display: none;
+  }
+
+  .pancakeImage {
+    display: block;
+    margin-top: 13px;
+    width: 160px;
+    height: 25px;
+  }
+  .line {
+    display: block;
+    border-bottom: 0.1px solid #aaaaaa;
+  }
+  .lineEnd {
+    display: block;
+    border-bottom: 0.1px solid #aaaaaa;
+    margin-top: 30px;
+  }
+  .footerTop {
+    display: flex;
+    gap: 30px;
   }
 }

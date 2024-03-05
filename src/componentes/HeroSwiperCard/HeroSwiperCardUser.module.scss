@@ -1,0 +1,98 @@
+.containerUser{
+    display: flex;
+    flex-direction: row;
+    border: 1px #1fc7d4 solid;
+    width: 100%;
+    height: 100%;
+    border-radius: 32px;
+    background: linear-gradient(360deg, rgba(49, 61, 92, 0.9) 0%, rgba(61, 42, 84, 0.9) 100%);
+}
+.iconUser{
+    height: 120px;
+    width: 120px;
+    border: 3px solid #191326;
+    border-radius: 50%;
+    margin-right: 24px;
+}
+
+.containerIconText{
+    display: flex;
+    align-items: center;
+    padding: 40px;
+}
+.textUser{
+    color: #f4eeff;
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 16px;
+}
+.containerMoneyButton{
+    background: #383241;
+    border-radius: 24px;
+    width: 486px;
+    height: 96px;
+    margin-top: 60px;
+    margin-left: 208px;
+    display: flex;
+    padding: 1px 1px 3px;
+}
+
+.containerTrue{
+    width: 100%;
+    height: 100%;
+    overflow: inherit;
+    background: #27262c;
+    justify-content: space-between;
+    border-radius: 24px;
+
+}
+
+.containerPhrase{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 24px;
+}
+.moneyUser{
+    color: #f4eeff;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.1;
+}
+.phraseUser{
+    color: #b8add2;
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+@media (min-width: 768px){
+     div .containerMoneyButton{
+        width: 486px;
+        height: 96px;
+        margin-right: 40px;
+        margin-bottom: 60px;
+    }
+
+ }
+
+ 
+ @media(min-width: 425px){
+    div .containerMoneyButton{
+        width: 486px;
+        height: 96px;
+        margin-right: 40px;
+        margin-bottom: 60px;
+    }
+ }
+ 
+ @media(min-width: 319px){
+    div .containerMoneyButton{
+        width: 486px;
+        height: 96px;
+        margin-right: 40px;
+        margin-bottom: 60px;
+    }
+
+ }
+ 

@@ -1,4 +1,4 @@
-.modal{
+.modal {
   background: var(--colors-gradientCardHeader);
 
   .modalContent {
@@ -10,62 +10,65 @@
   }
 }
 
-  .close {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60px;
-    cursor: pointer;
-  }
+.close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  cursor: pointer;
+}
 
-  .closeSVG{
-    fill: var(--colors-primary);
-    width: 30px;
-  }
+.closeSVG {
+  fill: var(--colors-primary);
+  width: 30px;
+}
 
-.header{
-    height: 74px;
-    object-fit: cover;
-  
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .activate{
-    width: auto;
-    height: 100%;
-  
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  }
-  .textContainer{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  }
-  .buttons{
-    display: flex;
-    flex-direction: row;
-    height: 10px;
-  }
-  
-  .modalTop{
-    display: flex;
-    flex-direction: row;
-    // align-items: start;
-    justify-content: space-between;
-  
-    height: 300px;
-  }
-  .modalBottom{
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: space-around;
-    height: 100px;
-  
-  }
+.header {
+  height: 74px;
+  object-fit: cover;
+  color: var(--colors-text);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.activate {
+  width: auto;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.textContainer {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  height: 10px;
+}
+
+.modalTop {
+  color: var(--colors-text);
+  display: flex;
+  flex-direction: row;
+  // align-items: start;
+  justify-content: space-between;
+
+  height: 300px;
+}
+.modalBottom {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-around;
+  height: 100px;
+  color: var(--colors-text);
+}

@@ -1,18 +1,20 @@
-import imagenes from "../../public/assets/imagenes";
-import Boton from "../componentes/Boton/Boton";
+import images from "../../Assets/SwiperImages/HeroSwiperImages";
 import { ArrowLink } from "../../Assets/Icons/ArrowLink";
 import { ArrowRight } from "../../Assets/Icons/ArrowRight";
+import Boton from "../componentes/Boton/Boton";
+import styles from "../componentes/HeroSwiperCard/SwiperAnimations.module.scss"
+import { t } from "i18next";
 
 export const heroSwiperCardData = [
   {
-    backgroundImg: imagenes.background1,
+    backgroundImg: images.background1,
     colorBackground: "transparent",
     topLogo: (
       <img
         style={{
           marginLeft: "var(--space-8px)",
         }}
-        src={imagenes.logoPancake}
+        src={images.logoPancake}
         alt="Logo Pancake"
       />
     ),
@@ -43,7 +45,7 @@ export const heroSwiperCardData = [
             marginRight: "var(--space-4px)",
           }}
         >
-          Introducing
+          {t("Introducing")}
         </div>
         <div
           style={{
@@ -51,34 +53,42 @@ export const heroSwiperCardData = [
             marginRight: "var(--space-4px)",
           }}
         >
-          Gauges Voting
+          {t("GaugesVoting")}
         </div>
         <div
           style={{
             color: "var(--colors-secondary)",
           }}
         >
-          and veCAKE
+          {t("andveCAKE")}
         </div>
       </div>
     ),
-    botonPrimary: <Boton texto="Get Started" icon={<ArrowRight />} isBlue />,
-    botonSecondary: <Boton texto="Learn More" isWhite />,
+    botonPrimary: (
+      <Boton
+        texto="Get Started"
+        icon={<ArrowRight color={"white"} />}
+        isBlue
+        isTextWhite
+      />
+    ),
+    botonSecondary: <Boton texto="Learn More" isLearnWhite />,
     bunnyPng: (
       <img
         style={{
           position: "absolute",
-          right: "13%",
+          right: "14%",
           bottom: 0,
-          height: "257px",
-          width: "235px",
+          height: "247px",
+          width: "225px",
         }}
-        src={imagenes.desktopBunny}
+        src={images.desktopBunny}
         alt="Bunny"
       ></img>
     ),
     decorationPng: (
       <img
+        className={styles.animationToken}
         style={{
           position: "absolute",
           right: "35%",
@@ -86,20 +96,20 @@ export const heroSwiperCardData = [
           height: "77px",
           width: "72px",
         }}
-        src={imagenes.cakeToken}
+        src={images.cakeToken}
         alt="Bunny"
       ></img>
     ),
   },
   {
-    backgroundImg: imagenes.background2,
+    backgroundImg: images.background2,
     colorBackground: "rgb(32, 40, 61)",
     topLogo: (
       <img
         style={{
           marginLeft: "var(--space-8px)",
         }}
-        src={imagenes.logoPancakeWhite}
+        src={images.logoPancakeWhite}
         alt="Logo Pancake"
       />
     ),
@@ -111,7 +121,7 @@ export const heroSwiperCardData = [
           color: "var(--colors-gold)",
         }}
       >
-        PancakeSwap Gaming Marketplace
+        {t("PancakeGamingMarketplace")}
       </h4>
     ),
     secondText: (
@@ -130,7 +140,7 @@ export const heroSwiperCardData = [
             fontSize: "22px",
           }}
         >
-          Explore Your
+          {t("ExploreYour")}
         </div>
         <div
           style={{
@@ -140,7 +150,7 @@ export const heroSwiperCardData = [
           }}
         >
           <img
-            src={imagenes.gametext}
+            src={images.gametext}
             style={{ width: "100%", height: "100%" }}
             alt="GameFi Spirit"
           />
@@ -152,11 +162,11 @@ export const heroSwiperCardData = [
             fontSize: "22px",
             background:
               "-webkit-linear-gradient(0deg,rgb(136, 255, 92) 10.97%,rgb(244, 226, 59) 27.39%,rgb(255, 223, 56) 99.79%",
-            webkitBackgroundClip: "text",
-            webkitTextFillColor: "transparent",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
           }}
         >
-          1.5M Monthly Players Await!
+          {t("MonthlyPlayers")}
         </div>
       </div>
     ),
@@ -174,8 +184,8 @@ export const heroSwiperCardData = [
             gap: "10px",
           }}
         >
-          Try Now
-          <ArrowLink />
+          {t("TryNow")}
+          <ArrowLink color={"#34fba6"}/>
         </a>
       </div>
     ),
@@ -184,17 +194,18 @@ export const heroSwiperCardData = [
       <img
         style={{
           position: "absolute",
-          right: "8%",
+          right: "5%",
           bottom: 0,
           height: "100%",
           width: "235px",
         }}
-        src={imagenes.gameBunny}
+        src={images.gameBunny}
         alt="Bunny"
       ></img>
     ),
     decorationPng: (
       <img
+        className={styles.animationCube}
         style={{
           position: "absolute",
           right: "29%",
@@ -202,7 +213,7 @@ export const heroSwiperCardData = [
           height: "59px",
           width: "59px",
         }}
-        src={imagenes.gameCube}
+        src={images.gameCube}
         alt="Bunny"
       ></img>
     ),
@@ -220,7 +231,7 @@ export const heroSwiperCardData = [
           color: "var(--colors-gold)",
         }}
       >
-        Perpetual Futures
+        {t("PerpetualFutures")}
       </h6>
     ),
     secondText: (
@@ -232,10 +243,17 @@ export const heroSwiperCardData = [
           fontSize: "38px",
         }}
       >
-        UP TO 1001× LEVERAGE
+        {t("UPTO1001×LEVERAGE")}
       </div>
     ),
-    botonPrimary: <Boton texto="Trade Now" icon={<ArrowRight />} isBlue />,
+    botonPrimary: (
+      <Boton
+        texto="Trade Now"
+        icon={<ArrowRight color={"white"} />}
+        isBlue
+        isTextWhite
+      />
+    ),
     botonSecondary: null,
     bunnyPng: (
       <img
@@ -246,7 +264,7 @@ export const heroSwiperCardData = [
           height: "247px",
           width: "392px",
         }}
-        src={imagenes.perpetualBunny}
+        src={images.perpetualBunny}
         alt="Bunny"
       ></img>
     ),

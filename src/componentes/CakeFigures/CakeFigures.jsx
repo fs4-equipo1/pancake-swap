@@ -1,37 +1,42 @@
 import Tipografia from "../Tipografia/Tipografia";
 import { CakeFiguresCard } from "./CakeFiguresCard";
-import classes from './CakeFigures.module.scss'
-import CoinPrice from "../CustomHooks/CoinPrice";
+import classes from "./CakeFigures.module.scss";
+import useCoinPrice from "../CustomHooks/useCoinPrice";
+import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 
-export function CakeFigures() {  
-  
-  const circulatingSup = CoinPrice()[2];
-   const formatCirculatingSupply = new Intl.NumberFormat("en-US", {  //Formatea el numero
+export function CakeFigures() {
+  const { t } = useTranslation();
+  const { market, circulating, total } = useCoinPrice();
+  const formatCirculatingSupply = new Intl.NumberFormat("en-US", {
+    //Formatea el numero
     maximumFractionDigits: 0,
-  }).format(circulatingSup)
+  }).format(circulating);
 
-  const totalSup = CoinPrice()[3];
   const formatTotalSupply = new Intl.NumberFormat("en-US", {
     maximumFractionDigits: 0,
-  }).format(totalSup)
+  }).format(total);
 
-  const marketCap = CoinPrice()[1];
   const formatMarketCap = new Intl.NumberFormat("en-US", {
     maximumFractionDigits: 0,
-  }).format(marketCap)
+  }).format(market);
 
   return (
-  <div className={classes.seccionClass}>
-    <div className={classes.cakeFiguresTitulo}>
-    <Tipografia color={'--colors-text'} texto={'CAKE'} isSubtitle/> <Tipografia color={'--colors-secondary'} texto={'Figures'} isSubtitle/>
+    <div className={classes.seccionClass}>
+      <div className={classes.cakeFiguresTitulo}>
+        <Tipografia color={"--colors-text"} texto={t("CAKE")} isSubtitle />{" "}
+        <Tipografia color={"--colors-secondary"} texto={t("Figures")} isSubtitle />
+      </div>
+      <div className={classes.containerOfCards}>
+        <CakeFiguresCard
+          titulo={t("CirculatingSupply")}
+          numero={formatCirculatingSupply}
+        />
+        <CakeFiguresCard titulo={t("TotalSupply")} numero={formatTotalSupply} />
+        <CakeFiguresCard titulo={t("MarketCap")} numero={`$${formatMarketCap}`} />
+        <CakeFiguresCard titulo={t("TokenBurn")} numero={`1,126,580,112`} />
+        <CakeFiguresCard titulo={t("CurrentEmissions")} numero={`1,36/block`} />
+      </div>
     </div>
-    <div className={classes.containerOfCards}>
-        <CakeFiguresCard titulo={"Circulating Supply"} numero={formatCirculatingSupply}/>
-        <CakeFiguresCard titulo={"Total Supply"} numero={formatTotalSupply}/>
-        <CakeFiguresCard titulo={"Market Cap"} numero={`$ ${formatMarketCap}`}/>
-        <CakeFiguresCard titulo={"Token Burn"} numero={`1,126,580,112`}/>
-        <CakeFiguresCard titulo={"Current Emissions"} numero={`1,36/block`}/>
-    </div>
-
-  </div>);
+  );
 }

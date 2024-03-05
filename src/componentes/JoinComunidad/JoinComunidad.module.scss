@@ -1,27 +1,296 @@
+@media (min-width: 768px){
+   div.soloCards div.cards{
+    flex-direction: column;
+   }
+}
+@media (min-width: 1023px){
+    div.soloCards div.cards{
+        flex-direction: row !important;
+    }
+}
+
+@media(min-width: 425px){
+    div.soloCards div.cards{
+        flex-direction: column;
+    }
+    div.cardsContainer div.tittleComunity{
+        flex-direction: column;
+    }
+    div.allcontainer div.iconosFoot{
+        gap: 4px;
+    }
+    div.cardsContainer div.tittleComunity{
+        gap: 0px;
+    }
+}
+
+@media(min-width: 319px){
+    div.soloCards div.cards{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    div.cardsContainer div.tittleComunity{
+        flex-direction: column;
+    }
+    div.allcontainer div.iconosFoot{
+        gap: 4px;
+    }
+    div.cardsContainer div.tittleComunity{
+        gap: 0px;
+    }
+}
+
+.allcontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    
+    @media (min-width: 426px){
+        width: 70vw;
+    }
+
+    color: white;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 16px;
+    border: 1px solid #383241;
+    box-sizing: border-box;
+    backdrop-filter: blur(20px);
+    border-radius: 72px;
+}
+
+.cardsContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 968px;
+
+}
+
+.soloCards{
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
 .iconosFoot{
     display: flex;
     margin-top: 30px;
     gap: 12px;
     justify-content: center;
 }
-.container{
-    background-color:rgba(0, 0, 0, 0.8);
-    color: white;
-    height: 628px;
-    width: 936px;
-    padding: 40px;
-    border-radius: 72px;
-    border: 1px solid #383241;
-    position: relative;
-    backdrop-filter: blur(20px);
-    box-sizing: border-box;
+
+
+.containerSwiper{
+    position: relative; 
+    height: 340px;
+    width: 340px;
+    background-color: #383241;
+    border-radius: 32px;
+    border: 2px solid #28242f;
+    box-shadow: #28242f 0px 4px 0px 0px;
+    padding: 20px;
+}
+
+.titleSwiper{
+    color: #f4eeff;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 24px;
+    font-size: 16px;
+    padding: 0px;
+    border: 0px;
+    vertical-align: baseline;
+}
+
+.logoComunity{
+    display: flex;
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    justify-content: center;
+    background: linear-gradient(rgb(83, 222, 233) 0%, rgb(31, 199, 212) 100%);
+    padding: 1px;
+    margin-bottom: 4px;
+}
+
+div{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+.verifiContainer{
+    display: flex;
+    align-items: center;
+}
+
+.subtitleSwiper{
+    color: #f4eeff;
+    font-weight: 600px;
+    height: 42px;
+    width: 267px;
+    line-height: 1.5;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.verificadoSwiper{
+    align-self: center;
+    fill: #a881fc;
+    color: #a881fc;
+    flex-shrink: 0;
+    margin-left: 3px;
+    margin-top: 9px;
+}
+
+.datosInteres{
+    gap: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    align-content: space-around;
+    margin-left: 10px;
+}
+
+.nombreCuenta{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #b8add2;
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.barras{
+    width: 1px;
+    height: 16px;
+    background-color: #383241;
+    border-radius: 25%;
+    margin: 0px 8px;
+}
+
+.fecha{
+    color: #b8add2;
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.corazonLikes{
+    align-self: center;
+    fill: #b8add2;
+    color: #b8add2;
+    flex-shrink: 0;
+    margin-right: 2px;
+    width: 17px;
+    height: 19px;
+}
+
+.numLikes{
+    color: #b8add2;
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.estasimbol{
+    align-self: center;
+    fill: #b8add2;
+    color: #b8add2;
+    flex-shrink: 0;
+    width: 17px;
+    height: 19px;
+}
+
+.numEstadisticas{
+    color: #b8add2;
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 14px;
+    margin-left: 3px;
+}
+.containerTexto{
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.textoComunidad {
+    height: 50.39px;
+    width: 290px;
+    display: inline-block;
+    white-space: pre-wrap;
+    overflow: hidden;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.enlaceComunidad{
+    display: flex;
+    font-weight: 600;
+    align-items: center;
+    width: fit-content;
+    color: #1fc7d4;
+
+}
+
+.aComunity{
+    line-height: 1.5;
+    margin-top: 5px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.asvg{
+    fill: #1fc7d4;
+    color: #1fc7d4;
+    flex-shrink: 0;
+    margin-left: 3px;
+    width: 20px;
+}
+
+.imagenBlog{
+    background-image: url("https://sgp1.digitaloceanspaces.com/strapi.space/813cb90861b09e0eae694797b56c3475.jpg");
+    width: 100%;
+    width: 290px;
+    height: 140px;
+    border-radius: 16px;
+    background-size: cover;
+}
+.fechaBlog{
+    color:#b8add2;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-top: 8px;
+    font-size: 14px;
+    text-align: left;
+}
+.textoBlog{
+    color: #f4eeff;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-top: 10px;
+    font-size: 14px;
 }
 
 .cards{
-    gap: 24px;
+    gap: 50px;
     display: flex;
-    flex-flow: wrap;
-    align-items: center;
+    flex-direction: row;
     justify-content: center;
 }
 
@@ -29,6 +298,7 @@
     line-height: 1.1;
     font-size: 32px;
 }
+
 .joinComunidad{
     color: rgb(168, 129, 252);
     font-size: 32px;
@@ -48,3 +318,4 @@
     font-weight: 600;
     color: #b8add2;
 }
+

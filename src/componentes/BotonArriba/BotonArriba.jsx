@@ -32,7 +32,7 @@ const BotonArriba = () => {
     style={{display: visible ? 'inline' : 'none'}}
     className={classes.buttonToTop}
     >
-      <MdOutlineArrowUpward  size={20} color="white" />
+      <MdOutlineArrowUpward  size={20} color="var(--colors-invertedContrast)" />
     </button>
   );
 }

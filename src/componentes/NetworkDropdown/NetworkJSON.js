@@ -1,0 +1,98 @@
+export const networkJSON = [
+  {
+    chainId: "0x38",
+    chainName: "BNB Chain",
+    iconUrls: ["https://assets.pancakeswap.finance/web/chains/56.png"],
+    rpcUrls: ["https://bsc-dataseed.binance.org/"],
+    nativeCurrency: {
+      name: "BNB",
+      symbol: "BNB",
+      decimals: 18,
+    },
+    blockExplorerUrls: ["https://bscscan.com/"],
+  },
+  {
+    chainId: "0x1",
+    chainName: "Ethereum",
+    iconUrls: ["https://assets.pancakeswap.finance/web/chains/1.png"],
+    rpcUrls: ["https://mainnet.infura.io/v3/"],
+    nativeCurrency: {
+      name: "Ethereum",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    blockExplorerUrls: ["https://etherscan.io/"],
+  },
+  {
+    chainId: "0x89",
+    chainName: "Polygon",
+    iconUrls: ["https://assets.pancakeswap.finance/web/chains/1101.png"],
+    rpcUrls: ["https://rpc-mainnet.maticvigil.com/"],
+    nativeCurrency: {
+      name: "Matic",
+      symbol: "MATIC",
+      decimals: 18,
+    },
+    blockExplorerUrls: ["https://polygonscan.com/"],
+  },
+  {
+    chainId: "0x6E",
+    chainName: "zkSync Era",
+    iconUrls: ["https://assets.pancakeswap.finance/web/chains/324.png"],
+    rpcUrls: ["https://api.zksync.io/jsrpc"],
+    nativeCurrency: {
+      name: "zkSync",
+      symbol: "zETH",
+      decimals: 18,
+    },
+    blockExplorerUrls: ["https://zkscan.io/"],
+  },
+  {
+    chainId: "0xA4B1",
+    chainName: "Arbitrum One",
+    iconUrls: ["https://assets.pancakeswap.finance/web/chains/42161.png"],
+    rpcUrls: ["https://arb1.arbitrum.io/rpc"],
+    nativeCurrency: {
+      name: "Arbitrum ETH",
+      symbol: "AETH",
+      decimals: 18,
+    },
+    blockExplorerUrls: ["https://arbiscan.io/"],
+  },
+  {
+    chainId: "0x7A69",
+    chainName: "Linea Mainnet",
+    iconUrls: ["https://assets.pancakeswap.finance/web/chains/59144.png"],
+    rpcUrls: ["https://linea-api.linea.today"],
+    nativeCurrency: {
+      name: "LINEA",
+      symbol: "LINEA",
+      decimals: 18,
+    },
+    blockExplorerUrls: ["https://explorer.linea.today/"],
+  },
+  {
+    chainId: "0x10",
+    chainName: "Base",
+    iconUrls: ["https://assets.pancakeswap.finance/web/chains/8453.png"],
+    rpcUrls: ["https://base-chain.minebase.org/rpc"],
+    nativeCurrency: {
+      name: "BASE",
+      symbol: "BASE",
+      decimals: 18,
+    },
+    blockExplorerUrls: ["https://base-explorer.minebase.org/"],
+  },
+  {
+    chainId: "0x62",
+    chainName: "opBNB",
+    iconUrls: ["https://assets.pancakeswap.finance/web/chains/56.png"],
+    rpcUrls: ["https://opbnbrpc.zenithchain.co"],
+    nativeCurrency: {
+      name: "opBNB",
+      symbol: "opBNB",
+      decimals: 18,
+    },
+    blockExplorerUrls: ["https://opbscan.zenithchain.co/"],
+  },
+];

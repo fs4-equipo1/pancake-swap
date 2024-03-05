@@ -1,0 +1,42 @@
+.containerCurvedSVG {
+  z-index: -100;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0px;
+  left: 0px;
+}
+
+.curvedSvg {
+  width: 100%;
+  position: absolute;
+  bottom: -14px;
+  width: 100%;
+}
+
+.diagonalSVG {
+  width: 100%;
+  height: 100%;
+  max-height: 48px;
+  display: flex;
+  flex-flow: nowrap;
+}
+
+.comunidadSVG {
+  width: 100%;
+  height: 100%;
+  max-height: 48px;
+  display: flex;
+  flex-flow: nowrap;
+  position: absolute;
+  top: -47px;
+}
+
+@media (max-width: 650px) {
+  .diagonalSVG, .comunidadSVG {
+    display: flex;
+    flex-flow: nowrap;
+  }
+}
+

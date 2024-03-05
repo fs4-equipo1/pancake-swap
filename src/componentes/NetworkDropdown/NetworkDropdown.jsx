@@ -1,48 +1,115 @@
-import { useState } from "react";
+import React, { useEffect } from "react";
 import styles from "./NetworkDropdown.module.scss";
 import { networkData } from "./NetworksData";
+import { networkJSON } from "./NetworkJSON";
+import { useTranslation } from "react-i18next";
+import { useActiveNetwork } from "../../context/ActiveNetworkContext";
+import { useSwitchNetwork } from "wagmi";
+import i18n from "../../i18n/i18n";
 
 const NetworkDropdown = () => {
-  const [activeNetwork, setActiveNetwork] = useState({
-    label: "BNB Chain",
-    image: "https://assets.pancakeswap.finance/web/chains/56.png",
-  });
+  const { activeNetwork, updateActiveNetwork } = useActiveNetwork();
+  const { chains, error, isLoading, pendingChainId, switchNetwork } =
+    useSwitchNetwork();
 
-  const handleButtonClick = (network) => {
-    setActiveNetwork(network);
+  const isNetworkAlreadyAdded = async (network) => {
+    try {
+      const accounts = await ethereum.request({
+        method: "eth_accounts",
+      });
+
+      const activeChainId =
+        accounts.length > 0
+          ? await ethereum.request({
+              method: "eth_chainId",
+            })
+          : null;
+
+      return activeChainId === network.chainId;
+    } catch (error) {
+      console.error("Error al verificar la red en MetaMask:", error);
+      return false;
+    }
   };
+
+  const addNetworkToMetamask = async (network) => {
+    try {
+      await window.ethereum.request({
+        method: "wallet_addEthereumChain",
+        params: [network],
+      });
+      console.log(`Red ${network.label} agregada a Metamask.`);
+    } catch (error) {
+      console.error("Error al agregar la red a Metamask:", error);
+    }
+  };
+  
+  useEffect(() => {
+    updateActiveNetwork(networkData[0]);
+  }, []);
+
+  const handleButtonClick = async (network) => {
+    try {
+      const isNetworkAdded = await isNetworkAlreadyAdded(network);
+      if (!isNetworkAdded && network.chainId !== "0x1") {
+        await addNetworkToMetamask(network);
+      }
+      await switchNetwork?.(network.chainId);
+      await new Promise((resolve) => {
+        ethereum.on("chainChanged", (chainId) => {
+          console.log(
+            "Se ha cambiado exitosamente la red en MetaMask:",
+            chainId
+          );
+          resolve();
+        });
+      });
+      await updateActiveNetwork(network);
+    } catch {
+      console.log(
+        "Ha habido un error al añadir la billetera o actualizar la red."
+      );
+    }
+  };
+
+  const { t } = useTranslation();
 
   return (
     <div className={styles.dropdownCoinContainer}>
       <div className={styles.activeNetwork}>
         <img
-          src={activeNetwork.image}
-          alt={activeNetwork.label}
+          src={activeNetwork.iconUrls}
+          alt={activeNetwork.chainName}
           className={styles.buttonImage}
         />
-        <button>{activeNetwork.label}</button>
+        <button>{activeNetwork.chainName}</button>
         <DropdownArrow />
       </div>
 
       <div className={styles.dropdownCoinContent}>
-        <p>Select a Network</p>
+        <p>{t("SelectaNetwork")}</p>
         <hr></hr>
-        {networkData.map((network) => (
-          <div key={network.label} className={styles.buttonWithImage}>
+        {networkJSON.map((network) => (
+          <button
+            onClick={() => handleButtonClick(network)}
+            key={network.chainId}
+            className={styles.buttonWithImage}
+          >
             <img
-              src={network.image}
-              alt={network.label}
+              src={network.iconUrls[0]}
+              alt={network.chainName}
               className={styles.buttonImage}
             />
-            <button
-              onClick={() => handleButtonClick(network)}
+            <div
               className={
-                activeNetwork.label === network.label ? styles.active : ""
+                activeNetwork.chainName === network.chainName
+                  ? styles.active
+                  : ""
               }
             >
-              {network.label}
-            </button>
-          </div>
+              {network.chainName}
+            </div>
+          </button>
         ))}
       </div>
     </div>

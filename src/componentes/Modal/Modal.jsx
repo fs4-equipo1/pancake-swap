@@ -26,17 +26,17 @@ const Modal = ({ onClose, children }) => {
           onClose();
           console.log("clicked");
         }}
-      ></div>
+      />
     </div>
   );
 };
 
 Modal.propTypes = {
-  isOpen: PropTypes.bool.isRequired,
+  isOpen: PropTypes.bool,
   onClose: PropTypes.func.isRequired,
   children: PropTypes.node.isRequired,
   onClick: PropTypes.func,
-  modal: PropTypes.string.isRequired,
+  modal: PropTypes.string,
 };
 
 export default Modal;

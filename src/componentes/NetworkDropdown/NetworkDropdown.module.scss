@@ -18,11 +18,10 @@
 }
 
 .dropdownCoinContent {
-  width: 200px;
+  width: 230px;
   z-index: 1000;
   background-color: var(--colors-backgroundAlt);
   text-align: center;
-  padding: 10px;
   display: none;
   position: absolute;
   top: 100%;
@@ -30,6 +29,17 @@
   border: 1px solid;
   border-color: var(--colors-cardBorder);
   border-radius: 16px;
+  overflow: hidden;
+}
+
+.dropdownCoinContent { 
+  p {
+  margin: 6px;
+  color: var(--colors-textSubtle);
+  }
+  hr {
+  border-color: var(--colors-textSubtle)
+  }
 }
 
 .activeNetwork {
@@ -41,15 +51,18 @@
   display: flex;
   align-items: center;
   justify-content: flex-start; /* Align items to the start of the container */
-  margin-bottom: 8px; /* Adjust spacing between buttons if needed */
+  padding: 8px 6px; /* Adjust spacing between buttons if needed */
+  width: 100%;
+  left: -7;
+  &:hover{background-color: var(--colors-tertiary);}
 }
 
 .buttonImage {
-  height: 32px;
+  height: 35px;
+  width: 35px;
   color: var(--colors-textSubtle);
-  width: 32px;
   position: relative;
-  left: -5px;
+  margin-right: 7px;
   border-radius: 50%;
 }
 
@@ -64,4 +77,12 @@
   justify-content: "center";
   align-items: "center";
   height: 100%;
+}
+
+@media (max-width: 575px) {
+  .activeNetwork{
+    button {
+      display: none;
+    }
+  }
 }

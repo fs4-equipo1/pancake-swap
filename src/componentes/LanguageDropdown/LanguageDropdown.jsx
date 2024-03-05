@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import styles from "./LanguageDropdown.module.scss";
 import { TbWorld } from "react-icons/tb";
+import { useTranslation } from "react-i18next";
 
 const LanguageDropdown = ({reverse}) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -35,6 +36,11 @@ const LanguageDropdown = ({reverse}) => {
     };
   }, []);
 
+  const { i18n } = useTranslation();
+  const handleLanguage = (language) => {
+    i18n.changeLanguage(language);
+  }
+
 return (
     <div className={`${styles["dropdown-container"]} ${reverse ? styles["reverse"] : ""}`}>
       
@@ -55,18 +61,11 @@ return (
           onMouseEnter={handleContentMouseEnter}
           onMouseLeave={handleContentMouseLeave}
         >
-          <p className={styles.item}>English</p>
-          <p className={styles.item}>Deutsch</p>
-          <p className={styles.item}>Spanish</p>
-          <p className={styles.item}>Français</p>
-          <p className={styles.item}>English</p>
-          <p className={styles.item}>Deutsch</p>
-          <p className={styles.item}>Spanish</p>
-          <p className={styles.item}>Français</p>
-          <p className={styles.item}>English</p>
-          <p className={styles.item}>Deutsch</p>
-          <p className={styles.item}>Spanish</p>
-          <p className={styles.item}>Français</p>
+           {i18n.language === "es" ? (
+          <button className={styles.item} onClick={() => handleLanguage('en')}>English</button>
+           ) : ( 
+          <button className={styles.item} onClick={() => handleLanguage('es')}>Español</button>
+           )}
         </div>
       )}
     </div>

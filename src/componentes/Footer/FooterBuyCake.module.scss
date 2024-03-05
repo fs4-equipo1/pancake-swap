@@ -4,3 +4,25 @@
   justify-content: center;
   align-items: center;
 }
+
+.imagePancake {
+  display: none;
+}
+.logoPrice {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 426px) {
+  .footerBuyCake {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .imagePancake {
+    width: 160px;
+    height: 25px;
+    margin-bottom: 20px;
+  }
+}
