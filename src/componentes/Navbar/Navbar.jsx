@@ -23,6 +23,7 @@ import { useAccount, useDisconnect, useFeeData } from "wagmi";
 import classNames from "classnames/bind";
 import WalletDropdown from "../WalletDropdown/WalletDropdown";
 import useAddress from "../WalletConnect/useAddress";
+
 const cx = classNames.bind();
 
 function Navbar() {
@@ -48,10 +49,10 @@ function Navbar() {
 
   const className = cx({
     es: i18n.language === "es",
-    en: i18n.language === "en"
+    en: i18n.language === "en",
   });
 
-  console.log('Const Classname:', className)
+  console.log("Const Classname:", className);
 
   const itemsTrade = [
     {
@@ -201,11 +202,7 @@ function Navbar() {
             {`$${price}`}
             {
               <div className={styles.bluecircleImage}>
-                <img
-                  src="https://cdn.discordapp.com/attachments/1185220628794593330/1186043627458277518/bluecircleicon.ico?ex=6591d034&is=657f5b34&hm=2286b225c46783a62484255d51c01670db25ee68e9ee9210e5ce883a89f81835&"
-                  alt="Cake Icon"
-                  width="25px"
-                />
+                <img src="../../../public/assets/pancakeIcon" alt="Cake Icon" width="25px" />
               </div>
             }
           </a>
@@ -233,9 +230,9 @@ function Navbar() {
           />
         )}
         {!isDisconnected && (
-          <WalletDropdown 
-          user={`${formatAddress(address)}`}
-          disconnectHandler={() => disconnect()} 
+          <WalletDropdown
+            user={`${formatAddress(address)}`}
+            disconnectHandler={() => disconnect()}
           />
         )}
       </div>
