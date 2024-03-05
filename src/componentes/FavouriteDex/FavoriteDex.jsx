@@ -6,12 +6,17 @@ import { useTranslation } from "react-i18next";
 import { useAccount } from "wagmi";
 import { useWeb3Modal } from "@web3modal/wagmi/react";
 import { useState } from "react";
+import bunnyVideo from "../../../Assets/Gifs/bunnyv2.webm";
+import starVideo from "../../../Assets/Gifs/star.webm";
+import heroCakeVideo from "../../../Assets/Gifs/hero-cake.webm";
+import rock01Video from "../../../Assets/Gifs/rock01.webm";
+import rock02Video from "../../../Assets/Gifs/rock02.webm";
+import rock03Video from "../../../Assets/Gifs/rock03.webm";
 
 const cx = classNames.bind(styles);
 
 export function FavoriteDex() {
-
-  const { t } = useTranslation()
+  const { t } = useTranslation();
   const { open, selectedNetworkId } = useWeb3Modal();
   const { address, isDisconnected } = useAccount();
   const [buttonText, setButtonText] = useState(
@@ -30,10 +35,7 @@ export function FavoriteDex() {
           playsInline
           width="1080"
         >
-          <source
-            src="../../../Assets/Gifs/bunnyv2.webm"
-            type="video/webm"
-          />
+          <source src={bunnyVideo} type="video/webm" />
         </video>
         <video
           loop
@@ -43,10 +45,7 @@ export function FavoriteDex() {
           width="1080"
           className={styles.vid}
         >
-          <source
-            src="../../../Assets/Gifs/star.webm"
-            type="video/webm"
-          />
+          <source src={starVideo} type="video/webm" />
         </video>
         <video
           loop
@@ -56,10 +55,7 @@ export function FavoriteDex() {
           width="1080"
           className={styles.vid}
         >
-          <source
-            src="../../../Assets/Gifs/hero-cake.webm"
-            type="video/webm"
-          />
+          <source src={heroCakeVideo} type="video/webm" />
         </video>
         <video
           loop
@@ -69,10 +65,7 @@ export function FavoriteDex() {
           width="1080"
           className={styles.vid}
         >
-          <source
-            src="../../../Assets/Gifs/rock01.webm"
-            type="video/webm"
-          />
+          <source src={rock01Video} type="video/webm" />
         </video>
         <video
           loop
@@ -82,10 +75,7 @@ export function FavoriteDex() {
           width="1080"
           className={styles.vid}
         >
-          <source
-            src="../../../Assets/Gifs/rock02.webm"
-            type="video/webm"
-          />
+          <source src={rock02Video} type="video/webm" />
         </video>
         <video
           loop
@@ -95,22 +85,19 @@ export function FavoriteDex() {
           width="1080"
           className={styles.vid}
         >
-          <source
-            src="../../../Assets/Gifs/rock03.webm"
-            type="video/webm"
-          />
+          <source src={rock03Video} type="video/webm" />
         </video>
       </div>
       <div className={styles.container}>
         <Texto />
         <div className={styles.buttons}>
-        {isDisconnected && (
-          <Boton
-            onClick={() => open({ view: "Connect" })}
-            texto={buttonText}
-            isBlue={true}
-          />
-        )}
+          {isDisconnected && (
+            <Boton
+              onClick={() => open({ view: "Connect" })}
+              texto={buttonText}
+              isBlue={true}
+            />
+          )}
           <Boton texto={t("TradeNow")} isTransparent></Boton>
         </div>
       </div>
