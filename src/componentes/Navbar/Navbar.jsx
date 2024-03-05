@@ -202,7 +202,7 @@ function Navbar() {
             {`$${price}`}
             {
               <div className={styles.bluecircleImage}>
-                <img src="public\assets\PancakeSwapIcon.png" alt="Cake Icon" width="25px" />
+                <img src="..\..\..\public\assets\PancakeSwapIcon.png" alt="Cake Icon" width="25px" />
               </div>
             }
           </a>
