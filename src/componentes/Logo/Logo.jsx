@@ -1,20 +1,26 @@
 import styles from "./Logo.module.scss";
 import { useTheme } from "../../context/ThemeContext";
+import logoBlanco from "../../../public/assets/logoPancakeBlanco.png";
+import logoPancake from "../../../public/assets/logoPancake.png";
+import conejoResponsive from "../../../public/assets/conejoResponsive.png";
 export function Logo({ isInverted }) {
   const { theme } = useTheme();
   return (
     <div className={styles.pancakeLogo}>
-      {theme === 'dark' ? (
+      {theme === "dark" ? (
         <>
-          <img src="../public/assets/logoPancakeBlanco.png" className={styles.logoImage} />
+          <img src={logoBlanco} className={styles.logoImage} />
         </>
       ) : (
         <>
-          <img src="../public/assets/logoPancake.png"  className={styles.logoImage} />
+          <img
+            src={logoPancake}
+            className={styles.logoImage}
+          />
         </>
       )}
       <img
-        src="../public/assets/conejoResponsive.png"
+        src={conejoResponsive}
         alt=""
         className={styles.iconResponsive}
       />
