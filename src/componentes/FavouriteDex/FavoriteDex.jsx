@@ -31,7 +31,7 @@ export function FavoriteDex() {
           width="1080"
         >
           <source
-            src="./Assets/Gifs/bunnyv2.webm"
+            src="../../../Assets/Gifs/bunnyv2.webm"
             type="video/webm"
           />
         </video>
@@ -44,7 +44,7 @@ export function FavoriteDex() {
           className={styles.vid}
         >
           <source
-            src="./Assets/Gifs/star.webm"
+            src="../../../Assets/Gifs/star.webm"
             type="video/webm"
           />
         </video>
@@ -57,7 +57,7 @@ export function FavoriteDex() {
           className={styles.vid}
         >
           <source
-            src="./Assets/Gifs/hero-cake.webm"
+            src="../../../Assets/Gifs/hero-cake.webm"
             type="video/webm"
           />
         </video>
@@ -70,7 +70,7 @@ export function FavoriteDex() {
           className={styles.vid}
         >
           <source
-            src="./Assets/Gifs/rock01.webm"
+            src="../../../Assets/Gifs/rock01.webm"
             type="video/webm"
           />
         </video>
@@ -83,7 +83,7 @@ export function FavoriteDex() {
           className={styles.vid}
         >
           <source
-            src="./Assets/Gifs/rock02.webm"
+            src="../../../Assets/Gifs/rock02.webm"
             type="video/webm"
           />
         </video>
@@ -96,7 +96,7 @@ export function FavoriteDex() {
           className={styles.vid}
         >
           <source
-            src="./Assets/Gifs/rock03.webm"
+            src="../../../Assets/Gifs/rock03.webm"
             type="video/webm"
           />
         </video>

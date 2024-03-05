@@ -23,7 +23,7 @@ import { useAccount, useDisconnect, useFeeData } from "wagmi";
 import classNames from "classnames/bind";
 import WalletDropdown from "../WalletDropdown/WalletDropdown";
 import useAddress from "../WalletConnect/useAddress";
-
+import pancakeIcon from "../../../public/assets/PancakeSwapIcon.png"
 const cx = classNames.bind();
 
 function Navbar() {
@@ -202,7 +202,7 @@ function Navbar() {
             {`$${price}`}
             {
               <div className={styles.bluecircleImage}>
-                <img src="..\..\..\public\assets\PancakeSwapIcon.png" alt="Cake Icon" width="25px" />
+                <img src={pancakeIcon} alt="Cake Icon" width="25px" />
               </div>
             }
           </a>
