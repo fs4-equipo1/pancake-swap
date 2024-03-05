@@ -1,5 +1,5 @@
 import { useTheme } from "../../context/ThemeContext";
-import { DiagonalSVG } from "../BackgroundSVG/DiagonalSVG.JSX";
+import { DiagonalSVG } from "../BackgroundSVG/DiagonalSVG";
 import styles from "./ShapingFuture.module.scss";
 
 export function ShapingFuture({ children }) {
