@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import { useAccount } from "wagmi";
 import { useWeb3Modal } from "@web3modal/wagmi/react";
+import icons from "../../../Assets/Images/floatIcons/icons";
 
 const DexNow = ({ titleLarge }) => {
   return (
@@ -48,25 +49,25 @@ export function DexNowSection() {
         </div>
         <img
           className={styles.cakeRight}
-          src="../../../Assets/Images/asset33.png"
+          src={icons.pancakeRight}
           alt="pancake-right"
           width="160px"
         ></img>
         <img
           className={styles.cakeLeft}
-          src="../../../Assets/Images/asset32.png"
+          src={icons.pancakeLeft}
           alt="pancake-left"
           width="160px"
         ></img>
         <img
           className={styles.rockLeft}
-          src="../../../Assets/Images/asset35.png"
+          src={icons.rockRight}
           alt="rock-right"
           width="160px"
         ></img>
         <img
           className={styles.rockRight}
-          src="../../../Assets/Images/asset34.png"
+          src={icons.rockLeft}
           alt="rock-right"
           width="160px"
         ></img>

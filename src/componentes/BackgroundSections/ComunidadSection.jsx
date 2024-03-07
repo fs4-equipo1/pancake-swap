@@ -1,6 +1,7 @@
 import { useTheme } from "../../context/ThemeContext";
 import { ComunidadSVG } from "../BackgroundSVG/ComunidadSVG";
 import styles from "./ComunidadSection.module.scss";
+import icons from "../../../Assets/Images/floatIcons/icons";
 
 export function ComunidadSection({ children }) {
   const { theme } = useTheme();
@@ -9,41 +10,41 @@ export function ComunidadSection({ children }) {
       {theme === "dark" ? (
         <section className={styles.ComunidadDark}><ComunidadSVG />{children}
         <div className={styles.socialIcons}>
-            <img className={styles.discord} src="../../../Assets/Images/asset78.png" alt="Discord Icon" />
-            <img className={styles.instagram} src="../../../Assets/Images/asset76.png" alt="Instagram Icon" />
-            <img className={styles.telegram} src="../../../Assets/Images/asset77.png" alt="Telegram Icon" />
-            <img className={styles.x} src="../../../Assets/Images/asset79.png" alt="X Icon" />
+            <img className={styles.discord} src={icons.discord} alt="Discord Icon" />
+            <img className={styles.instagram} src={icons.instagram} alt="Instagram Icon" />
+            <img className={styles.telegram} src={icons.telegram} alt="Telegram Icon" />
+            <img className={styles.x} src={icons.x} alt="X Icon" />
             </div>
             <div className={styles.rightIcons}>
-            <img className={styles.comment} src="../../../Assets/Images/asset1.png" alt="Comment Icon" />
-            <img className={styles.ring} src="../../../Assets/Images/asset2.png" alt="Ring Icon" />
-            <img className={styles.heart} src="../../../Assets/Images/asset3.png" alt="Like Icon" />
-            <img className={styles.speaker} src="../../../Assets/Images/asset4.png" alt="Speaker Icon" />
-            <img className={styles.comment2} src="../../../Assets/Images/asset5.png" alt="Comment Icon" />
+            <img className={styles.comment} src={icons.comment} alt="Comment Icon" />
+            <img className={styles.ring} src={icons.ring} alt="Ring Icon" />
+            <img className={styles.heart} src={icons.heart} alt="Like Icon" />
+            <img className={styles.speaker} src={icons.speaker} alt="Speaker Icon" />
+            <img className={styles.comment2} src={icons.comment2} alt="Comment Icon" />
             </div>
             <div className={styles.leftResponsiveIcons}>
-            <img className={styles.leftRing} src="../../../Assets/Images/asset2.png" alt="Ring Icon" />
-            <img className={styles.pinkComment} src="../../../Assets/Images/asset1.png" alt="Comment Icon" />
+            <img className={styles.leftRing} src={icons.leftRing} alt="Ring Icon" />
+            <img className={styles.pinkComment} src={icons.pinkComment} alt="Comment Icon" />
             </div>
             </section>
       ) : (
         <section className={styles.ComunidadLight}><ComunidadSVG />{children}
         <div className={styles.socialIcons}>
-            <img className={styles.discord} src="../../../Assets/Images/asset78.png" alt="Discord Icon" />
-            <img className={styles.instagram} src="../../../Assets/Images/asset76.png" alt="Instagram Icon" />
-            <img className={styles.telegram} src="../../../Assets/Images/asset77.png" alt="Telegram Icon" />
-            <img className={styles.x} src="../../../Assets/Images/asset79.png" alt="X Icon" />
+        <img className={styles.discord} src={icons.discord} alt="Discord Icon" />
+            <img className={styles.instagram} src={icons.instagram} alt="Instagram Icon" />
+            <img className={styles.telegram} src={icons.telegram} alt="Telegram Icon" />
+            <img className={styles.x} src={icons.x} alt="X Icon" />
             </div>
             <div className={styles.rightIcons}>
-            <img className={styles.comment} src="../../../Assets/Images/asset1.png" alt="Comment Icon" />
-            <img className={styles.ring} src="../../../Assets/Images/asset2.png" alt="Ring Icon" />
-            <img className={styles.heart} src="../../../Assets/Images/asset3.png" alt="Like Icon" />
-            <img className={styles.speaker} src="../../../Assets/Images/asset4.png" alt="Speaker Icon" />
-            <img className={styles.comment2} src="../../../Assets/Images/asset5.png" alt="Comment Icon" />
+            <img className={styles.comment} src={icons.comment} alt="Comment Icon" />
+            <img className={styles.ring} src={icons.ring} alt="Ring Icon" />
+            <img className={styles.heart} src={icons.heart} alt="Like Icon" />
+            <img className={styles.speaker} src={icons.speaker} alt="Speaker Icon" />
+            <img className={styles.comment2} src={icons.comment2} alt="Comment Icon" />
             </div>
             <div className={styles.leftResponsiveIcons}>
-            <img className={styles.leftRing} src="../../../Assets/Images/asset2.png" alt="Ring Icon" />
-            <img className={styles.pinkComment} src="../../../Assets/Images/asset1.png" alt="Comment Icon" />
+            <img className={styles.leftRing} src={icons.leftRing} alt="Ring Icon" />
+            <img className={styles.pinkComment} src={icons.pinkComment} alt="Comment Icon" />
             </div>
             </section>
       )}
