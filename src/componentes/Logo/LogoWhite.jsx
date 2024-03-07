@@ -1,12 +1,14 @@
 import styles from "./Logo.module.scss";
+import logoBlanco from "../../../public/assets/logoPancakeBlanco.png"
+import logoResponsive from "../../../public/assets/conejoResponsive.png"
 export function LogoWhite() {
   return (
     <div>
         <>
-          <img src="../public/assets/logoPancakeBlanco.png"  className={styles.logoImage} />
+          <img src={logoBlanco}  className={styles.logoImage} />
         </>
       <img
-        src="../public/assets/conejoResponsive.png"
+        src={logoResponsive}
         alt=""
         className={styles.iconResponsive}
       />

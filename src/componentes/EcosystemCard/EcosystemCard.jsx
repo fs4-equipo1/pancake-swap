@@ -8,6 +8,7 @@ import { useTheme } from "../../context/ThemeContext";
 import { useMediaQuery } from "./useMediaQuerie";
 import { t } from "i18next";
 import { useTranslation } from "react-i18next";
+import images from "../../../Assets/Images/EcosystemImages/ecosystemImages";
 
 const cx = classNames.bind(styles);
 
@@ -117,104 +118,104 @@ export function EcosystemCards() {
   const data = [
     {
       id: 1,
-      imgsrc: "./Assets/Images/trade-swap-purple.png",
-      imgsrcColor: "./Assets/Images/trade-swap.png",
+      imgsrc: images.trade,
+      imgsrcColor: images.tradeColor,
       title: t("Trade"),
       content: t("cardContent1"),
       button: t("TradeNow"),
     },
     {
       id: 1,
-      imgsrc: "./Assets/Images/trade-liquidity-purple.png",
-      imgsrcColor: "./Assets/Images/trade-liquidity.png",
+      imgsrc: images.liquidity,
+      imgsrcColor: images.liquidityColor,
       title: t("Liquidity"),
       content: t("cardContent2"),
       button: t("AddNow"),
     },
     {
       id: 1,
-      imgsrc: "./Assets/Images/trade-bridge-purple.png",
-      imgsrcColor: "./Assets/Images/trade-bridge.png",
+      imgsrc: images.bridge,
+      imgsrcColor: images.bridgeColor,
       title: t("Bridge"),
       content: t("cardContent3"),
       button: "Bridge Now",
     },
     {
       id: 1,
-      imgsrc: "./Assets/Images/trade-perpetual-purple.png",
-      imgsrcColor: "./Assets/Images/trade-perpetual.png",
+      imgsrc: images.perpetual,
+      imgsrcColor: images.perpetualColor,
       title: t("Perpetual"),
       content: t("cardContent4"),
       button: t("TradeNow"),
     },
     {
       id: 1,
-      imgsrc: "./Assets/Images/trade-buy-crypto-purple.png",
-      imgsrcColor: "./Assets/Images/trade-buy-crypto.png",
+      imgsrc: images.buyCrypto,
+      imgsrcColor: images.buyCryptoColor,
       title: t("BuyCrypto"),
       content: t("cardContainer5"),
       button: t("BuyNow"),
     },
     {
       id: 2,
-      imgsrc: "./Assets/Images/earn-farm-purple.png",
-      imgsrcColor: "./Assets/Images/earn-farm.png",
+      imgsrc: images.farm,
+      imgsrcColor: images.farmColor,
       title: t("Farm"),
       content: t("cardContainer6"),
       button: t("StakeNow"),
     },
     {
       id: 2,
-      imgsrc: "./Assets/Images/earn-pools-purple.png",
-      imgsrcColor: "./Assets/Images/earn-pools.png",
+      imgsrc: images.pools,
+      imgsrcColor: images.poolsColor,
       title: t("Pools"),
       content: t("cardContainer7"),
       button: t("StakeNow"),
     },
     {
       id: 2,
-      imgsrc: "./Assets/Images/earn-liquidstaking-purple.png",
-      imgsrcColor: "./Assets/Images/earn-liquistaking.png",
+      imgsrc: images.liquidStaking,
+      imgsrcColor: images.liquidStakingColor,
       title: t("LiquidStaking"),
       content: t("cardContainer8"),
       button: t("AddNow"),
     },
     {
       id: 2,
-      imgsrc: "./Assets/Images/earn-simplestaking-purple.png",
-      imgsrcColor: "./Assets/Images/earn-simplestaking.png",
+      imgsrc: images.simpleStaking,
+      imgsrcColor: images.simpleStakingColor,
       title: t("SimpleStaking"),
       content: t("cardContainer8"),
       button: t("StakeNow"),
     },
     {
       id: 2,
-      imgsrc: "./Assets/Images/earn-pm-purple.webp",
-      imgsrcColor: "./Assets/Images/earn-position-manager.png",
+      imgsrc: images.position,
+      imgsrcColor: images.positionColor,
       title: t("PositionManager"),
       content: t("cardContainer8.5"),
       button: t("StakeNow"),
     },
     {
       id: 3,
-      imgsrc: "./Assets/Images/game-gaming-marketplace-purple.webp",
-      imgsrcColor: "./Assets/Images/game-gaming-marketplace.png",
+      imgsrc: images.gaming,
+      imgsrcColor: images.gamingColor,
       title: t("GamingMarketplace"),
       content: t("cardContainer14"),
       button: t("PlayNow"),
     },
     {
       id: 3,
-      imgsrc: "./Assets/Images/gamenft-prediction-purple.png",
-      imgsrcColor: "./Assets/Images/gamenft-prediction.png",
+      imgsrc: images.prediction,
+      imgsrcColor: images.predictionColor,
       title: t("Prediction"),
       content: t("cardContainer9"),
       button: t("TryNow"),
     },
     {
       id: 3,
-      imgsrc: "./Assets/Images/gamenft-nftmarketplace-purple.png",
-      imgsrcColor: "./Assets/Images/gamenft-nftmarketplace.png",
+      imgsrc: images.nftMarket,
+      imgsrcColor: images.nftMarketColor,
       title: t("NFTMarketplace"),
       content: t("cardContainer13"),
       button: t("TradeNow"),
@@ -224,20 +225,20 @@ export function EcosystemCards() {
     <div className={styles.section}>
       <EcosystemImgAndTitle />
       <EcosystemCard
-        path={"../../Assets/Images/trade-bunny.png"}
+        path={images.tradeBunny}
         titulo={t("Trade")}
         cardData={data}
         objectId={1}
       />
       <EcosystemCard
-        path={"../../Assets/Images/asset36.png"}
+        path={images.earnBunny}
         titulo={t("Earn")}
         cardData={data}
         objectId={2}
         isReverse
       />
       <EcosystemCard
-        path={"../../Assets/Images/asset8.png"}
+        path={images.gameBunny}
         titulo={t("GameNFT")}
         cardData={data}
         objectId={3}

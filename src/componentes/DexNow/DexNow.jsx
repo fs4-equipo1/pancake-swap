@@ -48,25 +48,25 @@ export function DexNowSection() {
         </div>
         <img
           className={styles.cakeRight}
-          src="../../Assets/Images/asset33.png"
+          src="../../../Assets/Images/asset33.png"
           alt="pancake-right"
           width="160px"
         ></img>
         <img
           className={styles.cakeLeft}
-          src="../../Assets/Images/asset32.png"
+          src="../../../Assets/Images/asset32.png"
           alt="pancake-left"
           width="160px"
         ></img>
         <img
           className={styles.rockLeft}
-          src="../../Assets/Images/asset35.png"
+          src="../../../Assets/Images/asset35.png"
           alt="rock-right"
           width="160px"
         ></img>
         <img
           className={styles.rockRight}
-          src="../../Assets/Images/asset34.png"
+          src="../../../Assets/Images/asset34.png"
           alt="rock-right"
           width="160px"
         ></img>

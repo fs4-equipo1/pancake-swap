@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from "./PishingWarning.module.scss"
 import { useTranslation } from "react-i18next";
+import warningImg from "../../../Assets/Images/phishing-warning-bunny.webp"
 
 export function PishingWarning() {
     const { t } = useTranslation();
@@ -15,7 +16,7 @@ export function PishingWarning() {
                 <div height="70" className={styles.header}>
                     <div className={styles.headerContent}>
             <div className={styles.headerImg}>
-                <img src="../Assets/Images/phishing-warning-bunny.webp" alt="phishing-warning" className={styles.phishingImg}></img>
+                <img src={warningImg} alt="phishing-warning" className={styles.phishingImg}></img>
                 <div className={styles.headerCard}>
                     <span className={styles.phishing}>{t("WarningTitle")}</span>
                     <span className={styles.text}>{t("WarningText")}</span>

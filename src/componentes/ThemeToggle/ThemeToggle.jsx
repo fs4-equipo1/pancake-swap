@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import styles from "./ThemeToggle.module.scss";
 import { useTheme } from "../../context/ThemeContext";
+import darkIcon from "../../../public/images/svgexport-85.png"
+import lightIcon from "../../../public/images/svgexport-82.png"
 
 const ThemeToggle = () => {
   const { theme, toggleTheme } = useTheme();
@@ -14,7 +16,7 @@ const ThemeToggle = () => {
         <>
           <img src="../public/images/svgexport-83.png" />
           <img
-            src="../public/images/svgexport-85.png"
+            src={darkIcon}
             alt="Dark Icon"
             className={styles.themeIcon}
           />
@@ -22,7 +24,7 @@ const ThemeToggle = () => {
       ) : (
         <>
           <img
-            src="../public/images/svgexport-82.png"
+            src={lightIcon}
             alt="Light Icon"
             className={styles.themeIcon}
           />
