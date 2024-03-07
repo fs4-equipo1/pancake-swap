@@ -1,5 +1,6 @@
 import { t } from "i18next";
 import styles from "./VerticalRightSlider.module.scss";
+import icons from "../../../Assets/Images/SliderImages/sliderImages";
 
 function VerticalRightSlider() {
   return (
@@ -12,36 +13,36 @@ function VerticalRightSlider() {
         <div className={styles.scroll}>
           <div>
             <span className={styles.scrollAptos}>
-              <img src="../public/images/svgexport-54.png"></img>Metamask
+              <img src={icons.metamask}></img>Metamask
             </span>
             <span className={styles.scrollEthereum}>
-              <img src="../public/images/svgexport-53.png"></img>Ledger
+              <img src={icons.ledger}></img>Ledger
             </span>
             <span className={styles.scrollPolygon}>
-              <img src="../public/images/svgexport-56.png"></img>Alpaca Finance
+              <img src={icons.alpaca}></img>Alpaca Finance
             </span>
             <span className={styles.scrollZksync}>
-              <img src="../public/images/svgexport-55.png"></img>Venus
+              <img src={icons.venus}></img>Venus
             </span>
             <span className={styles.scrollArbitrum}>
-              <img src="../public/images/svgexport-57.png"></img>ApolloX
+              <img src={icons.apolloX}></img>ApolloX
             </span>
           </div>
           <div>
             <span className={styles.scrollAptos}>
-              <img src="../public/images/svgexport-54.png"></img>Metamask
+              <img src={icons.metamask}></img>Metamask
             </span>
             <span className={styles.scrollEthereum}>
-              <img src="../public/images/svgexport-53.png"></img>Ledger
+              <img src={icons.ledger}></img>Ledger
             </span>
             <span className={styles.scrollPolygon}>
-              <img src="../public/images/svgexport-56.png"></img>Alpaca Finance
+              <img src={icons.alpaca}></img>Alpaca Finance
             </span>
             <span className={styles.scrollZksync}>
-              <img src="../public/images/svgexport-55.png"></img>Venus
+              <img src={icons.venus}></img>Venus
             </span>
             <span className={styles.scrollArbitrum}>
-              <img src="../public/images/svgexport-57.png"></img>ApolloX
+              <img src={icons.apolloX}></img>ApolloX
             </span>
           </div>
         </div>

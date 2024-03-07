@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { useTheme } from "../../context/ThemeContext";
 import styles from "./SliderSeparator.module.scss";
 import { IoMdEgg } from "react-icons/io";
+import icons from "../../../Assets/Images/SliderImages/sliderImages";
 
 function SliderSeparator() {
   const { theme } = useTheme();
@@ -9,7 +10,7 @@ function SliderSeparator() {
     <>
       <div className={styles.imgSeparator}>
         <video
-          src="..\src\assets\videoTrans.webm" 
+          src={icons.videoMoneda}
           alt="Slider Separator" 
           className={styles.coin}
           autoPlay  

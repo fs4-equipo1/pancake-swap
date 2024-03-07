@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import images from "../../../Assets/SwiperImages/HeroSwiperImages";
+import images from "../../../Assets/Images/SwiperImages/HeroSwiperImages";
 import { ArrowLink } from "../../../Assets/Icons/ArrowLink";
 import { ArrowRight } from "../../../Assets/Icons/ArrowRight";
 import { useTranslation } from "react-i18next";

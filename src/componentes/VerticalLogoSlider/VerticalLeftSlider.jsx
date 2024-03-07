@@ -1,6 +1,7 @@
 import { t } from "i18next";
 import styles from "./VerticalLeftSlider.module.scss";
 import { useTranslation } from "react-i18next";
+import icons from "../../../Assets/Images/SliderImages/sliderImages";
 
 function VerticalLeftSlider() {
   const { t } = useTranslation();
@@ -14,54 +15,54 @@ function VerticalLeftSlider() {
         <div className={styles.scroll}>
           <div>
             <span className={styles.scrollAptos}>
-              <img src="../public/images/svgexport-50.png"></img>{t("Game")}
+              <img src={icons.game}></img>{t("Game")}
             </span>
             <span className={styles.scrollEthereum}>
-              <img src="../public/images/svgexport-48.png"></img>NFT
+              <img src={icons.nft}></img>NFT
             </span>
             <span className={styles.scrollPolygon}>
-              <img src="../public/images/svgexport-47.png"></img>{t("Trade")}
+              <img src={icons.trade}></img>{t("Trade")}
             </span>
             <span className={styles.scrollZksync}>
-              <img src="../public/images/svgexport-51.png"></img>{t("Governance")}
+              <img src={icons.governance}></img>{t("Governance")}
             </span>
             <span className={styles.scrollArbitrum}>
-              <img src="../public/images/svgexport-45.png"></img>{t("Staking")}
+              <img src={icons.staking}></img>{t("Staking")}
             </span>
             <span className={styles.scrollLinea}>
-              <img src="../public/images/svgexport-46.png"></img>{t("Farming")}
+              <img src={icons.farming}></img>{t("Farming")}
             </span>
             <span className={styles.scrollBase}>
-              <img src="../public/images/svgexport-49.png"></img>{t("Liquidity")}
+              <img src={icons.liquidiy}></img>{t("Liquidity")}
             </span>
             <span className={styles.scrollBNB}>
-              <img src="../public/images/svgexport-52.png"></img>IFO
+              <img src={icons.ifo}></img>IFO
             </span>
           </div>
           <div>
             <span className={styles.scrollAptos}>
-              <img src="../public/images/svgexport-50.png"></img>{t("Game")}
+              <img src={icons.game}></img>{t("Game")}
             </span>
             <span className={styles.scrollEthereum}>
-              <img src="../public/images/svgexport-48.png"></img>NFT
+              <img src={icons.nft}></img>NFT
             </span>
             <span className={styles.scrollPolygon}>
-              <img src="../public/images/svgexport-47.png"></img>{t("Trade")}
+              <img src={icons.trade}></img>{t("Trade")}
             </span>
             <span className={styles.scrollZksync}>
-              <img src="../public/images/svgexport-51.png"></img>{t("Governance")}
+              <img src={icons.governance}></img>{t("Governance")}
             </span>
             <span className={styles.scrollArbitrum}>
-              <img src="../public/images/svgexport-45.png"></img>{t("Staking")}
+              <img src={icons.staking}></img>{t("Staking")}
             </span>
             <span className={styles.scrollLinea}>
-              <img src="../public/images/svgexport-46.png"></img>{t("Farming")}
+              <img src={icons.farming}></img>{t("Farming")}
             </span>
             <span className={styles.scrollBase}>
-              <img src="../public/images/svgexport-49.png"></img>{t("Liquidity")}
+              <img src={icons.liquidiy}></img>{t("Liquidity")}
             </span>
             <span className={styles.scrollBNB}>
-              <img src="../public/images/svgexport-52.png"></img>IFO
+              <img src={icons.ifo}></img>IFO
             </span>
           </div>
         </div>
